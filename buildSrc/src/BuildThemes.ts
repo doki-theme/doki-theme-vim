@@ -10,14 +10,12 @@ const path = require('path');
 
 const repoDirectory = path.resolve(__dirname, '..', '..');
 
-const colorsDirectory
-
 const fs = require('fs');
 
 const masterThemeDefinitionDirectoryPath =
   path.resolve(repoDirectory, 'masterThemes');
 
-const chromeDefinitionDirectoryPath = path.resolve(
+const vimDefinitionDirectoryPath = path.resolve(
         '.',
   "themes",
   "definitions"
@@ -191,7 +189,7 @@ export const dictionaryReducer = <T>(
 function buildVimColor(
   dokiThemeDefinition: MasterDokiThemeDefinition,
   dokiTemplateDefinitions: DokiThemeDefinitions,
-  dokiThemeChromeDefinition: VimDokiThemeDefinition,
+  dokiThemeVimDefinition: VimDokiThemeDefinition,
 ) {
   const namedColors = constructNamedColorTemplate(
     dokiThemeDefinition, dokiTemplateDefinitions
@@ -206,7 +204,7 @@ function createDokiTheme(
   dokiFileDefinitionPath: string,
   dokiThemeDefinition: MasterDokiThemeDefinition,
   dokiTemplateDefinitions: DokiThemeDefinitions,
-  dokiThemeChromeDefinition: VimDokiThemeDefinition,
+  dokiThemeVimDefinition: VimDokiThemeDefinition,
 ) {
   try {
     return {
@@ -215,7 +213,7 @@ function createDokiTheme(
       color: buildVimColor(
         dokiThemeDefinition,
         dokiTemplateDefinitions,
-        dokiThemeChromeDefinition,
+        dokiThemeVimDefinition,
       ),
       theme: {}
     };
@@ -289,15 +287,15 @@ const getStickers = (
 const omit = require('lodash/omit');
 
 console.log('Preparing to generate themes.');
-walkDir(chromeDefinitionDirectoryPath)
+walkDir(vimDefinitionDirectoryPath)
   .then((files) =>
     files.filter((file) => file.endsWith("vim.definition.json"))
   )
-  .then((dokiThemeChromeDefinitionPaths) => {
+  .then((dokiThemeVimDefinitionPaths) => {
     return {
-      dokiThemeChromeDefinitions: dokiThemeChromeDefinitionPaths
-        .map((dokiThemeChromeDefinitionPath) =>
-          readJson<VimDokiThemeDefinition>(dokiThemeChromeDefinitionPath)
+      dokiThemeVimDefinitions: dokiThemeVimDefinitionPaths
+        .map((dokiThemeVimDefinitionPath) =>
+          readJson<VimDokiThemeDefinition>(dokiThemeVimDefinitionPath)
         )
         .reduce(
           (accum: StringDictonary<VimDokiThemeDefinition>, def) => {
@@ -307,7 +305,7 @@ walkDir(chromeDefinitionDirectoryPath)
           {}
         ),
     };
-  }).then(({dokiThemeChromeDefinitions}) =>
+  }).then(({dokiThemeVimDefinitions}) =>
   walkDir(path.resolve(masterThemeDefinitionDirectoryPath, 'templates'))
     .then(readTemplates)
     .then(dokiTemplateDefinitions => {
@@ -315,7 +313,7 @@ walkDir(chromeDefinitionDirectoryPath)
         .then(files => files.filter(file => file.endsWith('master.definition.json')))
         .then(dokiFileDefinitionPaths => {
           return {
-            dokiThemeChromeDefinitions,
+            dokiThemeVimDefinitions,
             dokiTemplateDefinitions,
             dokiFileDefinitionPaths
           };
@@ -324,15 +322,15 @@ walkDir(chromeDefinitionDirectoryPath)
   .then(templatesAndDefinitions => {
     const {
       dokiTemplateDefinitions,
-      dokiThemeChromeDefinitions,
+      dokiThemeVimDefinitions,
       dokiFileDefinitionPaths
     } = templatesAndDefinitions;
     return dokiFileDefinitionPaths
       .map(dokiFileDefinitionPath => {
         const dokiThemeDefinition = readJson<MasterDokiThemeDefinition>(dokiFileDefinitionPath);
-        const dokiThemeChromeDefinition =
-          dokiThemeChromeDefinitions[dokiThemeDefinition.id];
-        if (!dokiThemeChromeDefinition) {
+        const dokiThemeVimDefinition =
+          dokiThemeVimDefinitions[dokiThemeDefinition.id];
+        if (!dokiThemeVimDefinition) {
           throw new Error(
             `${dokiThemeDefinition.displayName}'s theme does not have a vim Definition!!`
           );
@@ -340,7 +338,7 @@ walkDir(chromeDefinitionDirectoryPath)
         return ({
           dokiFileDefinitionPath,
           dokiThemeDefinition,
-          dokiThemeChromeDefinition,
+          dokiThemeVimDefinition,
         });
       })
       .filter(pathAndDefinition =>
@@ -351,18 +349,18 @@ walkDir(chromeDefinitionDirectoryPath)
       .map(({
               dokiFileDefinitionPath,
               dokiThemeDefinition,
-        dokiThemeChromeDefinition,
+              dokiThemeVimDefinition,
             }) =>
         createDokiTheme(
           dokiFileDefinitionPath,
           dokiThemeDefinition,
           dokiTemplateDefinitions,
-          dokiThemeChromeDefinition,
+          dokiThemeVimDefinition,
         )
       );
   }).then(dokiThemes => {
   // write things for extension
-  console.log(dokiThemes);
+
 })
   .then(() => {
     console.log('Theme Generation Complete!');
