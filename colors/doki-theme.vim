@@ -1,6 +1,6 @@
 " Dracula Theme: {{{
 "
-" https://github.com/zenorocha/dracula-theme
+" https://github.com/zenorocha/doki-theme-theme
 "
 " Copyright 2016, All rights reserved
 "
@@ -23,7 +23,7 @@ if v:version > 580
   endif
 endif
 
-let g:colors_name = 'dracula'
+let g:colors_name = 'doki-theme'
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
   finish
@@ -31,77 +31,77 @@ endif
 
 " Palette: {{{2
 
-let s:fg        = g:dracula#palette.fg
+let s:fg        = g:doki-theme#palette.fg
 
-let s:bglighter = g:dracula#palette.bglighter
-let s:bglight   = g:dracula#palette.bglight
-let s:bg        = g:dracula#palette.bg
-let s:bgdark    = g:dracula#palette.bgdark
-let s:bgdarker  = g:dracula#palette.bgdarker
+let s:bglighter = g:doki-theme#palette.bglighter
+let s:bglight   = g:doki-theme#palette.bglight
+let s:bg        = g:doki-theme#palette.bg
+let s:bgdark    = g:doki-theme#palette.bgdark
+let s:bgdarker  = g:doki-theme#palette.bgdarker
 
-let s:comment   = g:dracula#palette.comment
-let s:selection = g:dracula#palette.selection
-let s:subtle    = g:dracula#palette.subtle
+let s:comment   = g:doki-theme#palette.comment
+let s:selection = g:doki-theme#palette.selection
+let s:subtle    = g:doki-theme#palette.subtle
 
-let s:cyan      = g:dracula#palette.cyan
-let s:green     = g:dracula#palette.green
-let s:orange    = g:dracula#palette.orange
-let s:pink      = g:dracula#palette.pink
-let s:purple    = g:dracula#palette.purple
-let s:red       = g:dracula#palette.red
-let s:yellow    = g:dracula#palette.yellow
+let s:cyan      = g:doki-theme#palette.cyan
+let s:green     = g:doki-theme#palette.green
+let s:orange    = g:doki-theme#palette.orange
+let s:pink      = g:doki-theme#palette.pink
+let s:purple    = g:doki-theme#palette.purple
+let s:red       = g:doki-theme#palette.red
+let s:yellow    = g:doki-theme#palette.yellow
 
 let s:none      = ['NONE', 'NONE']
 
 if has('nvim')
   for s:i in range(16)
-    let g:terminal_color_{s:i} = g:dracula#palette['color_' . s:i]
+    let g:terminal_color_{s:i} = g:doki-theme#palette['color_' . s:i]
   endfor
 endif
 
 if has('terminal')
   let g:terminal_ansi_colors = []
   for s:i in range(16)
-    call add(g:terminal_ansi_colors, g:dracula#palette['color_' . s:i])
+    call add(g:terminal_ansi_colors, g:doki-theme#palette['color_' . s:i])
   endfor
 endif
 
 " }}}2
 " User Configuration: {{{2
 
-if !exists('g:dracula_bold')
-  let g:dracula_bold = 1
+if !exists('g:doki-theme_bold')
+  let g:doki-theme_bold = 1
 endif
 
-if !exists('g:dracula_italic')
-  let g:dracula_italic = 1
+if !exists('g:doki-theme_italic')
+  let g:doki-theme_italic = 1
 endif
 
-if !exists('g:dracula_underline')
-  let g:dracula_underline = 1
+if !exists('g:doki-theme_underline')
+  let g:doki-theme_underline = 1
 endif
 
-if !exists('g:dracula_undercurl') && g:dracula_underline != 0
-  let g:dracula_undercurl = 1
+if !exists('g:doki-theme_undercurl') && g:doki-theme_underline != 0
+  let g:doki-theme_undercurl = 1
 endif
 
-if !exists('g:dracula_inverse')
-  let g:dracula_inverse = 1
+if !exists('g:doki-theme_inverse')
+  let g:doki-theme_inverse = 1
 endif
 
-if !exists('g:dracula_colorterm')
-  let g:dracula_colorterm = 1
+if !exists('g:doki-theme_colorterm')
+  let g:doki-theme_colorterm = 1
 endif
 
 "}}}2
 " Script Helpers: {{{2
 
 let s:attrs = {
-      \ 'bold': g:dracula_bold == 1 ? 'bold' : 0,
-      \ 'italic': g:dracula_italic == 1 ? 'italic' : 0,
-      \ 'underline': g:dracula_underline == 1 ? 'underline' : 0,
-      \ 'undercurl': g:dracula_undercurl == 1 ? 'undercurl' : 0,
-      \ 'inverse': g:dracula_inverse == 1 ? 'inverse' : 0,
+      \ 'bold': g:doki-theme_bold == 1 ? 'bold' : 0,
+      \ 'italic': g:doki-theme_italic == 1 ? 'italic' : 0,
+      \ 'underline': g:doki-theme_underline == 1 ? 'underline' : 0,
+      \ 'undercurl': g:doki-theme_undercurl == 1 ? 'undercurl' : 0,
+      \ 'inverse': g:doki-theme_inverse == 1 ? 'inverse' : 0,
       \}
 
 function! s:h(scope, fg, ...) " bg, attr_list, special
@@ -199,7 +199,7 @@ call s:h('DraculaDiffDelete', s:red, s:bgdark)
 set background=dark
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:dracula_colorterm || has('gui_running') ? s:bg : s:none )
+call s:h('Normal', s:fg, g:doki-theme_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
