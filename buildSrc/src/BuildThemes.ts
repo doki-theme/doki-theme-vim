@@ -10,6 +10,8 @@ const path = require('path');
 
 const repoDirectory = path.resolve(__dirname, '..', '..');
 
+const colorsDirectory
+
 const fs = require('fs');
 
 const masterThemeDefinitionDirectoryPath =
