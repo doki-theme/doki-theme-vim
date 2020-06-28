@@ -80,7 +80,7 @@ endif
 "}}}2
 " Script Helpers: 
 
-let s:attrs = 
+let s:attrs = {
       \ 'bold': g:darkness-dark_bold == 1 ? 'bold' : 0,
       \ 'italic': g:darkness-dark_italic == 1 ? 'italic' : 0,
       \ 'underline': g:darkness-dark_underline == 1 ? 'underline' : 0,

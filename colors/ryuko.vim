@@ -80,7 +80,7 @@ endif
 "}}}2
 " Script Helpers: 
 
-let s:attrs = 
+let s:attrs = {
       \ 'bold': g:ryuko_bold == 1 ? 'bold' : 0,
       \ 'italic': g:ryuko_italic == 1 ? 'italic' : 0,
       \ 'underline': g:ryuko_underline == 1 ? 'underline' : 0,

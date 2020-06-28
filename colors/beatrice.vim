@@ -80,7 +80,7 @@ endif
 "}}}2
 " Script Helpers: 
 
-let s:attrs = 
+let s:attrs = {
       \ 'bold': g:beatrice_bold == 1 ? 'bold' : 0,
       \ 'italic': g:beatrice_italic == 1 ? 'italic' : 0,
       \ 'underline': g:beatrice_underline == 1 ? 'underline' : 0,

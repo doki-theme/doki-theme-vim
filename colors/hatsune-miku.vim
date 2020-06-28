@@ -80,7 +80,7 @@ endif
 "}}}2
 " Script Helpers: 
 
-let s:attrs = 
+let s:attrs = {
       \ 'bold': g:hatsune-miku_bold == 1 ? 'bold' : 0,
       \ 'italic': g:hatsune-miku_italic == 1 ? 'italic' : 0,
       \ 'underline': g:hatsune-miku_underline == 1 ? 'underline' : 0,

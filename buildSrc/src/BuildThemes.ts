@@ -250,7 +250,7 @@ function fillInTemplateScript(
 ) {
   return templateToFillIn.split('\n')
     .map(line => {
-      return line.split("").reduce((accum, next) => {
+      const reduce = line.split("").reduce((accum, next) => {
         if (accum.currentTemplate) {
           if(next === '}' && accum.currentTemplate.endsWith('}')) {
             // evaluate Template
@@ -281,7 +281,8 @@ function fillInTemplateScript(
         currentTemplate: '',
         stagingTemplate: '',
         line: '',
-      }).line;
+      });
+      return reduce.line + reduce.stagingTemplate || reduce.currentTemplate;
     }).join('\n')
 
 }
