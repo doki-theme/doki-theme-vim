@@ -225,7 +225,7 @@ function buildVimAutoLoadScript(
 function evaluateTemplate(
   dokiThemeDefinition: MasterDokiThemeDefinition,
   dokiTemplateDefinitions: DokiThemeDefinitions,
-  vimAutoLoadScript: string
+  vimAutoLoadScript: string,
 ) {
   const namedColors = constructNamedColorTemplate(
     dokiThemeDefinition, dokiTemplateDefinitions
@@ -236,6 +236,7 @@ function evaluateTemplate(
     return fillInTemplateScript(
       vimAutoLoadScript,
       {
+        ...namedColors,
         themeName
       }
     );

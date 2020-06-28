@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:darkness-dark#palette           = {}
-let g:darkness-dark#palette.fg        = ['#F8F8F2', 253]
+let g:darkness-dark#palette.fg        = ['#c3c3c3', 253]
 
-let g:darkness-dark#palette.bglighter = ['#424450', 238]
-let g:darkness-dark#palette.bglight   = ['#343746', 237]
-let g:darkness-dark#palette.bg        = ['#282A36', 236]
-let g:darkness-dark#palette.bgdark    = ['#21222C', 235]
-let g:darkness-dark#palette.bgdarker  = ['#191A21', 234]
+let g:darkness-dark#palette.bglighter = ['#080703', 238]
+let g:darkness-dark#palette.bglight   = ['#080703', 237]
+let g:darkness-dark#palette.bg        = ['#080703', 236]
+let g:darkness-dark#palette.bgdark    = ['#080703', 235]
+let g:darkness-dark#palette.bgdarker  = ['#080703', 234]
 
 let g:darkness-dark#palette.comment   = ['#6272A4',  61]
 let g:darkness-dark#palette.selection = ['#44475A', 239]

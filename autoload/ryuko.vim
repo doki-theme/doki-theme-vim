@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:ryuko#palette           = {}
-let g:ryuko#palette.fg        = ['#F8F8F2', 253]
+let g:ryuko#palette.fg        = ['#bbbbbb', 253]
 
-let g:ryuko#palette.bglighter = ['#424450', 238]
-let g:ryuko#palette.bglight   = ['#343746', 237]
-let g:ryuko#palette.bg        = ['#282A36', 236]
-let g:ryuko#palette.bgdark    = ['#21222C', 235]
-let g:ryuko#palette.bgdarker  = ['#191A21', 234]
+let g:ryuko#palette.bglighter = ['#2f363c', 238]
+let g:ryuko#palette.bglight   = ['#2f363c', 237]
+let g:ryuko#palette.bg        = ['#2f363c', 236]
+let g:ryuko#palette.bgdark    = ['#2f363c', 235]
+let g:ryuko#palette.bgdarker  = ['#2f363c', 234]
 
 let g:ryuko#palette.comment   = ['#6272A4',  61]
 let g:ryuko#palette.selection = ['#44475A', 239]

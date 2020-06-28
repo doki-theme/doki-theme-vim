@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:konata#palette           = {}
-let g:konata#palette.fg        = ['#F8F8F2', 253]
+let g:konata#palette.fg        = ['#f3edff', 253]
 
-let g:konata#palette.bglighter = ['#424450', 238]
-let g:konata#palette.bglight   = ['#343746', 237]
-let g:konata#palette.bg        = ['#282A36', 236]
-let g:konata#palette.bgdark    = ['#21222C', 235]
-let g:konata#palette.bgdarker  = ['#191A21', 234]
+let g:konata#palette.bglighter = ['#6192ee', 238]
+let g:konata#palette.bglight   = ['#6192ee', 237]
+let g:konata#palette.bg        = ['#6192ee', 236]
+let g:konata#palette.bgdark    = ['#6192ee', 235]
+let g:konata#palette.bgdarker  = ['#6192ee', 234]
 
 let g:konata#palette.comment   = ['#6272A4',  61]
 let g:konata#palette.selection = ['#44475A', 239]

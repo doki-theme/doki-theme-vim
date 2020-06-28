@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:yuri-light#palette           = {}
-let g:yuri-light#palette.fg        = ['#F8F8F2', 253]
+let g:yuri-light#palette.fg        = ['#252427', 253]
 
-let g:yuri-light#palette.bglighter = ['#424450', 238]
-let g:yuri-light#palette.bglight   = ['#343746', 237]
-let g:yuri-light#palette.bg        = ['#282A36', 236]
-let g:yuri-light#palette.bgdark    = ['#21222C', 235]
-let g:yuri-light#palette.bgdarker  = ['#191A21', 234]
+let g:yuri-light#palette.bglighter = ['#f7f3ff', 238]
+let g:yuri-light#palette.bglight   = ['#f7f3ff', 237]
+let g:yuri-light#palette.bg        = ['#f7f3ff', 236]
+let g:yuri-light#palette.bgdark    = ['#f7f3ff', 235]
+let g:yuri-light#palette.bgdarker  = ['#f7f3ff', 234]
 
 let g:yuri-light#palette.comment   = ['#6272A4',  61]
 let g:yuri-light#palette.selection = ['#44475A', 239]

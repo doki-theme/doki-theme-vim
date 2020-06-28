@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:satsuki#palette           = {}
-let g:satsuki#palette.fg        = ['#F8F8F2', 253]
+let g:satsuki#palette.fg        = ['#252427', 253]
 
-let g:satsuki#palette.bglighter = ['#424450', 238]
-let g:satsuki#palette.bglight   = ['#343746', 237]
-let g:satsuki#palette.bg        = ['#282A36', 236]
-let g:satsuki#palette.bgdark    = ['#21222C', 235]
-let g:satsuki#palette.bgdarker  = ['#191A21', 234]
+let g:satsuki#palette.bglighter = ['#eae9ee', 238]
+let g:satsuki#palette.bglight   = ['#eae9ee', 237]
+let g:satsuki#palette.bg        = ['#eae9ee', 236]
+let g:satsuki#palette.bgdark    = ['#eae9ee', 235]
+let g:satsuki#palette.bgdarker  = ['#eae9ee', 234]
 
 let g:satsuki#palette.comment   = ['#6272A4',  61]
 let g:satsuki#palette.selection = ['#44475A', 239]

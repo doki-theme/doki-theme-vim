@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:asuna#palette           = {}
-let g:asuna#palette.fg        = ['#F8F8F2', 253]
+let g:asuna#palette.fg        = ['#252427', 253]
 
-let g:asuna#palette.bglighter = ['#424450', 238]
-let g:asuna#palette.bglight   = ['#343746', 237]
-let g:asuna#palette.bg        = ['#282A36', 236]
-let g:asuna#palette.bgdark    = ['#21222C', 235]
-let g:asuna#palette.bgdarker  = ['#191A21', 234]
+let g:asuna#palette.bglighter = ['#ffffff', 238]
+let g:asuna#palette.bglight   = ['#ffffff', 237]
+let g:asuna#palette.bg        = ['#ffffff', 236]
+let g:asuna#palette.bgdark    = ['#ffffff', 235]
+let g:asuna#palette.bgdarker  = ['#ffffff', 234]
 
 let g:asuna#palette.comment   = ['#6272A4',  61]
 let g:asuna#palette.selection = ['#44475A', 239]

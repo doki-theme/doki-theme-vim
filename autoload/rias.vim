@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:rias#palette           = {}
-let g:rias#palette.fg        = ['#F8F8F2', 253]
+let g:rias#palette.fg        = ['#fafafa', 253]
 
-let g:rias#palette.bglighter = ['#424450', 238]
-let g:rias#palette.bglight   = ['#343746', 237]
-let g:rias#palette.bg        = ['#282A36', 236]
-let g:rias#palette.bgdark    = ['#21222C', 235]
-let g:rias#palette.bgdarker  = ['#191A21', 234]
+let g:rias#palette.bglighter = ['#401112', 238]
+let g:rias#palette.bglight   = ['#401112', 237]
+let g:rias#palette.bg        = ['#401112', 236]
+let g:rias#palette.bgdark    = ['#401112', 235]
+let g:rias#palette.bgdarker  = ['#401112', 234]
 
 let g:rias#palette.comment   = ['#6272A4',  61]
 let g:rias#palette.selection = ['#44475A', 239]

@@ -1,13 +1,13 @@
 " Palette: {{{
 
 let g:{{themeName}}#palette           = {}
-let g:{{themeName}}#palette.fg        = ['#F8F8F2', 253]
+let g:{{themeName}}#palette.fg        = ['{{foregroundColor}}', 253]
 
-let g:{{themeName}}#palette.bglighter = ['#424450', 238]
-let g:{{themeName}}#palette.bglight   = ['#343746', 237]
-let g:{{themeName}}#palette.bg        = ['#282A36', 236]
-let g:{{themeName}}#palette.bgdark    = ['#21222C', 235]
-let g:{{themeName}}#palette.bgdarker  = ['#191A21', 234]
+let g:{{themeName}}#palette.bglighter = ['{{baseBackground}}', 238]
+let g:{{themeName}}#palette.bglight   = ['{{baseBackground}}', 237]
+let g:{{themeName}}#palette.bg        = ['{{baseBackground}}', 236]
+let g:{{themeName}}#palette.bgdark    = ['{{baseBackground}}', 235]
+let g:{{themeName}}#palette.bgdarker  = ['{{baseBackground}}', 234]
 
 let g:{{themeName}}#palette.comment   = ['#6272A4',  61]
 let g:{{themeName}}#palette.selection = ['#44475A', 239]

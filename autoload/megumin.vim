@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:megumin#palette           = {}
-let g:megumin#palette.fg        = ['#F8F8F2', 253]
+let g:megumin#palette.fg        = ['#bbbbbb', 253]
 
-let g:megumin#palette.bglighter = ['#424450', 238]
-let g:megumin#palette.bglight   = ['#343746', 237]
-let g:megumin#palette.bg        = ['#282A36', 236]
-let g:megumin#palette.bgdark    = ['#21222C', 235]
-let g:megumin#palette.bgdarker  = ['#191A21', 234]
+let g:megumin#palette.bglighter = ['#271c21', 238]
+let g:megumin#palette.bglight   = ['#271c21', 237]
+let g:megumin#palette.bg        = ['#271c21', 236]
+let g:megumin#palette.bgdark    = ['#271c21', 235]
+let g:megumin#palette.bgdarker  = ['#271c21', 234]
 
 let g:megumin#palette.comment   = ['#6272A4',  61]
 let g:megumin#palette.selection = ['#44475A', 239]

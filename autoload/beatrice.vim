@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:beatrice#palette           = {}
-let g:beatrice#palette.fg        = ['#F8F8F2', 253]
+let g:beatrice#palette.fg        = ['#000000', 253]
 
-let g:beatrice#palette.bglighter = ['#424450', 238]
-let g:beatrice#palette.bglight   = ['#343746', 237]
-let g:beatrice#palette.bg        = ['#282A36', 236]
-let g:beatrice#palette.bgdark    = ['#21222C', 235]
-let g:beatrice#palette.bgdarker  = ['#191A21', 234]
+let g:beatrice#palette.bglighter = ['#ffe4f1', 238]
+let g:beatrice#palette.bglight   = ['#ffe4f1', 237]
+let g:beatrice#palette.bg        = ['#ffe4f1', 236]
+let g:beatrice#palette.bgdark    = ['#ffe4f1', 235]
+let g:beatrice#palette.bgdarker  = ['#ffe4f1', 234]
 
 let g:beatrice#palette.comment   = ['#6272A4',  61]
 let g:beatrice#palette.selection = ['#44475A', 239]
