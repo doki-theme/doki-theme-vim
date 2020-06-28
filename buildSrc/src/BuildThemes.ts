@@ -15,6 +15,12 @@ const fs = require('fs');
 const masterThemeDefinitionDirectoryPath =
   path.resolve(repoDirectory, 'masterThemes');
 
+const colorDirectoryPath =
+  path.resolve(repoDirectory, 'colors');
+
+const autoLoadDirectoryPath =
+  path.resolve(repoDirectory, 'autoload');
+
 const vimDefinitionDirectoryPath = path.resolve(
         '.',
   "themes",
@@ -360,6 +366,17 @@ walkDir(vimDefinitionDirectoryPath)
       );
   }).then(dokiThemes => {
   // write things for extension
+  dokiThemes.forEach(dokiTheme => {
+    const dokiThemeVimScriptName = `${
+      dokiTheme.definition.name.replace(' ', '-').toLowerCase()
+    }.vim`;
+
+    // write Vim Color Script
+    fs.writeFileSync(path.resolve(colorDirectoryPath, dokiThemeVimScriptName), 'yeet!');
+
+    // write Vim Auto load Script
+    fs.writeFileSync(path.resolve(autoLoadDirectoryPath, dokiThemeVimScriptName), 'yeet!');
+  })
 
 })
   .then(() => {
