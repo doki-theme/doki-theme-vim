@@ -117,63 +117,63 @@ endfunction
 "}}}2
 "Highlight Groups: {{{2
 
-call s:h('DraculaBgLight', s:none, s:bglight)
-call s:h('DraculaBgLighter', s:none, s:bglighter)
-call s:h('DraculaBgDark', s:none, s:bgdark)
-call s:h('DraculaBgDarker', s:none, s:bgdarker)
+call s:h('{{themeProperName}}BgLight', s:none, s:bglight)
+call s:h('{{themeProperName}}BgLighter', s:none, s:bglighter)
+call s:h('{{themeProperName}}BgDark', s:none, s:bgdark)
+call s:h('{{themeProperName}}BgDarker', s:none, s:bgdarker)
 
-call s:h('DraculaFg', s:fg)
-call s:h('DraculaFgUnderline', s:fg, s:none, [s:attrs.underline])
-call s:h('DraculaFgBold', s:fg, s:none, [s:attrs.bold])
+call s:h('{{themeProperName}}Fg', s:fg)
+call s:h('{{themeProperName}}FgUnderline', s:fg, s:none, [s:attrs.underline])
+call s:h('{{themeProperName}}FgBold', s:fg, s:none, [s:attrs.bold])
 
-call s:h('DraculaComment', s:comment)
-call s:h('DraculaCommentBold', s:comment, s:none, [s:attrs.bold])
+call s:h('{{themeProperName}}Comment', s:comment)
+call s:h('{{themeProperName}}CommentBold', s:comment, s:none, [s:attrs.bold])
 
-call s:h('DraculaSelection', s:none, s:selection)
+call s:h('{{themeProperName}}Selection', s:none, s:selection)
 
-call s:h('DraculaSubtle', s:subtle)
+call s:h('{{themeProperName}}Subtle', s:subtle)
 
-call s:h('DraculaCyan', s:cyan)
-call s:h('DraculaCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('{{themeProperName}}Cyan', s:cyan)
+call s:h('{{themeProperName}}CyanItalic', s:cyan, s:none, [s:attrs.italic])
 
-call s:h('DraculaGreen', s:green)
-call s:h('DraculaGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('DraculaGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('DraculaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('{{themeProperName}}Green', s:green)
+call s:h('{{themeProperName}}GreenBold', s:green, s:none, [s:attrs.bold])
+call s:h('{{themeProperName}}GreenItalic', s:green, s:none, [s:attrs.italic])
+call s:h('{{themeProperName}}GreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('DraculaOrange', s:orange)
-call s:h('DraculaOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('DraculaOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('DraculaOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('DraculaOrangeInverse', s:bg, s:orange)
+call s:h('{{themeProperName}}Orange', s:orange)
+call s:h('{{themeProperName}}OrangeBold', s:orange, s:none, [s:attrs.bold])
+call s:h('{{themeProperName}}OrangeItalic', s:orange, s:none, [s:attrs.italic])
+call s:h('{{themeProperName}}OrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('{{themeProperName}}OrangeInverse', s:bg, s:orange)
 
-call s:h('DraculaPink', s:pink)
-call s:h('DraculaPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('{{themeProperName}}Pink', s:pink)
+call s:h('{{themeProperName}}PinkItalic', s:pink, s:none, [s:attrs.italic])
 
-call s:h('DraculaPurple', s:purple)
-call s:h('DraculaPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('DraculaPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('{{themeProperName}}Purple', s:purple)
+call s:h('{{themeProperName}}PurpleBold', s:purple, s:none, [s:attrs.bold])
+call s:h('{{themeProperName}}PurpleItalic', s:purple, s:none, [s:attrs.italic])
 
-call s:h('DraculaRed', s:red)
-call s:h('DraculaRedInverse', s:fg, s:red)
+call s:h('{{themeProperName}}Red', s:red)
+call s:h('{{themeProperName}}RedInverse', s:fg, s:red)
 
-call s:h('DraculaYellow', s:yellow)
-call s:h('DraculaYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('{{themeProperName}}Yellow', s:yellow)
+call s:h('{{themeProperName}}YellowItalic', s:yellow, s:none, [s:attrs.italic])
 
-call s:h('DraculaError', s:red, s:none, [], s:red)
+call s:h('{{themeProperName}}Error', s:red, s:none, [], s:red)
 
-call s:h('DraculaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('DraculaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('DraculaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('{{themeProperName}}ErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
+call s:h('{{themeProperName}}WarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
+call s:h('{{themeProperName}}InfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
 
-call s:h('DraculaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
-call s:h('DraculaBoundary', s:comment, s:bgdark)
-call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('{{themeProperName}}Todo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('{{themeProperName}}Search', s:green, s:none, [s:attrs.inverse])
+call s:h('{{themeProperName}}Boundary', s:comment, s:bgdark)
+call s:h('{{themeProperName}}Link', s:cyan, s:none, [s:attrs.underline])
 
-call s:h('DraculaDiffChange', s:orange, s:none)
-call s:h('DraculaDiffText', s:bg, s:orange)
-call s:h('DraculaDiffDelete', s:red, s:bgdark)
+call s:h('{{themeProperName}}DiffChange', s:orange, s:none)
+call s:h('{{themeProperName}}DiffText', s:bg, s:orange)
+call s:h('{{themeProperName}}DiffDelete', s:red, s:bgdark)
 
 " }}}2
 
@@ -191,38 +191,38 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  DraculaBgDark
+hi! link ColorColumn  {{themeProperName}}BgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr DraculaYellow
-hi! link DiffAdd      DraculaGreen
+hi! link CursorLineNr {{themeProperName}}Yellow
+hi! link DiffAdd      {{themeProperName}}Green
 hi! link DiffAdded    DiffAdd
-hi! link DiffChange   DraculaDiffChange
-hi! link DiffDelete   DraculaDiffDelete
+hi! link DiffChange   {{themeProperName}}DiffChange
+hi! link DiffDelete   {{themeProperName}}DiffDelete
 hi! link DiffRemoved  DiffDelete
-hi! link DiffText     DraculaDiffText
-hi! link Directory    DraculaPurpleBold
-hi! link ErrorMsg     DraculaRedInverse
-hi! link FoldColumn   DraculaSubtle
-hi! link Folded       DraculaBoundary
-hi! link IncSearch    DraculaOrangeInverse
+hi! link DiffText     {{themeProperName}}DiffText
+hi! link Directory    {{themeProperName}}PurpleBold
+hi! link ErrorMsg     {{themeProperName}}RedInverse
+hi! link FoldColumn   {{themeProperName}}Subtle
+hi! link Folded       {{themeProperName}}Boundary
+hi! link IncSearch    {{themeProperName}}OrangeInverse
 call s:h('LineNr', s:comment)
-hi! link MoreMsg      DraculaFgBold
-hi! link NonText      DraculaSubtle
-hi! link Pmenu        DraculaBgDark
-hi! link PmenuSbar    DraculaBgDark
-hi! link PmenuSel     DraculaSelection
-hi! link PmenuThumb   DraculaSelection
-hi! link Question     DraculaFgBold
-hi! link Search       DraculaSearch
+hi! link MoreMsg      {{themeProperName}}FgBold
+hi! link NonText      {{themeProperName}}Subtle
+hi! link Pmenu        {{themeProperName}}BgDark
+hi! link PmenuSbar    {{themeProperName}}BgDark
+hi! link PmenuSel     {{themeProperName}}Selection
+hi! link PmenuThumb   {{themeProperName}}Selection
+hi! link Question     {{themeProperName}}FgBold
+hi! link Search       {{themeProperName}}Search
 call s:h('SignColumn', s:comment)
-hi! link TabLine      DraculaBoundary
-hi! link TabLineFill  DraculaBgDarker
+hi! link TabLine      {{themeProperName}}Boundary
+hi! link TabLineFill  {{themeProperName}}BgDarker
 hi! link TabLineSel   Normal
-hi! link Title        DraculaGreenBold
-hi! link VertSplit    DraculaBoundary
-hi! link Visual       DraculaSelection
+hi! link Title        {{themeProperName}}GreenBold
+hi! link VertSplit    {{themeProperName}}Boundary
+hi! link Visual       {{themeProperName}}Selection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   DraculaOrangeInverse
+hi! link WarningMsg   {{themeProperName}}OrangeInverse
 
 " }}}
 " Syntax: {{{
@@ -233,67 +233,67 @@ call s:h('Conceal', s:cyan, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
-  hi! link SpecialKey DraculaRed
-  hi! link LspDiagnosticsUnderline DraculaFgUnderline
-  hi! link LspDiagnosticsInformation DraculaCyan
-  hi! link LspDiagnosticsHint DraculaCyan
-  hi! link LspDiagnosticsError DraculaError
-  hi! link LspDiagnosticsWarning DraculaOrange
-  hi! link LspDiagnosticsUnderlineError DraculaErrorLine
-  hi! link LspDiagnosticsUnderlineHint DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineInformation DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineWarning DraculaWarnLine
+  hi! link SpecialKey {{themeProperName}}Red
+  hi! link LspDiagnosticsUnderline {{themeProperName}}FgUnderline
+  hi! link LspDiagnosticsInformation {{themeProperName}}Cyan
+  hi! link LspDiagnosticsHint {{themeProperName}}Cyan
+  hi! link LspDiagnosticsError {{themeProperName}}Error
+  hi! link LspDiagnosticsWarning {{themeProperName}}Orange
+  hi! link LspDiagnosticsUnderlineError {{themeProperName}}ErrorLine
+  hi! link LspDiagnosticsUnderlineHint {{themeProperName}}InfoLine
+  hi! link LspDiagnosticsUnderlineInformation {{themeProperName}}InfoLine
+  hi! link LspDiagnosticsUnderlineWarning {{themeProperName}}WarnLine
 else
-  hi! link SpecialKey DraculaSubtle
+  hi! link SpecialKey {{themeProperName}}Subtle
 endif
 
-hi! link Comment DraculaComment
-hi! link Underlined DraculaFgUnderline
-hi! link Todo DraculaTodo
+hi! link Comment {{themeProperName}}Comment
+hi! link Underlined {{themeProperName}}FgUnderline
+hi! link Todo {{themeProperName}}Todo
 
-hi! link Error DraculaError
-hi! link SpellBad DraculaErrorLine
-hi! link SpellLocal DraculaWarnLine
-hi! link SpellCap DraculaInfoLine
-hi! link SpellRare DraculaInfoLine
+hi! link Error {{themeProperName}}Error
+hi! link SpellBad {{themeProperName}}ErrorLine
+hi! link SpellLocal {{themeProperName}}WarnLine
+hi! link SpellCap {{themeProperName}}InfoLine
+hi! link SpellRare {{themeProperName}}InfoLine
 
-hi! link Constant DraculaPurple
-hi! link String DraculaYellow
-hi! link Character DraculaPink
+hi! link Constant {{themeProperName}}Purple
+hi! link String {{themeProperName}}Yellow
+hi! link Character {{themeProperName}}Pink
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
-hi! link Identifier DraculaFg
-hi! link Function DraculaGreen
+hi! link Identifier {{themeProperName}}Fg
+hi! link Function {{themeProperName}}Green
 
-hi! link Statement DraculaPink
-hi! link Conditional DraculaPink
-hi! link Repeat DraculaPink
-hi! link Label DraculaPink
-hi! link Operator DraculaPink
-hi! link Keyword DraculaPink
-hi! link Exception DraculaPink
+hi! link Statement {{themeProperName}}Pink
+hi! link Conditional {{themeProperName}}Pink
+hi! link Repeat {{themeProperName}}Pink
+hi! link Label {{themeProperName}}Pink
+hi! link Operator {{themeProperName}}Pink
+hi! link Keyword {{themeProperName}}Pink
+hi! link Exception {{themeProperName}}Pink
 
-hi! link PreProc DraculaPink
-hi! link Include DraculaPink
-hi! link Define DraculaPink
-hi! link Macro DraculaPink
-hi! link PreCondit DraculaPink
-hi! link StorageClass DraculaPink
-hi! link Structure DraculaPink
-hi! link Typedef DraculaPink
+hi! link PreProc {{themeProperName}}Pink
+hi! link Include {{themeProperName}}Pink
+hi! link Define {{themeProperName}}Pink
+hi! link Macro {{themeProperName}}Pink
+hi! link PreCondit {{themeProperName}}Pink
+hi! link StorageClass {{themeProperName}}Pink
+hi! link Structure {{themeProperName}}Pink
+hi! link Typedef {{themeProperName}}Pink
 
-hi! link Type DraculaCyanItalic
+hi! link Type {{themeProperName}}CyanItalic
 
-hi! link Delimiter DraculaFg
+hi! link Delimiter {{themeProperName}}Fg
 
-hi! link Special DraculaPink
-hi! link SpecialComment DraculaCyanItalic
-hi! link Tag DraculaCyan
-hi! link helpHyperTextJump DraculaLink
-hi! link helpCommand DraculaPurple
-hi! link helpExample DraculaGreen
+hi! link Special {{themeProperName}}Pink
+hi! link SpecialComment {{themeProperName}}CyanItalic
+hi! link Tag {{themeProperName}}Cyan
+hi! link helpHyperTextJump {{themeProperName}}Link
+hi! link helpCommand {{themeProperName}}Purple
+hi! link helpExample {{themeProperName}}Green
 hi! link helpBacktick Special
 
 "}}}

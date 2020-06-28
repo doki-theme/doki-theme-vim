@@ -117,63 +117,63 @@ endfunction
 "}}}2
 "Highlight Groups: 
 
-call s:h('DraculaBgLight', s:none, s:bglight)
-call s:h('DraculaBgLighter', s:none, s:bglighter)
-call s:h('DraculaBgDark', s:none, s:bgdark)
-call s:h('DraculaBgDarker', s:none, s:bgdarker)
+call s:h('YuriLightBgLight', s:none, s:bglight)
+call s:h('YuriLightBgLighter', s:none, s:bglighter)
+call s:h('YuriLightBgDark', s:none, s:bgdark)
+call s:h('YuriLightBgDarker', s:none, s:bgdarker)
 
-call s:h('DraculaFg', s:fg)
-call s:h('DraculaFgUnderline', s:fg, s:none, [s:attrs.underline])
-call s:h('DraculaFgBold', s:fg, s:none, [s:attrs.bold])
+call s:h('YuriLightFg', s:fg)
+call s:h('YuriLightFgUnderline', s:fg, s:none, [s:attrs.underline])
+call s:h('YuriLightFgBold', s:fg, s:none, [s:attrs.bold])
 
-call s:h('DraculaComment', s:comment)
-call s:h('DraculaCommentBold', s:comment, s:none, [s:attrs.bold])
+call s:h('YuriLightComment', s:comment)
+call s:h('YuriLightCommentBold', s:comment, s:none, [s:attrs.bold])
 
-call s:h('DraculaSelection', s:none, s:selection)
+call s:h('YuriLightSelection', s:none, s:selection)
 
-call s:h('DraculaSubtle', s:subtle)
+call s:h('YuriLightSubtle', s:subtle)
 
-call s:h('DraculaCyan', s:cyan)
-call s:h('DraculaCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('YuriLightCyan', s:cyan)
+call s:h('YuriLightCyanItalic', s:cyan, s:none, [s:attrs.italic])
 
-call s:h('DraculaGreen', s:green)
-call s:h('DraculaGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('DraculaGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('DraculaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('YuriLightGreen', s:green)
+call s:h('YuriLightGreenBold', s:green, s:none, [s:attrs.bold])
+call s:h('YuriLightGreenItalic', s:green, s:none, [s:attrs.italic])
+call s:h('YuriLightGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('DraculaOrange', s:orange)
-call s:h('DraculaOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('DraculaOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('DraculaOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('DraculaOrangeInverse', s:bg, s:orange)
+call s:h('YuriLightOrange', s:orange)
+call s:h('YuriLightOrangeBold', s:orange, s:none, [s:attrs.bold])
+call s:h('YuriLightOrangeItalic', s:orange, s:none, [s:attrs.italic])
+call s:h('YuriLightOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('YuriLightOrangeInverse', s:bg, s:orange)
 
-call s:h('DraculaPink', s:pink)
-call s:h('DraculaPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('YuriLightPink', s:pink)
+call s:h('YuriLightPinkItalic', s:pink, s:none, [s:attrs.italic])
 
-call s:h('DraculaPurple', s:purple)
-call s:h('DraculaPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('DraculaPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('YuriLightPurple', s:purple)
+call s:h('YuriLightPurpleBold', s:purple, s:none, [s:attrs.bold])
+call s:h('YuriLightPurpleItalic', s:purple, s:none, [s:attrs.italic])
 
-call s:h('DraculaRed', s:red)
-call s:h('DraculaRedInverse', s:fg, s:red)
+call s:h('YuriLightRed', s:red)
+call s:h('YuriLightRedInverse', s:fg, s:red)
 
-call s:h('DraculaYellow', s:yellow)
-call s:h('DraculaYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('YuriLightYellow', s:yellow)
+call s:h('YuriLightYellowItalic', s:yellow, s:none, [s:attrs.italic])
 
-call s:h('DraculaError', s:red, s:none, [], s:red)
+call s:h('YuriLightError', s:red, s:none, [], s:red)
 
-call s:h('DraculaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('DraculaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('DraculaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('YuriLightErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
+call s:h('YuriLightWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
+call s:h('YuriLightInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
 
-call s:h('DraculaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
-call s:h('DraculaBoundary', s:comment, s:bgdark)
-call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('YuriLightTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('YuriLightSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('YuriLightBoundary', s:comment, s:bgdark)
+call s:h('YuriLightLink', s:cyan, s:none, [s:attrs.underline])
 
-call s:h('DraculaDiffChange', s:orange, s:none)
-call s:h('DraculaDiffText', s:bg, s:orange)
-call s:h('DraculaDiffDelete', s:red, s:bgdark)
+call s:h('YuriLightDiffChange', s:orange, s:none)
+call s:h('YuriLightDiffText', s:bg, s:orange)
+call s:h('YuriLightDiffDelete', s:red, s:bgdark)
 
 " }}}2
 
@@ -191,38 +191,38 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  DraculaBgDark
+hi! link ColorColumn  YuriLightBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr DraculaYellow
-hi! link DiffAdd      DraculaGreen
+hi! link CursorLineNr YuriLightYellow
+hi! link DiffAdd      YuriLightGreen
 hi! link DiffAdded    DiffAdd
-hi! link DiffChange   DraculaDiffChange
-hi! link DiffDelete   DraculaDiffDelete
+hi! link DiffChange   YuriLightDiffChange
+hi! link DiffDelete   YuriLightDiffDelete
 hi! link DiffRemoved  DiffDelete
-hi! link DiffText     DraculaDiffText
-hi! link Directory    DraculaPurpleBold
-hi! link ErrorMsg     DraculaRedInverse
-hi! link FoldColumn   DraculaSubtle
-hi! link Folded       DraculaBoundary
-hi! link IncSearch    DraculaOrangeInverse
+hi! link DiffText     YuriLightDiffText
+hi! link Directory    YuriLightPurpleBold
+hi! link ErrorMsg     YuriLightRedInverse
+hi! link FoldColumn   YuriLightSubtle
+hi! link Folded       YuriLightBoundary
+hi! link IncSearch    YuriLightOrangeInverse
 call s:h('LineNr', s:comment)
-hi! link MoreMsg      DraculaFgBold
-hi! link NonText      DraculaSubtle
-hi! link Pmenu        DraculaBgDark
-hi! link PmenuSbar    DraculaBgDark
-hi! link PmenuSel     DraculaSelection
-hi! link PmenuThumb   DraculaSelection
-hi! link Question     DraculaFgBold
-hi! link Search       DraculaSearch
+hi! link MoreMsg      YuriLightFgBold
+hi! link NonText      YuriLightSubtle
+hi! link Pmenu        YuriLightBgDark
+hi! link PmenuSbar    YuriLightBgDark
+hi! link PmenuSel     YuriLightSelection
+hi! link PmenuThumb   YuriLightSelection
+hi! link Question     YuriLightFgBold
+hi! link Search       YuriLightSearch
 call s:h('SignColumn', s:comment)
-hi! link TabLine      DraculaBoundary
-hi! link TabLineFill  DraculaBgDarker
+hi! link TabLine      YuriLightBoundary
+hi! link TabLineFill  YuriLightBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        DraculaGreenBold
-hi! link VertSplit    DraculaBoundary
-hi! link Visual       DraculaSelection
+hi! link Title        YuriLightGreenBold
+hi! link VertSplit    YuriLightBoundary
+hi! link Visual       YuriLightSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   DraculaOrangeInverse
+hi! link WarningMsg   YuriLightOrangeInverse
 
 " }}}
 " Syntax: 
@@ -233,67 +233,67 @@ call s:h('Conceal', s:cyan, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
-  hi! link SpecialKey DraculaRed
-  hi! link LspDiagnosticsUnderline DraculaFgUnderline
-  hi! link LspDiagnosticsInformation DraculaCyan
-  hi! link LspDiagnosticsHint DraculaCyan
-  hi! link LspDiagnosticsError DraculaError
-  hi! link LspDiagnosticsWarning DraculaOrange
-  hi! link LspDiagnosticsUnderlineError DraculaErrorLine
-  hi! link LspDiagnosticsUnderlineHint DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineInformation DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineWarning DraculaWarnLine
+  hi! link SpecialKey YuriLightRed
+  hi! link LspDiagnosticsUnderline YuriLightFgUnderline
+  hi! link LspDiagnosticsInformation YuriLightCyan
+  hi! link LspDiagnosticsHint YuriLightCyan
+  hi! link LspDiagnosticsError YuriLightError
+  hi! link LspDiagnosticsWarning YuriLightOrange
+  hi! link LspDiagnosticsUnderlineError YuriLightErrorLine
+  hi! link LspDiagnosticsUnderlineHint YuriLightInfoLine
+  hi! link LspDiagnosticsUnderlineInformation YuriLightInfoLine
+  hi! link LspDiagnosticsUnderlineWarning YuriLightWarnLine
 else
-  hi! link SpecialKey DraculaSubtle
+  hi! link SpecialKey YuriLightSubtle
 endif
 
-hi! link Comment DraculaComment
-hi! link Underlined DraculaFgUnderline
-hi! link Todo DraculaTodo
+hi! link Comment YuriLightComment
+hi! link Underlined YuriLightFgUnderline
+hi! link Todo YuriLightTodo
 
-hi! link Error DraculaError
-hi! link SpellBad DraculaErrorLine
-hi! link SpellLocal DraculaWarnLine
-hi! link SpellCap DraculaInfoLine
-hi! link SpellRare DraculaInfoLine
+hi! link Error YuriLightError
+hi! link SpellBad YuriLightErrorLine
+hi! link SpellLocal YuriLightWarnLine
+hi! link SpellCap YuriLightInfoLine
+hi! link SpellRare YuriLightInfoLine
 
-hi! link Constant DraculaPurple
-hi! link String DraculaYellow
-hi! link Character DraculaPink
+hi! link Constant YuriLightPurple
+hi! link String YuriLightYellow
+hi! link Character YuriLightPink
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
-hi! link Identifier DraculaFg
-hi! link Function DraculaGreen
+hi! link Identifier YuriLightFg
+hi! link Function YuriLightGreen
 
-hi! link Statement DraculaPink
-hi! link Conditional DraculaPink
-hi! link Repeat DraculaPink
-hi! link Label DraculaPink
-hi! link Operator DraculaPink
-hi! link Keyword DraculaPink
-hi! link Exception DraculaPink
+hi! link Statement YuriLightPink
+hi! link Conditional YuriLightPink
+hi! link Repeat YuriLightPink
+hi! link Label YuriLightPink
+hi! link Operator YuriLightPink
+hi! link Keyword YuriLightPink
+hi! link Exception YuriLightPink
 
-hi! link PreProc DraculaPink
-hi! link Include DraculaPink
-hi! link Define DraculaPink
-hi! link Macro DraculaPink
-hi! link PreCondit DraculaPink
-hi! link StorageClass DraculaPink
-hi! link Structure DraculaPink
-hi! link Typedef DraculaPink
+hi! link PreProc YuriLightPink
+hi! link Include YuriLightPink
+hi! link Define YuriLightPink
+hi! link Macro YuriLightPink
+hi! link PreCondit YuriLightPink
+hi! link StorageClass YuriLightPink
+hi! link Structure YuriLightPink
+hi! link Typedef YuriLightPink
 
-hi! link Type DraculaCyanItalic
+hi! link Type YuriLightCyanItalic
 
-hi! link Delimiter DraculaFg
+hi! link Delimiter YuriLightFg
 
-hi! link Special DraculaPink
-hi! link SpecialComment DraculaCyanItalic
-hi! link Tag DraculaCyan
-hi! link helpHyperTextJump DraculaLink
-hi! link helpCommand DraculaPurple
-hi! link helpExample DraculaGreen
+hi! link Special YuriLightPink
+hi! link SpecialComment YuriLightCyanItalic
+hi! link Tag YuriLightCyan
+hi! link helpHyperTextJump YuriLightLink
+hi! link helpCommand YuriLightPurple
+hi! link helpExample YuriLightGreen
 hi! link helpBacktick Special
 
 "}}}

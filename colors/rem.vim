@@ -117,63 +117,63 @@ endfunction
 "}}}2
 "Highlight Groups: 
 
-call s:h('DraculaBgLight', s:none, s:bglight)
-call s:h('DraculaBgLighter', s:none, s:bglighter)
-call s:h('DraculaBgDark', s:none, s:bgdark)
-call s:h('DraculaBgDarker', s:none, s:bgdarker)
+call s:h('RemBgLight', s:none, s:bglight)
+call s:h('RemBgLighter', s:none, s:bglighter)
+call s:h('RemBgDark', s:none, s:bgdark)
+call s:h('RemBgDarker', s:none, s:bgdarker)
 
-call s:h('DraculaFg', s:fg)
-call s:h('DraculaFgUnderline', s:fg, s:none, [s:attrs.underline])
-call s:h('DraculaFgBold', s:fg, s:none, [s:attrs.bold])
+call s:h('RemFg', s:fg)
+call s:h('RemFgUnderline', s:fg, s:none, [s:attrs.underline])
+call s:h('RemFgBold', s:fg, s:none, [s:attrs.bold])
 
-call s:h('DraculaComment', s:comment)
-call s:h('DraculaCommentBold', s:comment, s:none, [s:attrs.bold])
+call s:h('RemComment', s:comment)
+call s:h('RemCommentBold', s:comment, s:none, [s:attrs.bold])
 
-call s:h('DraculaSelection', s:none, s:selection)
+call s:h('RemSelection', s:none, s:selection)
 
-call s:h('DraculaSubtle', s:subtle)
+call s:h('RemSubtle', s:subtle)
 
-call s:h('DraculaCyan', s:cyan)
-call s:h('DraculaCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('RemCyan', s:cyan)
+call s:h('RemCyanItalic', s:cyan, s:none, [s:attrs.italic])
 
-call s:h('DraculaGreen', s:green)
-call s:h('DraculaGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('DraculaGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('DraculaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('RemGreen', s:green)
+call s:h('RemGreenBold', s:green, s:none, [s:attrs.bold])
+call s:h('RemGreenItalic', s:green, s:none, [s:attrs.italic])
+call s:h('RemGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('DraculaOrange', s:orange)
-call s:h('DraculaOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('DraculaOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('DraculaOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('DraculaOrangeInverse', s:bg, s:orange)
+call s:h('RemOrange', s:orange)
+call s:h('RemOrangeBold', s:orange, s:none, [s:attrs.bold])
+call s:h('RemOrangeItalic', s:orange, s:none, [s:attrs.italic])
+call s:h('RemOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('RemOrangeInverse', s:bg, s:orange)
 
-call s:h('DraculaPink', s:pink)
-call s:h('DraculaPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('RemPink', s:pink)
+call s:h('RemPinkItalic', s:pink, s:none, [s:attrs.italic])
 
-call s:h('DraculaPurple', s:purple)
-call s:h('DraculaPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('DraculaPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('RemPurple', s:purple)
+call s:h('RemPurpleBold', s:purple, s:none, [s:attrs.bold])
+call s:h('RemPurpleItalic', s:purple, s:none, [s:attrs.italic])
 
-call s:h('DraculaRed', s:red)
-call s:h('DraculaRedInverse', s:fg, s:red)
+call s:h('RemRed', s:red)
+call s:h('RemRedInverse', s:fg, s:red)
 
-call s:h('DraculaYellow', s:yellow)
-call s:h('DraculaYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('RemYellow', s:yellow)
+call s:h('RemYellowItalic', s:yellow, s:none, [s:attrs.italic])
 
-call s:h('DraculaError', s:red, s:none, [], s:red)
+call s:h('RemError', s:red, s:none, [], s:red)
 
-call s:h('DraculaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('DraculaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('DraculaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('RemErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
+call s:h('RemWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
+call s:h('RemInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
 
-call s:h('DraculaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
-call s:h('DraculaBoundary', s:comment, s:bgdark)
-call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('RemTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('RemSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('RemBoundary', s:comment, s:bgdark)
+call s:h('RemLink', s:cyan, s:none, [s:attrs.underline])
 
-call s:h('DraculaDiffChange', s:orange, s:none)
-call s:h('DraculaDiffText', s:bg, s:orange)
-call s:h('DraculaDiffDelete', s:red, s:bgdark)
+call s:h('RemDiffChange', s:orange, s:none)
+call s:h('RemDiffText', s:bg, s:orange)
+call s:h('RemDiffDelete', s:red, s:bgdark)
 
 " }}}2
 
@@ -191,38 +191,38 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  DraculaBgDark
+hi! link ColorColumn  RemBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr DraculaYellow
-hi! link DiffAdd      DraculaGreen
+hi! link CursorLineNr RemYellow
+hi! link DiffAdd      RemGreen
 hi! link DiffAdded    DiffAdd
-hi! link DiffChange   DraculaDiffChange
-hi! link DiffDelete   DraculaDiffDelete
+hi! link DiffChange   RemDiffChange
+hi! link DiffDelete   RemDiffDelete
 hi! link DiffRemoved  DiffDelete
-hi! link DiffText     DraculaDiffText
-hi! link Directory    DraculaPurpleBold
-hi! link ErrorMsg     DraculaRedInverse
-hi! link FoldColumn   DraculaSubtle
-hi! link Folded       DraculaBoundary
-hi! link IncSearch    DraculaOrangeInverse
+hi! link DiffText     RemDiffText
+hi! link Directory    RemPurpleBold
+hi! link ErrorMsg     RemRedInverse
+hi! link FoldColumn   RemSubtle
+hi! link Folded       RemBoundary
+hi! link IncSearch    RemOrangeInverse
 call s:h('LineNr', s:comment)
-hi! link MoreMsg      DraculaFgBold
-hi! link NonText      DraculaSubtle
-hi! link Pmenu        DraculaBgDark
-hi! link PmenuSbar    DraculaBgDark
-hi! link PmenuSel     DraculaSelection
-hi! link PmenuThumb   DraculaSelection
-hi! link Question     DraculaFgBold
-hi! link Search       DraculaSearch
+hi! link MoreMsg      RemFgBold
+hi! link NonText      RemSubtle
+hi! link Pmenu        RemBgDark
+hi! link PmenuSbar    RemBgDark
+hi! link PmenuSel     RemSelection
+hi! link PmenuThumb   RemSelection
+hi! link Question     RemFgBold
+hi! link Search       RemSearch
 call s:h('SignColumn', s:comment)
-hi! link TabLine      DraculaBoundary
-hi! link TabLineFill  DraculaBgDarker
+hi! link TabLine      RemBoundary
+hi! link TabLineFill  RemBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        DraculaGreenBold
-hi! link VertSplit    DraculaBoundary
-hi! link Visual       DraculaSelection
+hi! link Title        RemGreenBold
+hi! link VertSplit    RemBoundary
+hi! link Visual       RemSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   DraculaOrangeInverse
+hi! link WarningMsg   RemOrangeInverse
 
 " }}}
 " Syntax: 
@@ -233,67 +233,67 @@ call s:h('Conceal', s:cyan, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
-  hi! link SpecialKey DraculaRed
-  hi! link LspDiagnosticsUnderline DraculaFgUnderline
-  hi! link LspDiagnosticsInformation DraculaCyan
-  hi! link LspDiagnosticsHint DraculaCyan
-  hi! link LspDiagnosticsError DraculaError
-  hi! link LspDiagnosticsWarning DraculaOrange
-  hi! link LspDiagnosticsUnderlineError DraculaErrorLine
-  hi! link LspDiagnosticsUnderlineHint DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineInformation DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineWarning DraculaWarnLine
+  hi! link SpecialKey RemRed
+  hi! link LspDiagnosticsUnderline RemFgUnderline
+  hi! link LspDiagnosticsInformation RemCyan
+  hi! link LspDiagnosticsHint RemCyan
+  hi! link LspDiagnosticsError RemError
+  hi! link LspDiagnosticsWarning RemOrange
+  hi! link LspDiagnosticsUnderlineError RemErrorLine
+  hi! link LspDiagnosticsUnderlineHint RemInfoLine
+  hi! link LspDiagnosticsUnderlineInformation RemInfoLine
+  hi! link LspDiagnosticsUnderlineWarning RemWarnLine
 else
-  hi! link SpecialKey DraculaSubtle
+  hi! link SpecialKey RemSubtle
 endif
 
-hi! link Comment DraculaComment
-hi! link Underlined DraculaFgUnderline
-hi! link Todo DraculaTodo
+hi! link Comment RemComment
+hi! link Underlined RemFgUnderline
+hi! link Todo RemTodo
 
-hi! link Error DraculaError
-hi! link SpellBad DraculaErrorLine
-hi! link SpellLocal DraculaWarnLine
-hi! link SpellCap DraculaInfoLine
-hi! link SpellRare DraculaInfoLine
+hi! link Error RemError
+hi! link SpellBad RemErrorLine
+hi! link SpellLocal RemWarnLine
+hi! link SpellCap RemInfoLine
+hi! link SpellRare RemInfoLine
 
-hi! link Constant DraculaPurple
-hi! link String DraculaYellow
-hi! link Character DraculaPink
+hi! link Constant RemPurple
+hi! link String RemYellow
+hi! link Character RemPink
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
-hi! link Identifier DraculaFg
-hi! link Function DraculaGreen
+hi! link Identifier RemFg
+hi! link Function RemGreen
 
-hi! link Statement DraculaPink
-hi! link Conditional DraculaPink
-hi! link Repeat DraculaPink
-hi! link Label DraculaPink
-hi! link Operator DraculaPink
-hi! link Keyword DraculaPink
-hi! link Exception DraculaPink
+hi! link Statement RemPink
+hi! link Conditional RemPink
+hi! link Repeat RemPink
+hi! link Label RemPink
+hi! link Operator RemPink
+hi! link Keyword RemPink
+hi! link Exception RemPink
 
-hi! link PreProc DraculaPink
-hi! link Include DraculaPink
-hi! link Define DraculaPink
-hi! link Macro DraculaPink
-hi! link PreCondit DraculaPink
-hi! link StorageClass DraculaPink
-hi! link Structure DraculaPink
-hi! link Typedef DraculaPink
+hi! link PreProc RemPink
+hi! link Include RemPink
+hi! link Define RemPink
+hi! link Macro RemPink
+hi! link PreCondit RemPink
+hi! link StorageClass RemPink
+hi! link Structure RemPink
+hi! link Typedef RemPink
 
-hi! link Type DraculaCyanItalic
+hi! link Type RemCyanItalic
 
-hi! link Delimiter DraculaFg
+hi! link Delimiter RemFg
 
-hi! link Special DraculaPink
-hi! link SpecialComment DraculaCyanItalic
-hi! link Tag DraculaCyan
-hi! link helpHyperTextJump DraculaLink
-hi! link helpCommand DraculaPurple
-hi! link helpExample DraculaGreen
+hi! link Special RemPink
+hi! link SpecialComment RemCyanItalic
+hi! link Tag RemCyan
+hi! link helpHyperTextJump RemLink
+hi! link helpCommand RemPurple
+hi! link helpExample RemGreen
 hi! link helpBacktick Special
 
 "}}}

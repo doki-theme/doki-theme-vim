@@ -117,63 +117,63 @@ endfunction
 "}}}2
 "Highlight Groups: 
 
-call s:h('DraculaBgLight', s:none, s:bglight)
-call s:h('DraculaBgLighter', s:none, s:bglighter)
-call s:h('DraculaBgDark', s:none, s:bgdark)
-call s:h('DraculaBgDarker', s:none, s:bgdarker)
+call s:h('KonataBgLight', s:none, s:bglight)
+call s:h('KonataBgLighter', s:none, s:bglighter)
+call s:h('KonataBgDark', s:none, s:bgdark)
+call s:h('KonataBgDarker', s:none, s:bgdarker)
 
-call s:h('DraculaFg', s:fg)
-call s:h('DraculaFgUnderline', s:fg, s:none, [s:attrs.underline])
-call s:h('DraculaFgBold', s:fg, s:none, [s:attrs.bold])
+call s:h('KonataFg', s:fg)
+call s:h('KonataFgUnderline', s:fg, s:none, [s:attrs.underline])
+call s:h('KonataFgBold', s:fg, s:none, [s:attrs.bold])
 
-call s:h('DraculaComment', s:comment)
-call s:h('DraculaCommentBold', s:comment, s:none, [s:attrs.bold])
+call s:h('KonataComment', s:comment)
+call s:h('KonataCommentBold', s:comment, s:none, [s:attrs.bold])
 
-call s:h('DraculaSelection', s:none, s:selection)
+call s:h('KonataSelection', s:none, s:selection)
 
-call s:h('DraculaSubtle', s:subtle)
+call s:h('KonataSubtle', s:subtle)
 
-call s:h('DraculaCyan', s:cyan)
-call s:h('DraculaCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('KonataCyan', s:cyan)
+call s:h('KonataCyanItalic', s:cyan, s:none, [s:attrs.italic])
 
-call s:h('DraculaGreen', s:green)
-call s:h('DraculaGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('DraculaGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('DraculaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('KonataGreen', s:green)
+call s:h('KonataGreenBold', s:green, s:none, [s:attrs.bold])
+call s:h('KonataGreenItalic', s:green, s:none, [s:attrs.italic])
+call s:h('KonataGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('DraculaOrange', s:orange)
-call s:h('DraculaOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('DraculaOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('DraculaOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('DraculaOrangeInverse', s:bg, s:orange)
+call s:h('KonataOrange', s:orange)
+call s:h('KonataOrangeBold', s:orange, s:none, [s:attrs.bold])
+call s:h('KonataOrangeItalic', s:orange, s:none, [s:attrs.italic])
+call s:h('KonataOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('KonataOrangeInverse', s:bg, s:orange)
 
-call s:h('DraculaPink', s:pink)
-call s:h('DraculaPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('KonataPink', s:pink)
+call s:h('KonataPinkItalic', s:pink, s:none, [s:attrs.italic])
 
-call s:h('DraculaPurple', s:purple)
-call s:h('DraculaPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('DraculaPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('KonataPurple', s:purple)
+call s:h('KonataPurpleBold', s:purple, s:none, [s:attrs.bold])
+call s:h('KonataPurpleItalic', s:purple, s:none, [s:attrs.italic])
 
-call s:h('DraculaRed', s:red)
-call s:h('DraculaRedInverse', s:fg, s:red)
+call s:h('KonataRed', s:red)
+call s:h('KonataRedInverse', s:fg, s:red)
 
-call s:h('DraculaYellow', s:yellow)
-call s:h('DraculaYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('KonataYellow', s:yellow)
+call s:h('KonataYellowItalic', s:yellow, s:none, [s:attrs.italic])
 
-call s:h('DraculaError', s:red, s:none, [], s:red)
+call s:h('KonataError', s:red, s:none, [], s:red)
 
-call s:h('DraculaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('DraculaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('DraculaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('KonataErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
+call s:h('KonataWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
+call s:h('KonataInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
 
-call s:h('DraculaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
-call s:h('DraculaBoundary', s:comment, s:bgdark)
-call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('KonataTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('KonataSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('KonataBoundary', s:comment, s:bgdark)
+call s:h('KonataLink', s:cyan, s:none, [s:attrs.underline])
 
-call s:h('DraculaDiffChange', s:orange, s:none)
-call s:h('DraculaDiffText', s:bg, s:orange)
-call s:h('DraculaDiffDelete', s:red, s:bgdark)
+call s:h('KonataDiffChange', s:orange, s:none)
+call s:h('KonataDiffText', s:bg, s:orange)
+call s:h('KonataDiffDelete', s:red, s:bgdark)
 
 " }}}2
 
@@ -191,38 +191,38 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  DraculaBgDark
+hi! link ColorColumn  KonataBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr DraculaYellow
-hi! link DiffAdd      DraculaGreen
+hi! link CursorLineNr KonataYellow
+hi! link DiffAdd      KonataGreen
 hi! link DiffAdded    DiffAdd
-hi! link DiffChange   DraculaDiffChange
-hi! link DiffDelete   DraculaDiffDelete
+hi! link DiffChange   KonataDiffChange
+hi! link DiffDelete   KonataDiffDelete
 hi! link DiffRemoved  DiffDelete
-hi! link DiffText     DraculaDiffText
-hi! link Directory    DraculaPurpleBold
-hi! link ErrorMsg     DraculaRedInverse
-hi! link FoldColumn   DraculaSubtle
-hi! link Folded       DraculaBoundary
-hi! link IncSearch    DraculaOrangeInverse
+hi! link DiffText     KonataDiffText
+hi! link Directory    KonataPurpleBold
+hi! link ErrorMsg     KonataRedInverse
+hi! link FoldColumn   KonataSubtle
+hi! link Folded       KonataBoundary
+hi! link IncSearch    KonataOrangeInverse
 call s:h('LineNr', s:comment)
-hi! link MoreMsg      DraculaFgBold
-hi! link NonText      DraculaSubtle
-hi! link Pmenu        DraculaBgDark
-hi! link PmenuSbar    DraculaBgDark
-hi! link PmenuSel     DraculaSelection
-hi! link PmenuThumb   DraculaSelection
-hi! link Question     DraculaFgBold
-hi! link Search       DraculaSearch
+hi! link MoreMsg      KonataFgBold
+hi! link NonText      KonataSubtle
+hi! link Pmenu        KonataBgDark
+hi! link PmenuSbar    KonataBgDark
+hi! link PmenuSel     KonataSelection
+hi! link PmenuThumb   KonataSelection
+hi! link Question     KonataFgBold
+hi! link Search       KonataSearch
 call s:h('SignColumn', s:comment)
-hi! link TabLine      DraculaBoundary
-hi! link TabLineFill  DraculaBgDarker
+hi! link TabLine      KonataBoundary
+hi! link TabLineFill  KonataBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        DraculaGreenBold
-hi! link VertSplit    DraculaBoundary
-hi! link Visual       DraculaSelection
+hi! link Title        KonataGreenBold
+hi! link VertSplit    KonataBoundary
+hi! link Visual       KonataSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   DraculaOrangeInverse
+hi! link WarningMsg   KonataOrangeInverse
 
 " }}}
 " Syntax: 
@@ -233,67 +233,67 @@ call s:h('Conceal', s:cyan, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
-  hi! link SpecialKey DraculaRed
-  hi! link LspDiagnosticsUnderline DraculaFgUnderline
-  hi! link LspDiagnosticsInformation DraculaCyan
-  hi! link LspDiagnosticsHint DraculaCyan
-  hi! link LspDiagnosticsError DraculaError
-  hi! link LspDiagnosticsWarning DraculaOrange
-  hi! link LspDiagnosticsUnderlineError DraculaErrorLine
-  hi! link LspDiagnosticsUnderlineHint DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineInformation DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineWarning DraculaWarnLine
+  hi! link SpecialKey KonataRed
+  hi! link LspDiagnosticsUnderline KonataFgUnderline
+  hi! link LspDiagnosticsInformation KonataCyan
+  hi! link LspDiagnosticsHint KonataCyan
+  hi! link LspDiagnosticsError KonataError
+  hi! link LspDiagnosticsWarning KonataOrange
+  hi! link LspDiagnosticsUnderlineError KonataErrorLine
+  hi! link LspDiagnosticsUnderlineHint KonataInfoLine
+  hi! link LspDiagnosticsUnderlineInformation KonataInfoLine
+  hi! link LspDiagnosticsUnderlineWarning KonataWarnLine
 else
-  hi! link SpecialKey DraculaSubtle
+  hi! link SpecialKey KonataSubtle
 endif
 
-hi! link Comment DraculaComment
-hi! link Underlined DraculaFgUnderline
-hi! link Todo DraculaTodo
+hi! link Comment KonataComment
+hi! link Underlined KonataFgUnderline
+hi! link Todo KonataTodo
 
-hi! link Error DraculaError
-hi! link SpellBad DraculaErrorLine
-hi! link SpellLocal DraculaWarnLine
-hi! link SpellCap DraculaInfoLine
-hi! link SpellRare DraculaInfoLine
+hi! link Error KonataError
+hi! link SpellBad KonataErrorLine
+hi! link SpellLocal KonataWarnLine
+hi! link SpellCap KonataInfoLine
+hi! link SpellRare KonataInfoLine
 
-hi! link Constant DraculaPurple
-hi! link String DraculaYellow
-hi! link Character DraculaPink
+hi! link Constant KonataPurple
+hi! link String KonataYellow
+hi! link Character KonataPink
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
-hi! link Identifier DraculaFg
-hi! link Function DraculaGreen
+hi! link Identifier KonataFg
+hi! link Function KonataGreen
 
-hi! link Statement DraculaPink
-hi! link Conditional DraculaPink
-hi! link Repeat DraculaPink
-hi! link Label DraculaPink
-hi! link Operator DraculaPink
-hi! link Keyword DraculaPink
-hi! link Exception DraculaPink
+hi! link Statement KonataPink
+hi! link Conditional KonataPink
+hi! link Repeat KonataPink
+hi! link Label KonataPink
+hi! link Operator KonataPink
+hi! link Keyword KonataPink
+hi! link Exception KonataPink
 
-hi! link PreProc DraculaPink
-hi! link Include DraculaPink
-hi! link Define DraculaPink
-hi! link Macro DraculaPink
-hi! link PreCondit DraculaPink
-hi! link StorageClass DraculaPink
-hi! link Structure DraculaPink
-hi! link Typedef DraculaPink
+hi! link PreProc KonataPink
+hi! link Include KonataPink
+hi! link Define KonataPink
+hi! link Macro KonataPink
+hi! link PreCondit KonataPink
+hi! link StorageClass KonataPink
+hi! link Structure KonataPink
+hi! link Typedef KonataPink
 
-hi! link Type DraculaCyanItalic
+hi! link Type KonataCyanItalic
 
-hi! link Delimiter DraculaFg
+hi! link Delimiter KonataFg
 
-hi! link Special DraculaPink
-hi! link SpecialComment DraculaCyanItalic
-hi! link Tag DraculaCyan
-hi! link helpHyperTextJump DraculaLink
-hi! link helpCommand DraculaPurple
-hi! link helpExample DraculaGreen
+hi! link Special KonataPink
+hi! link SpecialComment KonataCyanItalic
+hi! link Tag KonataCyan
+hi! link helpHyperTextJump KonataLink
+hi! link helpCommand KonataPurple
+hi! link helpExample KonataGreen
 hi! link helpBacktick Special
 
 "}}}

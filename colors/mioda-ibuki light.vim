@@ -117,63 +117,63 @@ endfunction
 "}}}2
 "Highlight Groups: 
 
-call s:h('DraculaBgLight', s:none, s:bglight)
-call s:h('DraculaBgLighter', s:none, s:bglighter)
-call s:h('DraculaBgDark', s:none, s:bgdark)
-call s:h('DraculaBgDarker', s:none, s:bgdarker)
+call s:h('MiodaIbukiLightBgLight', s:none, s:bglight)
+call s:h('MiodaIbukiLightBgLighter', s:none, s:bglighter)
+call s:h('MiodaIbukiLightBgDark', s:none, s:bgdark)
+call s:h('MiodaIbukiLightBgDarker', s:none, s:bgdarker)
 
-call s:h('DraculaFg', s:fg)
-call s:h('DraculaFgUnderline', s:fg, s:none, [s:attrs.underline])
-call s:h('DraculaFgBold', s:fg, s:none, [s:attrs.bold])
+call s:h('MiodaIbukiLightFg', s:fg)
+call s:h('MiodaIbukiLightFgUnderline', s:fg, s:none, [s:attrs.underline])
+call s:h('MiodaIbukiLightFgBold', s:fg, s:none, [s:attrs.bold])
 
-call s:h('DraculaComment', s:comment)
-call s:h('DraculaCommentBold', s:comment, s:none, [s:attrs.bold])
+call s:h('MiodaIbukiLightComment', s:comment)
+call s:h('MiodaIbukiLightCommentBold', s:comment, s:none, [s:attrs.bold])
 
-call s:h('DraculaSelection', s:none, s:selection)
+call s:h('MiodaIbukiLightSelection', s:none, s:selection)
 
-call s:h('DraculaSubtle', s:subtle)
+call s:h('MiodaIbukiLightSubtle', s:subtle)
 
-call s:h('DraculaCyan', s:cyan)
-call s:h('DraculaCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('MiodaIbukiLightCyan', s:cyan)
+call s:h('MiodaIbukiLightCyanItalic', s:cyan, s:none, [s:attrs.italic])
 
-call s:h('DraculaGreen', s:green)
-call s:h('DraculaGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('DraculaGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('DraculaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('MiodaIbukiLightGreen', s:green)
+call s:h('MiodaIbukiLightGreenBold', s:green, s:none, [s:attrs.bold])
+call s:h('MiodaIbukiLightGreenItalic', s:green, s:none, [s:attrs.italic])
+call s:h('MiodaIbukiLightGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('DraculaOrange', s:orange)
-call s:h('DraculaOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('DraculaOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('DraculaOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('DraculaOrangeInverse', s:bg, s:orange)
+call s:h('MiodaIbukiLightOrange', s:orange)
+call s:h('MiodaIbukiLightOrangeBold', s:orange, s:none, [s:attrs.bold])
+call s:h('MiodaIbukiLightOrangeItalic', s:orange, s:none, [s:attrs.italic])
+call s:h('MiodaIbukiLightOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('MiodaIbukiLightOrangeInverse', s:bg, s:orange)
 
-call s:h('DraculaPink', s:pink)
-call s:h('DraculaPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('MiodaIbukiLightPink', s:pink)
+call s:h('MiodaIbukiLightPinkItalic', s:pink, s:none, [s:attrs.italic])
 
-call s:h('DraculaPurple', s:purple)
-call s:h('DraculaPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('DraculaPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('MiodaIbukiLightPurple', s:purple)
+call s:h('MiodaIbukiLightPurpleBold', s:purple, s:none, [s:attrs.bold])
+call s:h('MiodaIbukiLightPurpleItalic', s:purple, s:none, [s:attrs.italic])
 
-call s:h('DraculaRed', s:red)
-call s:h('DraculaRedInverse', s:fg, s:red)
+call s:h('MiodaIbukiLightRed', s:red)
+call s:h('MiodaIbukiLightRedInverse', s:fg, s:red)
 
-call s:h('DraculaYellow', s:yellow)
-call s:h('DraculaYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('MiodaIbukiLightYellow', s:yellow)
+call s:h('MiodaIbukiLightYellowItalic', s:yellow, s:none, [s:attrs.italic])
 
-call s:h('DraculaError', s:red, s:none, [], s:red)
+call s:h('MiodaIbukiLightError', s:red, s:none, [], s:red)
 
-call s:h('DraculaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('DraculaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('DraculaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('MiodaIbukiLightErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
+call s:h('MiodaIbukiLightWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
+call s:h('MiodaIbukiLightInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
 
-call s:h('DraculaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
-call s:h('DraculaBoundary', s:comment, s:bgdark)
-call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('MiodaIbukiLightTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('MiodaIbukiLightSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('MiodaIbukiLightBoundary', s:comment, s:bgdark)
+call s:h('MiodaIbukiLightLink', s:cyan, s:none, [s:attrs.underline])
 
-call s:h('DraculaDiffChange', s:orange, s:none)
-call s:h('DraculaDiffText', s:bg, s:orange)
-call s:h('DraculaDiffDelete', s:red, s:bgdark)
+call s:h('MiodaIbukiLightDiffChange', s:orange, s:none)
+call s:h('MiodaIbukiLightDiffText', s:bg, s:orange)
+call s:h('MiodaIbukiLightDiffDelete', s:red, s:bgdark)
 
 " }}}2
 
@@ -191,38 +191,38 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  DraculaBgDark
+hi! link ColorColumn  MiodaIbukiLightBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr DraculaYellow
-hi! link DiffAdd      DraculaGreen
+hi! link CursorLineNr MiodaIbukiLightYellow
+hi! link DiffAdd      MiodaIbukiLightGreen
 hi! link DiffAdded    DiffAdd
-hi! link DiffChange   DraculaDiffChange
-hi! link DiffDelete   DraculaDiffDelete
+hi! link DiffChange   MiodaIbukiLightDiffChange
+hi! link DiffDelete   MiodaIbukiLightDiffDelete
 hi! link DiffRemoved  DiffDelete
-hi! link DiffText     DraculaDiffText
-hi! link Directory    DraculaPurpleBold
-hi! link ErrorMsg     DraculaRedInverse
-hi! link FoldColumn   DraculaSubtle
-hi! link Folded       DraculaBoundary
-hi! link IncSearch    DraculaOrangeInverse
+hi! link DiffText     MiodaIbukiLightDiffText
+hi! link Directory    MiodaIbukiLightPurpleBold
+hi! link ErrorMsg     MiodaIbukiLightRedInverse
+hi! link FoldColumn   MiodaIbukiLightSubtle
+hi! link Folded       MiodaIbukiLightBoundary
+hi! link IncSearch    MiodaIbukiLightOrangeInverse
 call s:h('LineNr', s:comment)
-hi! link MoreMsg      DraculaFgBold
-hi! link NonText      DraculaSubtle
-hi! link Pmenu        DraculaBgDark
-hi! link PmenuSbar    DraculaBgDark
-hi! link PmenuSel     DraculaSelection
-hi! link PmenuThumb   DraculaSelection
-hi! link Question     DraculaFgBold
-hi! link Search       DraculaSearch
+hi! link MoreMsg      MiodaIbukiLightFgBold
+hi! link NonText      MiodaIbukiLightSubtle
+hi! link Pmenu        MiodaIbukiLightBgDark
+hi! link PmenuSbar    MiodaIbukiLightBgDark
+hi! link PmenuSel     MiodaIbukiLightSelection
+hi! link PmenuThumb   MiodaIbukiLightSelection
+hi! link Question     MiodaIbukiLightFgBold
+hi! link Search       MiodaIbukiLightSearch
 call s:h('SignColumn', s:comment)
-hi! link TabLine      DraculaBoundary
-hi! link TabLineFill  DraculaBgDarker
+hi! link TabLine      MiodaIbukiLightBoundary
+hi! link TabLineFill  MiodaIbukiLightBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        DraculaGreenBold
-hi! link VertSplit    DraculaBoundary
-hi! link Visual       DraculaSelection
+hi! link Title        MiodaIbukiLightGreenBold
+hi! link VertSplit    MiodaIbukiLightBoundary
+hi! link Visual       MiodaIbukiLightSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   DraculaOrangeInverse
+hi! link WarningMsg   MiodaIbukiLightOrangeInverse
 
 " }}}
 " Syntax: 
@@ -233,67 +233,67 @@ call s:h('Conceal', s:cyan, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
-  hi! link SpecialKey DraculaRed
-  hi! link LspDiagnosticsUnderline DraculaFgUnderline
-  hi! link LspDiagnosticsInformation DraculaCyan
-  hi! link LspDiagnosticsHint DraculaCyan
-  hi! link LspDiagnosticsError DraculaError
-  hi! link LspDiagnosticsWarning DraculaOrange
-  hi! link LspDiagnosticsUnderlineError DraculaErrorLine
-  hi! link LspDiagnosticsUnderlineHint DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineInformation DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineWarning DraculaWarnLine
+  hi! link SpecialKey MiodaIbukiLightRed
+  hi! link LspDiagnosticsUnderline MiodaIbukiLightFgUnderline
+  hi! link LspDiagnosticsInformation MiodaIbukiLightCyan
+  hi! link LspDiagnosticsHint MiodaIbukiLightCyan
+  hi! link LspDiagnosticsError MiodaIbukiLightError
+  hi! link LspDiagnosticsWarning MiodaIbukiLightOrange
+  hi! link LspDiagnosticsUnderlineError MiodaIbukiLightErrorLine
+  hi! link LspDiagnosticsUnderlineHint MiodaIbukiLightInfoLine
+  hi! link LspDiagnosticsUnderlineInformation MiodaIbukiLightInfoLine
+  hi! link LspDiagnosticsUnderlineWarning MiodaIbukiLightWarnLine
 else
-  hi! link SpecialKey DraculaSubtle
+  hi! link SpecialKey MiodaIbukiLightSubtle
 endif
 
-hi! link Comment DraculaComment
-hi! link Underlined DraculaFgUnderline
-hi! link Todo DraculaTodo
+hi! link Comment MiodaIbukiLightComment
+hi! link Underlined MiodaIbukiLightFgUnderline
+hi! link Todo MiodaIbukiLightTodo
 
-hi! link Error DraculaError
-hi! link SpellBad DraculaErrorLine
-hi! link SpellLocal DraculaWarnLine
-hi! link SpellCap DraculaInfoLine
-hi! link SpellRare DraculaInfoLine
+hi! link Error MiodaIbukiLightError
+hi! link SpellBad MiodaIbukiLightErrorLine
+hi! link SpellLocal MiodaIbukiLightWarnLine
+hi! link SpellCap MiodaIbukiLightInfoLine
+hi! link SpellRare MiodaIbukiLightInfoLine
 
-hi! link Constant DraculaPurple
-hi! link String DraculaYellow
-hi! link Character DraculaPink
+hi! link Constant MiodaIbukiLightPurple
+hi! link String MiodaIbukiLightYellow
+hi! link Character MiodaIbukiLightPink
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
-hi! link Identifier DraculaFg
-hi! link Function DraculaGreen
+hi! link Identifier MiodaIbukiLightFg
+hi! link Function MiodaIbukiLightGreen
 
-hi! link Statement DraculaPink
-hi! link Conditional DraculaPink
-hi! link Repeat DraculaPink
-hi! link Label DraculaPink
-hi! link Operator DraculaPink
-hi! link Keyword DraculaPink
-hi! link Exception DraculaPink
+hi! link Statement MiodaIbukiLightPink
+hi! link Conditional MiodaIbukiLightPink
+hi! link Repeat MiodaIbukiLightPink
+hi! link Label MiodaIbukiLightPink
+hi! link Operator MiodaIbukiLightPink
+hi! link Keyword MiodaIbukiLightPink
+hi! link Exception MiodaIbukiLightPink
 
-hi! link PreProc DraculaPink
-hi! link Include DraculaPink
-hi! link Define DraculaPink
-hi! link Macro DraculaPink
-hi! link PreCondit DraculaPink
-hi! link StorageClass DraculaPink
-hi! link Structure DraculaPink
-hi! link Typedef DraculaPink
+hi! link PreProc MiodaIbukiLightPink
+hi! link Include MiodaIbukiLightPink
+hi! link Define MiodaIbukiLightPink
+hi! link Macro MiodaIbukiLightPink
+hi! link PreCondit MiodaIbukiLightPink
+hi! link StorageClass MiodaIbukiLightPink
+hi! link Structure MiodaIbukiLightPink
+hi! link Typedef MiodaIbukiLightPink
 
-hi! link Type DraculaCyanItalic
+hi! link Type MiodaIbukiLightCyanItalic
 
-hi! link Delimiter DraculaFg
+hi! link Delimiter MiodaIbukiLightFg
 
-hi! link Special DraculaPink
-hi! link SpecialComment DraculaCyanItalic
-hi! link Tag DraculaCyan
-hi! link helpHyperTextJump DraculaLink
-hi! link helpCommand DraculaPurple
-hi! link helpExample DraculaGreen
+hi! link Special MiodaIbukiLightPink
+hi! link SpecialComment MiodaIbukiLightCyanItalic
+hi! link Tag MiodaIbukiLightCyan
+hi! link helpHyperTextJump MiodaIbukiLightLink
+hi! link helpCommand MiodaIbukiLightPurple
+hi! link helpExample MiodaIbukiLightGreen
 hi! link helpBacktick Special
 
 "}}}

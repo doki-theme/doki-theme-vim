@@ -117,63 +117,63 @@ endfunction
 "}}}2
 "Highlight Groups: 
 
-call s:h('DraculaBgLight', s:none, s:bglight)
-call s:h('DraculaBgLighter', s:none, s:bglighter)
-call s:h('DraculaBgDark', s:none, s:bgdark)
-call s:h('DraculaBgDarker', s:none, s:bgdarker)
+call s:h('RyukoBgLight', s:none, s:bglight)
+call s:h('RyukoBgLighter', s:none, s:bglighter)
+call s:h('RyukoBgDark', s:none, s:bgdark)
+call s:h('RyukoBgDarker', s:none, s:bgdarker)
 
-call s:h('DraculaFg', s:fg)
-call s:h('DraculaFgUnderline', s:fg, s:none, [s:attrs.underline])
-call s:h('DraculaFgBold', s:fg, s:none, [s:attrs.bold])
+call s:h('RyukoFg', s:fg)
+call s:h('RyukoFgUnderline', s:fg, s:none, [s:attrs.underline])
+call s:h('RyukoFgBold', s:fg, s:none, [s:attrs.bold])
 
-call s:h('DraculaComment', s:comment)
-call s:h('DraculaCommentBold', s:comment, s:none, [s:attrs.bold])
+call s:h('RyukoComment', s:comment)
+call s:h('RyukoCommentBold', s:comment, s:none, [s:attrs.bold])
 
-call s:h('DraculaSelection', s:none, s:selection)
+call s:h('RyukoSelection', s:none, s:selection)
 
-call s:h('DraculaSubtle', s:subtle)
+call s:h('RyukoSubtle', s:subtle)
 
-call s:h('DraculaCyan', s:cyan)
-call s:h('DraculaCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('RyukoCyan', s:cyan)
+call s:h('RyukoCyanItalic', s:cyan, s:none, [s:attrs.italic])
 
-call s:h('DraculaGreen', s:green)
-call s:h('DraculaGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('DraculaGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('DraculaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('RyukoGreen', s:green)
+call s:h('RyukoGreenBold', s:green, s:none, [s:attrs.bold])
+call s:h('RyukoGreenItalic', s:green, s:none, [s:attrs.italic])
+call s:h('RyukoGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('DraculaOrange', s:orange)
-call s:h('DraculaOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('DraculaOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('DraculaOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('DraculaOrangeInverse', s:bg, s:orange)
+call s:h('RyukoOrange', s:orange)
+call s:h('RyukoOrangeBold', s:orange, s:none, [s:attrs.bold])
+call s:h('RyukoOrangeItalic', s:orange, s:none, [s:attrs.italic])
+call s:h('RyukoOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('RyukoOrangeInverse', s:bg, s:orange)
 
-call s:h('DraculaPink', s:pink)
-call s:h('DraculaPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('RyukoPink', s:pink)
+call s:h('RyukoPinkItalic', s:pink, s:none, [s:attrs.italic])
 
-call s:h('DraculaPurple', s:purple)
-call s:h('DraculaPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('DraculaPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('RyukoPurple', s:purple)
+call s:h('RyukoPurpleBold', s:purple, s:none, [s:attrs.bold])
+call s:h('RyukoPurpleItalic', s:purple, s:none, [s:attrs.italic])
 
-call s:h('DraculaRed', s:red)
-call s:h('DraculaRedInverse', s:fg, s:red)
+call s:h('RyukoRed', s:red)
+call s:h('RyukoRedInverse', s:fg, s:red)
 
-call s:h('DraculaYellow', s:yellow)
-call s:h('DraculaYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('RyukoYellow', s:yellow)
+call s:h('RyukoYellowItalic', s:yellow, s:none, [s:attrs.italic])
 
-call s:h('DraculaError', s:red, s:none, [], s:red)
+call s:h('RyukoError', s:red, s:none, [], s:red)
 
-call s:h('DraculaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('DraculaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('DraculaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('RyukoErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
+call s:h('RyukoWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
+call s:h('RyukoInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
 
-call s:h('DraculaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
-call s:h('DraculaBoundary', s:comment, s:bgdark)
-call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('RyukoTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('RyukoSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('RyukoBoundary', s:comment, s:bgdark)
+call s:h('RyukoLink', s:cyan, s:none, [s:attrs.underline])
 
-call s:h('DraculaDiffChange', s:orange, s:none)
-call s:h('DraculaDiffText', s:bg, s:orange)
-call s:h('DraculaDiffDelete', s:red, s:bgdark)
+call s:h('RyukoDiffChange', s:orange, s:none)
+call s:h('RyukoDiffText', s:bg, s:orange)
+call s:h('RyukoDiffDelete', s:red, s:bgdark)
 
 " }}}2
 
@@ -191,38 +191,38 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  DraculaBgDark
+hi! link ColorColumn  RyukoBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr DraculaYellow
-hi! link DiffAdd      DraculaGreen
+hi! link CursorLineNr RyukoYellow
+hi! link DiffAdd      RyukoGreen
 hi! link DiffAdded    DiffAdd
-hi! link DiffChange   DraculaDiffChange
-hi! link DiffDelete   DraculaDiffDelete
+hi! link DiffChange   RyukoDiffChange
+hi! link DiffDelete   RyukoDiffDelete
 hi! link DiffRemoved  DiffDelete
-hi! link DiffText     DraculaDiffText
-hi! link Directory    DraculaPurpleBold
-hi! link ErrorMsg     DraculaRedInverse
-hi! link FoldColumn   DraculaSubtle
-hi! link Folded       DraculaBoundary
-hi! link IncSearch    DraculaOrangeInverse
+hi! link DiffText     RyukoDiffText
+hi! link Directory    RyukoPurpleBold
+hi! link ErrorMsg     RyukoRedInverse
+hi! link FoldColumn   RyukoSubtle
+hi! link Folded       RyukoBoundary
+hi! link IncSearch    RyukoOrangeInverse
 call s:h('LineNr', s:comment)
-hi! link MoreMsg      DraculaFgBold
-hi! link NonText      DraculaSubtle
-hi! link Pmenu        DraculaBgDark
-hi! link PmenuSbar    DraculaBgDark
-hi! link PmenuSel     DraculaSelection
-hi! link PmenuThumb   DraculaSelection
-hi! link Question     DraculaFgBold
-hi! link Search       DraculaSearch
+hi! link MoreMsg      RyukoFgBold
+hi! link NonText      RyukoSubtle
+hi! link Pmenu        RyukoBgDark
+hi! link PmenuSbar    RyukoBgDark
+hi! link PmenuSel     RyukoSelection
+hi! link PmenuThumb   RyukoSelection
+hi! link Question     RyukoFgBold
+hi! link Search       RyukoSearch
 call s:h('SignColumn', s:comment)
-hi! link TabLine      DraculaBoundary
-hi! link TabLineFill  DraculaBgDarker
+hi! link TabLine      RyukoBoundary
+hi! link TabLineFill  RyukoBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        DraculaGreenBold
-hi! link VertSplit    DraculaBoundary
-hi! link Visual       DraculaSelection
+hi! link Title        RyukoGreenBold
+hi! link VertSplit    RyukoBoundary
+hi! link Visual       RyukoSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   DraculaOrangeInverse
+hi! link WarningMsg   RyukoOrangeInverse
 
 " }}}
 " Syntax: 
@@ -233,67 +233,67 @@ call s:h('Conceal', s:cyan, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
-  hi! link SpecialKey DraculaRed
-  hi! link LspDiagnosticsUnderline DraculaFgUnderline
-  hi! link LspDiagnosticsInformation DraculaCyan
-  hi! link LspDiagnosticsHint DraculaCyan
-  hi! link LspDiagnosticsError DraculaError
-  hi! link LspDiagnosticsWarning DraculaOrange
-  hi! link LspDiagnosticsUnderlineError DraculaErrorLine
-  hi! link LspDiagnosticsUnderlineHint DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineInformation DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineWarning DraculaWarnLine
+  hi! link SpecialKey RyukoRed
+  hi! link LspDiagnosticsUnderline RyukoFgUnderline
+  hi! link LspDiagnosticsInformation RyukoCyan
+  hi! link LspDiagnosticsHint RyukoCyan
+  hi! link LspDiagnosticsError RyukoError
+  hi! link LspDiagnosticsWarning RyukoOrange
+  hi! link LspDiagnosticsUnderlineError RyukoErrorLine
+  hi! link LspDiagnosticsUnderlineHint RyukoInfoLine
+  hi! link LspDiagnosticsUnderlineInformation RyukoInfoLine
+  hi! link LspDiagnosticsUnderlineWarning RyukoWarnLine
 else
-  hi! link SpecialKey DraculaSubtle
+  hi! link SpecialKey RyukoSubtle
 endif
 
-hi! link Comment DraculaComment
-hi! link Underlined DraculaFgUnderline
-hi! link Todo DraculaTodo
+hi! link Comment RyukoComment
+hi! link Underlined RyukoFgUnderline
+hi! link Todo RyukoTodo
 
-hi! link Error DraculaError
-hi! link SpellBad DraculaErrorLine
-hi! link SpellLocal DraculaWarnLine
-hi! link SpellCap DraculaInfoLine
-hi! link SpellRare DraculaInfoLine
+hi! link Error RyukoError
+hi! link SpellBad RyukoErrorLine
+hi! link SpellLocal RyukoWarnLine
+hi! link SpellCap RyukoInfoLine
+hi! link SpellRare RyukoInfoLine
 
-hi! link Constant DraculaPurple
-hi! link String DraculaYellow
-hi! link Character DraculaPink
+hi! link Constant RyukoPurple
+hi! link String RyukoYellow
+hi! link Character RyukoPink
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
-hi! link Identifier DraculaFg
-hi! link Function DraculaGreen
+hi! link Identifier RyukoFg
+hi! link Function RyukoGreen
 
-hi! link Statement DraculaPink
-hi! link Conditional DraculaPink
-hi! link Repeat DraculaPink
-hi! link Label DraculaPink
-hi! link Operator DraculaPink
-hi! link Keyword DraculaPink
-hi! link Exception DraculaPink
+hi! link Statement RyukoPink
+hi! link Conditional RyukoPink
+hi! link Repeat RyukoPink
+hi! link Label RyukoPink
+hi! link Operator RyukoPink
+hi! link Keyword RyukoPink
+hi! link Exception RyukoPink
 
-hi! link PreProc DraculaPink
-hi! link Include DraculaPink
-hi! link Define DraculaPink
-hi! link Macro DraculaPink
-hi! link PreCondit DraculaPink
-hi! link StorageClass DraculaPink
-hi! link Structure DraculaPink
-hi! link Typedef DraculaPink
+hi! link PreProc RyukoPink
+hi! link Include RyukoPink
+hi! link Define RyukoPink
+hi! link Macro RyukoPink
+hi! link PreCondit RyukoPink
+hi! link StorageClass RyukoPink
+hi! link Structure RyukoPink
+hi! link Typedef RyukoPink
 
-hi! link Type DraculaCyanItalic
+hi! link Type RyukoCyanItalic
 
-hi! link Delimiter DraculaFg
+hi! link Delimiter RyukoFg
 
-hi! link Special DraculaPink
-hi! link SpecialComment DraculaCyanItalic
-hi! link Tag DraculaCyan
-hi! link helpHyperTextJump DraculaLink
-hi! link helpCommand DraculaPurple
-hi! link helpExample DraculaGreen
+hi! link Special RyukoPink
+hi! link SpecialComment RyukoCyanItalic
+hi! link Tag RyukoCyan
+hi! link helpHyperTextJump RyukoLink
+hi! link helpCommand RyukoPurple
+hi! link helpExample RyukoGreen
 hi! link helpBacktick Special
 
 "}}}

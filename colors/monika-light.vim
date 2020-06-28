@@ -117,63 +117,63 @@ endfunction
 "}}}2
 "Highlight Groups: 
 
-call s:h('DraculaBgLight', s:none, s:bglight)
-call s:h('DraculaBgLighter', s:none, s:bglighter)
-call s:h('DraculaBgDark', s:none, s:bgdark)
-call s:h('DraculaBgDarker', s:none, s:bgdarker)
+call s:h('MonikaLightBgLight', s:none, s:bglight)
+call s:h('MonikaLightBgLighter', s:none, s:bglighter)
+call s:h('MonikaLightBgDark', s:none, s:bgdark)
+call s:h('MonikaLightBgDarker', s:none, s:bgdarker)
 
-call s:h('DraculaFg', s:fg)
-call s:h('DraculaFgUnderline', s:fg, s:none, [s:attrs.underline])
-call s:h('DraculaFgBold', s:fg, s:none, [s:attrs.bold])
+call s:h('MonikaLightFg', s:fg)
+call s:h('MonikaLightFgUnderline', s:fg, s:none, [s:attrs.underline])
+call s:h('MonikaLightFgBold', s:fg, s:none, [s:attrs.bold])
 
-call s:h('DraculaComment', s:comment)
-call s:h('DraculaCommentBold', s:comment, s:none, [s:attrs.bold])
+call s:h('MonikaLightComment', s:comment)
+call s:h('MonikaLightCommentBold', s:comment, s:none, [s:attrs.bold])
 
-call s:h('DraculaSelection', s:none, s:selection)
+call s:h('MonikaLightSelection', s:none, s:selection)
 
-call s:h('DraculaSubtle', s:subtle)
+call s:h('MonikaLightSubtle', s:subtle)
 
-call s:h('DraculaCyan', s:cyan)
-call s:h('DraculaCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('MonikaLightCyan', s:cyan)
+call s:h('MonikaLightCyanItalic', s:cyan, s:none, [s:attrs.italic])
 
-call s:h('DraculaGreen', s:green)
-call s:h('DraculaGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('DraculaGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('DraculaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('MonikaLightGreen', s:green)
+call s:h('MonikaLightGreenBold', s:green, s:none, [s:attrs.bold])
+call s:h('MonikaLightGreenItalic', s:green, s:none, [s:attrs.italic])
+call s:h('MonikaLightGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('DraculaOrange', s:orange)
-call s:h('DraculaOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('DraculaOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('DraculaOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('DraculaOrangeInverse', s:bg, s:orange)
+call s:h('MonikaLightOrange', s:orange)
+call s:h('MonikaLightOrangeBold', s:orange, s:none, [s:attrs.bold])
+call s:h('MonikaLightOrangeItalic', s:orange, s:none, [s:attrs.italic])
+call s:h('MonikaLightOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('MonikaLightOrangeInverse', s:bg, s:orange)
 
-call s:h('DraculaPink', s:pink)
-call s:h('DraculaPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('MonikaLightPink', s:pink)
+call s:h('MonikaLightPinkItalic', s:pink, s:none, [s:attrs.italic])
 
-call s:h('DraculaPurple', s:purple)
-call s:h('DraculaPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('DraculaPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('MonikaLightPurple', s:purple)
+call s:h('MonikaLightPurpleBold', s:purple, s:none, [s:attrs.bold])
+call s:h('MonikaLightPurpleItalic', s:purple, s:none, [s:attrs.italic])
 
-call s:h('DraculaRed', s:red)
-call s:h('DraculaRedInverse', s:fg, s:red)
+call s:h('MonikaLightRed', s:red)
+call s:h('MonikaLightRedInverse', s:fg, s:red)
 
-call s:h('DraculaYellow', s:yellow)
-call s:h('DraculaYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('MonikaLightYellow', s:yellow)
+call s:h('MonikaLightYellowItalic', s:yellow, s:none, [s:attrs.italic])
 
-call s:h('DraculaError', s:red, s:none, [], s:red)
+call s:h('MonikaLightError', s:red, s:none, [], s:red)
 
-call s:h('DraculaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('DraculaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('DraculaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('MonikaLightErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
+call s:h('MonikaLightWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
+call s:h('MonikaLightInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
 
-call s:h('DraculaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
-call s:h('DraculaBoundary', s:comment, s:bgdark)
-call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('MonikaLightTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('MonikaLightSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('MonikaLightBoundary', s:comment, s:bgdark)
+call s:h('MonikaLightLink', s:cyan, s:none, [s:attrs.underline])
 
-call s:h('DraculaDiffChange', s:orange, s:none)
-call s:h('DraculaDiffText', s:bg, s:orange)
-call s:h('DraculaDiffDelete', s:red, s:bgdark)
+call s:h('MonikaLightDiffChange', s:orange, s:none)
+call s:h('MonikaLightDiffText', s:bg, s:orange)
+call s:h('MonikaLightDiffDelete', s:red, s:bgdark)
 
 " }}}2
 
@@ -191,38 +191,38 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  DraculaBgDark
+hi! link ColorColumn  MonikaLightBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr DraculaYellow
-hi! link DiffAdd      DraculaGreen
+hi! link CursorLineNr MonikaLightYellow
+hi! link DiffAdd      MonikaLightGreen
 hi! link DiffAdded    DiffAdd
-hi! link DiffChange   DraculaDiffChange
-hi! link DiffDelete   DraculaDiffDelete
+hi! link DiffChange   MonikaLightDiffChange
+hi! link DiffDelete   MonikaLightDiffDelete
 hi! link DiffRemoved  DiffDelete
-hi! link DiffText     DraculaDiffText
-hi! link Directory    DraculaPurpleBold
-hi! link ErrorMsg     DraculaRedInverse
-hi! link FoldColumn   DraculaSubtle
-hi! link Folded       DraculaBoundary
-hi! link IncSearch    DraculaOrangeInverse
+hi! link DiffText     MonikaLightDiffText
+hi! link Directory    MonikaLightPurpleBold
+hi! link ErrorMsg     MonikaLightRedInverse
+hi! link FoldColumn   MonikaLightSubtle
+hi! link Folded       MonikaLightBoundary
+hi! link IncSearch    MonikaLightOrangeInverse
 call s:h('LineNr', s:comment)
-hi! link MoreMsg      DraculaFgBold
-hi! link NonText      DraculaSubtle
-hi! link Pmenu        DraculaBgDark
-hi! link PmenuSbar    DraculaBgDark
-hi! link PmenuSel     DraculaSelection
-hi! link PmenuThumb   DraculaSelection
-hi! link Question     DraculaFgBold
-hi! link Search       DraculaSearch
+hi! link MoreMsg      MonikaLightFgBold
+hi! link NonText      MonikaLightSubtle
+hi! link Pmenu        MonikaLightBgDark
+hi! link PmenuSbar    MonikaLightBgDark
+hi! link PmenuSel     MonikaLightSelection
+hi! link PmenuThumb   MonikaLightSelection
+hi! link Question     MonikaLightFgBold
+hi! link Search       MonikaLightSearch
 call s:h('SignColumn', s:comment)
-hi! link TabLine      DraculaBoundary
-hi! link TabLineFill  DraculaBgDarker
+hi! link TabLine      MonikaLightBoundary
+hi! link TabLineFill  MonikaLightBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        DraculaGreenBold
-hi! link VertSplit    DraculaBoundary
-hi! link Visual       DraculaSelection
+hi! link Title        MonikaLightGreenBold
+hi! link VertSplit    MonikaLightBoundary
+hi! link Visual       MonikaLightSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   DraculaOrangeInverse
+hi! link WarningMsg   MonikaLightOrangeInverse
 
 " }}}
 " Syntax: 
@@ -233,67 +233,67 @@ call s:h('Conceal', s:cyan, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
-  hi! link SpecialKey DraculaRed
-  hi! link LspDiagnosticsUnderline DraculaFgUnderline
-  hi! link LspDiagnosticsInformation DraculaCyan
-  hi! link LspDiagnosticsHint DraculaCyan
-  hi! link LspDiagnosticsError DraculaError
-  hi! link LspDiagnosticsWarning DraculaOrange
-  hi! link LspDiagnosticsUnderlineError DraculaErrorLine
-  hi! link LspDiagnosticsUnderlineHint DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineInformation DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineWarning DraculaWarnLine
+  hi! link SpecialKey MonikaLightRed
+  hi! link LspDiagnosticsUnderline MonikaLightFgUnderline
+  hi! link LspDiagnosticsInformation MonikaLightCyan
+  hi! link LspDiagnosticsHint MonikaLightCyan
+  hi! link LspDiagnosticsError MonikaLightError
+  hi! link LspDiagnosticsWarning MonikaLightOrange
+  hi! link LspDiagnosticsUnderlineError MonikaLightErrorLine
+  hi! link LspDiagnosticsUnderlineHint MonikaLightInfoLine
+  hi! link LspDiagnosticsUnderlineInformation MonikaLightInfoLine
+  hi! link LspDiagnosticsUnderlineWarning MonikaLightWarnLine
 else
-  hi! link SpecialKey DraculaSubtle
+  hi! link SpecialKey MonikaLightSubtle
 endif
 
-hi! link Comment DraculaComment
-hi! link Underlined DraculaFgUnderline
-hi! link Todo DraculaTodo
+hi! link Comment MonikaLightComment
+hi! link Underlined MonikaLightFgUnderline
+hi! link Todo MonikaLightTodo
 
-hi! link Error DraculaError
-hi! link SpellBad DraculaErrorLine
-hi! link SpellLocal DraculaWarnLine
-hi! link SpellCap DraculaInfoLine
-hi! link SpellRare DraculaInfoLine
+hi! link Error MonikaLightError
+hi! link SpellBad MonikaLightErrorLine
+hi! link SpellLocal MonikaLightWarnLine
+hi! link SpellCap MonikaLightInfoLine
+hi! link SpellRare MonikaLightInfoLine
 
-hi! link Constant DraculaPurple
-hi! link String DraculaYellow
-hi! link Character DraculaPink
+hi! link Constant MonikaLightPurple
+hi! link String MonikaLightYellow
+hi! link Character MonikaLightPink
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
-hi! link Identifier DraculaFg
-hi! link Function DraculaGreen
+hi! link Identifier MonikaLightFg
+hi! link Function MonikaLightGreen
 
-hi! link Statement DraculaPink
-hi! link Conditional DraculaPink
-hi! link Repeat DraculaPink
-hi! link Label DraculaPink
-hi! link Operator DraculaPink
-hi! link Keyword DraculaPink
-hi! link Exception DraculaPink
+hi! link Statement MonikaLightPink
+hi! link Conditional MonikaLightPink
+hi! link Repeat MonikaLightPink
+hi! link Label MonikaLightPink
+hi! link Operator MonikaLightPink
+hi! link Keyword MonikaLightPink
+hi! link Exception MonikaLightPink
 
-hi! link PreProc DraculaPink
-hi! link Include DraculaPink
-hi! link Define DraculaPink
-hi! link Macro DraculaPink
-hi! link PreCondit DraculaPink
-hi! link StorageClass DraculaPink
-hi! link Structure DraculaPink
-hi! link Typedef DraculaPink
+hi! link PreProc MonikaLightPink
+hi! link Include MonikaLightPink
+hi! link Define MonikaLightPink
+hi! link Macro MonikaLightPink
+hi! link PreCondit MonikaLightPink
+hi! link StorageClass MonikaLightPink
+hi! link Structure MonikaLightPink
+hi! link Typedef MonikaLightPink
 
-hi! link Type DraculaCyanItalic
+hi! link Type MonikaLightCyanItalic
 
-hi! link Delimiter DraculaFg
+hi! link Delimiter MonikaLightFg
 
-hi! link Special DraculaPink
-hi! link SpecialComment DraculaCyanItalic
-hi! link Tag DraculaCyan
-hi! link helpHyperTextJump DraculaLink
-hi! link helpCommand DraculaPurple
-hi! link helpExample DraculaGreen
+hi! link Special MonikaLightPink
+hi! link SpecialComment MonikaLightCyanItalic
+hi! link Tag MonikaLightCyan
+hi! link helpHyperTextJump MonikaLightLink
+hi! link helpCommand MonikaLightPurple
+hi! link helpExample MonikaLightGreen
 hi! link helpBacktick Special
 
 "}}}

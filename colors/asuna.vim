@@ -117,63 +117,63 @@ endfunction
 "}}}2
 "Highlight Groups: 
 
-call s:h('DraculaBgLight', s:none, s:bglight)
-call s:h('DraculaBgLighter', s:none, s:bglighter)
-call s:h('DraculaBgDark', s:none, s:bgdark)
-call s:h('DraculaBgDarker', s:none, s:bgdarker)
+call s:h('AsunaBgLight', s:none, s:bglight)
+call s:h('AsunaBgLighter', s:none, s:bglighter)
+call s:h('AsunaBgDark', s:none, s:bgdark)
+call s:h('AsunaBgDarker', s:none, s:bgdarker)
 
-call s:h('DraculaFg', s:fg)
-call s:h('DraculaFgUnderline', s:fg, s:none, [s:attrs.underline])
-call s:h('DraculaFgBold', s:fg, s:none, [s:attrs.bold])
+call s:h('AsunaFg', s:fg)
+call s:h('AsunaFgUnderline', s:fg, s:none, [s:attrs.underline])
+call s:h('AsunaFgBold', s:fg, s:none, [s:attrs.bold])
 
-call s:h('DraculaComment', s:comment)
-call s:h('DraculaCommentBold', s:comment, s:none, [s:attrs.bold])
+call s:h('AsunaComment', s:comment)
+call s:h('AsunaCommentBold', s:comment, s:none, [s:attrs.bold])
 
-call s:h('DraculaSelection', s:none, s:selection)
+call s:h('AsunaSelection', s:none, s:selection)
 
-call s:h('DraculaSubtle', s:subtle)
+call s:h('AsunaSubtle', s:subtle)
 
-call s:h('DraculaCyan', s:cyan)
-call s:h('DraculaCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('AsunaCyan', s:cyan)
+call s:h('AsunaCyanItalic', s:cyan, s:none, [s:attrs.italic])
 
-call s:h('DraculaGreen', s:green)
-call s:h('DraculaGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('DraculaGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('DraculaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('AsunaGreen', s:green)
+call s:h('AsunaGreenBold', s:green, s:none, [s:attrs.bold])
+call s:h('AsunaGreenItalic', s:green, s:none, [s:attrs.italic])
+call s:h('AsunaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('DraculaOrange', s:orange)
-call s:h('DraculaOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('DraculaOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('DraculaOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('DraculaOrangeInverse', s:bg, s:orange)
+call s:h('AsunaOrange', s:orange)
+call s:h('AsunaOrangeBold', s:orange, s:none, [s:attrs.bold])
+call s:h('AsunaOrangeItalic', s:orange, s:none, [s:attrs.italic])
+call s:h('AsunaOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('AsunaOrangeInverse', s:bg, s:orange)
 
-call s:h('DraculaPink', s:pink)
-call s:h('DraculaPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('AsunaPink', s:pink)
+call s:h('AsunaPinkItalic', s:pink, s:none, [s:attrs.italic])
 
-call s:h('DraculaPurple', s:purple)
-call s:h('DraculaPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('DraculaPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('AsunaPurple', s:purple)
+call s:h('AsunaPurpleBold', s:purple, s:none, [s:attrs.bold])
+call s:h('AsunaPurpleItalic', s:purple, s:none, [s:attrs.italic])
 
-call s:h('DraculaRed', s:red)
-call s:h('DraculaRedInverse', s:fg, s:red)
+call s:h('AsunaRed', s:red)
+call s:h('AsunaRedInverse', s:fg, s:red)
 
-call s:h('DraculaYellow', s:yellow)
-call s:h('DraculaYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('AsunaYellow', s:yellow)
+call s:h('AsunaYellowItalic', s:yellow, s:none, [s:attrs.italic])
 
-call s:h('DraculaError', s:red, s:none, [], s:red)
+call s:h('AsunaError', s:red, s:none, [], s:red)
 
-call s:h('DraculaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('DraculaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('DraculaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('AsunaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
+call s:h('AsunaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
+call s:h('AsunaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
 
-call s:h('DraculaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
-call s:h('DraculaBoundary', s:comment, s:bgdark)
-call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('AsunaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('AsunaSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('AsunaBoundary', s:comment, s:bgdark)
+call s:h('AsunaLink', s:cyan, s:none, [s:attrs.underline])
 
-call s:h('DraculaDiffChange', s:orange, s:none)
-call s:h('DraculaDiffText', s:bg, s:orange)
-call s:h('DraculaDiffDelete', s:red, s:bgdark)
+call s:h('AsunaDiffChange', s:orange, s:none)
+call s:h('AsunaDiffText', s:bg, s:orange)
+call s:h('AsunaDiffDelete', s:red, s:bgdark)
 
 " }}}2
 
@@ -191,38 +191,38 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  DraculaBgDark
+hi! link ColorColumn  AsunaBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr DraculaYellow
-hi! link DiffAdd      DraculaGreen
+hi! link CursorLineNr AsunaYellow
+hi! link DiffAdd      AsunaGreen
 hi! link DiffAdded    DiffAdd
-hi! link DiffChange   DraculaDiffChange
-hi! link DiffDelete   DraculaDiffDelete
+hi! link DiffChange   AsunaDiffChange
+hi! link DiffDelete   AsunaDiffDelete
 hi! link DiffRemoved  DiffDelete
-hi! link DiffText     DraculaDiffText
-hi! link Directory    DraculaPurpleBold
-hi! link ErrorMsg     DraculaRedInverse
-hi! link FoldColumn   DraculaSubtle
-hi! link Folded       DraculaBoundary
-hi! link IncSearch    DraculaOrangeInverse
+hi! link DiffText     AsunaDiffText
+hi! link Directory    AsunaPurpleBold
+hi! link ErrorMsg     AsunaRedInverse
+hi! link FoldColumn   AsunaSubtle
+hi! link Folded       AsunaBoundary
+hi! link IncSearch    AsunaOrangeInverse
 call s:h('LineNr', s:comment)
-hi! link MoreMsg      DraculaFgBold
-hi! link NonText      DraculaSubtle
-hi! link Pmenu        DraculaBgDark
-hi! link PmenuSbar    DraculaBgDark
-hi! link PmenuSel     DraculaSelection
-hi! link PmenuThumb   DraculaSelection
-hi! link Question     DraculaFgBold
-hi! link Search       DraculaSearch
+hi! link MoreMsg      AsunaFgBold
+hi! link NonText      AsunaSubtle
+hi! link Pmenu        AsunaBgDark
+hi! link PmenuSbar    AsunaBgDark
+hi! link PmenuSel     AsunaSelection
+hi! link PmenuThumb   AsunaSelection
+hi! link Question     AsunaFgBold
+hi! link Search       AsunaSearch
 call s:h('SignColumn', s:comment)
-hi! link TabLine      DraculaBoundary
-hi! link TabLineFill  DraculaBgDarker
+hi! link TabLine      AsunaBoundary
+hi! link TabLineFill  AsunaBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        DraculaGreenBold
-hi! link VertSplit    DraculaBoundary
-hi! link Visual       DraculaSelection
+hi! link Title        AsunaGreenBold
+hi! link VertSplit    AsunaBoundary
+hi! link Visual       AsunaSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   DraculaOrangeInverse
+hi! link WarningMsg   AsunaOrangeInverse
 
 " }}}
 " Syntax: 
@@ -233,67 +233,67 @@ call s:h('Conceal', s:cyan, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
-  hi! link SpecialKey DraculaRed
-  hi! link LspDiagnosticsUnderline DraculaFgUnderline
-  hi! link LspDiagnosticsInformation DraculaCyan
-  hi! link LspDiagnosticsHint DraculaCyan
-  hi! link LspDiagnosticsError DraculaError
-  hi! link LspDiagnosticsWarning DraculaOrange
-  hi! link LspDiagnosticsUnderlineError DraculaErrorLine
-  hi! link LspDiagnosticsUnderlineHint DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineInformation DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineWarning DraculaWarnLine
+  hi! link SpecialKey AsunaRed
+  hi! link LspDiagnosticsUnderline AsunaFgUnderline
+  hi! link LspDiagnosticsInformation AsunaCyan
+  hi! link LspDiagnosticsHint AsunaCyan
+  hi! link LspDiagnosticsError AsunaError
+  hi! link LspDiagnosticsWarning AsunaOrange
+  hi! link LspDiagnosticsUnderlineError AsunaErrorLine
+  hi! link LspDiagnosticsUnderlineHint AsunaInfoLine
+  hi! link LspDiagnosticsUnderlineInformation AsunaInfoLine
+  hi! link LspDiagnosticsUnderlineWarning AsunaWarnLine
 else
-  hi! link SpecialKey DraculaSubtle
+  hi! link SpecialKey AsunaSubtle
 endif
 
-hi! link Comment DraculaComment
-hi! link Underlined DraculaFgUnderline
-hi! link Todo DraculaTodo
+hi! link Comment AsunaComment
+hi! link Underlined AsunaFgUnderline
+hi! link Todo AsunaTodo
 
-hi! link Error DraculaError
-hi! link SpellBad DraculaErrorLine
-hi! link SpellLocal DraculaWarnLine
-hi! link SpellCap DraculaInfoLine
-hi! link SpellRare DraculaInfoLine
+hi! link Error AsunaError
+hi! link SpellBad AsunaErrorLine
+hi! link SpellLocal AsunaWarnLine
+hi! link SpellCap AsunaInfoLine
+hi! link SpellRare AsunaInfoLine
 
-hi! link Constant DraculaPurple
-hi! link String DraculaYellow
-hi! link Character DraculaPink
+hi! link Constant AsunaPurple
+hi! link String AsunaYellow
+hi! link Character AsunaPink
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
-hi! link Identifier DraculaFg
-hi! link Function DraculaGreen
+hi! link Identifier AsunaFg
+hi! link Function AsunaGreen
 
-hi! link Statement DraculaPink
-hi! link Conditional DraculaPink
-hi! link Repeat DraculaPink
-hi! link Label DraculaPink
-hi! link Operator DraculaPink
-hi! link Keyword DraculaPink
-hi! link Exception DraculaPink
+hi! link Statement AsunaPink
+hi! link Conditional AsunaPink
+hi! link Repeat AsunaPink
+hi! link Label AsunaPink
+hi! link Operator AsunaPink
+hi! link Keyword AsunaPink
+hi! link Exception AsunaPink
 
-hi! link PreProc DraculaPink
-hi! link Include DraculaPink
-hi! link Define DraculaPink
-hi! link Macro DraculaPink
-hi! link PreCondit DraculaPink
-hi! link StorageClass DraculaPink
-hi! link Structure DraculaPink
-hi! link Typedef DraculaPink
+hi! link PreProc AsunaPink
+hi! link Include AsunaPink
+hi! link Define AsunaPink
+hi! link Macro AsunaPink
+hi! link PreCondit AsunaPink
+hi! link StorageClass AsunaPink
+hi! link Structure AsunaPink
+hi! link Typedef AsunaPink
 
-hi! link Type DraculaCyanItalic
+hi! link Type AsunaCyanItalic
 
-hi! link Delimiter DraculaFg
+hi! link Delimiter AsunaFg
 
-hi! link Special DraculaPink
-hi! link SpecialComment DraculaCyanItalic
-hi! link Tag DraculaCyan
-hi! link helpHyperTextJump DraculaLink
-hi! link helpCommand DraculaPurple
-hi! link helpExample DraculaGreen
+hi! link Special AsunaPink
+hi! link SpecialComment AsunaCyanItalic
+hi! link Tag AsunaCyan
+hi! link helpHyperTextJump AsunaLink
+hi! link helpCommand AsunaPurple
+hi! link helpExample AsunaGreen
 hi! link helpBacktick Special
 
 "}}}

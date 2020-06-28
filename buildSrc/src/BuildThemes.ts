@@ -222,6 +222,8 @@ function buildVimAutoLoadScript(
   );
 }
 
+const capitalize = require('lodash/capitalize');
+
 function evaluateTemplate(
   dokiThemeDefinition: MasterDokiThemeDefinition,
   dokiTemplateDefinitions: DokiThemeDefinitions,
@@ -231,13 +233,17 @@ function evaluateTemplate(
     dokiThemeDefinition, dokiTemplateDefinitions
   );
   const themeName = constructVimName(dokiThemeDefinition);
+  const themeProperName = dokiThemeDefinition.name.split(" ")
+    .map(part => capitalize(part))
+    .join('')
 
   try {
     return fillInTemplateScript(
       vimAutoLoadScript,
       {
         ...namedColors,
-        themeName
+        themeName,
+        themeProperName,
       }
     );
   } catch (e) {

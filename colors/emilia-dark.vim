@@ -117,63 +117,63 @@ endfunction
 "}}}2
 "Highlight Groups: 
 
-call s:h('DraculaBgLight', s:none, s:bglight)
-call s:h('DraculaBgLighter', s:none, s:bglighter)
-call s:h('DraculaBgDark', s:none, s:bgdark)
-call s:h('DraculaBgDarker', s:none, s:bgdarker)
+call s:h('EmiliaDarkBgLight', s:none, s:bglight)
+call s:h('EmiliaDarkBgLighter', s:none, s:bglighter)
+call s:h('EmiliaDarkBgDark', s:none, s:bgdark)
+call s:h('EmiliaDarkBgDarker', s:none, s:bgdarker)
 
-call s:h('DraculaFg', s:fg)
-call s:h('DraculaFgUnderline', s:fg, s:none, [s:attrs.underline])
-call s:h('DraculaFgBold', s:fg, s:none, [s:attrs.bold])
+call s:h('EmiliaDarkFg', s:fg)
+call s:h('EmiliaDarkFgUnderline', s:fg, s:none, [s:attrs.underline])
+call s:h('EmiliaDarkFgBold', s:fg, s:none, [s:attrs.bold])
 
-call s:h('DraculaComment', s:comment)
-call s:h('DraculaCommentBold', s:comment, s:none, [s:attrs.bold])
+call s:h('EmiliaDarkComment', s:comment)
+call s:h('EmiliaDarkCommentBold', s:comment, s:none, [s:attrs.bold])
 
-call s:h('DraculaSelection', s:none, s:selection)
+call s:h('EmiliaDarkSelection', s:none, s:selection)
 
-call s:h('DraculaSubtle', s:subtle)
+call s:h('EmiliaDarkSubtle', s:subtle)
 
-call s:h('DraculaCyan', s:cyan)
-call s:h('DraculaCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('EmiliaDarkCyan', s:cyan)
+call s:h('EmiliaDarkCyanItalic', s:cyan, s:none, [s:attrs.italic])
 
-call s:h('DraculaGreen', s:green)
-call s:h('DraculaGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('DraculaGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('DraculaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('EmiliaDarkGreen', s:green)
+call s:h('EmiliaDarkGreenBold', s:green, s:none, [s:attrs.bold])
+call s:h('EmiliaDarkGreenItalic', s:green, s:none, [s:attrs.italic])
+call s:h('EmiliaDarkGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('DraculaOrange', s:orange)
-call s:h('DraculaOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('DraculaOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('DraculaOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('DraculaOrangeInverse', s:bg, s:orange)
+call s:h('EmiliaDarkOrange', s:orange)
+call s:h('EmiliaDarkOrangeBold', s:orange, s:none, [s:attrs.bold])
+call s:h('EmiliaDarkOrangeItalic', s:orange, s:none, [s:attrs.italic])
+call s:h('EmiliaDarkOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('EmiliaDarkOrangeInverse', s:bg, s:orange)
 
-call s:h('DraculaPink', s:pink)
-call s:h('DraculaPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('EmiliaDarkPink', s:pink)
+call s:h('EmiliaDarkPinkItalic', s:pink, s:none, [s:attrs.italic])
 
-call s:h('DraculaPurple', s:purple)
-call s:h('DraculaPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('DraculaPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('EmiliaDarkPurple', s:purple)
+call s:h('EmiliaDarkPurpleBold', s:purple, s:none, [s:attrs.bold])
+call s:h('EmiliaDarkPurpleItalic', s:purple, s:none, [s:attrs.italic])
 
-call s:h('DraculaRed', s:red)
-call s:h('DraculaRedInverse', s:fg, s:red)
+call s:h('EmiliaDarkRed', s:red)
+call s:h('EmiliaDarkRedInverse', s:fg, s:red)
 
-call s:h('DraculaYellow', s:yellow)
-call s:h('DraculaYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('EmiliaDarkYellow', s:yellow)
+call s:h('EmiliaDarkYellowItalic', s:yellow, s:none, [s:attrs.italic])
 
-call s:h('DraculaError', s:red, s:none, [], s:red)
+call s:h('EmiliaDarkError', s:red, s:none, [], s:red)
 
-call s:h('DraculaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('DraculaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('DraculaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('EmiliaDarkErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
+call s:h('EmiliaDarkWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
+call s:h('EmiliaDarkInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
 
-call s:h('DraculaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
-call s:h('DraculaBoundary', s:comment, s:bgdark)
-call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('EmiliaDarkTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('EmiliaDarkSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('EmiliaDarkBoundary', s:comment, s:bgdark)
+call s:h('EmiliaDarkLink', s:cyan, s:none, [s:attrs.underline])
 
-call s:h('DraculaDiffChange', s:orange, s:none)
-call s:h('DraculaDiffText', s:bg, s:orange)
-call s:h('DraculaDiffDelete', s:red, s:bgdark)
+call s:h('EmiliaDarkDiffChange', s:orange, s:none)
+call s:h('EmiliaDarkDiffText', s:bg, s:orange)
+call s:h('EmiliaDarkDiffDelete', s:red, s:bgdark)
 
 " }}}2
 
@@ -191,38 +191,38 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  DraculaBgDark
+hi! link ColorColumn  EmiliaDarkBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr DraculaYellow
-hi! link DiffAdd      DraculaGreen
+hi! link CursorLineNr EmiliaDarkYellow
+hi! link DiffAdd      EmiliaDarkGreen
 hi! link DiffAdded    DiffAdd
-hi! link DiffChange   DraculaDiffChange
-hi! link DiffDelete   DraculaDiffDelete
+hi! link DiffChange   EmiliaDarkDiffChange
+hi! link DiffDelete   EmiliaDarkDiffDelete
 hi! link DiffRemoved  DiffDelete
-hi! link DiffText     DraculaDiffText
-hi! link Directory    DraculaPurpleBold
-hi! link ErrorMsg     DraculaRedInverse
-hi! link FoldColumn   DraculaSubtle
-hi! link Folded       DraculaBoundary
-hi! link IncSearch    DraculaOrangeInverse
+hi! link DiffText     EmiliaDarkDiffText
+hi! link Directory    EmiliaDarkPurpleBold
+hi! link ErrorMsg     EmiliaDarkRedInverse
+hi! link FoldColumn   EmiliaDarkSubtle
+hi! link Folded       EmiliaDarkBoundary
+hi! link IncSearch    EmiliaDarkOrangeInverse
 call s:h('LineNr', s:comment)
-hi! link MoreMsg      DraculaFgBold
-hi! link NonText      DraculaSubtle
-hi! link Pmenu        DraculaBgDark
-hi! link PmenuSbar    DraculaBgDark
-hi! link PmenuSel     DraculaSelection
-hi! link PmenuThumb   DraculaSelection
-hi! link Question     DraculaFgBold
-hi! link Search       DraculaSearch
+hi! link MoreMsg      EmiliaDarkFgBold
+hi! link NonText      EmiliaDarkSubtle
+hi! link Pmenu        EmiliaDarkBgDark
+hi! link PmenuSbar    EmiliaDarkBgDark
+hi! link PmenuSel     EmiliaDarkSelection
+hi! link PmenuThumb   EmiliaDarkSelection
+hi! link Question     EmiliaDarkFgBold
+hi! link Search       EmiliaDarkSearch
 call s:h('SignColumn', s:comment)
-hi! link TabLine      DraculaBoundary
-hi! link TabLineFill  DraculaBgDarker
+hi! link TabLine      EmiliaDarkBoundary
+hi! link TabLineFill  EmiliaDarkBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        DraculaGreenBold
-hi! link VertSplit    DraculaBoundary
-hi! link Visual       DraculaSelection
+hi! link Title        EmiliaDarkGreenBold
+hi! link VertSplit    EmiliaDarkBoundary
+hi! link Visual       EmiliaDarkSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   DraculaOrangeInverse
+hi! link WarningMsg   EmiliaDarkOrangeInverse
 
 " }}}
 " Syntax: 
@@ -233,67 +233,67 @@ call s:h('Conceal', s:cyan, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
-  hi! link SpecialKey DraculaRed
-  hi! link LspDiagnosticsUnderline DraculaFgUnderline
-  hi! link LspDiagnosticsInformation DraculaCyan
-  hi! link LspDiagnosticsHint DraculaCyan
-  hi! link LspDiagnosticsError DraculaError
-  hi! link LspDiagnosticsWarning DraculaOrange
-  hi! link LspDiagnosticsUnderlineError DraculaErrorLine
-  hi! link LspDiagnosticsUnderlineHint DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineInformation DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineWarning DraculaWarnLine
+  hi! link SpecialKey EmiliaDarkRed
+  hi! link LspDiagnosticsUnderline EmiliaDarkFgUnderline
+  hi! link LspDiagnosticsInformation EmiliaDarkCyan
+  hi! link LspDiagnosticsHint EmiliaDarkCyan
+  hi! link LspDiagnosticsError EmiliaDarkError
+  hi! link LspDiagnosticsWarning EmiliaDarkOrange
+  hi! link LspDiagnosticsUnderlineError EmiliaDarkErrorLine
+  hi! link LspDiagnosticsUnderlineHint EmiliaDarkInfoLine
+  hi! link LspDiagnosticsUnderlineInformation EmiliaDarkInfoLine
+  hi! link LspDiagnosticsUnderlineWarning EmiliaDarkWarnLine
 else
-  hi! link SpecialKey DraculaSubtle
+  hi! link SpecialKey EmiliaDarkSubtle
 endif
 
-hi! link Comment DraculaComment
-hi! link Underlined DraculaFgUnderline
-hi! link Todo DraculaTodo
+hi! link Comment EmiliaDarkComment
+hi! link Underlined EmiliaDarkFgUnderline
+hi! link Todo EmiliaDarkTodo
 
-hi! link Error DraculaError
-hi! link SpellBad DraculaErrorLine
-hi! link SpellLocal DraculaWarnLine
-hi! link SpellCap DraculaInfoLine
-hi! link SpellRare DraculaInfoLine
+hi! link Error EmiliaDarkError
+hi! link SpellBad EmiliaDarkErrorLine
+hi! link SpellLocal EmiliaDarkWarnLine
+hi! link SpellCap EmiliaDarkInfoLine
+hi! link SpellRare EmiliaDarkInfoLine
 
-hi! link Constant DraculaPurple
-hi! link String DraculaYellow
-hi! link Character DraculaPink
+hi! link Constant EmiliaDarkPurple
+hi! link String EmiliaDarkYellow
+hi! link Character EmiliaDarkPink
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
-hi! link Identifier DraculaFg
-hi! link Function DraculaGreen
+hi! link Identifier EmiliaDarkFg
+hi! link Function EmiliaDarkGreen
 
-hi! link Statement DraculaPink
-hi! link Conditional DraculaPink
-hi! link Repeat DraculaPink
-hi! link Label DraculaPink
-hi! link Operator DraculaPink
-hi! link Keyword DraculaPink
-hi! link Exception DraculaPink
+hi! link Statement EmiliaDarkPink
+hi! link Conditional EmiliaDarkPink
+hi! link Repeat EmiliaDarkPink
+hi! link Label EmiliaDarkPink
+hi! link Operator EmiliaDarkPink
+hi! link Keyword EmiliaDarkPink
+hi! link Exception EmiliaDarkPink
 
-hi! link PreProc DraculaPink
-hi! link Include DraculaPink
-hi! link Define DraculaPink
-hi! link Macro DraculaPink
-hi! link PreCondit DraculaPink
-hi! link StorageClass DraculaPink
-hi! link Structure DraculaPink
-hi! link Typedef DraculaPink
+hi! link PreProc EmiliaDarkPink
+hi! link Include EmiliaDarkPink
+hi! link Define EmiliaDarkPink
+hi! link Macro EmiliaDarkPink
+hi! link PreCondit EmiliaDarkPink
+hi! link StorageClass EmiliaDarkPink
+hi! link Structure EmiliaDarkPink
+hi! link Typedef EmiliaDarkPink
 
-hi! link Type DraculaCyanItalic
+hi! link Type EmiliaDarkCyanItalic
 
-hi! link Delimiter DraculaFg
+hi! link Delimiter EmiliaDarkFg
 
-hi! link Special DraculaPink
-hi! link SpecialComment DraculaCyanItalic
-hi! link Tag DraculaCyan
-hi! link helpHyperTextJump DraculaLink
-hi! link helpCommand DraculaPurple
-hi! link helpExample DraculaGreen
+hi! link Special EmiliaDarkPink
+hi! link SpecialComment EmiliaDarkCyanItalic
+hi! link Tag EmiliaDarkCyan
+hi! link helpHyperTextJump EmiliaDarkLink
+hi! link helpCommand EmiliaDarkPurple
+hi! link helpExample EmiliaDarkGreen
 hi! link helpBacktick Special
 
 "}}}

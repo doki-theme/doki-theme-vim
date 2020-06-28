@@ -117,63 +117,63 @@ endfunction
 "}}}2
 "Highlight Groups: 
 
-call s:h('DraculaBgLight', s:none, s:bglight)
-call s:h('DraculaBgLighter', s:none, s:bglighter)
-call s:h('DraculaBgDark', s:none, s:bgdark)
-call s:h('DraculaBgDarker', s:none, s:bgdarker)
+call s:h('RiasBgLight', s:none, s:bglight)
+call s:h('RiasBgLighter', s:none, s:bglighter)
+call s:h('RiasBgDark', s:none, s:bgdark)
+call s:h('RiasBgDarker', s:none, s:bgdarker)
 
-call s:h('DraculaFg', s:fg)
-call s:h('DraculaFgUnderline', s:fg, s:none, [s:attrs.underline])
-call s:h('DraculaFgBold', s:fg, s:none, [s:attrs.bold])
+call s:h('RiasFg', s:fg)
+call s:h('RiasFgUnderline', s:fg, s:none, [s:attrs.underline])
+call s:h('RiasFgBold', s:fg, s:none, [s:attrs.bold])
 
-call s:h('DraculaComment', s:comment)
-call s:h('DraculaCommentBold', s:comment, s:none, [s:attrs.bold])
+call s:h('RiasComment', s:comment)
+call s:h('RiasCommentBold', s:comment, s:none, [s:attrs.bold])
 
-call s:h('DraculaSelection', s:none, s:selection)
+call s:h('RiasSelection', s:none, s:selection)
 
-call s:h('DraculaSubtle', s:subtle)
+call s:h('RiasSubtle', s:subtle)
 
-call s:h('DraculaCyan', s:cyan)
-call s:h('DraculaCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('RiasCyan', s:cyan)
+call s:h('RiasCyanItalic', s:cyan, s:none, [s:attrs.italic])
 
-call s:h('DraculaGreen', s:green)
-call s:h('DraculaGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('DraculaGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('DraculaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('RiasGreen', s:green)
+call s:h('RiasGreenBold', s:green, s:none, [s:attrs.bold])
+call s:h('RiasGreenItalic', s:green, s:none, [s:attrs.italic])
+call s:h('RiasGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('DraculaOrange', s:orange)
-call s:h('DraculaOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('DraculaOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('DraculaOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('DraculaOrangeInverse', s:bg, s:orange)
+call s:h('RiasOrange', s:orange)
+call s:h('RiasOrangeBold', s:orange, s:none, [s:attrs.bold])
+call s:h('RiasOrangeItalic', s:orange, s:none, [s:attrs.italic])
+call s:h('RiasOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('RiasOrangeInverse', s:bg, s:orange)
 
-call s:h('DraculaPink', s:pink)
-call s:h('DraculaPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('RiasPink', s:pink)
+call s:h('RiasPinkItalic', s:pink, s:none, [s:attrs.italic])
 
-call s:h('DraculaPurple', s:purple)
-call s:h('DraculaPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('DraculaPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('RiasPurple', s:purple)
+call s:h('RiasPurpleBold', s:purple, s:none, [s:attrs.bold])
+call s:h('RiasPurpleItalic', s:purple, s:none, [s:attrs.italic])
 
-call s:h('DraculaRed', s:red)
-call s:h('DraculaRedInverse', s:fg, s:red)
+call s:h('RiasRed', s:red)
+call s:h('RiasRedInverse', s:fg, s:red)
 
-call s:h('DraculaYellow', s:yellow)
-call s:h('DraculaYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('RiasYellow', s:yellow)
+call s:h('RiasYellowItalic', s:yellow, s:none, [s:attrs.italic])
 
-call s:h('DraculaError', s:red, s:none, [], s:red)
+call s:h('RiasError', s:red, s:none, [], s:red)
 
-call s:h('DraculaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('DraculaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('DraculaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('RiasErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
+call s:h('RiasWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
+call s:h('RiasInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
 
-call s:h('DraculaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
-call s:h('DraculaBoundary', s:comment, s:bgdark)
-call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('RiasTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('RiasSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('RiasBoundary', s:comment, s:bgdark)
+call s:h('RiasLink', s:cyan, s:none, [s:attrs.underline])
 
-call s:h('DraculaDiffChange', s:orange, s:none)
-call s:h('DraculaDiffText', s:bg, s:orange)
-call s:h('DraculaDiffDelete', s:red, s:bgdark)
+call s:h('RiasDiffChange', s:orange, s:none)
+call s:h('RiasDiffText', s:bg, s:orange)
+call s:h('RiasDiffDelete', s:red, s:bgdark)
 
 " }}}2
 
@@ -191,38 +191,38 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  DraculaBgDark
+hi! link ColorColumn  RiasBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr DraculaYellow
-hi! link DiffAdd      DraculaGreen
+hi! link CursorLineNr RiasYellow
+hi! link DiffAdd      RiasGreen
 hi! link DiffAdded    DiffAdd
-hi! link DiffChange   DraculaDiffChange
-hi! link DiffDelete   DraculaDiffDelete
+hi! link DiffChange   RiasDiffChange
+hi! link DiffDelete   RiasDiffDelete
 hi! link DiffRemoved  DiffDelete
-hi! link DiffText     DraculaDiffText
-hi! link Directory    DraculaPurpleBold
-hi! link ErrorMsg     DraculaRedInverse
-hi! link FoldColumn   DraculaSubtle
-hi! link Folded       DraculaBoundary
-hi! link IncSearch    DraculaOrangeInverse
+hi! link DiffText     RiasDiffText
+hi! link Directory    RiasPurpleBold
+hi! link ErrorMsg     RiasRedInverse
+hi! link FoldColumn   RiasSubtle
+hi! link Folded       RiasBoundary
+hi! link IncSearch    RiasOrangeInverse
 call s:h('LineNr', s:comment)
-hi! link MoreMsg      DraculaFgBold
-hi! link NonText      DraculaSubtle
-hi! link Pmenu        DraculaBgDark
-hi! link PmenuSbar    DraculaBgDark
-hi! link PmenuSel     DraculaSelection
-hi! link PmenuThumb   DraculaSelection
-hi! link Question     DraculaFgBold
-hi! link Search       DraculaSearch
+hi! link MoreMsg      RiasFgBold
+hi! link NonText      RiasSubtle
+hi! link Pmenu        RiasBgDark
+hi! link PmenuSbar    RiasBgDark
+hi! link PmenuSel     RiasSelection
+hi! link PmenuThumb   RiasSelection
+hi! link Question     RiasFgBold
+hi! link Search       RiasSearch
 call s:h('SignColumn', s:comment)
-hi! link TabLine      DraculaBoundary
-hi! link TabLineFill  DraculaBgDarker
+hi! link TabLine      RiasBoundary
+hi! link TabLineFill  RiasBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        DraculaGreenBold
-hi! link VertSplit    DraculaBoundary
-hi! link Visual       DraculaSelection
+hi! link Title        RiasGreenBold
+hi! link VertSplit    RiasBoundary
+hi! link Visual       RiasSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   DraculaOrangeInverse
+hi! link WarningMsg   RiasOrangeInverse
 
 " }}}
 " Syntax: 
@@ -233,67 +233,67 @@ call s:h('Conceal', s:cyan, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
-  hi! link SpecialKey DraculaRed
-  hi! link LspDiagnosticsUnderline DraculaFgUnderline
-  hi! link LspDiagnosticsInformation DraculaCyan
-  hi! link LspDiagnosticsHint DraculaCyan
-  hi! link LspDiagnosticsError DraculaError
-  hi! link LspDiagnosticsWarning DraculaOrange
-  hi! link LspDiagnosticsUnderlineError DraculaErrorLine
-  hi! link LspDiagnosticsUnderlineHint DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineInformation DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineWarning DraculaWarnLine
+  hi! link SpecialKey RiasRed
+  hi! link LspDiagnosticsUnderline RiasFgUnderline
+  hi! link LspDiagnosticsInformation RiasCyan
+  hi! link LspDiagnosticsHint RiasCyan
+  hi! link LspDiagnosticsError RiasError
+  hi! link LspDiagnosticsWarning RiasOrange
+  hi! link LspDiagnosticsUnderlineError RiasErrorLine
+  hi! link LspDiagnosticsUnderlineHint RiasInfoLine
+  hi! link LspDiagnosticsUnderlineInformation RiasInfoLine
+  hi! link LspDiagnosticsUnderlineWarning RiasWarnLine
 else
-  hi! link SpecialKey DraculaSubtle
+  hi! link SpecialKey RiasSubtle
 endif
 
-hi! link Comment DraculaComment
-hi! link Underlined DraculaFgUnderline
-hi! link Todo DraculaTodo
+hi! link Comment RiasComment
+hi! link Underlined RiasFgUnderline
+hi! link Todo RiasTodo
 
-hi! link Error DraculaError
-hi! link SpellBad DraculaErrorLine
-hi! link SpellLocal DraculaWarnLine
-hi! link SpellCap DraculaInfoLine
-hi! link SpellRare DraculaInfoLine
+hi! link Error RiasError
+hi! link SpellBad RiasErrorLine
+hi! link SpellLocal RiasWarnLine
+hi! link SpellCap RiasInfoLine
+hi! link SpellRare RiasInfoLine
 
-hi! link Constant DraculaPurple
-hi! link String DraculaYellow
-hi! link Character DraculaPink
+hi! link Constant RiasPurple
+hi! link String RiasYellow
+hi! link Character RiasPink
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
-hi! link Identifier DraculaFg
-hi! link Function DraculaGreen
+hi! link Identifier RiasFg
+hi! link Function RiasGreen
 
-hi! link Statement DraculaPink
-hi! link Conditional DraculaPink
-hi! link Repeat DraculaPink
-hi! link Label DraculaPink
-hi! link Operator DraculaPink
-hi! link Keyword DraculaPink
-hi! link Exception DraculaPink
+hi! link Statement RiasPink
+hi! link Conditional RiasPink
+hi! link Repeat RiasPink
+hi! link Label RiasPink
+hi! link Operator RiasPink
+hi! link Keyword RiasPink
+hi! link Exception RiasPink
 
-hi! link PreProc DraculaPink
-hi! link Include DraculaPink
-hi! link Define DraculaPink
-hi! link Macro DraculaPink
-hi! link PreCondit DraculaPink
-hi! link StorageClass DraculaPink
-hi! link Structure DraculaPink
-hi! link Typedef DraculaPink
+hi! link PreProc RiasPink
+hi! link Include RiasPink
+hi! link Define RiasPink
+hi! link Macro RiasPink
+hi! link PreCondit RiasPink
+hi! link StorageClass RiasPink
+hi! link Structure RiasPink
+hi! link Typedef RiasPink
 
-hi! link Type DraculaCyanItalic
+hi! link Type RiasCyanItalic
 
-hi! link Delimiter DraculaFg
+hi! link Delimiter RiasFg
 
-hi! link Special DraculaPink
-hi! link SpecialComment DraculaCyanItalic
-hi! link Tag DraculaCyan
-hi! link helpHyperTextJump DraculaLink
-hi! link helpCommand DraculaPurple
-hi! link helpExample DraculaGreen
+hi! link Special RiasPink
+hi! link SpecialComment RiasCyanItalic
+hi! link Tag RiasCyan
+hi! link helpHyperTextJump RiasLink
+hi! link helpCommand RiasPurple
+hi! link helpExample RiasGreen
 hi! link helpBacktick Special
 
 "}}}

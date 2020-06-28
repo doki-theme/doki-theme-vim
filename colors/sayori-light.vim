@@ -117,63 +117,63 @@ endfunction
 "}}}2
 "Highlight Groups: 
 
-call s:h('DraculaBgLight', s:none, s:bglight)
-call s:h('DraculaBgLighter', s:none, s:bglighter)
-call s:h('DraculaBgDark', s:none, s:bgdark)
-call s:h('DraculaBgDarker', s:none, s:bgdarker)
+call s:h('SayoriLightBgLight', s:none, s:bglight)
+call s:h('SayoriLightBgLighter', s:none, s:bglighter)
+call s:h('SayoriLightBgDark', s:none, s:bgdark)
+call s:h('SayoriLightBgDarker', s:none, s:bgdarker)
 
-call s:h('DraculaFg', s:fg)
-call s:h('DraculaFgUnderline', s:fg, s:none, [s:attrs.underline])
-call s:h('DraculaFgBold', s:fg, s:none, [s:attrs.bold])
+call s:h('SayoriLightFg', s:fg)
+call s:h('SayoriLightFgUnderline', s:fg, s:none, [s:attrs.underline])
+call s:h('SayoriLightFgBold', s:fg, s:none, [s:attrs.bold])
 
-call s:h('DraculaComment', s:comment)
-call s:h('DraculaCommentBold', s:comment, s:none, [s:attrs.bold])
+call s:h('SayoriLightComment', s:comment)
+call s:h('SayoriLightCommentBold', s:comment, s:none, [s:attrs.bold])
 
-call s:h('DraculaSelection', s:none, s:selection)
+call s:h('SayoriLightSelection', s:none, s:selection)
 
-call s:h('DraculaSubtle', s:subtle)
+call s:h('SayoriLightSubtle', s:subtle)
 
-call s:h('DraculaCyan', s:cyan)
-call s:h('DraculaCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('SayoriLightCyan', s:cyan)
+call s:h('SayoriLightCyanItalic', s:cyan, s:none, [s:attrs.italic])
 
-call s:h('DraculaGreen', s:green)
-call s:h('DraculaGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('DraculaGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('DraculaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('SayoriLightGreen', s:green)
+call s:h('SayoriLightGreenBold', s:green, s:none, [s:attrs.bold])
+call s:h('SayoriLightGreenItalic', s:green, s:none, [s:attrs.italic])
+call s:h('SayoriLightGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('DraculaOrange', s:orange)
-call s:h('DraculaOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('DraculaOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('DraculaOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('DraculaOrangeInverse', s:bg, s:orange)
+call s:h('SayoriLightOrange', s:orange)
+call s:h('SayoriLightOrangeBold', s:orange, s:none, [s:attrs.bold])
+call s:h('SayoriLightOrangeItalic', s:orange, s:none, [s:attrs.italic])
+call s:h('SayoriLightOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('SayoriLightOrangeInverse', s:bg, s:orange)
 
-call s:h('DraculaPink', s:pink)
-call s:h('DraculaPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('SayoriLightPink', s:pink)
+call s:h('SayoriLightPinkItalic', s:pink, s:none, [s:attrs.italic])
 
-call s:h('DraculaPurple', s:purple)
-call s:h('DraculaPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('DraculaPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('SayoriLightPurple', s:purple)
+call s:h('SayoriLightPurpleBold', s:purple, s:none, [s:attrs.bold])
+call s:h('SayoriLightPurpleItalic', s:purple, s:none, [s:attrs.italic])
 
-call s:h('DraculaRed', s:red)
-call s:h('DraculaRedInverse', s:fg, s:red)
+call s:h('SayoriLightRed', s:red)
+call s:h('SayoriLightRedInverse', s:fg, s:red)
 
-call s:h('DraculaYellow', s:yellow)
-call s:h('DraculaYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('SayoriLightYellow', s:yellow)
+call s:h('SayoriLightYellowItalic', s:yellow, s:none, [s:attrs.italic])
 
-call s:h('DraculaError', s:red, s:none, [], s:red)
+call s:h('SayoriLightError', s:red, s:none, [], s:red)
 
-call s:h('DraculaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('DraculaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('DraculaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('SayoriLightErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
+call s:h('SayoriLightWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
+call s:h('SayoriLightInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
 
-call s:h('DraculaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
-call s:h('DraculaBoundary', s:comment, s:bgdark)
-call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('SayoriLightTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('SayoriLightSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('SayoriLightBoundary', s:comment, s:bgdark)
+call s:h('SayoriLightLink', s:cyan, s:none, [s:attrs.underline])
 
-call s:h('DraculaDiffChange', s:orange, s:none)
-call s:h('DraculaDiffText', s:bg, s:orange)
-call s:h('DraculaDiffDelete', s:red, s:bgdark)
+call s:h('SayoriLightDiffChange', s:orange, s:none)
+call s:h('SayoriLightDiffText', s:bg, s:orange)
+call s:h('SayoriLightDiffDelete', s:red, s:bgdark)
 
 " }}}2
 
@@ -191,38 +191,38 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  DraculaBgDark
+hi! link ColorColumn  SayoriLightBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr DraculaYellow
-hi! link DiffAdd      DraculaGreen
+hi! link CursorLineNr SayoriLightYellow
+hi! link DiffAdd      SayoriLightGreen
 hi! link DiffAdded    DiffAdd
-hi! link DiffChange   DraculaDiffChange
-hi! link DiffDelete   DraculaDiffDelete
+hi! link DiffChange   SayoriLightDiffChange
+hi! link DiffDelete   SayoriLightDiffDelete
 hi! link DiffRemoved  DiffDelete
-hi! link DiffText     DraculaDiffText
-hi! link Directory    DraculaPurpleBold
-hi! link ErrorMsg     DraculaRedInverse
-hi! link FoldColumn   DraculaSubtle
-hi! link Folded       DraculaBoundary
-hi! link IncSearch    DraculaOrangeInverse
+hi! link DiffText     SayoriLightDiffText
+hi! link Directory    SayoriLightPurpleBold
+hi! link ErrorMsg     SayoriLightRedInverse
+hi! link FoldColumn   SayoriLightSubtle
+hi! link Folded       SayoriLightBoundary
+hi! link IncSearch    SayoriLightOrangeInverse
 call s:h('LineNr', s:comment)
-hi! link MoreMsg      DraculaFgBold
-hi! link NonText      DraculaSubtle
-hi! link Pmenu        DraculaBgDark
-hi! link PmenuSbar    DraculaBgDark
-hi! link PmenuSel     DraculaSelection
-hi! link PmenuThumb   DraculaSelection
-hi! link Question     DraculaFgBold
-hi! link Search       DraculaSearch
+hi! link MoreMsg      SayoriLightFgBold
+hi! link NonText      SayoriLightSubtle
+hi! link Pmenu        SayoriLightBgDark
+hi! link PmenuSbar    SayoriLightBgDark
+hi! link PmenuSel     SayoriLightSelection
+hi! link PmenuThumb   SayoriLightSelection
+hi! link Question     SayoriLightFgBold
+hi! link Search       SayoriLightSearch
 call s:h('SignColumn', s:comment)
-hi! link TabLine      DraculaBoundary
-hi! link TabLineFill  DraculaBgDarker
+hi! link TabLine      SayoriLightBoundary
+hi! link TabLineFill  SayoriLightBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        DraculaGreenBold
-hi! link VertSplit    DraculaBoundary
-hi! link Visual       DraculaSelection
+hi! link Title        SayoriLightGreenBold
+hi! link VertSplit    SayoriLightBoundary
+hi! link Visual       SayoriLightSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   DraculaOrangeInverse
+hi! link WarningMsg   SayoriLightOrangeInverse
 
 " }}}
 " Syntax: 
@@ -233,67 +233,67 @@ call s:h('Conceal', s:cyan, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
-  hi! link SpecialKey DraculaRed
-  hi! link LspDiagnosticsUnderline DraculaFgUnderline
-  hi! link LspDiagnosticsInformation DraculaCyan
-  hi! link LspDiagnosticsHint DraculaCyan
-  hi! link LspDiagnosticsError DraculaError
-  hi! link LspDiagnosticsWarning DraculaOrange
-  hi! link LspDiagnosticsUnderlineError DraculaErrorLine
-  hi! link LspDiagnosticsUnderlineHint DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineInformation DraculaInfoLine
-  hi! link LspDiagnosticsUnderlineWarning DraculaWarnLine
+  hi! link SpecialKey SayoriLightRed
+  hi! link LspDiagnosticsUnderline SayoriLightFgUnderline
+  hi! link LspDiagnosticsInformation SayoriLightCyan
+  hi! link LspDiagnosticsHint SayoriLightCyan
+  hi! link LspDiagnosticsError SayoriLightError
+  hi! link LspDiagnosticsWarning SayoriLightOrange
+  hi! link LspDiagnosticsUnderlineError SayoriLightErrorLine
+  hi! link LspDiagnosticsUnderlineHint SayoriLightInfoLine
+  hi! link LspDiagnosticsUnderlineInformation SayoriLightInfoLine
+  hi! link LspDiagnosticsUnderlineWarning SayoriLightWarnLine
 else
-  hi! link SpecialKey DraculaSubtle
+  hi! link SpecialKey SayoriLightSubtle
 endif
 
-hi! link Comment DraculaComment
-hi! link Underlined DraculaFgUnderline
-hi! link Todo DraculaTodo
+hi! link Comment SayoriLightComment
+hi! link Underlined SayoriLightFgUnderline
+hi! link Todo SayoriLightTodo
 
-hi! link Error DraculaError
-hi! link SpellBad DraculaErrorLine
-hi! link SpellLocal DraculaWarnLine
-hi! link SpellCap DraculaInfoLine
-hi! link SpellRare DraculaInfoLine
+hi! link Error SayoriLightError
+hi! link SpellBad SayoriLightErrorLine
+hi! link SpellLocal SayoriLightWarnLine
+hi! link SpellCap SayoriLightInfoLine
+hi! link SpellRare SayoriLightInfoLine
 
-hi! link Constant DraculaPurple
-hi! link String DraculaYellow
-hi! link Character DraculaPink
+hi! link Constant SayoriLightPurple
+hi! link String SayoriLightYellow
+hi! link Character SayoriLightPink
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
-hi! link Identifier DraculaFg
-hi! link Function DraculaGreen
+hi! link Identifier SayoriLightFg
+hi! link Function SayoriLightGreen
 
-hi! link Statement DraculaPink
-hi! link Conditional DraculaPink
-hi! link Repeat DraculaPink
-hi! link Label DraculaPink
-hi! link Operator DraculaPink
-hi! link Keyword DraculaPink
-hi! link Exception DraculaPink
+hi! link Statement SayoriLightPink
+hi! link Conditional SayoriLightPink
+hi! link Repeat SayoriLightPink
+hi! link Label SayoriLightPink
+hi! link Operator SayoriLightPink
+hi! link Keyword SayoriLightPink
+hi! link Exception SayoriLightPink
 
-hi! link PreProc DraculaPink
-hi! link Include DraculaPink
-hi! link Define DraculaPink
-hi! link Macro DraculaPink
-hi! link PreCondit DraculaPink
-hi! link StorageClass DraculaPink
-hi! link Structure DraculaPink
-hi! link Typedef DraculaPink
+hi! link PreProc SayoriLightPink
+hi! link Include SayoriLightPink
+hi! link Define SayoriLightPink
+hi! link Macro SayoriLightPink
+hi! link PreCondit SayoriLightPink
+hi! link StorageClass SayoriLightPink
+hi! link Structure SayoriLightPink
+hi! link Typedef SayoriLightPink
 
-hi! link Type DraculaCyanItalic
+hi! link Type SayoriLightCyanItalic
 
-hi! link Delimiter DraculaFg
+hi! link Delimiter SayoriLightFg
 
-hi! link Special DraculaPink
-hi! link SpecialComment DraculaCyanItalic
-hi! link Tag DraculaCyan
-hi! link helpHyperTextJump DraculaLink
-hi! link helpCommand DraculaPurple
-hi! link helpExample DraculaGreen
+hi! link Special SayoriLightPink
+hi! link SpecialComment SayoriLightCyanItalic
+hi! link Tag SayoriLightCyan
+hi! link helpHyperTextJump SayoriLightLink
+hi! link helpCommand SayoriLightPurple
+hi! link helpExample SayoriLightGreen
 hi! link helpBacktick Special
 
 "}}}
