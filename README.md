@@ -54,7 +54,7 @@ colorscheme rem
 
 ### Acknowledgments
 
-Big thanks to the [Vim for Dracula](https://github.com/darcula/vim.git) for being the base for this plugin!
+Big thanks to the [Vim for Dracula](https://github.com/dracula/vim.git) for being the base for this plugin!
 
 ---
 
