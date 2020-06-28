@@ -3,11 +3,11 @@
 let g:emilia-dark#palette           = {}
 let g:emilia-dark#palette.fg        = ['#DADADA', 253]
 
-let g:emilia-dark#palette.bglighter = ['#4e3162', 238]
-let g:emilia-dark#palette.bglight   = ['#4e3162', 237]
-let g:emilia-dark#palette.bg        = ['#4e3162', 236]
-let g:emilia-dark#palette.bgdark    = ['#4e3162', 235]
-let g:emilia-dark#palette.bgdarker  = ['#4e3162', 234]
+let g:emilia-dark#palette.bglighter = ['#4e3162', 239]
+let g:emilia-dark#palette.bglight   = ['#4e3162', 239]
+let g:emilia-dark#palette.bg        = ['#4e3162', 239]
+let g:emilia-dark#palette.bgdark    = ['#4e3162', 239]
+let g:emilia-dark#palette.bgdarker  = ['#4e3162', 239]
 
 let g:emilia-dark#palette.comment   = ['#6272A4',  61]
 let g:emilia-dark#palette.selection = ['#44475A', 239]

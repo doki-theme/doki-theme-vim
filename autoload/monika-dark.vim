@@ -1,12 +1,12 @@
 " Palette: 
 
 let g:monika-dark#palette           = {}
-let g:monika-dark#palette.fg        = ['#bbbbbb', 253]
+let g:monika-dark#palette.fg        = ['#bbbbbb', 250]
 
-let g:monika-dark#palette.bglighter = ['#1A1E12', 238]
-let g:monika-dark#palette.bglight   = ['#1A1E12', 237]
-let g:monika-dark#palette.bg        = ['#1A1E12', 236]
-let g:monika-dark#palette.bgdark    = ['#1A1E12', 235]
+let g:monika-dark#palette.bglighter = ['#1A1E12', 234]
+let g:monika-dark#palette.bglight   = ['#1A1E12', 234]
+let g:monika-dark#palette.bg        = ['#1A1E12', 234]
+let g:monika-dark#palette.bgdark    = ['#1A1E12', 234]
 let g:monika-dark#palette.bgdarker  = ['#1A1E12', 234]
 
 let g:monika-dark#palette.comment   = ['#6272A4',  61]

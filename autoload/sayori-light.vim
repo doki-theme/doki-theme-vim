@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:sayori-light#palette           = {}
-let g:sayori-light#palette.fg        = ['#252427', 253]
+let g:sayori-light#palette.fg        = ['#252427', 235]
 
-let g:sayori-light#palette.bglighter = ['#f3faff', 238]
-let g:sayori-light#palette.bglight   = ['#f3faff', 237]
-let g:sayori-light#palette.bg        = ['#f3faff', 236]
-let g:sayori-light#palette.bgdark    = ['#f3faff', 235]
-let g:sayori-light#palette.bgdarker  = ['#f3faff', 234]
+let g:sayori-light#palette.bglighter = ['#f3faff', 231]
+let g:sayori-light#palette.bglight   = ['#f3faff', 231]
+let g:sayori-light#palette.bg        = ['#f3faff', 231]
+let g:sayori-light#palette.bgdark    = ['#f3faff', 231]
+let g:sayori-light#palette.bgdarker  = ['#f3faff', 231]
 
 let g:sayori-light#palette.comment   = ['#6272A4',  61]
 let g:sayori-light#palette.selection = ['#44475A', 239]

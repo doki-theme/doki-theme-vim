@@ -180,7 +180,6 @@ call s:h('DarknessDarkDiffDelete', s:red, s:bgdark)
 " }}}
 " User Interface: 
 
-set background=dark
 
 " Required as some plugins will overwrite
 call s:h('Normal', s:fg, g:darkness-dark_colorterm || has('gui_running') ? s:bg : s:none )

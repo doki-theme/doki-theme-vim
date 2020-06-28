@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:mioda-ibuki dark#palette           = {}
-let g:mioda-ibuki dark#palette.fg        = ['#bbbbbb', 253]
+let g:mioda-ibuki dark#palette.fg        = ['#bbbbbb', 250]
 
-let g:mioda-ibuki dark#palette.bglighter = ['#141617', 238]
-let g:mioda-ibuki dark#palette.bglight   = ['#141617', 237]
-let g:mioda-ibuki dark#palette.bg        = ['#141617', 236]
-let g:mioda-ibuki dark#palette.bgdark    = ['#141617', 235]
-let g:mioda-ibuki dark#palette.bgdarker  = ['#141617', 234]
+let g:mioda-ibuki dark#palette.bglighter = ['#141617', 233]
+let g:mioda-ibuki dark#palette.bglight   = ['#141617', 233]
+let g:mioda-ibuki dark#palette.bg        = ['#141617', 233]
+let g:mioda-ibuki dark#palette.bgdark    = ['#141617', 233]
+let g:mioda-ibuki dark#palette.bgdarker  = ['#141617', 233]
 
 let g:mioda-ibuki dark#palette.comment   = ['#6272A4',  61]
 let g:mioda-ibuki dark#palette.selection = ['#44475A', 239]

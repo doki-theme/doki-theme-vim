@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:natsuki-dark#palette           = {}
-let g:natsuki-dark#palette.fg        = ['#bbbbbb', 253]
+let g:natsuki-dark#palette.fg        = ['#bbbbbb', 250]
 
-let g:natsuki-dark#palette.bglighter = ['#310a29', 238]
-let g:natsuki-dark#palette.bglight   = ['#310a29', 237]
-let g:natsuki-dark#palette.bg        = ['#310a29', 236]
+let g:natsuki-dark#palette.bglighter = ['#310a29', 235]
+let g:natsuki-dark#palette.bglight   = ['#310a29', 235]
+let g:natsuki-dark#palette.bg        = ['#310a29', 235]
 let g:natsuki-dark#palette.bgdark    = ['#310a29', 235]
-let g:natsuki-dark#palette.bgdarker  = ['#310a29', 234]
+let g:natsuki-dark#palette.bgdarker  = ['#310a29', 235]
 
 let g:natsuki-dark#palette.comment   = ['#6272A4',  61]
 let g:natsuki-dark#palette.selection = ['#44475A', 239]

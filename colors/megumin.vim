@@ -180,7 +180,6 @@ call s:h('MeguminDiffDelete', s:red, s:bgdark)
 " }}}
 " User Interface: 
 
-set background=dark
 
 " Required as some plugins will overwrite
 call s:h('Normal', s:fg, g:megumin_colorterm || has('gui_running') ? s:bg : s:none )

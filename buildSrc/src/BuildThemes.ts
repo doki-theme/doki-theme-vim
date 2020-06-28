@@ -17,13 +17,13 @@ const autoLoadDirectoryPath =
   path.resolve(repoDirectory, 'autoload');
 
 const vimDefinitionDirectoryPath = path.resolve(
-        '.',
+  '.',
   "themes",
   "definitions"
 );
 
 const vimScriptTemplateDirectoryPath = path.resolve(
-        '.',
+  '.',
   "templates",
 );
 
@@ -230,7 +230,7 @@ function evaluateTemplate(
   vimAutoLoadScript: string,
 ) {
   const namedColors = constructNamedColorTemplate(
-    dokiThemeDefinition, dokiTemplateDefinitions
+    dokiThemeDefinition, dokiTemplateDefinitions,
   );
   const themeName = constructVimName(dokiThemeDefinition);
   const themeProperName = dokiThemeDefinition.name.split(" ")
@@ -251,6 +251,65 @@ function evaluateTemplate(
   }
 }
 
+function getColorFromTemplate(templateVariables: StringDictionary<string>, templateVariable: string) {
+  const resolvedTemplateVariable = templateVariables[templateVariable];
+  if (!resolvedTemplateVariable) {
+    throw Error(`Template does not have variable ${templateVariable}`)
+  }
+
+  return resolvedTemplateVariable;
+}
+
+function toRGBArray(hexColor: string): number[] {
+  const hexNumber = parseInt(hexColor.substr(1), 16);
+  return [
+    (hexNumber & 0xFF0000) >> 16,
+    (hexNumber & 0XFF00) >> 8,
+    hexNumber & 0xFF
+  ]
+}
+
+type X256Color = { rgbArray: number[]; name: string; guifg: string; ctermfg: number };
+const x256Colors = require('./XTerm256Colors').default;
+const x256ColorsWithRGB: X256Color[] = x256Colors.map((c: { name: string; guifg: string; ctermfg: number }) => ({
+  ...c,
+  rgbArray: toRGBArray(c.guifg)
+}))
+
+function findClosestX256Color(hexColor: string): string {
+  const themeColor = toRGBArray(hexColor);
+  const closest = x256ColorsWithRGB.reduce((accum,
+                                            next: X256Color) => {
+    const distance = themeColor.map((number, index) => Math.abs(number - next.rgbArray[index]))
+      .reduce((accum, next) => accum + next, 0)
+    if (distance < accum.distance) {
+      accum.distance = distance;
+      accum.closest = next
+    }
+    return accum;
+  }, {
+    closest: x256ColorsWithRGB[0],
+    distance: Number.MAX_VALUE
+  });
+  return closest.closest.ctermfg.toString();
+}
+
+const x256Delimiter = '$x256';
+
+function resolveTemplateVariable(
+  templateVariable: string,
+  templateVariables: StringDictionary<string>,
+): string {
+  if (templateVariable.endsWith(x256Delimiter)) {
+    const colorFromTemplate = getColorFromTemplate(
+      templateVariables,
+      templateVariable.substr(0, templateVariable.length - x256Delimiter.length)
+    );
+    return findClosestX256Color(colorFromTemplate)
+  }
+  return getColorFromTemplate(templateVariables, templateVariable);
+}
+
 function fillInTemplateScript(
   templateToFillIn: string,
   templateVariables: StringDictionary<string>,
@@ -259,24 +318,24 @@ function fillInTemplateScript(
     .map(line => {
       const reduce = line.split("").reduce((accum, next) => {
         if (accum.currentTemplate) {
-          if(next === '}' && accum.currentTemplate.endsWith('}')) {
+          if (next === '}' && accum.currentTemplate.endsWith('}')) {
             // evaluate Template
             const templateVariable = accum.currentTemplate.substring(2, accum.currentTemplate.length - 1)
             accum.currentTemplate = ''
-            const resolvedTemplateVariable = templateVariables[templateVariable];
-            if(!resolvedTemplateVariable) {
-              throw Error(`Template does not have variable ${templateVariable}`)
-            }
+            const resolvedTemplateVariable = resolveTemplateVariable(
+              templateVariable,
+              templateVariables
+            )
             accum.line += resolvedTemplateVariable
           } else {
             accum.currentTemplate += next
           }
-        } else if(next === '{' && !accum.stagingTemplate) {
+        } else if (next === '{' && !accum.stagingTemplate) {
           accum.stagingTemplate = next
-        } else if(accum.stagingTemplate && next === '{') {
+        } else if (accum.stagingTemplate && next === '{') {
           accum.stagingTemplate = '';
           accum.currentTemplate = '{{';
-        } else if(accum.stagingTemplate) {
+        } else if (accum.stagingTemplate) {
           accum.line += accum.stagingTemplate + next;
           accum.stagingTemplate = ''
         } else {

@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:hatsune-miku#palette           = {}
-let g:hatsune-miku#palette.fg        = ['#bbbbbb', 253]
+let g:hatsune-miku#palette.fg        = ['#bbbbbb', 250]
 
-let g:hatsune-miku#palette.bglighter = ['#293030', 238]
-let g:hatsune-miku#palette.bglight   = ['#293030', 237]
+let g:hatsune-miku#palette.bglighter = ['#293030', 236]
+let g:hatsune-miku#palette.bglight   = ['#293030', 236]
 let g:hatsune-miku#palette.bg        = ['#293030', 236]
-let g:hatsune-miku#palette.bgdark    = ['#293030', 235]
-let g:hatsune-miku#palette.bgdarker  = ['#293030', 234]
+let g:hatsune-miku#palette.bgdark    = ['#293030', 236]
+let g:hatsune-miku#palette.bgdarker  = ['#293030', 236]
 
 let g:hatsune-miku#palette.comment   = ['#6272A4',  61]
 let g:hatsune-miku#palette.selection = ['#44475A', 239]

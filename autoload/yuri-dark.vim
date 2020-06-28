@@ -4,10 +4,10 @@ let g:yuri-dark#palette           = {}
 let g:yuri-dark#palette.fg        = ['#DADADA', 253]
 
 let g:yuri-dark#palette.bglighter = ['#493162', 238]
-let g:yuri-dark#palette.bglight   = ['#493162', 237]
-let g:yuri-dark#palette.bg        = ['#493162', 236]
-let g:yuri-dark#palette.bgdark    = ['#493162', 235]
-let g:yuri-dark#palette.bgdarker  = ['#493162', 234]
+let g:yuri-dark#palette.bglight   = ['#493162', 238]
+let g:yuri-dark#palette.bg        = ['#493162', 238]
+let g:yuri-dark#palette.bgdark    = ['#493162', 238]
+let g:yuri-dark#palette.bgdarker  = ['#493162', 238]
 
 let g:yuri-dark#palette.comment   = ['#6272A4',  61]
 let g:yuri-dark#palette.selection = ['#44475A', 239]

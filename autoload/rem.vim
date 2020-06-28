@@ -1,13 +1,13 @@
 " Palette: 
 
 let g:rem#palette           = {}
-let g:rem#palette.fg        = ['#bbbbbb', 253]
+let g:rem#palette.fg        = ['#bbbbbb', 250]
 
-let g:rem#palette.bglighter = ['#292A30', 238]
-let g:rem#palette.bglight   = ['#292A30', 237]
+let g:rem#palette.bglighter = ['#292A30', 236]
+let g:rem#palette.bglight   = ['#292A30', 236]
 let g:rem#palette.bg        = ['#292A30', 236]
-let g:rem#palette.bgdark    = ['#292A30', 235]
-let g:rem#palette.bgdarker  = ['#292A30', 234]
+let g:rem#palette.bgdark    = ['#292A30', 236]
+let g:rem#palette.bgdarker  = ['#292A30', 236]
 
 let g:rem#palette.comment   = ['#6272A4',  61]
 let g:rem#palette.selection = ['#44475A', 239]
