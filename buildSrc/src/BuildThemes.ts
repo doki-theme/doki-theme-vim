@@ -212,6 +212,23 @@ function buildVimColorScript(
   );
 }
 
+function buildVimSyntaxScript(
+  dokiThemeDefinition: MasterDokiThemeDefinition,
+  dokiTemplateDefinitions: DokiThemeDefinitions,
+  dokiThemeVimDefinition: VimDokiThemeDefinition,
+  vimAfterScript: FileDef[],
+) {
+  return vimAfterScript.map(({fileName, fileContents})=>({
+    fileName,
+    fileContents: evaluateTemplate(
+      dokiThemeDefinition,
+      dokiTemplateDefinitions,
+      fileContents
+    )
+  }));
+}
+
+
 function buildVimAfterScript(
   dokiThemeDefinition: MasterDokiThemeDefinition,
   dokiTemplateDefinitions: DokiThemeDefinitions,
@@ -369,10 +386,12 @@ function fillInTemplateScript(
 
 }
 
+type FileDef = { fileName: string, fileContents: string };
 type VimTemplates = {
   autoloadTemplate: string;
   colorsTemplate: string;
   afterTemplate: string;
+  afterSyntaxTemplates: FileDef[]
 };
 
 
@@ -404,6 +423,12 @@ function createDokiTheme(
         dokiTemplateDefinitions,
         dokiThemeVimDefinition,
         vimTemplates.afterTemplate,
+      ),
+      afterSyntaxTemplates: buildVimSyntaxScript(
+        dokiThemeDefinition,
+        dokiTemplateDefinitions,
+        dokiThemeVimDefinition,
+        vimTemplates.afterSyntaxTemplates,
       )
     };
   } catch (e) {
@@ -509,6 +534,18 @@ walkDir(vimDefinitionDirectoryPath)
           };
         });
     }))
+  .then(templatesAndDefinitions =>
+    walkDir(path.resolve(vimScriptTemplateDirectoryPath, 'syntax'))
+      .then(vimSyntaxPaths => {
+        return {
+          ...templatesAndDefinitions,
+          vimSyntaxFileDefs : vimSyntaxPaths.map(syntaxPath => ({
+            fileName: path.basename(syntaxPath),
+            fileContents: fs.readFileSync(syntaxPath,'utf-8'),
+          }))
+        }
+      })
+  )
   .then(templatesAndDefinitions => {
     const autoloadTemplate = fs.readFileSync(path.resolve(
       vimScriptTemplateDirectoryPath,
@@ -531,7 +568,8 @@ walkDir(vimDefinitionDirectoryPath)
     const vimTemplates = {
       autoloadTemplate,
       colorsTemplate,
-      afterTemplate
+      afterTemplate,
+      afterSyntaxTemplates: templatesAndDefinitions.vimSyntaxFileDefs
     };
     const {
       dokiTemplateDefinitions,
@@ -575,13 +613,21 @@ walkDir(vimDefinitionDirectoryPath)
   }).then(dokiThemes => {
   // write things for extension
   dokiThemes.forEach(dokiTheme => {
-    const dokiThemeVimScriptName = `${constructVimName(dokiTheme.definition)}.vim`;
+    const vimName = constructVimName(dokiTheme.definition);
+    const dokiThemeVimScriptName = `${vimName}.vim`;
 
     // write Vim Color Script
     fs.writeFileSync(path.resolve(colorDirectoryPath, dokiThemeVimScriptName), dokiTheme.colorsTemplate);
 
     // write Vim after plugin Script
     fs.writeFileSync(path.resolve(afterDirectoryPath, 'plugin', dokiThemeVimScriptName), dokiTheme.afterTemplate);
+
+    // write Vim Syntax Highlighting things
+    dokiTheme.afterSyntaxTemplates.forEach(({
+      fileName, fileContents
+                                            })=> {
+      fs.writeFileSync(path.resolve(afterDirectoryPath, 'syntax', `${vimName}_${fileName}`), fileContents);
+    });
 
     // write Vim Auto load Script
     fs.writeFileSync(path.resolve(autoLoadDirectoryPath, dokiThemeVimScriptName), dokiTheme.autoloadTemplate);
