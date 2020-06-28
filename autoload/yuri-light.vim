@@ -10,7 +10,7 @@ let g:yuri-light#palette.bgdark    = ['#f7f3ff', 231]
 let g:yuri-light#palette.bgdarker  = ['#f7f3ff', 231]
 
 let g:yuri-light#palette.comment   = ['#6272A4',  61]
-let g:yuri-light#palette.selection = ['#44475A', 239]
+let g:yuri-light#palette.selection = ['#ada0d2', 146]
 let g:yuri-light#palette.subtle    = ['#424450', 238]
 
 let g:yuri-light#palette.cyan      = ['#8BE9FD', 117]

@@ -10,7 +10,7 @@ let g:emilia-light#palette.bgdark    = ['#fcf3ff', 231]
 let g:emilia-light#palette.bgdarker  = ['#fcf3ff', 231]
 
 let g:emilia-light#palette.comment   = ['#6272A4',  61]
-let g:emilia-light#palette.selection = ['#44475A', 239]
+let g:emilia-light#palette.selection = ['#c7a0d2', 182]
 let g:emilia-light#palette.subtle    = ['#424450', 238]
 
 let g:emilia-light#palette.cyan      = ['#8BE9FD', 117]

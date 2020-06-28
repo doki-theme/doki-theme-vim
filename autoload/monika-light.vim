@@ -10,7 +10,7 @@ let g:monika-light#palette.bgdark    = ['#f3fff4', 231]
 let g:monika-light#palette.bgdarker  = ['#f3fff4', 231]
 
 let g:monika-light#palette.comment   = ['#6272A4',  61]
-let g:monika-light#palette.selection = ['#44475A', 239]
+let g:monika-light#palette.selection = ['#a9ecac', 157]
 let g:monika-light#palette.subtle    = ['#424450', 238]
 
 let g:monika-light#palette.cyan      = ['#8BE9FD', 117]

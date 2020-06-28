@@ -10,7 +10,7 @@ let g:megumin#palette.bgdark    = ['#271c21', 234]
 let g:megumin#palette.bgdarker  = ['#271c21', 234]
 
 let g:megumin#palette.comment   = ['#6272A4',  61]
-let g:megumin#palette.selection = ['#44475A', 239]
+let g:megumin#palette.selection = ['#563036', 237]
 let g:megumin#palette.subtle    = ['#424450', 238]
 
 let g:megumin#palette.cyan      = ['#8BE9FD', 117]

@@ -10,7 +10,7 @@ let g:rias#palette.bgdark    = ['#401112', 233]
 let g:rias#palette.bgdarker  = ['#401112', 233]
 
 let g:rias#palette.comment   = ['#6272A4',  61]
-let g:rias#palette.selection = ['#44475A', 239]
+let g:rias#palette.selection = ['#822e2e', 236]
 let g:rias#palette.subtle    = ['#424450', 238]
 
 let g:rias#palette.cyan      = ['#8BE9FD', 117]

@@ -356,7 +356,8 @@ function fillInTemplateScript(
 type VimTemplates = {
   autoloadTemplate: string;
   colorsTemplate: string;
-}
+};
+
 
 function createDokiTheme(
   dokiFileDefinitionPath: string,

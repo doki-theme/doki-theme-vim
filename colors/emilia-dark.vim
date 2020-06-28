@@ -106,7 +106,6 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
-        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]

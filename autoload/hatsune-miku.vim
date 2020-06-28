@@ -10,7 +10,7 @@ let g:hatsune-miku#palette.bgdark    = ['#293030', 236]
 let g:hatsune-miku#palette.bgdarker  = ['#293030', 236]
 
 let g:hatsune-miku#palette.comment   = ['#6272A4',  61]
-let g:hatsune-miku#palette.selection = ['#44475A', 239]
+let g:hatsune-miku#palette.selection = ['#4c7a76', 243]
 let g:hatsune-miku#palette.subtle    = ['#424450', 238]
 
 let g:hatsune-miku#palette.cyan      = ['#8BE9FD', 117]

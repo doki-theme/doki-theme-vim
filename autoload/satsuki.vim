@@ -10,7 +10,7 @@ let g:satsuki#palette.bgdark    = ['#eae9ee', 255]
 let g:satsuki#palette.bgdarker  = ['#eae9ee', 255]
 
 let g:satsuki#palette.comment   = ['#6272A4',  61]
-let g:satsuki#palette.selection = ['#44475A', 239]
+let g:satsuki#palette.selection = ['#a0a9d2', 146]
 let g:satsuki#palette.subtle    = ['#424450', 238]
 
 let g:satsuki#palette.cyan      = ['#8BE9FD', 117]

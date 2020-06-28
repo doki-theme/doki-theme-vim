@@ -10,7 +10,7 @@ let g:beatrice#palette.bgdark    = ['#ffe4f1', 225]
 let g:beatrice#palette.bgdarker  = ['#ffe4f1', 225]
 
 let g:beatrice#palette.comment   = ['#6272A4',  61]
-let g:beatrice#palette.selection = ['#44475A', 239]
+let g:beatrice#palette.selection = ['#dc99bb', 175]
 let g:beatrice#palette.subtle    = ['#424450', 238]
 
 let g:beatrice#palette.cyan      = ['#8BE9FD', 117]

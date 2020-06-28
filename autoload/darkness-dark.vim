@@ -10,7 +10,7 @@ let g:darkness-dark#palette.bgdark    = ['#080703', 232]
 let g:darkness-dark#palette.bgdarker  = ['#080703', 232]
 
 let g:darkness-dark#palette.comment   = ['#6272A4',  61]
-let g:darkness-dark#palette.selection = ['#44475A', 239]
+let g:darkness-dark#palette.selection = ['#553919', 237]
 let g:darkness-dark#palette.subtle    = ['#424450', 238]
 
 let g:darkness-dark#palette.cyan      = ['#8BE9FD', 117]

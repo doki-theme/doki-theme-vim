@@ -10,7 +10,7 @@ let g:mioda-ibuki light#palette.bgdark    = ['#ffedfe', 231]
 let g:mioda-ibuki light#palette.bgdarker  = ['#ffedfe', 231]
 
 let g:mioda-ibuki light#palette.comment   = ['#6272A4',  61]
-let g:mioda-ibuki light#palette.selection = ['#44475A', 239]
+let g:mioda-ibuki light#palette.selection = ['#8EDBFF', 117]
 let g:mioda-ibuki light#palette.subtle    = ['#424450', 238]
 
 let g:mioda-ibuki light#palette.cyan      = ['#8BE9FD', 117]

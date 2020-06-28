@@ -10,7 +10,7 @@ let g:asuna#palette.bgdark    = ['#ffffff', 231]
 let g:asuna#palette.bgdarker  = ['#ffffff', 231]
 
 let g:asuna#palette.comment   = ['#6272A4',  61]
-let g:asuna#palette.selection = ['#44475A', 239]
+let g:asuna#palette.selection = ['#e9b4b8', 181]
 let g:asuna#palette.subtle    = ['#424450', 238]
 
 let g:asuna#palette.cyan      = ['#8BE9FD', 117]

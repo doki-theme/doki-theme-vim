@@ -10,7 +10,7 @@ let g:konata#palette.bgdark    = ['#6192ee', 69]
 let g:konata#palette.bgdarker  = ['#6192ee', 69]
 
 let g:konata#palette.comment   = ['#6272A4',  61]
-let g:konata#palette.selection = ['#44475A', 239]
+let g:konata#palette.selection = ['#59a5b2', 73]
 let g:konata#palette.subtle    = ['#424450', 238]
 
 let g:konata#palette.cyan      = ['#8BE9FD', 117]

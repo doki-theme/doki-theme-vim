@@ -10,7 +10,7 @@ let g:{{themeName}}#palette.bgdark    = ['{{baseBackground}}', {{baseBackground$
 let g:{{themeName}}#palette.bgdarker  = ['{{baseBackground}}', {{baseBackground$x256}}]
 
 let g:{{themeName}}#palette.comment   = ['#6272A4',  61]
-let g:{{themeName}}#palette.selection = ['#44475A', 239]
+let g:{{themeName}}#palette.selection = ['{{selectionBackground}}', {{selectionBackground$x256}}]
 let g:{{themeName}}#palette.subtle    = ['#424450', 238]
 
 let g:{{themeName}}#palette.cyan      = ['#8BE9FD', 117]
