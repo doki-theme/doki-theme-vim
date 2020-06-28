@@ -33,7 +33,7 @@ let s:orange    = g:megumin#palette.orange
 let s:pink      = g:megumin#palette.pink
 let s:purple    = g:megumin#palette.purple
 let s:red       = g:megumin#palette.red
-let s:yellow    = g:megumin#palette.yellow
+let s:string_color    = g:megumin#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('MeguminPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('MeguminRed', s:red)
 call s:h('MeguminRedInverse', s:fg, s:red)
 
-call s:h('MeguminYellow', s:yellow)
-call s:h('MeguminYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('MeguminStringColor', s:string_color)
+call s:h('MeguminStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('MeguminError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('MeguminDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:megumin_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:megumin_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  MeguminBgDark
+" hi! link ColorColumn  MeguminBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr MeguminYellow
+hi! link CursorLineNr MeguminStringColor
 hi! link DiffAdd      MeguminGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   MeguminDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    MeguminOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      MeguminFgBold
 hi! link NonText      MeguminSubtle
-hi! link Pmenu        MeguminBgDark
-hi! link PmenuSbar    MeguminBgDark
+" hi! link Pmenu        MeguminBgDark
+" hi! link PmenuSbar    MeguminBgDark
 hi! link PmenuSel     MeguminSelection
 hi! link PmenuThumb   MeguminSelection
 hi! link Question     MeguminFgBold
 hi! link Search       MeguminSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      MeguminBoundary
-hi! link TabLineFill  MeguminBgDarker
+" hi! link TabLineFill  MeguminBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        MeguminGreenBold
 hi! link VertSplit    MeguminBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap MeguminInfoLine
 hi! link SpellRare MeguminInfoLine
 
 hi! link Constant MeguminPurple
-hi! link String MeguminYellow
+hi! link String MeguminStringColor
 hi! link Character MeguminPink
 hi! link Number Constant
 hi! link Boolean Constant

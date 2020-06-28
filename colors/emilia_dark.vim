@@ -33,7 +33,7 @@ let s:orange    = g:emilia_dark#palette.orange
 let s:pink      = g:emilia_dark#palette.pink
 let s:purple    = g:emilia_dark#palette.purple
 let s:red       = g:emilia_dark#palette.red
-let s:yellow    = g:emilia_dark#palette.yellow
+let s:string_color    = g:emilia_dark#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('EmiliaDarkPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('EmiliaDarkRed', s:red)
 call s:h('EmiliaDarkRedInverse', s:fg, s:red)
 
-call s:h('EmiliaDarkYellow', s:yellow)
-call s:h('EmiliaDarkYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('EmiliaDarkStringColor', s:string_color)
+call s:h('EmiliaDarkStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('EmiliaDarkError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('EmiliaDarkDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:emilia_dark_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:emilia_dark_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  EmiliaDarkBgDark
+" hi! link ColorColumn  EmiliaDarkBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr EmiliaDarkYellow
+hi! link CursorLineNr EmiliaDarkStringColor
 hi! link DiffAdd      EmiliaDarkGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   EmiliaDarkDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    EmiliaDarkOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      EmiliaDarkFgBold
 hi! link NonText      EmiliaDarkSubtle
-hi! link Pmenu        EmiliaDarkBgDark
-hi! link PmenuSbar    EmiliaDarkBgDark
+" hi! link Pmenu        EmiliaDarkBgDark
+" hi! link PmenuSbar    EmiliaDarkBgDark
 hi! link PmenuSel     EmiliaDarkSelection
 hi! link PmenuThumb   EmiliaDarkSelection
 hi! link Question     EmiliaDarkFgBold
 hi! link Search       EmiliaDarkSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      EmiliaDarkBoundary
-hi! link TabLineFill  EmiliaDarkBgDarker
+" hi! link TabLineFill  EmiliaDarkBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        EmiliaDarkGreenBold
 hi! link VertSplit    EmiliaDarkBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap EmiliaDarkInfoLine
 hi! link SpellRare EmiliaDarkInfoLine
 
 hi! link Constant EmiliaDarkPurple
-hi! link String EmiliaDarkYellow
+hi! link String EmiliaDarkStringColor
 hi! link Character EmiliaDarkPink
 hi! link Number Constant
 hi! link Boolean Constant

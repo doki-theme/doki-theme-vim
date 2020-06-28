@@ -33,7 +33,7 @@ let s:orange    = g:sayori_light#palette.orange
 let s:pink      = g:sayori_light#palette.pink
 let s:purple    = g:sayori_light#palette.purple
 let s:red       = g:sayori_light#palette.red
-let s:yellow    = g:sayori_light#palette.yellow
+let s:string_color    = g:sayori_light#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('SayoriLightPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('SayoriLightRed', s:red)
 call s:h('SayoriLightRedInverse', s:fg, s:red)
 
-call s:h('SayoriLightYellow', s:yellow)
-call s:h('SayoriLightYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('SayoriLightStringColor', s:string_color)
+call s:h('SayoriLightStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('SayoriLightError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('SayoriLightDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:sayori_light_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:sayori_light_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  SayoriLightBgDark
+" hi! link ColorColumn  SayoriLightBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr SayoriLightYellow
+hi! link CursorLineNr SayoriLightStringColor
 hi! link DiffAdd      SayoriLightGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   SayoriLightDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    SayoriLightOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      SayoriLightFgBold
 hi! link NonText      SayoriLightSubtle
-hi! link Pmenu        SayoriLightBgDark
-hi! link PmenuSbar    SayoriLightBgDark
+" hi! link Pmenu        SayoriLightBgDark
+" hi! link PmenuSbar    SayoriLightBgDark
 hi! link PmenuSel     SayoriLightSelection
 hi! link PmenuThumb   SayoriLightSelection
 hi! link Question     SayoriLightFgBold
 hi! link Search       SayoriLightSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      SayoriLightBoundary
-hi! link TabLineFill  SayoriLightBgDarker
+" hi! link TabLineFill  SayoriLightBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        SayoriLightGreenBold
 hi! link VertSplit    SayoriLightBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap SayoriLightInfoLine
 hi! link SpellRare SayoriLightInfoLine
 
 hi! link Constant SayoriLightPurple
-hi! link String SayoriLightYellow
+hi! link String SayoriLightStringColor
 hi! link Character SayoriLightPink
 hi! link Number Constant
 hi! link Boolean Constant

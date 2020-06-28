@@ -19,7 +19,7 @@ let g:ram#palette.orange    = ['#FFB86C', 215]
 let g:ram#palette.pink      = ['#FF79C6', 212]
 let g:ram#palette.purple    = ['#BD93F9', 141]
 let g:ram#palette.red       = ['#FF5555', 203]
-let g:ram#palette.yellow    = ['#F1FA8C', 228]
+let g:ram#palette.string_color    = ['#f4fa8c', 228]
 
 "
 " Terminal Colors

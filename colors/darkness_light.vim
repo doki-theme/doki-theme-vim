@@ -33,7 +33,7 @@ let s:orange    = g:darkness_light#palette.orange
 let s:pink      = g:darkness_light#palette.pink
 let s:purple    = g:darkness_light#palette.purple
 let s:red       = g:darkness_light#palette.red
-let s:yellow    = g:darkness_light#palette.yellow
+let s:string_color    = g:darkness_light#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('DarknessLightPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('DarknessLightRed', s:red)
 call s:h('DarknessLightRedInverse', s:fg, s:red)
 
-call s:h('DarknessLightYellow', s:yellow)
-call s:h('DarknessLightYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('DarknessLightStringColor', s:string_color)
+call s:h('DarknessLightStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('DarknessLightError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('DarknessLightDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:darkness_light_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:darkness_light_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  DarknessLightBgDark
+" hi! link ColorColumn  DarknessLightBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr DarknessLightYellow
+hi! link CursorLineNr DarknessLightStringColor
 hi! link DiffAdd      DarknessLightGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   DarknessLightDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    DarknessLightOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      DarknessLightFgBold
 hi! link NonText      DarknessLightSubtle
-hi! link Pmenu        DarknessLightBgDark
-hi! link PmenuSbar    DarknessLightBgDark
+" hi! link Pmenu        DarknessLightBgDark
+" hi! link PmenuSbar    DarknessLightBgDark
 hi! link PmenuSel     DarknessLightSelection
 hi! link PmenuThumb   DarknessLightSelection
 hi! link Question     DarknessLightFgBold
 hi! link Search       DarknessLightSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      DarknessLightBoundary
-hi! link TabLineFill  DarknessLightBgDarker
+" hi! link TabLineFill  DarknessLightBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        DarknessLightGreenBold
 hi! link VertSplit    DarknessLightBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap DarknessLightInfoLine
 hi! link SpellRare DarknessLightInfoLine
 
 hi! link Constant DarknessLightPurple
-hi! link String DarknessLightYellow
+hi! link String DarknessLightStringColor
 hi! link Character DarknessLightPink
 hi! link Number Constant
 hi! link Boolean Constant

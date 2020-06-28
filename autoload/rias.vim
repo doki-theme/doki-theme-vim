@@ -19,7 +19,7 @@ let g:rias#palette.orange    = ['#FFB86C', 215]
 let g:rias#palette.pink      = ['#FF79C6', 212]
 let g:rias#palette.purple    = ['#BD93F9', 141]
 let g:rias#palette.red       = ['#FF5555', 203]
-let g:rias#palette.yellow    = ['#F1FA8C', 228]
+let g:rias#palette.string_color    = ['#9EB7D6', 146]
 
 "
 " Terminal Colors

@@ -19,7 +19,7 @@ let g:megumin#palette.orange    = ['#FFB86C', 215]
 let g:megumin#palette.pink      = ['#FF79C6', 212]
 let g:megumin#palette.purple    = ['#BD93F9', 141]
 let g:megumin#palette.red       = ['#FF5555', 203]
-let g:megumin#palette.yellow    = ['#F1FA8C', 228]
+let g:megumin#palette.string_color    = ['#ffd866', 221]
 
 "
 " Terminal Colors

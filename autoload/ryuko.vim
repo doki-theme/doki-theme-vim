@@ -19,7 +19,7 @@ let g:ryuko#palette.orange    = ['#FFB86C', 215]
 let g:ryuko#palette.pink      = ['#FF79C6', 212]
 let g:ryuko#palette.purple    = ['#BD93F9', 141]
 let g:ryuko#palette.red       = ['#FF5555', 203]
-let g:ryuko#palette.yellow    = ['#F1FA8C', 228]
+let g:ryuko#palette.string_color    = ['#efa554', 215]
 
 "
 " Terminal Colors

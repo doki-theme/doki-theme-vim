@@ -33,7 +33,7 @@ let s:orange    = g:konata#palette.orange
 let s:pink      = g:konata#palette.pink
 let s:purple    = g:konata#palette.purple
 let s:red       = g:konata#palette.red
-let s:yellow    = g:konata#palette.yellow
+let s:string_color    = g:konata#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('KonataPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('KonataRed', s:red)
 call s:h('KonataRedInverse', s:fg, s:red)
 
-call s:h('KonataYellow', s:yellow)
-call s:h('KonataYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('KonataStringColor', s:string_color)
+call s:h('KonataStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('KonataError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('KonataDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:konata_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:konata_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  KonataBgDark
+" hi! link ColorColumn  KonataBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr KonataYellow
+hi! link CursorLineNr KonataStringColor
 hi! link DiffAdd      KonataGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   KonataDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    KonataOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      KonataFgBold
 hi! link NonText      KonataSubtle
-hi! link Pmenu        KonataBgDark
-hi! link PmenuSbar    KonataBgDark
+" hi! link Pmenu        KonataBgDark
+" hi! link PmenuSbar    KonataBgDark
 hi! link PmenuSel     KonataSelection
 hi! link PmenuThumb   KonataSelection
 hi! link Question     KonataFgBold
 hi! link Search       KonataSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      KonataBoundary
-hi! link TabLineFill  KonataBgDarker
+" hi! link TabLineFill  KonataBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        KonataGreenBold
 hi! link VertSplit    KonataBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap KonataInfoLine
 hi! link SpellRare KonataInfoLine
 
 hi! link Constant KonataPurple
-hi! link String KonataYellow
+hi! link String KonataStringColor
 hi! link Character KonataPink
 hi! link Number Constant
 hi! link Boolean Constant

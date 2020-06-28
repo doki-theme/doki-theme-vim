@@ -19,7 +19,7 @@ let g:konata#palette.orange    = ['#FFB86C', 215]
 let g:konata#palette.pink      = ['#FF79C6', 212]
 let g:konata#palette.purple    = ['#BD93F9', 141]
 let g:konata#palette.red       = ['#FF5555', 203]
-let g:konata#palette.yellow    = ['#F1FA8C', 228]
+let g:konata#palette.string_color    = ['#FFB6EE', 219]
 
 "
 " Terminal Colors

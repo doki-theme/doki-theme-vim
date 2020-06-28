@@ -19,7 +19,7 @@ let g:mioda_ibuki_dark#palette.orange    = ['#FFB86C', 215]
 let g:mioda_ibuki_dark#palette.pink      = ['#FF79C6', 212]
 let g:mioda_ibuki_dark#palette.purple    = ['#BD93F9', 141]
 let g:mioda_ibuki_dark#palette.red       = ['#FF5555', 203]
-let g:mioda_ibuki_dark#palette.yellow    = ['#F1FA8C', 228]
+let g:mioda_ibuki_dark#palette.string_color    = ['#f4fa8c', 228]
 
 "
 " Terminal Colors

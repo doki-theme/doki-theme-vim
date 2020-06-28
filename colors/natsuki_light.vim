@@ -33,7 +33,7 @@ let s:orange    = g:natsuki_light#palette.orange
 let s:pink      = g:natsuki_light#palette.pink
 let s:purple    = g:natsuki_light#palette.purple
 let s:red       = g:natsuki_light#palette.red
-let s:yellow    = g:natsuki_light#palette.yellow
+let s:string_color    = g:natsuki_light#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('NatsukiLightPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('NatsukiLightRed', s:red)
 call s:h('NatsukiLightRedInverse', s:fg, s:red)
 
-call s:h('NatsukiLightYellow', s:yellow)
-call s:h('NatsukiLightYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('NatsukiLightStringColor', s:string_color)
+call s:h('NatsukiLightStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('NatsukiLightError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('NatsukiLightDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:natsuki_light_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:natsuki_light_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  NatsukiLightBgDark
+" hi! link ColorColumn  NatsukiLightBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr NatsukiLightYellow
+hi! link CursorLineNr NatsukiLightStringColor
 hi! link DiffAdd      NatsukiLightGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   NatsukiLightDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    NatsukiLightOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      NatsukiLightFgBold
 hi! link NonText      NatsukiLightSubtle
-hi! link Pmenu        NatsukiLightBgDark
-hi! link PmenuSbar    NatsukiLightBgDark
+" hi! link Pmenu        NatsukiLightBgDark
+" hi! link PmenuSbar    NatsukiLightBgDark
 hi! link PmenuSel     NatsukiLightSelection
 hi! link PmenuThumb   NatsukiLightSelection
 hi! link Question     NatsukiLightFgBold
 hi! link Search       NatsukiLightSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      NatsukiLightBoundary
-hi! link TabLineFill  NatsukiLightBgDarker
+" hi! link TabLineFill  NatsukiLightBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        NatsukiLightGreenBold
 hi! link VertSplit    NatsukiLightBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap NatsukiLightInfoLine
 hi! link SpellRare NatsukiLightInfoLine
 
 hi! link Constant NatsukiLightPurple
-hi! link String NatsukiLightYellow
+hi! link String NatsukiLightStringColor
 hi! link Character NatsukiLightPink
 hi! link Number Constant
 hi! link Boolean Constant

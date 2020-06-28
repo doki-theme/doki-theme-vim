@@ -33,7 +33,7 @@ let s:orange    = g:hatsune_miku#palette.orange
 let s:pink      = g:hatsune_miku#palette.pink
 let s:purple    = g:hatsune_miku#palette.purple
 let s:red       = g:hatsune_miku#palette.red
-let s:yellow    = g:hatsune_miku#palette.yellow
+let s:string_color    = g:hatsune_miku#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('HatsuneMikuPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('HatsuneMikuRed', s:red)
 call s:h('HatsuneMikuRedInverse', s:fg, s:red)
 
-call s:h('HatsuneMikuYellow', s:yellow)
-call s:h('HatsuneMikuYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('HatsuneMikuStringColor', s:string_color)
+call s:h('HatsuneMikuStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('HatsuneMikuError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('HatsuneMikuDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:hatsune_miku_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:hatsune_miku_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  HatsuneMikuBgDark
+" hi! link ColorColumn  HatsuneMikuBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr HatsuneMikuYellow
+hi! link CursorLineNr HatsuneMikuStringColor
 hi! link DiffAdd      HatsuneMikuGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   HatsuneMikuDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    HatsuneMikuOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      HatsuneMikuFgBold
 hi! link NonText      HatsuneMikuSubtle
-hi! link Pmenu        HatsuneMikuBgDark
-hi! link PmenuSbar    HatsuneMikuBgDark
+" hi! link Pmenu        HatsuneMikuBgDark
+" hi! link PmenuSbar    HatsuneMikuBgDark
 hi! link PmenuSel     HatsuneMikuSelection
 hi! link PmenuThumb   HatsuneMikuSelection
 hi! link Question     HatsuneMikuFgBold
 hi! link Search       HatsuneMikuSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      HatsuneMikuBoundary
-hi! link TabLineFill  HatsuneMikuBgDarker
+" hi! link TabLineFill  HatsuneMikuBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        HatsuneMikuGreenBold
 hi! link VertSplit    HatsuneMikuBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap HatsuneMikuInfoLine
 hi! link SpellRare HatsuneMikuInfoLine
 
 hi! link Constant HatsuneMikuPurple
-hi! link String HatsuneMikuYellow
+hi! link String HatsuneMikuStringColor
 hi! link Character HatsuneMikuPink
 hi! link Number Constant
 hi! link Boolean Constant

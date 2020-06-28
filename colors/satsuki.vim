@@ -33,7 +33,7 @@ let s:orange    = g:satsuki#palette.orange
 let s:pink      = g:satsuki#palette.pink
 let s:purple    = g:satsuki#palette.purple
 let s:red       = g:satsuki#palette.red
-let s:yellow    = g:satsuki#palette.yellow
+let s:string_color    = g:satsuki#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('SatsukiPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('SatsukiRed', s:red)
 call s:h('SatsukiRedInverse', s:fg, s:red)
 
-call s:h('SatsukiYellow', s:yellow)
-call s:h('SatsukiYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('SatsukiStringColor', s:string_color)
+call s:h('SatsukiStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('SatsukiError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('SatsukiDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:satsuki_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:satsuki_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  SatsukiBgDark
+" hi! link ColorColumn  SatsukiBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr SatsukiYellow
+hi! link CursorLineNr SatsukiStringColor
 hi! link DiffAdd      SatsukiGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   SatsukiDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    SatsukiOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      SatsukiFgBold
 hi! link NonText      SatsukiSubtle
-hi! link Pmenu        SatsukiBgDark
-hi! link PmenuSbar    SatsukiBgDark
+" hi! link Pmenu        SatsukiBgDark
+" hi! link PmenuSbar    SatsukiBgDark
 hi! link PmenuSel     SatsukiSelection
 hi! link PmenuThumb   SatsukiSelection
 hi! link Question     SatsukiFgBold
 hi! link Search       SatsukiSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      SatsukiBoundary
-hi! link TabLineFill  SatsukiBgDarker
+" hi! link TabLineFill  SatsukiBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        SatsukiGreenBold
 hi! link VertSplit    SatsukiBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap SatsukiInfoLine
 hi! link SpellRare SatsukiInfoLine
 
 hi! link Constant SatsukiPurple
-hi! link String SatsukiYellow
+hi! link String SatsukiStringColor
 hi! link Character SatsukiPink
 hi! link Number Constant
 hi! link Boolean Constant

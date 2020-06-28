@@ -33,7 +33,7 @@ let s:orange    = g:asuna#palette.orange
 let s:pink      = g:asuna#palette.pink
 let s:purple    = g:asuna#palette.purple
 let s:red       = g:asuna#palette.red
-let s:yellow    = g:asuna#palette.yellow
+let s:string_color    = g:asuna#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('AsunaPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('AsunaRed', s:red)
 call s:h('AsunaRedInverse', s:fg, s:red)
 
-call s:h('AsunaYellow', s:yellow)
-call s:h('AsunaYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('AsunaStringColor', s:string_color)
+call s:h('AsunaStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('AsunaError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('AsunaDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:asuna_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:asuna_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  AsunaBgDark
+" hi! link ColorColumn  AsunaBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr AsunaYellow
+hi! link CursorLineNr AsunaStringColor
 hi! link DiffAdd      AsunaGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   AsunaDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    AsunaOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      AsunaFgBold
 hi! link NonText      AsunaSubtle
-hi! link Pmenu        AsunaBgDark
-hi! link PmenuSbar    AsunaBgDark
+" hi! link Pmenu        AsunaBgDark
+" hi! link PmenuSbar    AsunaBgDark
 hi! link PmenuSel     AsunaSelection
 hi! link PmenuThumb   AsunaSelection
 hi! link Question     AsunaFgBold
 hi! link Search       AsunaSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      AsunaBoundary
-hi! link TabLineFill  AsunaBgDarker
+" hi! link TabLineFill  AsunaBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        AsunaGreenBold
 hi! link VertSplit    AsunaBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap AsunaInfoLine
 hi! link SpellRare AsunaInfoLine
 
 hi! link Constant AsunaPurple
-hi! link String AsunaYellow
+hi! link String AsunaStringColor
 hi! link Character AsunaPink
 hi! link Number Constant
 hi! link Boolean Constant

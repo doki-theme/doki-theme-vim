@@ -33,7 +33,7 @@ let s:orange    = g:rias#palette.orange
 let s:pink      = g:rias#palette.pink
 let s:purple    = g:rias#palette.purple
 let s:red       = g:rias#palette.red
-let s:yellow    = g:rias#palette.yellow
+let s:string_color    = g:rias#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('RiasPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('RiasRed', s:red)
 call s:h('RiasRedInverse', s:fg, s:red)
 
-call s:h('RiasYellow', s:yellow)
-call s:h('RiasYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('RiasStringColor', s:string_color)
+call s:h('RiasStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('RiasError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('RiasDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:rias_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:rias_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  RiasBgDark
+" hi! link ColorColumn  RiasBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr RiasYellow
+hi! link CursorLineNr RiasStringColor
 hi! link DiffAdd      RiasGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   RiasDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    RiasOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      RiasFgBold
 hi! link NonText      RiasSubtle
-hi! link Pmenu        RiasBgDark
-hi! link PmenuSbar    RiasBgDark
+" hi! link Pmenu        RiasBgDark
+" hi! link PmenuSbar    RiasBgDark
 hi! link PmenuSel     RiasSelection
 hi! link PmenuThumb   RiasSelection
 hi! link Question     RiasFgBold
 hi! link Search       RiasSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      RiasBoundary
-hi! link TabLineFill  RiasBgDarker
+" hi! link TabLineFill  RiasBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        RiasGreenBold
 hi! link VertSplit    RiasBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap RiasInfoLine
 hi! link SpellRare RiasInfoLine
 
 hi! link Constant RiasPurple
-hi! link String RiasYellow
+hi! link String RiasStringColor
 hi! link Character RiasPink
 hi! link Number Constant
 hi! link Boolean Constant

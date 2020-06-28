@@ -19,7 +19,7 @@ let g:hatsune_miku#palette.orange    = ['#FFB86C', 215]
 let g:hatsune_miku#palette.pink      = ['#FF79C6', 212]
 let g:hatsune_miku#palette.purple    = ['#BD93F9', 141]
 let g:hatsune_miku#palette.red       = ['#FF5555', 203]
-let g:hatsune_miku#palette.yellow    = ['#F1FA8C', 228]
+let g:hatsune_miku#palette.string_color    = ['#f4fa8c', 228]
 
 "
 " Terminal Colors

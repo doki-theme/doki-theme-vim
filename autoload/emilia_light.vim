@@ -19,7 +19,7 @@ let g:emilia_light#palette.orange    = ['#FFB86C', 215]
 let g:emilia_light#palette.pink      = ['#FF79C6', 212]
 let g:emilia_light#palette.purple    = ['#BD93F9', 141]
 let g:emilia_light#palette.red       = ['#FF5555', 203]
-let g:emilia_light#palette.yellow    = ['#F1FA8C', 228]
+let g:emilia_light#palette.string_color    = ['#d27f2d', 172]
 
 "
 " Terminal Colors

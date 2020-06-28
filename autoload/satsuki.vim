@@ -19,7 +19,7 @@ let g:satsuki#palette.orange    = ['#FFB86C', 215]
 let g:satsuki#palette.pink      = ['#FF79C6', 212]
 let g:satsuki#palette.purple    = ['#BD93F9', 141]
 let g:satsuki#palette.red       = ['#FF5555', 203]
-let g:satsuki#palette.yellow    = ['#F1FA8C', 228]
+let g:satsuki#palette.string_color    = ['#b8397e', 132]
 
 "
 " Terminal Colors

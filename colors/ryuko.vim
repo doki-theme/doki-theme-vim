@@ -33,7 +33,7 @@ let s:orange    = g:ryuko#palette.orange
 let s:pink      = g:ryuko#palette.pink
 let s:purple    = g:ryuko#palette.purple
 let s:red       = g:ryuko#palette.red
-let s:yellow    = g:ryuko#palette.yellow
+let s:string_color    = g:ryuko#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('RyukoPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('RyukoRed', s:red)
 call s:h('RyukoRedInverse', s:fg, s:red)
 
-call s:h('RyukoYellow', s:yellow)
-call s:h('RyukoYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('RyukoStringColor', s:string_color)
+call s:h('RyukoStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('RyukoError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('RyukoDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:ryuko_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:ryuko_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  RyukoBgDark
+" hi! link ColorColumn  RyukoBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr RyukoYellow
+hi! link CursorLineNr RyukoStringColor
 hi! link DiffAdd      RyukoGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   RyukoDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    RyukoOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      RyukoFgBold
 hi! link NonText      RyukoSubtle
-hi! link Pmenu        RyukoBgDark
-hi! link PmenuSbar    RyukoBgDark
+" hi! link Pmenu        RyukoBgDark
+" hi! link PmenuSbar    RyukoBgDark
 hi! link PmenuSel     RyukoSelection
 hi! link PmenuThumb   RyukoSelection
 hi! link Question     RyukoFgBold
 hi! link Search       RyukoSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      RyukoBoundary
-hi! link TabLineFill  RyukoBgDarker
+" hi! link TabLineFill  RyukoBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        RyukoGreenBold
 hi! link VertSplit    RyukoBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap RyukoInfoLine
 hi! link SpellRare RyukoInfoLine
 
 hi! link Constant RyukoPurple
-hi! link String RyukoYellow
+hi! link String RyukoStringColor
 hi! link Character RyukoPink
 hi! link Number Constant
 hi! link Boolean Constant

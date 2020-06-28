@@ -19,7 +19,7 @@ let g:{{themeName}}#palette.orange    = ['#FFB86C', 215]
 let g:{{themeName}}#palette.pink      = ['#FF79C6', 212]
 let g:{{themeName}}#palette.purple    = ['#BD93F9', 141]
 let g:{{themeName}}#palette.red       = ['#FF5555', 203]
-let g:{{themeName}}#palette.yellow    = ['#F1FA8C', 228]
+let g:{{themeName}}#palette.string_color    = ['{{stringColor}}', {{stringColor$x256}}]
 
 "
 " Terminal Colors

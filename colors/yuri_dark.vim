@@ -33,7 +33,7 @@ let s:orange    = g:yuri_dark#palette.orange
 let s:pink      = g:yuri_dark#palette.pink
 let s:purple    = g:yuri_dark#palette.purple
 let s:red       = g:yuri_dark#palette.red
-let s:yellow    = g:yuri_dark#palette.yellow
+let s:string_color    = g:yuri_dark#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('YuriDarkPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('YuriDarkRed', s:red)
 call s:h('YuriDarkRedInverse', s:fg, s:red)
 
-call s:h('YuriDarkYellow', s:yellow)
-call s:h('YuriDarkYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('YuriDarkStringColor', s:string_color)
+call s:h('YuriDarkStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('YuriDarkError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('YuriDarkDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:yuri_dark_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:yuri_dark_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  YuriDarkBgDark
+" hi! link ColorColumn  YuriDarkBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr YuriDarkYellow
+hi! link CursorLineNr YuriDarkStringColor
 hi! link DiffAdd      YuriDarkGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   YuriDarkDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    YuriDarkOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      YuriDarkFgBold
 hi! link NonText      YuriDarkSubtle
-hi! link Pmenu        YuriDarkBgDark
-hi! link PmenuSbar    YuriDarkBgDark
+" hi! link Pmenu        YuriDarkBgDark
+" hi! link PmenuSbar    YuriDarkBgDark
 hi! link PmenuSel     YuriDarkSelection
 hi! link PmenuThumb   YuriDarkSelection
 hi! link Question     YuriDarkFgBold
 hi! link Search       YuriDarkSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      YuriDarkBoundary
-hi! link TabLineFill  YuriDarkBgDarker
+" hi! link TabLineFill  YuriDarkBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        YuriDarkGreenBold
 hi! link VertSplit    YuriDarkBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap YuriDarkInfoLine
 hi! link SpellRare YuriDarkInfoLine
 
 hi! link Constant YuriDarkPurple
-hi! link String YuriDarkYellow
+hi! link String YuriDarkStringColor
 hi! link Character YuriDarkPink
 hi! link Number Constant
 hi! link Boolean Constant

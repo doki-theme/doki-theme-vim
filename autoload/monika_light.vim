@@ -19,7 +19,7 @@ let g:monika_light#palette.orange    = ['#FFB86C', 215]
 let g:monika_light#palette.pink      = ['#FF79C6', 212]
 let g:monika_light#palette.purple    = ['#BD93F9', 141]
 let g:monika_light#palette.red       = ['#FF5555', 203]
-let g:monika_light#palette.yellow    = ['#F1FA8C', 228]
+let g:monika_light#palette.string_color    = ['#EC9130', 209]
 
 "
 " Terminal Colors

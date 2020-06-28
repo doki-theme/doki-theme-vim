@@ -33,7 +33,7 @@ let s:orange    = g:mioda_ibuki_dark#palette.orange
 let s:pink      = g:mioda_ibuki_dark#palette.pink
 let s:purple    = g:mioda_ibuki_dark#palette.purple
 let s:red       = g:mioda_ibuki_dark#palette.red
-let s:yellow    = g:mioda_ibuki_dark#palette.yellow
+let s:string_color    = g:mioda_ibuki_dark#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('MiodaIbukiDarkPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('MiodaIbukiDarkRed', s:red)
 call s:h('MiodaIbukiDarkRedInverse', s:fg, s:red)
 
-call s:h('MiodaIbukiDarkYellow', s:yellow)
-call s:h('MiodaIbukiDarkYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('MiodaIbukiDarkStringColor', s:string_color)
+call s:h('MiodaIbukiDarkStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('MiodaIbukiDarkError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('MiodaIbukiDarkDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:mioda_ibuki_dark_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:mioda_ibuki_dark_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  MiodaIbukiDarkBgDark
+" hi! link ColorColumn  MiodaIbukiDarkBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr MiodaIbukiDarkYellow
+hi! link CursorLineNr MiodaIbukiDarkStringColor
 hi! link DiffAdd      MiodaIbukiDarkGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   MiodaIbukiDarkDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    MiodaIbukiDarkOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      MiodaIbukiDarkFgBold
 hi! link NonText      MiodaIbukiDarkSubtle
-hi! link Pmenu        MiodaIbukiDarkBgDark
-hi! link PmenuSbar    MiodaIbukiDarkBgDark
+" hi! link Pmenu        MiodaIbukiDarkBgDark
+" hi! link PmenuSbar    MiodaIbukiDarkBgDark
 hi! link PmenuSel     MiodaIbukiDarkSelection
 hi! link PmenuThumb   MiodaIbukiDarkSelection
 hi! link Question     MiodaIbukiDarkFgBold
 hi! link Search       MiodaIbukiDarkSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      MiodaIbukiDarkBoundary
-hi! link TabLineFill  MiodaIbukiDarkBgDarker
+" hi! link TabLineFill  MiodaIbukiDarkBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        MiodaIbukiDarkGreenBold
 hi! link VertSplit    MiodaIbukiDarkBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap MiodaIbukiDarkInfoLine
 hi! link SpellRare MiodaIbukiDarkInfoLine
 
 hi! link Constant MiodaIbukiDarkPurple
-hi! link String MiodaIbukiDarkYellow
+hi! link String MiodaIbukiDarkStringColor
 hi! link Character MiodaIbukiDarkPink
 hi! link Number Constant
 hi! link Boolean Constant

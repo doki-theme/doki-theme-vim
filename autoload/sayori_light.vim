@@ -19,7 +19,7 @@ let g:sayori_light#palette.orange    = ['#FFB86C', 215]
 let g:sayori_light#palette.pink      = ['#FF79C6', 212]
 let g:sayori_light#palette.purple    = ['#BD93F9', 141]
 let g:sayori_light#palette.red       = ['#FF5555', 203]
-let g:sayori_light#palette.yellow    = ['#F1FA8C', 228]
+let g:sayori_light#palette.string_color    = ['#DC872E', 172]
 
 "
 " Terminal Colors

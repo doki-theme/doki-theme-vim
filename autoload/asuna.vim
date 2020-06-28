@@ -19,7 +19,7 @@ let g:asuna#palette.orange    = ['#FFB86C', 215]
 let g:asuna#palette.pink      = ['#FF79C6', 212]
 let g:asuna#palette.purple    = ['#BD93F9', 141]
 let g:asuna#palette.red       = ['#FF5555', 203]
-let g:asuna#palette.yellow    = ['#F1FA8C', 228]
+let g:asuna#palette.string_color    = ['#a61d0d', 124]
 
 "
 " Terminal Colors

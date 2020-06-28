@@ -19,7 +19,7 @@ let g:darkness_dark#palette.orange    = ['#FFB86C', 215]
 let g:darkness_dark#palette.pink      = ['#FF79C6', 212]
 let g:darkness_dark#palette.purple    = ['#BD93F9', 141]
 let g:darkness_dark#palette.red       = ['#FF5555', 203]
-let g:darkness_dark#palette.yellow    = ['#F1FA8C', 228]
+let g:darkness_dark#palette.string_color    = ['#4593f5', 69]
 
 "
 " Terminal Colors

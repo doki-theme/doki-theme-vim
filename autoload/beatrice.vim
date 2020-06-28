@@ -19,7 +19,7 @@ let g:beatrice#palette.orange    = ['#FFB86C', 215]
 let g:beatrice#palette.pink      = ['#FF79C6', 212]
 let g:beatrice#palette.purple    = ['#BD93F9', 141]
 let g:beatrice#palette.red       = ['#FF5555', 203]
-let g:beatrice#palette.yellow    = ['#F1FA8C', 228]
+let g:beatrice#palette.string_color    = ['#DC872E', 172]
 
 "
 " Terminal Colors

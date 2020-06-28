@@ -33,7 +33,7 @@ let s:orange    = g:{{themeName}}#palette.orange
 let s:pink      = g:{{themeName}}#palette.pink
 let s:purple    = g:{{themeName}}#palette.purple
 let s:red       = g:{{themeName}}#palette.red
-let s:yellow    = g:{{themeName}}#palette.yellow
+let s:string_color    = g:{{themeName}}#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('{{themeProperName}}PurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('{{themeProperName}}Red', s:red)
 call s:h('{{themeProperName}}RedInverse', s:fg, s:red)
 
-call s:h('{{themeProperName}}Yellow', s:yellow)
-call s:h('{{themeProperName}}YellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('{{themeProperName}}StringColor', s:string_color)
+call s:h('{{themeProperName}}StringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('{{themeProperName}}Error', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('{{themeProperName}}DiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:{{themeName}}_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:{{themeName}}_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  {{themeProperName}}BgDark
+" hi! link ColorColumn  {{themeProperName}}BgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr {{themeProperName}}Yellow
+hi! link CursorLineNr {{themeProperName}}StringColor
 hi! link DiffAdd      {{themeProperName}}Green
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   {{themeProperName}}DiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    {{themeProperName}}OrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      {{themeProperName}}FgBold
 hi! link NonText      {{themeProperName}}Subtle
-hi! link Pmenu        {{themeProperName}}BgDark
-hi! link PmenuSbar    {{themeProperName}}BgDark
+" hi! link Pmenu        {{themeProperName}}BgDark
+" hi! link PmenuSbar    {{themeProperName}}BgDark
 hi! link PmenuSel     {{themeProperName}}Selection
 hi! link PmenuThumb   {{themeProperName}}Selection
 hi! link Question     {{themeProperName}}FgBold
 hi! link Search       {{themeProperName}}Search
 call s:h('SignColumn', s:comment)
 hi! link TabLine      {{themeProperName}}Boundary
-hi! link TabLineFill  {{themeProperName}}BgDarker
+" hi! link TabLineFill  {{themeProperName}}BgDarker
 hi! link TabLineSel   Normal
 hi! link Title        {{themeProperName}}GreenBold
 hi! link VertSplit    {{themeProperName}}Boundary
@@ -256,7 +257,7 @@ hi! link SpellCap {{themeProperName}}InfoLine
 hi! link SpellRare {{themeProperName}}InfoLine
 
 hi! link Constant {{themeProperName}}Purple
-hi! link String {{themeProperName}}Yellow
+hi! link String {{themeProperName}}StringColor
 hi! link Character {{themeProperName}}Pink
 hi! link Number Constant
 hi! link Boolean Constant

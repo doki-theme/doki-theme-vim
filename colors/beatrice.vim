@@ -33,7 +33,7 @@ let s:orange    = g:beatrice#palette.orange
 let s:pink      = g:beatrice#palette.pink
 let s:purple    = g:beatrice#palette.purple
 let s:red       = g:beatrice#palette.red
-let s:yellow    = g:beatrice#palette.yellow
+let s:string_color    = g:beatrice#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('BeatricePurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('BeatriceRed', s:red)
 call s:h('BeatriceRedInverse', s:fg, s:red)
 
-call s:h('BeatriceYellow', s:yellow)
-call s:h('BeatriceYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('BeatriceStringColor', s:string_color)
+call s:h('BeatriceStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('BeatriceError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('BeatriceDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:beatrice_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:beatrice_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  BeatriceBgDark
+" hi! link ColorColumn  BeatriceBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr BeatriceYellow
+hi! link CursorLineNr BeatriceStringColor
 hi! link DiffAdd      BeatriceGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   BeatriceDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    BeatriceOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      BeatriceFgBold
 hi! link NonText      BeatriceSubtle
-hi! link Pmenu        BeatriceBgDark
-hi! link PmenuSbar    BeatriceBgDark
+" hi! link Pmenu        BeatriceBgDark
+" hi! link PmenuSbar    BeatriceBgDark
 hi! link PmenuSel     BeatriceSelection
 hi! link PmenuThumb   BeatriceSelection
 hi! link Question     BeatriceFgBold
 hi! link Search       BeatriceSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      BeatriceBoundary
-hi! link TabLineFill  BeatriceBgDarker
+" hi! link TabLineFill  BeatriceBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        BeatriceGreenBold
 hi! link VertSplit    BeatriceBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap BeatriceInfoLine
 hi! link SpellRare BeatriceInfoLine
 
 hi! link Constant BeatricePurple
-hi! link String BeatriceYellow
+hi! link String BeatriceStringColor
 hi! link Character BeatricePink
 hi! link Number Constant
 hi! link Boolean Constant

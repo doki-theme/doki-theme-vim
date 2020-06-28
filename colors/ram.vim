@@ -33,7 +33,7 @@ let s:orange    = g:ram#palette.orange
 let s:pink      = g:ram#palette.pink
 let s:purple    = g:ram#palette.purple
 let s:red       = g:ram#palette.red
-let s:yellow    = g:ram#palette.yellow
+let s:string_color    = g:ram#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('RamPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('RamRed', s:red)
 call s:h('RamRedInverse', s:fg, s:red)
 
-call s:h('RamYellow', s:yellow)
-call s:h('RamYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('RamStringColor', s:string_color)
+call s:h('RamStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('RamError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('RamDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:ram_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:ram_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  RamBgDark
+" hi! link ColorColumn  RamBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr RamYellow
+hi! link CursorLineNr RamStringColor
 hi! link DiffAdd      RamGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   RamDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    RamOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      RamFgBold
 hi! link NonText      RamSubtle
-hi! link Pmenu        RamBgDark
-hi! link PmenuSbar    RamBgDark
+" hi! link Pmenu        RamBgDark
+" hi! link PmenuSbar    RamBgDark
 hi! link PmenuSel     RamSelection
 hi! link PmenuThumb   RamSelection
 hi! link Question     RamFgBold
 hi! link Search       RamSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      RamBoundary
-hi! link TabLineFill  RamBgDarker
+" hi! link TabLineFill  RamBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        RamGreenBold
 hi! link VertSplit    RamBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap RamInfoLine
 hi! link SpellRare RamInfoLine
 
 hi! link Constant RamPurple
-hi! link String RamYellow
+hi! link String RamStringColor
 hi! link Character RamPink
 hi! link Number Constant
 hi! link Boolean Constant

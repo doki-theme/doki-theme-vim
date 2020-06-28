@@ -33,7 +33,7 @@ let s:orange    = g:monika_dark#palette.orange
 let s:pink      = g:monika_dark#palette.pink
 let s:purple    = g:monika_dark#palette.purple
 let s:red       = g:monika_dark#palette.red
-let s:yellow    = g:monika_dark#palette.yellow
+let s:string_color    = g:monika_dark#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('MonikaDarkPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('MonikaDarkRed', s:red)
 call s:h('MonikaDarkRedInverse', s:fg, s:red)
 
-call s:h('MonikaDarkYellow', s:yellow)
-call s:h('MonikaDarkYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('MonikaDarkStringColor', s:string_color)
+call s:h('MonikaDarkStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('MonikaDarkError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('MonikaDarkDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:monika_dark_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:monika_dark_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  MonikaDarkBgDark
+" hi! link ColorColumn  MonikaDarkBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr MonikaDarkYellow
+hi! link CursorLineNr MonikaDarkStringColor
 hi! link DiffAdd      MonikaDarkGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   MonikaDarkDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    MonikaDarkOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      MonikaDarkFgBold
 hi! link NonText      MonikaDarkSubtle
-hi! link Pmenu        MonikaDarkBgDark
-hi! link PmenuSbar    MonikaDarkBgDark
+" hi! link Pmenu        MonikaDarkBgDark
+" hi! link PmenuSbar    MonikaDarkBgDark
 hi! link PmenuSel     MonikaDarkSelection
 hi! link PmenuThumb   MonikaDarkSelection
 hi! link Question     MonikaDarkFgBold
 hi! link Search       MonikaDarkSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      MonikaDarkBoundary
-hi! link TabLineFill  MonikaDarkBgDarker
+" hi! link TabLineFill  MonikaDarkBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        MonikaDarkGreenBold
 hi! link VertSplit    MonikaDarkBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap MonikaDarkInfoLine
 hi! link SpellRare MonikaDarkInfoLine
 
 hi! link Constant MonikaDarkPurple
-hi! link String MonikaDarkYellow
+hi! link String MonikaDarkStringColor
 hi! link Character MonikaDarkPink
 hi! link Number Constant
 hi! link Boolean Constant

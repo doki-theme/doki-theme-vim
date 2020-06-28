@@ -33,7 +33,7 @@ let s:orange    = g:emilia_light#palette.orange
 let s:pink      = g:emilia_light#palette.pink
 let s:purple    = g:emilia_light#palette.purple
 let s:red       = g:emilia_light#palette.red
-let s:yellow    = g:emilia_light#palette.yellow
+let s:string_color    = g:emilia_light#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('EmiliaLightPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('EmiliaLightRed', s:red)
 call s:h('EmiliaLightRedInverse', s:fg, s:red)
 
-call s:h('EmiliaLightYellow', s:yellow)
-call s:h('EmiliaLightYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('EmiliaLightStringColor', s:string_color)
+call s:h('EmiliaLightStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('EmiliaLightError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('EmiliaLightDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:emilia_light_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:emilia_light_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  EmiliaLightBgDark
+" hi! link ColorColumn  EmiliaLightBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr EmiliaLightYellow
+hi! link CursorLineNr EmiliaLightStringColor
 hi! link DiffAdd      EmiliaLightGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   EmiliaLightDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    EmiliaLightOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      EmiliaLightFgBold
 hi! link NonText      EmiliaLightSubtle
-hi! link Pmenu        EmiliaLightBgDark
-hi! link PmenuSbar    EmiliaLightBgDark
+" hi! link Pmenu        EmiliaLightBgDark
+" hi! link PmenuSbar    EmiliaLightBgDark
 hi! link PmenuSel     EmiliaLightSelection
 hi! link PmenuThumb   EmiliaLightSelection
 hi! link Question     EmiliaLightFgBold
 hi! link Search       EmiliaLightSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      EmiliaLightBoundary
-hi! link TabLineFill  EmiliaLightBgDarker
+" hi! link TabLineFill  EmiliaLightBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        EmiliaLightGreenBold
 hi! link VertSplit    EmiliaLightBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap EmiliaLightInfoLine
 hi! link SpellRare EmiliaLightInfoLine
 
 hi! link Constant EmiliaLightPurple
-hi! link String EmiliaLightYellow
+hi! link String EmiliaLightStringColor
 hi! link Character EmiliaLightPink
 hi! link Number Constant
 hi! link Boolean Constant

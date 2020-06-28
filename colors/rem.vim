@@ -33,7 +33,7 @@ let s:orange    = g:rem#palette.orange
 let s:pink      = g:rem#palette.pink
 let s:purple    = g:rem#palette.purple
 let s:red       = g:rem#palette.red
-let s:yellow    = g:rem#palette.yellow
+let s:string_color    = g:rem#palette.string_color
 
 let s:none      = ['NONE', 'NONE']
 
@@ -106,6 +106,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:hl_string = [
         \ 'highlight', a:scope,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
         \ 'gui=' . l:attrs, 'cterm=' . l:attrs,
         \ 'guisp=' . l:special[0],
         \]
@@ -156,8 +157,8 @@ call s:h('RemPurpleItalic', s:purple, s:none, [s:attrs.italic])
 call s:h('RemRed', s:red)
 call s:h('RemRedInverse', s:fg, s:red)
 
-call s:h('RemYellow', s:yellow)
-call s:h('RemYellowItalic', s:yellow, s:none, [s:attrs.italic])
+call s:h('RemStringColor', s:string_color)
+call s:h('RemStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 
 call s:h('RemError', s:red, s:none, [], s:red)
 
@@ -181,7 +182,7 @@ call s:h('RemDiffDelete', s:red, s:bgdark)
 
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:rem_colorterm || has('gui_running') ? s:bg : s:none )
+" call s:h('Normal', s:fg, g:rem_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
@@ -189,9 +190,9 @@ call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  RemBgDark
+" hi! link ColorColumn  RemBgDark
 hi! link CursorColumn CursorLine
-hi! link CursorLineNr RemYellow
+hi! link CursorLineNr RemStringColor
 hi! link DiffAdd      RemGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   RemDiffChange
@@ -206,15 +207,15 @@ hi! link IncSearch    RemOrangeInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      RemFgBold
 hi! link NonText      RemSubtle
-hi! link Pmenu        RemBgDark
-hi! link PmenuSbar    RemBgDark
+" hi! link Pmenu        RemBgDark
+" hi! link PmenuSbar    RemBgDark
 hi! link PmenuSel     RemSelection
 hi! link PmenuThumb   RemSelection
 hi! link Question     RemFgBold
 hi! link Search       RemSearch
 call s:h('SignColumn', s:comment)
 hi! link TabLine      RemBoundary
-hi! link TabLineFill  RemBgDarker
+" hi! link TabLineFill  RemBgDarker
 hi! link TabLineSel   Normal
 hi! link Title        RemGreenBold
 hi! link VertSplit    RemBoundary
@@ -256,7 +257,7 @@ hi! link SpellCap RemInfoLine
 hi! link SpellRare RemInfoLine
 
 hi! link Constant RemPurple
-hi! link String RemYellow
+hi! link String RemStringColor
 hi! link Character RemPink
 hi! link Number Constant
 hi! link Boolean Constant
