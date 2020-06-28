@@ -7,7 +7,7 @@ if v:version > 580
   endif
 endif
 
-let g:colors_name = 'dracula'
+let g:colors_name = 'darkness-light'
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
   finish
@@ -15,77 +15,77 @@ endif
 
 " Palette: {{{2
 
-let s:fg        = g:dracula#palette.fg
+let s:fg        = g:darkness-light#palette.fg
 
-let s:bglighter = g:dracula#palette.bglighter
-let s:bglight   = g:dracula#palette.bglight
-let s:bg        = g:dracula#palette.bg
-let s:bgdark    = g:dracula#palette.bgdark
-let s:bgdarker  = g:dracula#palette.bgdarker
+let s:bglighter = g:darkness-light#palette.bglighter
+let s:bglight   = g:darkness-light#palette.bglight
+let s:bg        = g:darkness-light#palette.bg
+let s:bgdark    = g:darkness-light#palette.bgdark
+let s:bgdarker  = g:darkness-light#palette.bgdarker
 
-let s:comment   = g:dracula#palette.comment
-let s:selection = g:dracula#palette.selection
-let s:subtle    = g:dracula#palette.subtle
+let s:comment   = g:darkness-light#palette.comment
+let s:selection = g:darkness-light#palette.selection
+let s:subtle    = g:darkness-light#palette.subtle
 
-let s:cyan      = g:dracula#palette.cyan
-let s:green     = g:dracula#palette.green
-let s:orange    = g:dracula#palette.orange
-let s:pink      = g:dracula#palette.pink
-let s:purple    = g:dracula#palette.purple
-let s:red       = g:dracula#palette.red
-let s:yellow    = g:dracula#palette.yellow
+let s:cyan      = g:darkness-light#palette.cyan
+let s:green     = g:darkness-light#palette.green
+let s:orange    = g:darkness-light#palette.orange
+let s:pink      = g:darkness-light#palette.pink
+let s:purple    = g:darkness-light#palette.purple
+let s:red       = g:darkness-light#palette.red
+let s:yellow    = g:darkness-light#palette.yellow
 
 let s:none      = ['NONE', 'NONE']
 
 if has('nvim')
   for s:i in range(16)
-    let g:terminal_color_{s:i} = g:dracula#palette['color_' . s:i]
+    let g:terminal_color_{s:i} = g:darkness-light#palette['color_' . s:i]
   endfor
 endif
 
 if has('terminal')
   let g:terminal_ansi_colors = []
   for s:i in range(16)
-    call add(g:terminal_ansi_colors, g:dracula#palette['color_' . s:i])
+    call add(g:terminal_ansi_colors, g:darkness-light#palette['color_' . s:i])
   endfor
 endif
 
 " }}}2
 " User Configuration: {{{2
 
-if !exists('g:dracula_bold')
-  let g:dracula_bold = 1
+if !exists('g:darkness-light_bold')
+  let g:darkness-light_bold = 1
 endif
 
-if !exists('g:dracula_italic')
-  let g:dracula_italic = 1
+if !exists('g:darkness-light_italic')
+  let g:darkness-light_italic = 1
 endif
 
-if !exists('g:dracula_underline')
-  let g:dracula_underline = 1
+if !exists('g:darkness-light_underline')
+  let g:darkness-light_underline = 1
 endif
 
-if !exists('g:dracula_undercurl') && g:dracula_underline != 0
-  let g:dracula_undercurl = 1
+if !exists('g:darkness-light_undercurl') && g:{{themeName}}_underline != 0
+  let g:darkness-light_undercurl = 1
 endif
 
-if !exists('g:dracula_inverse')
-  let g:dracula_inverse = 1
+if !exists('g:darkness-light_inverse')
+  let g:darkness-light_inverse = 1
 endif
 
-if !exists('g:dracula_colorterm')
-  let g:dracula_colorterm = 1
+if !exists('g:darkness-light_colorterm')
+  let g:darkness-light_colorterm = 1
 endif
 
 "}}}2
 " Script Helpers: {{{2
 
 let s:attrs = {
-      \ 'bold': g:dracula_bold == 1 ? 'bold' : 0,
-      \ 'italic': g:dracula_italic == 1 ? 'italic' : 0,
-      \ 'underline': g:dracula_underline == 1 ? 'underline' : 0,
-      \ 'undercurl': g:dracula_undercurl == 1 ? 'undercurl' : 0,
-      \ 'inverse': g:dracula_inverse == 1 ? 'inverse' : 0,
+      \ 'bold': g:darkness-light_bold == 1 ? 'bold' : 0,
+      \ 'italic': g:darkness-light_italic == 1 ? 'italic' : 0,
+      \ 'underline': g:darkness-light_underline == 1 ? 'underline' : 0,
+      \ 'undercurl': g:darkness-light_undercurl == 1 ? 'undercurl' : 0,
+      \ 'inverse': g:darkness-light_inverse == 1 ? 'inverse' : 0,
       \}
 
 function! s:h(scope, fg, ...) " bg, attr_list, special
@@ -115,7 +115,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
 endfunction
 
 "}}}2
-" Dracula Highlight Groups: {{{2
+"Highlight Groups: {{{2
 
 call s:h('DraculaBgLight', s:none, s:bglight)
 call s:h('DraculaBgLighter', s:none, s:bglighter)
@@ -183,7 +183,7 @@ call s:h('DraculaDiffDelete', s:red, s:bgdark)
 set background=dark
 
 " Required as some plugins will overwrite
-call s:h('Normal', s:fg, g:dracula_colorterm || has('gui_running') ? s:bg : s:none )
+call s:h('Normal', s:fg, g:darkness-light_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])

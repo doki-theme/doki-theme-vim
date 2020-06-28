@@ -197,18 +197,63 @@ export const dictionaryReducer = <T>(
   return accum;
 };
 
-function buildVimColor(
+function constructVimName(dokiTheme: MasterDokiThemeDefinition) {
+  return dokiTheme.name.replace(' ', '-').toLowerCase();
+}
+
+function buildVimColorScript(
   dokiThemeDefinition: MasterDokiThemeDefinition,
   dokiTemplateDefinitions: DokiThemeDefinitions,
   dokiThemeVimDefinition: VimDokiThemeDefinition,
+  vimColorScript: string,
+) {
+  return evaluateTemplate(
+    dokiThemeDefinition,
+    dokiTemplateDefinitions,
+    vimColorScript
+  );
+}
+
+function buildVimAutoLoadScript(
+  dokiThemeDefinition: MasterDokiThemeDefinition,
+  dokiTemplateDefinitions: DokiThemeDefinitions,
+  dokiThemeVimDefinition: VimDokiThemeDefinition,
+  vimAutoLoadScript: string,
+) {
+  return evaluateTemplate(
+    dokiThemeDefinition,
+    dokiTemplateDefinitions,
+    vimAutoLoadScript
+  );
+}
+
+function evaluateTemplate(
+  dokiThemeDefinition: MasterDokiThemeDefinition,
+  dokiTemplateDefinitions: DokiThemeDefinitions,
+  vimAutoLoadScript: string
 ) {
   const namedColors = constructNamedColorTemplate(
     dokiThemeDefinition, dokiTemplateDefinitions
   );
+  const themeName = constructVimName(dokiThemeDefinition);
 
-  return {
-    colors: namedColors
-  };
+  return fillInTemplateScript(
+    vimAutoLoadScript,
+    {
+      themeName
+    }
+  )
+}
+
+function fillInTemplateScript(
+  templateToFillIn: string,
+  templateVariables: StringDictionary<string>,
+) {
+  return templateToFillIn.split('\n')
+    .map(line => {
+      return line.replace('{{themeName}}', templateVariables.themeName);
+    }).join('\n')
+
 }
 
 type VimTemplates = {
@@ -227,13 +272,18 @@ function createDokiTheme(
     return {
       path: dokiFileDefinitionPath,
       definition: dokiThemeDefinition,
-      color: buildVimColor(
+      autoloadTemplate: buildVimAutoLoadScript(
         dokiThemeDefinition,
         dokiTemplateDefinitions,
         dokiThemeVimDefinition,
+        vimTemplates.autoloadTemplate,
       ),
-      autoloadTemplate: vimTemplates.autoloadTemplate,
-      colorsTemplate: vimTemplates.colorsTemplate,
+      colorsTemplate: buildVimColorScript(
+        dokiThemeDefinition,
+        dokiTemplateDefinitions,
+        dokiThemeVimDefinition,
+        vimTemplates.colorsTemplate,
+      ),
     };
   } catch (e) {
     throw new Error(`Unable to build ${dokiThemeDefinition.name}'s theme for reasons ${e}`);
@@ -305,6 +355,7 @@ const getStickers = (
 const omit = require('lodash/omit');
 
 console.log('Preparing to generate themes.');
+
 walkDir(vimDefinitionDirectoryPath)
   .then((files) =>
     files.filter((file) => file.endsWith("vim.definition.json"))
@@ -396,9 +447,7 @@ walkDir(vimDefinitionDirectoryPath)
   }).then(dokiThemes => {
   // write things for extension
   dokiThemes.forEach(dokiTheme => {
-    const dokiThemeVimScriptName = `${
-      dokiTheme.definition.name.replace(' ', '-').toLowerCase()
-    }.vim`;
+    const dokiThemeVimScriptName = `${constructVimName(dokiTheme.definition)}.vim`;
 
     // write Vim Color Script
     fs.writeFileSync(path.resolve(colorDirectoryPath, dokiThemeVimScriptName), dokiTheme.colorsTemplate);
