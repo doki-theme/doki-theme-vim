@@ -1,0 +1,6 @@
+cyan -> key_color -> KeyColor
+green -> class_name -> ClassName
+yellow -> string_color -> StringColor
+purple -> constants_color -> Constants
+orange -> parameter_color -> Parameter
+pink -> keyword_color -> Keyword
