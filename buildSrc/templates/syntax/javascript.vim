@@ -1,4 +1,4 @@
-if dracula#should_abort('javascript')
+if {{themeName}}#should_abort('javascript')
     finish
 endif
 
@@ -11,11 +11,11 @@ hi! link javaScriptFunction Keyword
 
 hi! link jsArrowFunction           Operator
 hi! link jsClassMethodType         Keyword
-hi! link jsDestructuringAssignment DraculaOrangeItalic
-hi! link jsDocParam                DraculaOrangeItalic
+hi! link jsDestructuringAssignment {{themeProperName}}ParameterItalic
+hi! link jsDocParam                {{themeProperName}}ParameterItalic
 hi! link jsDocTags                 Keyword
 hi! link jsDocType                 Type
-hi! link jsDocTypeBrackets         DraculaCyan
+hi! link jsDocTypeBrackets         {{themeProperName}}KeyColor
 hi! link jsFuncArgOperator         Operator
 hi! link jsFunction                Keyword
 hi! link jsTemplateBraces          Special

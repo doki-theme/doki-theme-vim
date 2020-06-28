@@ -1,38 +1,38 @@
-if dracula#should_abort('perl')
+if {{themeName}}#should_abort('perl')
     finish
 endif
 
 " Regex
-hi! link perlMatchStartEnd       DraculaRed
+hi! link perlMatchStartEnd       {{themeProperName}}Red
 
 " Builtin functions
-hi! link perlOperator            DraculaCyan
-hi! link perlStatementFiledesc   DraculaCyan
-hi! link perlStatementFiles      DraculaCyan
-hi! link perlStatementFlow       DraculaCyan
-hi! link perlStatementHash       DraculaCyan
-hi! link perlStatementIOfunc     DraculaCyan
-hi! link perlStatementIPC        DraculaCyan
-hi! link perlStatementList       DraculaCyan
-hi! link perlStatementMisc       DraculaCyan
-hi! link perlStatementNetwork    DraculaCyan
-hi! link perlStatementNumeric    DraculaCyan
-hi! link perlStatementProc       DraculaCyan
-hi! link perlStatementPword      DraculaCyan
-hi! link perlStatementRegexp     DraculaCyan
-hi! link perlStatementScalar     DraculaCyan
-hi! link perlStatementSocket     DraculaCyan
-hi! link perlStatementTime       DraculaCyan
-hi! link perlStatementVector     DraculaCyan
+hi! link perlOperator            {{themeProperName}}KeyColor
+hi! link perlStatementFiledesc   {{themeProperName}}KeyColor
+hi! link perlStatementFiles      {{themeProperName}}KeyColor
+hi! link perlStatementFlow       {{themeProperName}}KeyColor
+hi! link perlStatementHash       {{themeProperName}}KeyColor
+hi! link perlStatementIOfunc     {{themeProperName}}KeyColor
+hi! link perlStatementIPC        {{themeProperName}}KeyColor
+hi! link perlStatementList       {{themeProperName}}KeyColor
+hi! link perlStatementMisc       {{themeProperName}}KeyColor
+hi! link perlStatementNetwork    {{themeProperName}}KeyColor
+hi! link perlStatementNumeric    {{themeProperName}}KeyColor
+hi! link perlStatementProc       {{themeProperName}}KeyColor
+hi! link perlStatementPword      {{themeProperName}}KeyColor
+hi! link perlStatementRegexp     {{themeProperName}}KeyColor
+hi! link perlStatementScalar     {{themeProperName}}KeyColor
+hi! link perlStatementSocket     {{themeProperName}}KeyColor
+hi! link perlStatementTime       {{themeProperName}}KeyColor
+hi! link perlStatementVector     {{themeProperName}}KeyColor
 
 " Highlighting for quoting constructs, tied to existing option in vim-perl
 if get(g:, 'perl_string_as_statement', 0)
-  hi! link perlStringStartEnd DraculaRed
+  hi! link perlStringStartEnd {{themeProperName}}Red
 endif
 
 " Signatures
-hi! link perlSignature           DraculaOrangeItalic
-hi! link perlSubPrototype        DraculaOrangeItalic
+hi! link perlSignature           {{themeProperName}}ParameterItalic
+hi! link perlSubPrototype        {{themeProperName}}ParameterItalic
 
 " Hash keys
-hi! link perlVarSimpleMemberName DraculaPurple
+hi! link perlVarSimpleMemberName {{themeProperName}}Constants

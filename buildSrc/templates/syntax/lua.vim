@@ -1,6 +1,6 @@
-if dracula#should_abort('lua')
+if {{themeName}}#should_abort('lua')
     finish
 endif
 
-hi! link luaFunc  DraculaCyan
-hi! link luaTable DraculaFg
+hi! link luaFunc  {{themeProperName}}KeyColor
+hi! link luaTable {{themeProperName}}Fg

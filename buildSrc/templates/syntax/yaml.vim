@@ -1,12 +1,12 @@
-if dracula#should_abort('yaml')
+if {{themeName}}#should_abort('yaml')
     finish
 endif
 
-hi! link yamlAlias           DraculaGreenItalicUnderline
-hi! link yamlAnchor          DraculaPinkItalic
-hi! link yamlBlockMappingKey DraculaCyan
-hi! link yamlFlowCollection  DraculaPink
+hi! link yamlAlias           {{themeProperName}}ClassNameItalicUnderline
+hi! link yamlAnchor          {{themeProperName}}KeywordItalic
+hi! link yamlBlockMappingKey {{themeProperName}}KeyColor
+hi! link yamlFlowCollection  {{themeProperName}}Keyword
 hi! link yamlFlowIndicator   Delimiter
-hi! link yamlNodeTag         DraculaPink
-hi! link yamlPlainScalar     DraculaYellow
+hi! link yamlNodeTag         {{themeProperName}}Keyword
+hi! link yamlPlainScalar     {{themeProperName}}StringColor
 

@@ -1,4 +1,4 @@
-if dracula#should_abort('ruby')
+if {{themeName}}#should_abort('ruby')
     finish
 endif
 
@@ -6,11 +6,11 @@ if ! exists('g:ruby_operators')
     let g:ruby_operators=1
 endif
 
-hi! link rubyBlockArgument          DraculaOrangeItalic
-hi! link rubyBlockParameter         DraculaOrangeItalic
-hi! link rubyCurlyBlock             DraculaPink
-hi! link rubyGlobalVariable         DraculaPurple
-hi! link rubyInstanceVariable       DraculaPurpleItalic
-hi! link rubyInterpolationDelimiter DraculaPink
-hi! link rubyRegexpDelimiter        DraculaRed
-hi! link rubyStringDelimiter        DraculaYellow
+hi! link rubyBlockArgument          {{themeProperName}}ParameterItalic
+hi! link rubyBlockParameter         {{themeProperName}}ParameterItalic
+hi! link rubyCurlyBlock             {{themeProperName}}Keyword
+hi! link rubyGlobalVariable         {{themeProperName}}Constants
+hi! link rubyInstanceVariable       {{themeProperName}}ConstantsItalic
+hi! link rubyInterpolationDelimiter {{themeProperName}}Keyword
+hi! link rubyRegexpDelimiter        {{themeProperName}}Red
+hi! link rubyStringDelimiter        {{themeProperName}}StringColor

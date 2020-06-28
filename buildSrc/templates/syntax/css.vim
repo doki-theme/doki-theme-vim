@@ -1,15 +1,15 @@
-if dracula#should_abort('css')
+if {{themeName}}#should_abort('css')
     finish
 endif
 
 hi! link cssAttrComma         Delimiter
-hi! link cssAttrRegion        DraculaPink
-hi! link cssAttributeSelector DraculaGreenItalic
+hi! link cssAttrRegion        {{themeProperName}}Keyword
+hi! link cssAttributeSelector {{themeProperName}}ClassNameItalic
 hi! link cssBraces            Delimiter
 hi! link cssFunctionComma     Delimiter
-hi! link cssNoise             DraculaPink
-hi! link cssProp              DraculaCyan
-hi! link cssPseudoClass       DraculaPink
-hi! link cssPseudoClassId     DraculaGreenItalic
-hi! link cssUnitDecorators    DraculaPink
-hi! link cssVendor            DraculaGreenItalic
+hi! link cssNoise             {{themeProperName}}Keyword
+hi! link cssProp              {{themeProperName}}KeyColor
+hi! link cssPseudoClass       {{themeProperName}}Keyword
+hi! link cssPseudoClassId     {{themeProperName}}ClassNameItalic
+hi! link cssUnitDecorators    {{themeProperName}}Keyword
+hi! link cssVendor            {{themeProperName}}ClassNameItalic

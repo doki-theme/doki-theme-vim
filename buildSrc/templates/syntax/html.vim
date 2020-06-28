@@ -1,9 +1,9 @@
-if dracula#should_abort('html')
+if {{themeName}}#should_abort('html')
     finish
 endif
 
-hi! link htmlTag         DraculaFg
-hi! link htmlArg         DraculaGreenItalic
-hi! link htmlTitle       DraculaFg
-hi! link htmlH1          DraculaFg
-hi! link htmlSpecialChar DraculaPurple
+hi! link htmlTag         {{themeProperName}}Fg
+hi! link htmlArg         {{themeProperName}}ClassNameItalic
+hi! link htmlTitle       {{themeProperName}}Fg
+hi! link htmlH1          {{themeProperName}}Fg
+hi! link htmlSpecialChar {{themeProperName}}Constants

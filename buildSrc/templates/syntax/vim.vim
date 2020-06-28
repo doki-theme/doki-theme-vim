@@ -1,4 +1,4 @@
-if dracula#should_abort('vim')
+if {{themeName}}#should_abort('vim')
     finish
 endif
 

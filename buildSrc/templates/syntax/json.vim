@@ -1,6 +1,6 @@
-if dracula#should_abort('json')
+if {{themeName}}#should_abort('json')
     finish
 endif
 
-hi! link jsonKeyword      DraculaCyan
-hi! link jsonKeywordMatch DraculaPink
+hi! link jsonKeyword      {{themeProperName}}KeyColor
+hi! link jsonKeywordMatch {{themeProperName}}Keyword
