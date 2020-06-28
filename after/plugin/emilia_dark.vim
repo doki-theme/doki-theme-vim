@@ -1,8 +1,8 @@
-if {{themeName}}#should_abort()
+if emilia_dark#should_abort()
   finish
 endif
 
-" Fzf: {{{
+" Fzf: 
 if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
   let g:fzf_colors = {
     \ 'fg':      ['fg', 'Normal'],
@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', '{{themeProperName}}Orange'],
-    \ 'info':    ['fg', '{{themeProperName}}Purple'],
+    \ 'hl+':     ['fg', 'EmiliaDarkOrange'],
+    \ 'info':    ['fg', 'EmiliaDarkPurple'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', '{{themeProperName}}Green'],
+    \ 'prompt':  ['fg', 'EmiliaDarkGreen'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -21,21 +21,21 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \}
 endif
 "}}}
-" ALE: {{{
+" ALE: 
 if exists('g:ale_enabled')
-  hi! link ALEError              {{themeProperName}}ErrorLine
-  hi! link ALEWarning            {{themeProperName}}WarnLine
-  hi! link ALEInfo               {{themeProperName}}InfoLine
+  hi! link ALEError              EmiliaDarkErrorLine
+  hi! link ALEWarning            EmiliaDarkWarnLine
+  hi! link ALEInfo               EmiliaDarkInfoLine
 
-  hi! link ALEErrorSign          {{themeProperName}}Red
-  hi! link ALEWarningSign        {{themeProperName}}Orange
-  hi! link ALEInfoSign           {{themeProperName}}Cyan
+  hi! link ALEErrorSign          EmiliaDarkRed
+  hi! link ALEWarningSign        EmiliaDarkOrange
+  hi! link ALEInfoSign           EmiliaDarkCyan
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment
 endif
 " }}}
-" CtrlP: {{{
+" CtrlP: 
 if exists('g:loaded_ctrlp')
   hi! link CtrlPMatch     IncSearch
   hi! link CtrlPBufferHid Normal

@@ -1,8 +1,8 @@
-if {{themeName}}#should_abort()
+if asuna#should_abort()
   finish
 endif
 
-" Fzf: {{{
+" Fzf: 
 if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
   let g:fzf_colors = {
     \ 'fg':      ['fg', 'Normal'],
@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', '{{themeProperName}}Orange'],
-    \ 'info':    ['fg', '{{themeProperName}}Purple'],
+    \ 'hl+':     ['fg', 'AsunaOrange'],
+    \ 'info':    ['fg', 'AsunaPurple'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', '{{themeProperName}}Green'],
+    \ 'prompt':  ['fg', 'AsunaGreen'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -21,21 +21,21 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \}
 endif
 "}}}
-" ALE: {{{
+" ALE: 
 if exists('g:ale_enabled')
-  hi! link ALEError              {{themeProperName}}ErrorLine
-  hi! link ALEWarning            {{themeProperName}}WarnLine
-  hi! link ALEInfo               {{themeProperName}}InfoLine
+  hi! link ALEError              AsunaErrorLine
+  hi! link ALEWarning            AsunaWarnLine
+  hi! link ALEInfo               AsunaInfoLine
 
-  hi! link ALEErrorSign          {{themeProperName}}Red
-  hi! link ALEWarningSign        {{themeProperName}}Orange
-  hi! link ALEInfoSign           {{themeProperName}}Cyan
+  hi! link ALEErrorSign          AsunaRed
+  hi! link ALEWarningSign        AsunaOrange
+  hi! link ALEInfoSign           AsunaCyan
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment
 endif
 " }}}
-" CtrlP: {{{
+" CtrlP: 
 if exists('g:loaded_ctrlp')
   hi! link CtrlPMatch     IncSearch
   hi! link CtrlPBufferHid Normal
