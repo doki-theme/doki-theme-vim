@@ -9,15 +9,15 @@ let g:satsuki#palette.bg        = ['#eae9ee', 255]
 let g:satsuki#palette.bgdark    = ['#eae9ee', 255]
 let g:satsuki#palette.bgdarker  = ['#eae9ee', 255]
 
-let g:satsuki#palette.comment   = ['#6272A4',  61]
+let g:satsuki#palette.comment   = ['#6a737d',  243]
 let g:satsuki#palette.selection = ['#a0a9d2', 146]
 let g:satsuki#palette.subtle    = ['#e0dfe6', 254]
 
 let g:satsuki#palette.key_color      = ['#cd862f', 172]
 let g:satsuki#palette.class_name     = ['#757881', 243]
-let g:satsuki#palette.parameter_color    = ['#FFB86C', 215]
+let g:satsuki#palette.parameter_color    = ['#275AB3', 25]
 let g:satsuki#palette.keyword_color      = ['#275AB3', 25]
-let g:satsuki#palette.constants_color    = ['#BD93F9', 141]
+let g:satsuki#palette.constants_color    = ['#4C94D6', 68]
 let g:satsuki#palette.red       = ['#FF5555', 203]
 let g:satsuki#palette.string_color    = ['#b8397e', 132]
 

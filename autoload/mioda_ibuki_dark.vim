@@ -9,7 +9,7 @@ let g:mioda_ibuki_dark#palette.bg        = ['#141617', 233]
 let g:mioda_ibuki_dark#palette.bgdark    = ['#141617', 233]
 let g:mioda_ibuki_dark#palette.bgdarker  = ['#141617', 233]
 
-let g:mioda_ibuki_dark#palette.comment   = ['#6272A4',  61]
+let g:mioda_ibuki_dark#palette.comment   = ['#6272a4',  61]
 let g:mioda_ibuki_dark#palette.selection = ['#452735', 236]
 let g:mioda_ibuki_dark#palette.subtle    = ['#222526', 235]
 

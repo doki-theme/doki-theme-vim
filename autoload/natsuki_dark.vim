@@ -9,7 +9,7 @@ let g:natsuki_dark#palette.bg        = ['#310a29', 235]
 let g:natsuki_dark#palette.bgdark    = ['#310a29', 235]
 let g:natsuki_dark#palette.bgdarker  = ['#310a29', 235]
 
-let g:natsuki_dark#palette.comment   = ['#6272A4',  61]
+let g:natsuki_dark#palette.comment   = ['#6272a4',  61]
 let g:natsuki_dark#palette.selection = ['#602b50', 239]
 let g:natsuki_dark#palette.subtle    = ['#4D2339', 237]
 

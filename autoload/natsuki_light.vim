@@ -9,15 +9,15 @@ let g:natsuki_light#palette.bg        = ['#ffe4f1', 225]
 let g:natsuki_light#palette.bgdark    = ['#ffe4f1', 225]
 let g:natsuki_light#palette.bgdarker  = ['#ffe4f1', 225]
 
-let g:natsuki_light#palette.comment   = ['#6272A4',  61]
+let g:natsuki_light#palette.comment   = ['#6a737d',  243]
 let g:natsuki_light#palette.selection = ['#dc99bb', 175]
 let g:natsuki_light#palette.subtle    = ['#ffdce6', 224]
 
 let g:natsuki_light#palette.key_color      = ['#7C75EF', 105]
 let g:natsuki_light#palette.class_name     = ['#df81b8', 175]
-let g:natsuki_light#palette.parameter_color    = ['#FFB86C', 215]
+let g:natsuki_light#palette.parameter_color    = ['#E94686', 168]
 let g:natsuki_light#palette.keyword_color      = ['#C869A3', 169]
-let g:natsuki_light#palette.constants_color    = ['#BD93F9', 141]
+let g:natsuki_light#palette.constants_color    = ['#4C94D6', 68]
 let g:natsuki_light#palette.red       = ['#FF5555', 203]
 let g:natsuki_light#palette.string_color    = ['#DC872E', 172]
 

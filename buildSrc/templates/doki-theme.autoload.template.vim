@@ -9,15 +9,15 @@ let g:{{themeName}}#palette.bg        = ['{{baseBackground}}', {{baseBackground$
 let g:{{themeName}}#palette.bgdark    = ['{{baseBackground}}', {{baseBackground$x256}}]
 let g:{{themeName}}#palette.bgdarker  = ['{{baseBackground}}', {{baseBackground$x256}}]
 
-let g:{{themeName}}#palette.comment   = ['#6272A4',  61]
+let g:{{themeName}}#palette.comment   = ['{{comments}}',  {{comments$x256}}]
 let g:{{themeName}}#palette.selection = ['{{selectionBackground}}', {{selectionBackground$x256}}]
 let g:{{themeName}}#palette.subtle    = ['{{caretRow}}', {{caretRow$x256}}]
 
 let g:{{themeName}}#palette.key_color      = ['{{keyColor}}', {{keyColor$x256}}]
 let g:{{themeName}}#palette.class_name     = ['{{classNameColor}}', {{classNameColor$x256}}]
-let g:{{themeName}}#palette.parameter_color    = ['#FFB86C', 215]
+let g:{{themeName}}#palette.parameter_color    = ['{{parameterColor}}', {{parameterColor$x256}}]
 let g:{{themeName}}#palette.keyword_color      = ['{{keywordColor}}', {{keywordColor$x256}}]
-let g:{{themeName}}#palette.constants_color    = ['#BD93F9', 141]
+let g:{{themeName}}#palette.constants_color    = ['{{constantColor}}', {{constantColor$x256}}]
 let g:{{themeName}}#palette.red       = ['#FF5555', 203]
 let g:{{themeName}}#palette.string_color    = ['{{stringColor}}', {{stringColor$x256}}]
 

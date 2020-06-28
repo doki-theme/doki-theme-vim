@@ -9,7 +9,7 @@ let g:ram#palette.bg        = ['#302930', 236]
 let g:ram#palette.bgdark    = ['#302930', 236]
 let g:ram#palette.bgdarker  = ['#302930', 236]
 
-let g:ram#palette.comment   = ['#6272A4',  61]
+let g:ram#palette.comment   = ['#6272a4',  61]
 let g:ram#palette.selection = ['#7a546f', 95]
 let g:ram#palette.subtle    = ['#353139', 236]
 

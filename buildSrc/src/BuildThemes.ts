@@ -334,13 +334,13 @@ function resolveTemplateVariable(
   templateVariables: StringDictionary<string>,
 ): string {
   if (templateVariable.endsWith(x256Delimiter)) {
-    const colorFromTemplate = getColorFromTemplate(
+    const colorFromTemplate = resolveColor(getColorFromTemplate(
       templateVariables,
       templateVariable.substr(0, templateVariable.length - x256Delimiter.length)
-    );
+    ), templateVariables);
     return findClosestX256Color(colorFromTemplate)
   }
-  return getColorFromTemplate(templateVariables, templateVariable);
+  return resolveColor(getColorFromTemplate(templateVariables, templateVariable), templateVariables);
 }
 
 function fillInTemplateScript(
@@ -475,31 +475,6 @@ function resolveStickerPath(
   return stickerPath.substr(masterThemeDefinitionDirectoryPath.length + '/definitions'.length);
 }
 
-
-const getStickers = (
-  dokiDefinition: MasterDokiThemeDefinition,
-  dokiTheme: any
-) => {
-  const secondary =
-    dokiDefinition.stickers.secondary || dokiDefinition.stickers.normal;
-  return {
-    default: {
-      path: resolveStickerPath(dokiTheme.path, dokiDefinition.stickers.default),
-      name: dokiDefinition.stickers.default,
-    },
-    ...(secondary
-      ? {
-        secondary: {
-          path: resolveStickerPath(dokiTheme.path, secondary),
-          name: secondary,
-        },
-      }
-      : {}),
-  };
-};
-
-const omit = require('lodash/omit');
-
 console.log('Preparing to generate themes.');
 
 walkDir(vimDefinitionDirectoryPath)
@@ -551,17 +526,17 @@ walkDir(vimDefinitionDirectoryPath)
       vimScriptTemplateDirectoryPath,
       'doki-theme.autoload.template.vim'
     ), {
-      encoding: 'utf-8'
+      encoding: 'utf-8',
     });
     const colorsTemplate = fs.readFileSync(path.resolve(
       vimScriptTemplateDirectoryPath,
-      'doki-theme.colors.template.vim'
+      'doki-theme.colors.template.vim',
     ), {
       encoding: 'utf-8'
     });
     const afterTemplate = fs.readFileSync(path.resolve(
       vimScriptTemplateDirectoryPath,
-      'doki-theme.after.plugin.template.vim'
+      'doki-theme.after.plugin.template.vim',
     ), {
       encoding: 'utf-8'
     });

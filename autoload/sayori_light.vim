@@ -9,15 +9,15 @@ let g:sayori_light#palette.bg        = ['#f3faff', 231]
 let g:sayori_light#palette.bgdark    = ['#f3faff', 231]
 let g:sayori_light#palette.bgdarker  = ['#f3faff', 231]
 
-let g:sayori_light#palette.comment   = ['#6272A4',  61]
+let g:sayori_light#palette.comment   = ['#6a737d',  243]
 let g:sayori_light#palette.selection = ['#a9c8ec', 153]
 let g:sayori_light#palette.subtle    = ['#dceef7', 255]
 
 let g:sayori_light#palette.key_color      = ['#3F77EF', 69]
 let g:sayori_light#palette.class_name     = ['#FF3889', 204]
-let g:sayori_light#palette.parameter_color    = ['#FFB86C', 215]
+let g:sayori_light#palette.parameter_color    = ['#00bcd4', 38]
 let g:sayori_light#palette.keyword_color      = ['#9D868D', 138]
-let g:sayori_light#palette.constants_color    = ['#BD93F9', 141]
+let g:sayori_light#palette.constants_color    = ['#4C94D6', 68]
 let g:sayori_light#palette.red       = ['#FF5555', 203]
 let g:sayori_light#palette.string_color    = ['#DC872E', 172]
 

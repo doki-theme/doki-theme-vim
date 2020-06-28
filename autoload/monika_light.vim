@@ -9,15 +9,15 @@ let g:monika_light#palette.bg        = ['#f3fff4', 231]
 let g:monika_light#palette.bgdark    = ['#f3fff4', 231]
 let g:monika_light#palette.bgdarker  = ['#f3fff4', 231]
 
-let g:monika_light#palette.comment   = ['#6272A4',  61]
+let g:monika_light#palette.comment   = ['#6a737d',  243]
 let g:monika_light#palette.selection = ['#a9ecac', 157]
 let g:monika_light#palette.subtle    = ['#dcf7e0', 194]
 
 let g:monika_light#palette.key_color      = ['#8a777d', 244]
 let g:monika_light#palette.class_name     = ['#7AA42E', 106]
-let g:monika_light#palette.parameter_color    = ['#FFB86C', 215]
+let g:monika_light#palette.parameter_color    = ['#388E3C', 65]
 let g:monika_light#palette.keyword_color      = ['#3eae5d', 71]
-let g:monika_light#palette.constants_color    = ['#BD93F9', 141]
+let g:monika_light#palette.constants_color    = ['#4C94D6', 68]
 let g:monika_light#palette.red       = ['#FF5555', 203]
 let g:monika_light#palette.string_color    = ['#EC9130', 209]
 

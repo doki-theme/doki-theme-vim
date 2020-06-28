@@ -9,7 +9,7 @@ let g:darkness_dark#palette.bg        = ['#080703', 232]
 let g:darkness_dark#palette.bgdark    = ['#080703', 232]
 let g:darkness_dark#palette.bgdarker  = ['#080703', 232]
 
-let g:darkness_dark#palette.comment   = ['#6272A4',  61]
+let g:darkness_dark#palette.comment   = ['#6272a4',  61]
 let g:darkness_dark#palette.selection = ['#553919', 237]
 let g:darkness_dark#palette.subtle    = ['#14110d', 233]
 

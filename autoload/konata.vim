@@ -9,15 +9,15 @@ let g:konata#palette.bg        = ['#6192ee', 69]
 let g:konata#palette.bgdark    = ['#6192ee', 69]
 let g:konata#palette.bgdarker  = ['#6192ee', 69]
 
-let g:konata#palette.comment   = ['#6272A4',  61]
+let g:konata#palette.comment   = ['#6a737d',  243]
 let g:konata#palette.selection = ['#59a5b2', 73]
 let g:konata#palette.subtle    = ['#6c95ee', 69]
 
 let g:konata#palette.key_color      = ['#fffdae', 229]
 let g:konata#palette.class_name     = ['#DABDFB', 183]
-let g:konata#palette.parameter_color    = ['#FFB86C', 215]
+let g:konata#palette.parameter_color    = ['#4bcf4c', 77]
 let g:konata#palette.keyword_color      = ['#fad7e1', 224]
-let g:konata#palette.constants_color    = ['#BD93F9', 141]
+let g:konata#palette.constants_color    = ['#F3C49C', 223]
 let g:konata#palette.red       = ['#FF5555', 203]
 let g:konata#palette.string_color    = ['#FFB6EE', 219]
 

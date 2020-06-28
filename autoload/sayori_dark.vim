@@ -9,7 +9,7 @@ let g:sayori_dark#palette.bg        = ['#0E1D31', 234]
 let g:sayori_dark#palette.bgdark    = ['#0E1D31', 234]
 let g:sayori_dark#palette.bgdarker  = ['#0E1D31', 234]
 
-let g:sayori_dark#palette.comment   = ['#6272A4',  61]
+let g:sayori_dark#palette.comment   = ['#6272a4',  61]
 let g:sayori_dark#palette.selection = ['#234164', 238]
 let g:sayori_dark#palette.subtle    = ['#252D3C', 236]
 

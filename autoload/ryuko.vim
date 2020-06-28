@@ -9,7 +9,7 @@ let g:ryuko#palette.bg        = ['#2f363c', 237]
 let g:ryuko#palette.bgdark    = ['#2f363c', 237]
 let g:ryuko#palette.bgdarker  = ['#2f363c', 237]
 
-let g:ryuko#palette.comment   = ['#6272A4',  61]
+let g:ryuko#palette.comment   = ['#6272a4',  61]
 let g:ryuko#palette.selection = ['#563036', 237]
 let g:ryuko#palette.subtle    = ['#2a3037', 236]
 

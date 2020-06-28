@@ -9,15 +9,15 @@ let g:mioda_ibuki_light#palette.bg        = ['#ffedfe', 231]
 let g:mioda_ibuki_light#palette.bgdark    = ['#ffedfe', 231]
 let g:mioda_ibuki_light#palette.bgdarker  = ['#ffedfe', 231]
 
-let g:mioda_ibuki_light#palette.comment   = ['#6272A4',  61]
+let g:mioda_ibuki_light#palette.comment   = ['#6a737d',  243]
 let g:mioda_ibuki_light#palette.selection = ['#8EDBFF', 117]
 let g:mioda_ibuki_light#palette.subtle    = ['#f7dcf3', 225]
 
 let g:mioda_ibuki_light#palette.key_color      = ['#4174b3', 67]
 let g:mioda_ibuki_light#palette.class_name     = ['#cb70a5', 169]
-let g:mioda_ibuki_light#palette.parameter_color    = ['#FFB86C', 215]
+let g:mioda_ibuki_light#palette.parameter_color    = ['#DA46A7', 169]
 let g:mioda_ibuki_light#palette.keyword_color      = ['#C869A3', 169]
-let g:mioda_ibuki_light#palette.constants_color    = ['#BD93F9', 141]
+let g:mioda_ibuki_light#palette.constants_color    = ['#4C94D6', 68]
 let g:mioda_ibuki_light#palette.red       = ['#FF5555', 203]
 let g:mioda_ibuki_light#palette.string_color    = ['#d27f2d', 172]
 

@@ -9,15 +9,15 @@ let g:emilia_light#palette.bg        = ['#fcf3ff', 231]
 let g:emilia_light#palette.bgdark    = ['#fcf3ff', 231]
 let g:emilia_light#palette.bgdarker  = ['#fcf3ff', 231]
 
-let g:emilia_light#palette.comment   = ['#6272A4',  61]
+let g:emilia_light#palette.comment   = ['#6a737d',  243]
 let g:emilia_light#palette.selection = ['#c7a0d2', 182]
 let g:emilia_light#palette.subtle    = ['#f1dcf7', 225]
 
 let g:emilia_light#palette.key_color      = ['#7C75EF', 105]
 let g:emilia_light#palette.class_name     = ['#cb70a5', 169]
-let g:emilia_light#palette.parameter_color    = ['#FFB86C', 215]
+let g:emilia_light#palette.parameter_color    = ['#82357d', 96]
 let g:emilia_light#palette.keyword_color      = ['#C869A3', 169]
-let g:emilia_light#palette.constants_color    = ['#BD93F9', 141]
+let g:emilia_light#palette.constants_color    = ['#4C94D6', 68]
 let g:emilia_light#palette.red       = ['#FF5555', 203]
 let g:emilia_light#palette.string_color    = ['#d27f2d', 172]
 

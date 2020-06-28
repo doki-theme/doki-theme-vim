@@ -9,15 +9,15 @@ let g:beatrice#palette.bg        = ['#ffe4f1', 225]
 let g:beatrice#palette.bgdark    = ['#ffe4f1', 225]
 let g:beatrice#palette.bgdarker  = ['#ffe4f1', 225]
 
-let g:beatrice#palette.comment   = ['#6272A4',  61]
+let g:beatrice#palette.comment   = ['#6a737d',  243]
 let g:beatrice#palette.selection = ['#dc99bb', 175]
 let g:beatrice#palette.subtle    = ['#ffdce6', 224]
 
 let g:beatrice#palette.key_color      = ['#7C75EF', 105]
 let g:beatrice#palette.class_name     = ['#df81b8', 175]
-let g:beatrice#palette.parameter_color    = ['#FFB86C', 215]
+let g:beatrice#palette.parameter_color    = ['#78A5EB', 110]
 let g:beatrice#palette.keyword_color      = ['#C869A3', 169]
-let g:beatrice#palette.constants_color    = ['#BD93F9', 141]
+let g:beatrice#palette.constants_color    = ['#4C94D6', 68]
 let g:beatrice#palette.red       = ['#FF5555', 203]
 let g:beatrice#palette.string_color    = ['#DC872E', 172]
 
