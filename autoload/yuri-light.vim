@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:yuri-light#palette           = {}
 let g:yuri-light#palette.fg        = ['#F8F8F2', 253]

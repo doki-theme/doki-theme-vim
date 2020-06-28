@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:megumin#palette           = {}
 let g:megumin#palette.fg        = ['#F8F8F2', 253]

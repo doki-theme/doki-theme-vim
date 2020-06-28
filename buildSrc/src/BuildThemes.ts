@@ -1,10 +1,5 @@
 // @ts-ignore
-import {
-  DokiThemeDefinitions,
-  MasterDokiThemeDefinition,
-  StringDictonary,
-  VimDokiThemeDefinition
-} from './types';
+import {DokiThemeDefinitions, MasterDokiThemeDefinition, StringDictonary, VimDokiThemeDefinition} from './types';
 
 const path = require('path');
 
@@ -237,12 +232,16 @@ function evaluateTemplate(
   );
   const themeName = constructVimName(dokiThemeDefinition);
 
-  return fillInTemplateScript(
-    vimAutoLoadScript,
-    {
-      themeName
-    }
-  )
+  try {
+    return fillInTemplateScript(
+      vimAutoLoadScript,
+      {
+        themeName
+      }
+    );
+  } catch (e) {
+    throw Error(`Unable to evaluate ${dokiThemeDefinition.name}'s template for raisins: ${e.message}.`);
+  }
 }
 
 function fillInTemplateScript(
@@ -251,7 +250,38 @@ function fillInTemplateScript(
 ) {
   return templateToFillIn.split('\n')
     .map(line => {
-      return line.replace('{{themeName}}', templateVariables.themeName);
+      return line.split("").reduce((accum, next) => {
+        if (accum.currentTemplate) {
+          if(next === '}' && accum.currentTemplate.endsWith('}')) {
+            // evaluate Template
+            const templateVariable = accum.currentTemplate.substring(2, accum.currentTemplate.length - 1)
+            accum.currentTemplate = ''
+            const resolvedTemplateVariable = templateVariables[templateVariable];
+            if(!resolvedTemplateVariable) {
+              throw Error(`Template does not have variable ${templateVariable}`)
+            }
+            accum.line += resolvedTemplateVariable
+          } else {
+            accum.currentTemplate += next
+          }
+        } else if(next === '{' && !accum.stagingTemplate) {
+          accum.stagingTemplate = next
+        } else if(accum.stagingTemplate && next === '{') {
+          accum.stagingTemplate = '';
+          accum.currentTemplate = '{{';
+        } else if(accum.stagingTemplate) {
+          accum.line += accum.stagingTemplate + next;
+          accum.stagingTemplate = ''
+        } else {
+          accum.line += next;
+        }
+
+        return accum;
+      }, {
+        currentTemplate: '',
+        stagingTemplate: '',
+        line: '',
+      }).line;
     }).join('\n')
 
 }

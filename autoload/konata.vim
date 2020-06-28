@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:konata#palette           = {}
 let g:konata#palette.fg        = ['#F8F8F2', 253]

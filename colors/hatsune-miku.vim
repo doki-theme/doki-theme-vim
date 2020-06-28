@@ -1,4 +1,4 @@
-" Configuration: {{{
+" Configuration: 
 
 if v:version > 580
   highlight clear
@@ -13,7 +13,7 @@ if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 
   finish
 endif
 
-" Palette: {{{2
+" Palette: 
 
 let s:fg        = g:hatsune-miku#palette.fg
 
@@ -51,7 +51,7 @@ if has('terminal')
 endif
 
 " }}}2
-" User Configuration: {{{2
+" User Configuration: 
 
 if !exists('g:hatsune-miku_bold')
   let g:hatsune-miku_bold = 1
@@ -65,7 +65,7 @@ if !exists('g:hatsune-miku_underline')
   let g:hatsune-miku_underline = 1
 endif
 
-if !exists('g:hatsune-miku_undercurl') && g:{{themeName}}_underline != 0
+if !exists('g:hatsune-miku_undercurl') && g:hatsune-miku_underline != 0
   let g:hatsune-miku_undercurl = 1
 endif
 
@@ -78,9 +78,9 @@ if !exists('g:hatsune-miku_colorterm')
 endif
 
 "}}}2
-" Script Helpers: {{{2
+" Script Helpers: 
 
-let s:attrs = {
+let s:attrs = 
       \ 'bold': g:hatsune-miku_bold == 1 ? 'bold' : 0,
       \ 'italic': g:hatsune-miku_italic == 1 ? 'italic' : 0,
       \ 'underline': g:hatsune-miku_underline == 1 ? 'underline' : 0,
@@ -115,7 +115,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
 endfunction
 
 "}}}2
-"Highlight Groups: {{{2
+"Highlight Groups: 
 
 call s:h('DraculaBgLight', s:none, s:bglight)
 call s:h('DraculaBgLighter', s:none, s:bglighter)
@@ -178,7 +178,7 @@ call s:h('DraculaDiffDelete', s:red, s:bgdark)
 " }}}2
 
 " }}}
-" User Interface: {{{
+" User Interface: 
 
 set background=dark
 
@@ -225,7 +225,7 @@ hi! link VisualNOS    Visual
 hi! link WarningMsg   DraculaOrangeInverse
 
 " }}}
-" Syntax: {{{
+" Syntax: 
 
 " Required as some plugins will overwrite
 call s:h('MatchParen', s:green, s:none, [s:attrs.underline])

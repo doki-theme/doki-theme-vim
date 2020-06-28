@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:emilia-light#palette           = {}
 let g:emilia-light#palette.fg        = ['#F8F8F2', 253]

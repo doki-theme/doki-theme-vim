@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:hatsune-miku#palette           = {}
 let g:hatsune-miku#palette.fg        = ['#F8F8F2', 253]

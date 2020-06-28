@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:darkness-dark#palette           = {}
 let g:darkness-dark#palette.fg        = ['#F8F8F2', 253]

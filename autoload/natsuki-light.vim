@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:natsuki-light#palette           = {}
 let g:natsuki-light#palette.fg        = ['#F8F8F2', 253]

@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:sayori-light#palette           = {}
 let g:sayori-light#palette.fg        = ['#F8F8F2', 253]

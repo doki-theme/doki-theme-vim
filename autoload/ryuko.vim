@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:ryuko#palette           = {}
 let g:ryuko#palette.fg        = ['#F8F8F2', 253]

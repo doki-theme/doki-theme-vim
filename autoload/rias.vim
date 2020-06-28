@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:rias#palette           = {}
 let g:rias#palette.fg        = ['#F8F8F2', 253]

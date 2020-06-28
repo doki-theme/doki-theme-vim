@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:ram#palette           = {}
 let g:ram#palette.fg        = ['#F8F8F2', 253]

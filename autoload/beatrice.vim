@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:beatrice#palette           = {}
 let g:beatrice#palette.fg        = ['#F8F8F2', 253]

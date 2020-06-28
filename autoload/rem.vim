@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:rem#palette           = {}
 let g:rem#palette.fg        = ['#F8F8F2', 253]

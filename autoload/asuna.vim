@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:asuna#palette           = {}
 let g:asuna#palette.fg        = ['#F8F8F2', 253]

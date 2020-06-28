@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:mioda-ibuki dark#palette           = {}
 let g:mioda-ibuki dark#palette.fg        = ['#F8F8F2', 253]

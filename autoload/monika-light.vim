@@ -1,4 +1,4 @@
-" Palette: {{{
+" Palette: 
 
 let g:monika-light#palette           = {}
 let g:monika-light#palette.fg        = ['#F8F8F2', 253]
