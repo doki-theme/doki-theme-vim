@@ -27,11 +27,11 @@ let s:comment   = g:darkness_dark#palette.comment
 let s:selection = g:darkness_dark#palette.selection
 let s:subtle    = g:darkness_dark#palette.subtle
 
-let s:cyan      = g:darkness_dark#palette.cyan
-let s:green     = g:darkness_dark#palette.green
-let s:orange    = g:darkness_dark#palette.orange
-let s:pink      = g:darkness_dark#palette.pink
-let s:purple    = g:darkness_dark#palette.purple
+let s:key_color      = g:darkness_dark#palette.key_color
+let s:class_name     = g:darkness_dark#palette.class_name
+let s:parameter_color    = g:darkness_dark#palette.parameter_color
+let s:keyword_color      = g:darkness_dark#palette.keyword_color
+let s:constants_color    = g:darkness_dark#palette.constants_color
 let s:red       = g:darkness_dark#palette.red
 let s:string_color    = g:darkness_dark#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('DarknessDarkSelection', s:none, s:selection)
 
 call s:h('DarknessDarkSubtle', s:subtle)
 
-call s:h('DarknessDarkCyan', s:cyan)
-call s:h('DarknessDarkCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('DarknessDarkKeyColor', s:key_color)
+call s:h('DarknessDarkKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('DarknessDarkGreen', s:green)
-call s:h('DarknessDarkGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('DarknessDarkGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('DarknessDarkGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('DarknessDarkClassName', s:class_name)
+call s:h('DarknessDarkClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('DarknessDarkClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('DarknessDarkClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('DarknessDarkOrange', s:orange)
-call s:h('DarknessDarkOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('DarknessDarkOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('DarknessDarkOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('DarknessDarkOrangeInverse', s:bg, s:orange)
+call s:h('DarknessDarkParameter', s:parameter_color)
+call s:h('DarknessDarkParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('DarknessDarkParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('DarknessDarkParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('DarknessDarkParameterInverse', s:bg, s:parameter_color)
 
-call s:h('DarknessDarkPink', s:pink)
-call s:h('DarknessDarkPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('DarknessDarkKeyword', s:keyword_color)
+call s:h('DarknessDarkKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('DarknessDarkPurple', s:purple)
-call s:h('DarknessDarkPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('DarknessDarkPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('DarknessDarkConstants', s:constants_color)
+call s:h('DarknessDarkConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('DarknessDarkConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('DarknessDarkRed', s:red)
 call s:h('DarknessDarkRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('DarknessDarkStringColorItalic', s:string_color, s:none, [s:attrs.itali
 call s:h('DarknessDarkError', s:red, s:none, [], s:red)
 
 call s:h('DarknessDarkErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('DarknessDarkWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('DarknessDarkInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('DarknessDarkWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('DarknessDarkInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('DarknessDarkTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('DarknessDarkSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('DarknessDarkTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('DarknessDarkSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('DarknessDarkBoundary', s:comment, s:bgdark)
-call s:h('DarknessDarkLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('DarknessDarkLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('DarknessDarkDiffChange', s:orange, s:none)
-call s:h('DarknessDarkDiffText', s:bg, s:orange)
+call s:h('DarknessDarkDiffChange', s:parameter_color, s:none)
+call s:h('DarknessDarkDiffText', s:bg, s:parameter_color)
 call s:h('DarknessDarkDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  DarknessDarkBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr DarknessDarkStringColor
-hi! link DiffAdd      DarknessDarkGreen
+hi! link DiffAdd      DarknessDarkClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   DarknessDarkDiffChange
 hi! link DiffDelete   DarknessDarkDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     DarknessDarkDiffText
-hi! link Directory    DarknessDarkPurpleBold
+hi! link Directory    DarknessDarkConstantsBold
 hi! link ErrorMsg     DarknessDarkRedInverse
 hi! link FoldColumn   DarknessDarkSubtle
 hi! link Folded       DarknessDarkBoundary
-hi! link IncSearch    DarknessDarkOrangeInverse
+hi! link IncSearch    DarknessDarkParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      DarknessDarkFgBold
 hi! link NonText      DarknessDarkSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      DarknessDarkBoundary
 " hi! link TabLineFill  DarknessDarkBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        DarknessDarkGreenBold
+hi! link Title        DarknessDarkClassNameBold
 hi! link VertSplit    DarknessDarkBoundary
 hi! link Visual       DarknessDarkSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   DarknessDarkOrangeInverse
+hi! link WarningMsg   DarknessDarkParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey DarknessDarkRed
   hi! link LspDiagnosticsUnderline DarknessDarkFgUnderline
-  hi! link LspDiagnosticsInformation DarknessDarkCyan
-  hi! link LspDiagnosticsHint DarknessDarkCyan
+  hi! link LspDiagnosticsInformation DarknessDarkKeyColor
+  hi! link LspDiagnosticsHint DarknessDarkKeyColor
   hi! link LspDiagnosticsError DarknessDarkError
-  hi! link LspDiagnosticsWarning DarknessDarkOrange
+  hi! link LspDiagnosticsWarning DarknessDarkParameter
   hi! link LspDiagnosticsUnderlineError DarknessDarkErrorLine
   hi! link LspDiagnosticsUnderlineHint DarknessDarkInfoLine
   hi! link LspDiagnosticsUnderlineInformation DarknessDarkInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal DarknessDarkWarnLine
 hi! link SpellCap DarknessDarkInfoLine
 hi! link SpellRare DarknessDarkInfoLine
 
-hi! link Constant DarknessDarkPurple
+hi! link Constant DarknessDarkConstants
 hi! link String DarknessDarkStringColor
-hi! link Character DarknessDarkPink
+hi! link Character DarknessDarkKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier DarknessDarkFg
-hi! link Function DarknessDarkGreen
+hi! link Function DarknessDarkClassName
 
-hi! link Statement DarknessDarkPink
-hi! link Conditional DarknessDarkPink
-hi! link Repeat DarknessDarkPink
-hi! link Label DarknessDarkPink
-hi! link Operator DarknessDarkPink
-hi! link Keyword DarknessDarkPink
-hi! link Exception DarknessDarkPink
+hi! link Statement DarknessDarkKeyword
+hi! link Conditional DarknessDarkKeyword
+hi! link Repeat DarknessDarkKeyword
+hi! link Label DarknessDarkKeyword
+hi! link Operator DarknessDarkKeyword
+hi! link Keyword DarknessDarkKeyword
+hi! link Exception DarknessDarkKeyword
 
-hi! link PreProc DarknessDarkPink
-hi! link Include DarknessDarkPink
-hi! link Define DarknessDarkPink
-hi! link Macro DarknessDarkPink
-hi! link PreCondit DarknessDarkPink
-hi! link StorageClass DarknessDarkPink
-hi! link Structure DarknessDarkPink
-hi! link Typedef DarknessDarkPink
+hi! link PreProc DarknessDarkKeyword
+hi! link Include DarknessDarkKeyword
+hi! link Define DarknessDarkKeyword
+hi! link Macro DarknessDarkKeyword
+hi! link PreCondit DarknessDarkKeyword
+hi! link StorageClass DarknessDarkKeyword
+hi! link Structure DarknessDarkKeyword
+hi! link Typedef DarknessDarkKeyword
 
-hi! link Type DarknessDarkCyanItalic
+hi! link Type DarknessDarkKeyColorItalic
 
 hi! link Delimiter DarknessDarkFg
 
-hi! link Special DarknessDarkPink
-hi! link SpecialComment DarknessDarkCyanItalic
-hi! link Tag DarknessDarkCyan
+hi! link Special DarknessDarkKeyword
+hi! link SpecialComment DarknessDarkKeyColorItalic
+hi! link Tag DarknessDarkKeyColor
 hi! link helpHyperTextJump DarknessDarkLink
-hi! link helpCommand DarknessDarkPurple
-hi! link helpExample DarknessDarkGreen
+hi! link helpCommand DarknessDarkConstants
+hi! link helpExample DarknessDarkClassName
 hi! link helpBacktick Special
 
 "}}}

@@ -27,11 +27,11 @@ let s:comment   = g:rias#palette.comment
 let s:selection = g:rias#palette.selection
 let s:subtle    = g:rias#palette.subtle
 
-let s:cyan      = g:rias#palette.cyan
-let s:green     = g:rias#palette.green
-let s:orange    = g:rias#palette.orange
-let s:pink      = g:rias#palette.pink
-let s:purple    = g:rias#palette.purple
+let s:key_color      = g:rias#palette.key_color
+let s:class_name     = g:rias#palette.class_name
+let s:parameter_color    = g:rias#palette.parameter_color
+let s:keyword_color      = g:rias#palette.keyword_color
+let s:constants_color    = g:rias#palette.constants_color
 let s:red       = g:rias#palette.red
 let s:string_color    = g:rias#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('RiasSelection', s:none, s:selection)
 
 call s:h('RiasSubtle', s:subtle)
 
-call s:h('RiasCyan', s:cyan)
-call s:h('RiasCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('RiasKeyColor', s:key_color)
+call s:h('RiasKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('RiasGreen', s:green)
-call s:h('RiasGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('RiasGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('RiasGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('RiasClassName', s:class_name)
+call s:h('RiasClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('RiasClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('RiasClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('RiasOrange', s:orange)
-call s:h('RiasOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('RiasOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('RiasOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('RiasOrangeInverse', s:bg, s:orange)
+call s:h('RiasParameter', s:parameter_color)
+call s:h('RiasParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('RiasParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('RiasParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('RiasParameterInverse', s:bg, s:parameter_color)
 
-call s:h('RiasPink', s:pink)
-call s:h('RiasPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('RiasKeyword', s:keyword_color)
+call s:h('RiasKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('RiasPurple', s:purple)
-call s:h('RiasPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('RiasPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('RiasConstants', s:constants_color)
+call s:h('RiasConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('RiasConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('RiasRed', s:red)
 call s:h('RiasRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('RiasStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 call s:h('RiasError', s:red, s:none, [], s:red)
 
 call s:h('RiasErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('RiasWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('RiasInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('RiasWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('RiasInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('RiasTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('RiasSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('RiasTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('RiasSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('RiasBoundary', s:comment, s:bgdark)
-call s:h('RiasLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('RiasLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('RiasDiffChange', s:orange, s:none)
-call s:h('RiasDiffText', s:bg, s:orange)
+call s:h('RiasDiffChange', s:parameter_color, s:none)
+call s:h('RiasDiffText', s:bg, s:parameter_color)
 call s:h('RiasDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  RiasBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr RiasStringColor
-hi! link DiffAdd      RiasGreen
+hi! link DiffAdd      RiasClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   RiasDiffChange
 hi! link DiffDelete   RiasDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     RiasDiffText
-hi! link Directory    RiasPurpleBold
+hi! link Directory    RiasConstantsBold
 hi! link ErrorMsg     RiasRedInverse
 hi! link FoldColumn   RiasSubtle
 hi! link Folded       RiasBoundary
-hi! link IncSearch    RiasOrangeInverse
+hi! link IncSearch    RiasParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      RiasFgBold
 hi! link NonText      RiasSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      RiasBoundary
 " hi! link TabLineFill  RiasBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        RiasGreenBold
+hi! link Title        RiasClassNameBold
 hi! link VertSplit    RiasBoundary
 hi! link Visual       RiasSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   RiasOrangeInverse
+hi! link WarningMsg   RiasParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey RiasRed
   hi! link LspDiagnosticsUnderline RiasFgUnderline
-  hi! link LspDiagnosticsInformation RiasCyan
-  hi! link LspDiagnosticsHint RiasCyan
+  hi! link LspDiagnosticsInformation RiasKeyColor
+  hi! link LspDiagnosticsHint RiasKeyColor
   hi! link LspDiagnosticsError RiasError
-  hi! link LspDiagnosticsWarning RiasOrange
+  hi! link LspDiagnosticsWarning RiasParameter
   hi! link LspDiagnosticsUnderlineError RiasErrorLine
   hi! link LspDiagnosticsUnderlineHint RiasInfoLine
   hi! link LspDiagnosticsUnderlineInformation RiasInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal RiasWarnLine
 hi! link SpellCap RiasInfoLine
 hi! link SpellRare RiasInfoLine
 
-hi! link Constant RiasPurple
+hi! link Constant RiasConstants
 hi! link String RiasStringColor
-hi! link Character RiasPink
+hi! link Character RiasKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier RiasFg
-hi! link Function RiasGreen
+hi! link Function RiasClassName
 
-hi! link Statement RiasPink
-hi! link Conditional RiasPink
-hi! link Repeat RiasPink
-hi! link Label RiasPink
-hi! link Operator RiasPink
-hi! link Keyword RiasPink
-hi! link Exception RiasPink
+hi! link Statement RiasKeyword
+hi! link Conditional RiasKeyword
+hi! link Repeat RiasKeyword
+hi! link Label RiasKeyword
+hi! link Operator RiasKeyword
+hi! link Keyword RiasKeyword
+hi! link Exception RiasKeyword
 
-hi! link PreProc RiasPink
-hi! link Include RiasPink
-hi! link Define RiasPink
-hi! link Macro RiasPink
-hi! link PreCondit RiasPink
-hi! link StorageClass RiasPink
-hi! link Structure RiasPink
-hi! link Typedef RiasPink
+hi! link PreProc RiasKeyword
+hi! link Include RiasKeyword
+hi! link Define RiasKeyword
+hi! link Macro RiasKeyword
+hi! link PreCondit RiasKeyword
+hi! link StorageClass RiasKeyword
+hi! link Structure RiasKeyword
+hi! link Typedef RiasKeyword
 
-hi! link Type RiasCyanItalic
+hi! link Type RiasKeyColorItalic
 
 hi! link Delimiter RiasFg
 
-hi! link Special RiasPink
-hi! link SpecialComment RiasCyanItalic
-hi! link Tag RiasCyan
+hi! link Special RiasKeyword
+hi! link SpecialComment RiasKeyColorItalic
+hi! link Tag RiasKeyColor
 hi! link helpHyperTextJump RiasLink
-hi! link helpCommand RiasPurple
-hi! link helpExample RiasGreen
+hi! link helpCommand RiasConstants
+hi! link helpExample RiasClassName
 hi! link helpBacktick Special
 
 "}}}

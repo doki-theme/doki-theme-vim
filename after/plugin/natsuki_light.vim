@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'NatsukiLightOrange'],
-    \ 'info':    ['fg', 'NatsukiLightPurple'],
+    \ 'hl+':     ['fg', 'NatsukiLightParameter'],
+    \ 'info':    ['fg', 'NatsukiLightConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'NatsukiLightGreen'],
+    \ 'prompt':  ['fg', 'NatsukiLightClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               NatsukiLightInfoLine
 
   hi! link ALEErrorSign          NatsukiLightRed
-  hi! link ALEWarningSign        NatsukiLightOrange
-  hi! link ALEInfoSign           NatsukiLightCyan
+  hi! link ALEWarningSign        NatsukiLightParameter
+  hi! link ALEInfoSign           NatsukiLightKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

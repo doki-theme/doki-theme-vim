@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'AsunaOrange'],
-    \ 'info':    ['fg', 'AsunaPurple'],
+    \ 'hl+':     ['fg', 'AsunaParameter'],
+    \ 'info':    ['fg', 'AsunaConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'AsunaGreen'],
+    \ 'prompt':  ['fg', 'AsunaClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               AsunaInfoLine
 
   hi! link ALEErrorSign          AsunaRed
-  hi! link ALEWarningSign        AsunaOrange
-  hi! link ALEInfoSign           AsunaCyan
+  hi! link ALEWarningSign        AsunaParameter
+  hi! link ALEInfoSign           AsunaKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

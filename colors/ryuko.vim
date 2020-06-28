@@ -27,11 +27,11 @@ let s:comment   = g:ryuko#palette.comment
 let s:selection = g:ryuko#palette.selection
 let s:subtle    = g:ryuko#palette.subtle
 
-let s:cyan      = g:ryuko#palette.cyan
-let s:green     = g:ryuko#palette.green
-let s:orange    = g:ryuko#palette.orange
-let s:pink      = g:ryuko#palette.pink
-let s:purple    = g:ryuko#palette.purple
+let s:key_color      = g:ryuko#palette.key_color
+let s:class_name     = g:ryuko#palette.class_name
+let s:parameter_color    = g:ryuko#palette.parameter_color
+let s:keyword_color      = g:ryuko#palette.keyword_color
+let s:constants_color    = g:ryuko#palette.constants_color
 let s:red       = g:ryuko#palette.red
 let s:string_color    = g:ryuko#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('RyukoSelection', s:none, s:selection)
 
 call s:h('RyukoSubtle', s:subtle)
 
-call s:h('RyukoCyan', s:cyan)
-call s:h('RyukoCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('RyukoKeyColor', s:key_color)
+call s:h('RyukoKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('RyukoGreen', s:green)
-call s:h('RyukoGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('RyukoGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('RyukoGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('RyukoClassName', s:class_name)
+call s:h('RyukoClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('RyukoClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('RyukoClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('RyukoOrange', s:orange)
-call s:h('RyukoOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('RyukoOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('RyukoOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('RyukoOrangeInverse', s:bg, s:orange)
+call s:h('RyukoParameter', s:parameter_color)
+call s:h('RyukoParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('RyukoParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('RyukoParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('RyukoParameterInverse', s:bg, s:parameter_color)
 
-call s:h('RyukoPink', s:pink)
-call s:h('RyukoPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('RyukoKeyword', s:keyword_color)
+call s:h('RyukoKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('RyukoPurple', s:purple)
-call s:h('RyukoPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('RyukoPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('RyukoConstants', s:constants_color)
+call s:h('RyukoConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('RyukoConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('RyukoRed', s:red)
 call s:h('RyukoRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('RyukoStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 call s:h('RyukoError', s:red, s:none, [], s:red)
 
 call s:h('RyukoErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('RyukoWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('RyukoInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('RyukoWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('RyukoInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('RyukoTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('RyukoSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('RyukoTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('RyukoSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('RyukoBoundary', s:comment, s:bgdark)
-call s:h('RyukoLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('RyukoLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('RyukoDiffChange', s:orange, s:none)
-call s:h('RyukoDiffText', s:bg, s:orange)
+call s:h('RyukoDiffChange', s:parameter_color, s:none)
+call s:h('RyukoDiffText', s:bg, s:parameter_color)
 call s:h('RyukoDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  RyukoBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr RyukoStringColor
-hi! link DiffAdd      RyukoGreen
+hi! link DiffAdd      RyukoClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   RyukoDiffChange
 hi! link DiffDelete   RyukoDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     RyukoDiffText
-hi! link Directory    RyukoPurpleBold
+hi! link Directory    RyukoConstantsBold
 hi! link ErrorMsg     RyukoRedInverse
 hi! link FoldColumn   RyukoSubtle
 hi! link Folded       RyukoBoundary
-hi! link IncSearch    RyukoOrangeInverse
+hi! link IncSearch    RyukoParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      RyukoFgBold
 hi! link NonText      RyukoSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      RyukoBoundary
 " hi! link TabLineFill  RyukoBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        RyukoGreenBold
+hi! link Title        RyukoClassNameBold
 hi! link VertSplit    RyukoBoundary
 hi! link Visual       RyukoSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   RyukoOrangeInverse
+hi! link WarningMsg   RyukoParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey RyukoRed
   hi! link LspDiagnosticsUnderline RyukoFgUnderline
-  hi! link LspDiagnosticsInformation RyukoCyan
-  hi! link LspDiagnosticsHint RyukoCyan
+  hi! link LspDiagnosticsInformation RyukoKeyColor
+  hi! link LspDiagnosticsHint RyukoKeyColor
   hi! link LspDiagnosticsError RyukoError
-  hi! link LspDiagnosticsWarning RyukoOrange
+  hi! link LspDiagnosticsWarning RyukoParameter
   hi! link LspDiagnosticsUnderlineError RyukoErrorLine
   hi! link LspDiagnosticsUnderlineHint RyukoInfoLine
   hi! link LspDiagnosticsUnderlineInformation RyukoInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal RyukoWarnLine
 hi! link SpellCap RyukoInfoLine
 hi! link SpellRare RyukoInfoLine
 
-hi! link Constant RyukoPurple
+hi! link Constant RyukoConstants
 hi! link String RyukoStringColor
-hi! link Character RyukoPink
+hi! link Character RyukoKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier RyukoFg
-hi! link Function RyukoGreen
+hi! link Function RyukoClassName
 
-hi! link Statement RyukoPink
-hi! link Conditional RyukoPink
-hi! link Repeat RyukoPink
-hi! link Label RyukoPink
-hi! link Operator RyukoPink
-hi! link Keyword RyukoPink
-hi! link Exception RyukoPink
+hi! link Statement RyukoKeyword
+hi! link Conditional RyukoKeyword
+hi! link Repeat RyukoKeyword
+hi! link Label RyukoKeyword
+hi! link Operator RyukoKeyword
+hi! link Keyword RyukoKeyword
+hi! link Exception RyukoKeyword
 
-hi! link PreProc RyukoPink
-hi! link Include RyukoPink
-hi! link Define RyukoPink
-hi! link Macro RyukoPink
-hi! link PreCondit RyukoPink
-hi! link StorageClass RyukoPink
-hi! link Structure RyukoPink
-hi! link Typedef RyukoPink
+hi! link PreProc RyukoKeyword
+hi! link Include RyukoKeyword
+hi! link Define RyukoKeyword
+hi! link Macro RyukoKeyword
+hi! link PreCondit RyukoKeyword
+hi! link StorageClass RyukoKeyword
+hi! link Structure RyukoKeyword
+hi! link Typedef RyukoKeyword
 
-hi! link Type RyukoCyanItalic
+hi! link Type RyukoKeyColorItalic
 
 hi! link Delimiter RyukoFg
 
-hi! link Special RyukoPink
-hi! link SpecialComment RyukoCyanItalic
-hi! link Tag RyukoCyan
+hi! link Special RyukoKeyword
+hi! link SpecialComment RyukoKeyColorItalic
+hi! link Tag RyukoKeyColor
 hi! link helpHyperTextJump RyukoLink
-hi! link helpCommand RyukoPurple
-hi! link helpExample RyukoGreen
+hi! link helpCommand RyukoConstants
+hi! link helpExample RyukoClassName
 hi! link helpBacktick Special
 
 "}}}

@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'HatsuneMikuOrange'],
-    \ 'info':    ['fg', 'HatsuneMikuPurple'],
+    \ 'hl+':     ['fg', 'HatsuneMikuParameter'],
+    \ 'info':    ['fg', 'HatsuneMikuConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'HatsuneMikuGreen'],
+    \ 'prompt':  ['fg', 'HatsuneMikuClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               HatsuneMikuInfoLine
 
   hi! link ALEErrorSign          HatsuneMikuRed
-  hi! link ALEWarningSign        HatsuneMikuOrange
-  hi! link ALEInfoSign           HatsuneMikuCyan
+  hi! link ALEWarningSign        HatsuneMikuParameter
+  hi! link ALEInfoSign           HatsuneMikuKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

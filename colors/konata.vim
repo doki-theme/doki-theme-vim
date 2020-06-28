@@ -27,11 +27,11 @@ let s:comment   = g:konata#palette.comment
 let s:selection = g:konata#palette.selection
 let s:subtle    = g:konata#palette.subtle
 
-let s:cyan      = g:konata#palette.cyan
-let s:green     = g:konata#palette.green
-let s:orange    = g:konata#palette.orange
-let s:pink      = g:konata#palette.pink
-let s:purple    = g:konata#palette.purple
+let s:key_color      = g:konata#palette.key_color
+let s:class_name     = g:konata#palette.class_name
+let s:parameter_color    = g:konata#palette.parameter_color
+let s:keyword_color      = g:konata#palette.keyword_color
+let s:constants_color    = g:konata#palette.constants_color
 let s:red       = g:konata#palette.red
 let s:string_color    = g:konata#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('KonataSelection', s:none, s:selection)
 
 call s:h('KonataSubtle', s:subtle)
 
-call s:h('KonataCyan', s:cyan)
-call s:h('KonataCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('KonataKeyColor', s:key_color)
+call s:h('KonataKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('KonataGreen', s:green)
-call s:h('KonataGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('KonataGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('KonataGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('KonataClassName', s:class_name)
+call s:h('KonataClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('KonataClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('KonataClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('KonataOrange', s:orange)
-call s:h('KonataOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('KonataOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('KonataOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('KonataOrangeInverse', s:bg, s:orange)
+call s:h('KonataParameter', s:parameter_color)
+call s:h('KonataParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('KonataParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('KonataParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('KonataParameterInverse', s:bg, s:parameter_color)
 
-call s:h('KonataPink', s:pink)
-call s:h('KonataPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('KonataKeyword', s:keyword_color)
+call s:h('KonataKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('KonataPurple', s:purple)
-call s:h('KonataPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('KonataPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('KonataConstants', s:constants_color)
+call s:h('KonataConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('KonataConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('KonataRed', s:red)
 call s:h('KonataRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('KonataStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 call s:h('KonataError', s:red, s:none, [], s:red)
 
 call s:h('KonataErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('KonataWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('KonataInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('KonataWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('KonataInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('KonataTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('KonataSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('KonataTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('KonataSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('KonataBoundary', s:comment, s:bgdark)
-call s:h('KonataLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('KonataLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('KonataDiffChange', s:orange, s:none)
-call s:h('KonataDiffText', s:bg, s:orange)
+call s:h('KonataDiffChange', s:parameter_color, s:none)
+call s:h('KonataDiffText', s:bg, s:parameter_color)
 call s:h('KonataDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  KonataBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr KonataStringColor
-hi! link DiffAdd      KonataGreen
+hi! link DiffAdd      KonataClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   KonataDiffChange
 hi! link DiffDelete   KonataDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     KonataDiffText
-hi! link Directory    KonataPurpleBold
+hi! link Directory    KonataConstantsBold
 hi! link ErrorMsg     KonataRedInverse
 hi! link FoldColumn   KonataSubtle
 hi! link Folded       KonataBoundary
-hi! link IncSearch    KonataOrangeInverse
+hi! link IncSearch    KonataParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      KonataFgBold
 hi! link NonText      KonataSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      KonataBoundary
 " hi! link TabLineFill  KonataBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        KonataGreenBold
+hi! link Title        KonataClassNameBold
 hi! link VertSplit    KonataBoundary
 hi! link Visual       KonataSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   KonataOrangeInverse
+hi! link WarningMsg   KonataParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey KonataRed
   hi! link LspDiagnosticsUnderline KonataFgUnderline
-  hi! link LspDiagnosticsInformation KonataCyan
-  hi! link LspDiagnosticsHint KonataCyan
+  hi! link LspDiagnosticsInformation KonataKeyColor
+  hi! link LspDiagnosticsHint KonataKeyColor
   hi! link LspDiagnosticsError KonataError
-  hi! link LspDiagnosticsWarning KonataOrange
+  hi! link LspDiagnosticsWarning KonataParameter
   hi! link LspDiagnosticsUnderlineError KonataErrorLine
   hi! link LspDiagnosticsUnderlineHint KonataInfoLine
   hi! link LspDiagnosticsUnderlineInformation KonataInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal KonataWarnLine
 hi! link SpellCap KonataInfoLine
 hi! link SpellRare KonataInfoLine
 
-hi! link Constant KonataPurple
+hi! link Constant KonataConstants
 hi! link String KonataStringColor
-hi! link Character KonataPink
+hi! link Character KonataKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier KonataFg
-hi! link Function KonataGreen
+hi! link Function KonataClassName
 
-hi! link Statement KonataPink
-hi! link Conditional KonataPink
-hi! link Repeat KonataPink
-hi! link Label KonataPink
-hi! link Operator KonataPink
-hi! link Keyword KonataPink
-hi! link Exception KonataPink
+hi! link Statement KonataKeyword
+hi! link Conditional KonataKeyword
+hi! link Repeat KonataKeyword
+hi! link Label KonataKeyword
+hi! link Operator KonataKeyword
+hi! link Keyword KonataKeyword
+hi! link Exception KonataKeyword
 
-hi! link PreProc KonataPink
-hi! link Include KonataPink
-hi! link Define KonataPink
-hi! link Macro KonataPink
-hi! link PreCondit KonataPink
-hi! link StorageClass KonataPink
-hi! link Structure KonataPink
-hi! link Typedef KonataPink
+hi! link PreProc KonataKeyword
+hi! link Include KonataKeyword
+hi! link Define KonataKeyword
+hi! link Macro KonataKeyword
+hi! link PreCondit KonataKeyword
+hi! link StorageClass KonataKeyword
+hi! link Structure KonataKeyword
+hi! link Typedef KonataKeyword
 
-hi! link Type KonataCyanItalic
+hi! link Type KonataKeyColorItalic
 
 hi! link Delimiter KonataFg
 
-hi! link Special KonataPink
-hi! link SpecialComment KonataCyanItalic
-hi! link Tag KonataCyan
+hi! link Special KonataKeyword
+hi! link SpecialComment KonataKeyColorItalic
+hi! link Tag KonataKeyColor
 hi! link helpHyperTextJump KonataLink
-hi! link helpCommand KonataPurple
-hi! link helpExample KonataGreen
+hi! link helpCommand KonataConstants
+hi! link helpExample KonataClassName
 hi! link helpBacktick Special
 
 "}}}

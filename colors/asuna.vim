@@ -27,11 +27,11 @@ let s:comment   = g:asuna#palette.comment
 let s:selection = g:asuna#palette.selection
 let s:subtle    = g:asuna#palette.subtle
 
-let s:cyan      = g:asuna#palette.cyan
-let s:green     = g:asuna#palette.green
-let s:orange    = g:asuna#palette.orange
-let s:pink      = g:asuna#palette.pink
-let s:purple    = g:asuna#palette.purple
+let s:key_color      = g:asuna#palette.key_color
+let s:class_name     = g:asuna#palette.class_name
+let s:parameter_color    = g:asuna#palette.parameter_color
+let s:keyword_color      = g:asuna#palette.keyword_color
+let s:constants_color    = g:asuna#palette.constants_color
 let s:red       = g:asuna#palette.red
 let s:string_color    = g:asuna#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('AsunaSelection', s:none, s:selection)
 
 call s:h('AsunaSubtle', s:subtle)
 
-call s:h('AsunaCyan', s:cyan)
-call s:h('AsunaCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('AsunaKeyColor', s:key_color)
+call s:h('AsunaKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('AsunaGreen', s:green)
-call s:h('AsunaGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('AsunaGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('AsunaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('AsunaClassName', s:class_name)
+call s:h('AsunaClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('AsunaClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('AsunaClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('AsunaOrange', s:orange)
-call s:h('AsunaOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('AsunaOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('AsunaOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('AsunaOrangeInverse', s:bg, s:orange)
+call s:h('AsunaParameter', s:parameter_color)
+call s:h('AsunaParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('AsunaParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('AsunaParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('AsunaParameterInverse', s:bg, s:parameter_color)
 
-call s:h('AsunaPink', s:pink)
-call s:h('AsunaPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('AsunaKeyword', s:keyword_color)
+call s:h('AsunaKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('AsunaPurple', s:purple)
-call s:h('AsunaPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('AsunaPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('AsunaConstants', s:constants_color)
+call s:h('AsunaConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('AsunaConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('AsunaRed', s:red)
 call s:h('AsunaRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('AsunaStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 call s:h('AsunaError', s:red, s:none, [], s:red)
 
 call s:h('AsunaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('AsunaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('AsunaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('AsunaWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('AsunaInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('AsunaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('AsunaSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('AsunaTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('AsunaSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('AsunaBoundary', s:comment, s:bgdark)
-call s:h('AsunaLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('AsunaLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('AsunaDiffChange', s:orange, s:none)
-call s:h('AsunaDiffText', s:bg, s:orange)
+call s:h('AsunaDiffChange', s:parameter_color, s:none)
+call s:h('AsunaDiffText', s:bg, s:parameter_color)
 call s:h('AsunaDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  AsunaBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr AsunaStringColor
-hi! link DiffAdd      AsunaGreen
+hi! link DiffAdd      AsunaClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   AsunaDiffChange
 hi! link DiffDelete   AsunaDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     AsunaDiffText
-hi! link Directory    AsunaPurpleBold
+hi! link Directory    AsunaConstantsBold
 hi! link ErrorMsg     AsunaRedInverse
 hi! link FoldColumn   AsunaSubtle
 hi! link Folded       AsunaBoundary
-hi! link IncSearch    AsunaOrangeInverse
+hi! link IncSearch    AsunaParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      AsunaFgBold
 hi! link NonText      AsunaSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      AsunaBoundary
 " hi! link TabLineFill  AsunaBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        AsunaGreenBold
+hi! link Title        AsunaClassNameBold
 hi! link VertSplit    AsunaBoundary
 hi! link Visual       AsunaSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   AsunaOrangeInverse
+hi! link WarningMsg   AsunaParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey AsunaRed
   hi! link LspDiagnosticsUnderline AsunaFgUnderline
-  hi! link LspDiagnosticsInformation AsunaCyan
-  hi! link LspDiagnosticsHint AsunaCyan
+  hi! link LspDiagnosticsInformation AsunaKeyColor
+  hi! link LspDiagnosticsHint AsunaKeyColor
   hi! link LspDiagnosticsError AsunaError
-  hi! link LspDiagnosticsWarning AsunaOrange
+  hi! link LspDiagnosticsWarning AsunaParameter
   hi! link LspDiagnosticsUnderlineError AsunaErrorLine
   hi! link LspDiagnosticsUnderlineHint AsunaInfoLine
   hi! link LspDiagnosticsUnderlineInformation AsunaInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal AsunaWarnLine
 hi! link SpellCap AsunaInfoLine
 hi! link SpellRare AsunaInfoLine
 
-hi! link Constant AsunaPurple
+hi! link Constant AsunaConstants
 hi! link String AsunaStringColor
-hi! link Character AsunaPink
+hi! link Character AsunaKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier AsunaFg
-hi! link Function AsunaGreen
+hi! link Function AsunaClassName
 
-hi! link Statement AsunaPink
-hi! link Conditional AsunaPink
-hi! link Repeat AsunaPink
-hi! link Label AsunaPink
-hi! link Operator AsunaPink
-hi! link Keyword AsunaPink
-hi! link Exception AsunaPink
+hi! link Statement AsunaKeyword
+hi! link Conditional AsunaKeyword
+hi! link Repeat AsunaKeyword
+hi! link Label AsunaKeyword
+hi! link Operator AsunaKeyword
+hi! link Keyword AsunaKeyword
+hi! link Exception AsunaKeyword
 
-hi! link PreProc AsunaPink
-hi! link Include AsunaPink
-hi! link Define AsunaPink
-hi! link Macro AsunaPink
-hi! link PreCondit AsunaPink
-hi! link StorageClass AsunaPink
-hi! link Structure AsunaPink
-hi! link Typedef AsunaPink
+hi! link PreProc AsunaKeyword
+hi! link Include AsunaKeyword
+hi! link Define AsunaKeyword
+hi! link Macro AsunaKeyword
+hi! link PreCondit AsunaKeyword
+hi! link StorageClass AsunaKeyword
+hi! link Structure AsunaKeyword
+hi! link Typedef AsunaKeyword
 
-hi! link Type AsunaCyanItalic
+hi! link Type AsunaKeyColorItalic
 
 hi! link Delimiter AsunaFg
 
-hi! link Special AsunaPink
-hi! link SpecialComment AsunaCyanItalic
-hi! link Tag AsunaCyan
+hi! link Special AsunaKeyword
+hi! link SpecialComment AsunaKeyColorItalic
+hi! link Tag AsunaKeyColor
 hi! link helpHyperTextJump AsunaLink
-hi! link helpCommand AsunaPurple
-hi! link helpExample AsunaGreen
+hi! link helpCommand AsunaConstants
+hi! link helpExample AsunaClassName
 hi! link helpBacktick Special
 
 "}}}

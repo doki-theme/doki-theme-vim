@@ -27,11 +27,11 @@ let s:comment   = g:mioda_ibuki_light#palette.comment
 let s:selection = g:mioda_ibuki_light#palette.selection
 let s:subtle    = g:mioda_ibuki_light#palette.subtle
 
-let s:cyan      = g:mioda_ibuki_light#palette.cyan
-let s:green     = g:mioda_ibuki_light#palette.green
-let s:orange    = g:mioda_ibuki_light#palette.orange
-let s:pink      = g:mioda_ibuki_light#palette.pink
-let s:purple    = g:mioda_ibuki_light#palette.purple
+let s:key_color      = g:mioda_ibuki_light#palette.key_color
+let s:class_name     = g:mioda_ibuki_light#palette.class_name
+let s:parameter_color    = g:mioda_ibuki_light#palette.parameter_color
+let s:keyword_color      = g:mioda_ibuki_light#palette.keyword_color
+let s:constants_color    = g:mioda_ibuki_light#palette.constants_color
 let s:red       = g:mioda_ibuki_light#palette.red
 let s:string_color    = g:mioda_ibuki_light#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('MiodaIbukiLightSelection', s:none, s:selection)
 
 call s:h('MiodaIbukiLightSubtle', s:subtle)
 
-call s:h('MiodaIbukiLightCyan', s:cyan)
-call s:h('MiodaIbukiLightCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('MiodaIbukiLightKeyColor', s:key_color)
+call s:h('MiodaIbukiLightKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('MiodaIbukiLightGreen', s:green)
-call s:h('MiodaIbukiLightGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('MiodaIbukiLightGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('MiodaIbukiLightGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('MiodaIbukiLightClassName', s:class_name)
+call s:h('MiodaIbukiLightClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('MiodaIbukiLightClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('MiodaIbukiLightClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('MiodaIbukiLightOrange', s:orange)
-call s:h('MiodaIbukiLightOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('MiodaIbukiLightOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('MiodaIbukiLightOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('MiodaIbukiLightOrangeInverse', s:bg, s:orange)
+call s:h('MiodaIbukiLightParameter', s:parameter_color)
+call s:h('MiodaIbukiLightParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('MiodaIbukiLightParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('MiodaIbukiLightParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('MiodaIbukiLightParameterInverse', s:bg, s:parameter_color)
 
-call s:h('MiodaIbukiLightPink', s:pink)
-call s:h('MiodaIbukiLightPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('MiodaIbukiLightKeyword', s:keyword_color)
+call s:h('MiodaIbukiLightKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('MiodaIbukiLightPurple', s:purple)
-call s:h('MiodaIbukiLightPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('MiodaIbukiLightPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('MiodaIbukiLightConstants', s:constants_color)
+call s:h('MiodaIbukiLightConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('MiodaIbukiLightConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('MiodaIbukiLightRed', s:red)
 call s:h('MiodaIbukiLightRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('MiodaIbukiLightStringColorItalic', s:string_color, s:none, [s:attrs.it
 call s:h('MiodaIbukiLightError', s:red, s:none, [], s:red)
 
 call s:h('MiodaIbukiLightErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('MiodaIbukiLightWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('MiodaIbukiLightInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('MiodaIbukiLightWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('MiodaIbukiLightInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('MiodaIbukiLightTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('MiodaIbukiLightSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('MiodaIbukiLightTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('MiodaIbukiLightSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('MiodaIbukiLightBoundary', s:comment, s:bgdark)
-call s:h('MiodaIbukiLightLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('MiodaIbukiLightLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('MiodaIbukiLightDiffChange', s:orange, s:none)
-call s:h('MiodaIbukiLightDiffText', s:bg, s:orange)
+call s:h('MiodaIbukiLightDiffChange', s:parameter_color, s:none)
+call s:h('MiodaIbukiLightDiffText', s:bg, s:parameter_color)
 call s:h('MiodaIbukiLightDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  MiodaIbukiLightBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr MiodaIbukiLightStringColor
-hi! link DiffAdd      MiodaIbukiLightGreen
+hi! link DiffAdd      MiodaIbukiLightClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   MiodaIbukiLightDiffChange
 hi! link DiffDelete   MiodaIbukiLightDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     MiodaIbukiLightDiffText
-hi! link Directory    MiodaIbukiLightPurpleBold
+hi! link Directory    MiodaIbukiLightConstantsBold
 hi! link ErrorMsg     MiodaIbukiLightRedInverse
 hi! link FoldColumn   MiodaIbukiLightSubtle
 hi! link Folded       MiodaIbukiLightBoundary
-hi! link IncSearch    MiodaIbukiLightOrangeInverse
+hi! link IncSearch    MiodaIbukiLightParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      MiodaIbukiLightFgBold
 hi! link NonText      MiodaIbukiLightSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      MiodaIbukiLightBoundary
 " hi! link TabLineFill  MiodaIbukiLightBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        MiodaIbukiLightGreenBold
+hi! link Title        MiodaIbukiLightClassNameBold
 hi! link VertSplit    MiodaIbukiLightBoundary
 hi! link Visual       MiodaIbukiLightSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   MiodaIbukiLightOrangeInverse
+hi! link WarningMsg   MiodaIbukiLightParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey MiodaIbukiLightRed
   hi! link LspDiagnosticsUnderline MiodaIbukiLightFgUnderline
-  hi! link LspDiagnosticsInformation MiodaIbukiLightCyan
-  hi! link LspDiagnosticsHint MiodaIbukiLightCyan
+  hi! link LspDiagnosticsInformation MiodaIbukiLightKeyColor
+  hi! link LspDiagnosticsHint MiodaIbukiLightKeyColor
   hi! link LspDiagnosticsError MiodaIbukiLightError
-  hi! link LspDiagnosticsWarning MiodaIbukiLightOrange
+  hi! link LspDiagnosticsWarning MiodaIbukiLightParameter
   hi! link LspDiagnosticsUnderlineError MiodaIbukiLightErrorLine
   hi! link LspDiagnosticsUnderlineHint MiodaIbukiLightInfoLine
   hi! link LspDiagnosticsUnderlineInformation MiodaIbukiLightInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal MiodaIbukiLightWarnLine
 hi! link SpellCap MiodaIbukiLightInfoLine
 hi! link SpellRare MiodaIbukiLightInfoLine
 
-hi! link Constant MiodaIbukiLightPurple
+hi! link Constant MiodaIbukiLightConstants
 hi! link String MiodaIbukiLightStringColor
-hi! link Character MiodaIbukiLightPink
+hi! link Character MiodaIbukiLightKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier MiodaIbukiLightFg
-hi! link Function MiodaIbukiLightGreen
+hi! link Function MiodaIbukiLightClassName
 
-hi! link Statement MiodaIbukiLightPink
-hi! link Conditional MiodaIbukiLightPink
-hi! link Repeat MiodaIbukiLightPink
-hi! link Label MiodaIbukiLightPink
-hi! link Operator MiodaIbukiLightPink
-hi! link Keyword MiodaIbukiLightPink
-hi! link Exception MiodaIbukiLightPink
+hi! link Statement MiodaIbukiLightKeyword
+hi! link Conditional MiodaIbukiLightKeyword
+hi! link Repeat MiodaIbukiLightKeyword
+hi! link Label MiodaIbukiLightKeyword
+hi! link Operator MiodaIbukiLightKeyword
+hi! link Keyword MiodaIbukiLightKeyword
+hi! link Exception MiodaIbukiLightKeyword
 
-hi! link PreProc MiodaIbukiLightPink
-hi! link Include MiodaIbukiLightPink
-hi! link Define MiodaIbukiLightPink
-hi! link Macro MiodaIbukiLightPink
-hi! link PreCondit MiodaIbukiLightPink
-hi! link StorageClass MiodaIbukiLightPink
-hi! link Structure MiodaIbukiLightPink
-hi! link Typedef MiodaIbukiLightPink
+hi! link PreProc MiodaIbukiLightKeyword
+hi! link Include MiodaIbukiLightKeyword
+hi! link Define MiodaIbukiLightKeyword
+hi! link Macro MiodaIbukiLightKeyword
+hi! link PreCondit MiodaIbukiLightKeyword
+hi! link StorageClass MiodaIbukiLightKeyword
+hi! link Structure MiodaIbukiLightKeyword
+hi! link Typedef MiodaIbukiLightKeyword
 
-hi! link Type MiodaIbukiLightCyanItalic
+hi! link Type MiodaIbukiLightKeyColorItalic
 
 hi! link Delimiter MiodaIbukiLightFg
 
-hi! link Special MiodaIbukiLightPink
-hi! link SpecialComment MiodaIbukiLightCyanItalic
-hi! link Tag MiodaIbukiLightCyan
+hi! link Special MiodaIbukiLightKeyword
+hi! link SpecialComment MiodaIbukiLightKeyColorItalic
+hi! link Tag MiodaIbukiLightKeyColor
 hi! link helpHyperTextJump MiodaIbukiLightLink
-hi! link helpCommand MiodaIbukiLightPurple
-hi! link helpExample MiodaIbukiLightGreen
+hi! link helpCommand MiodaIbukiLightConstants
+hi! link helpExample MiodaIbukiLightClassName
 hi! link helpBacktick Special
 
 "}}}

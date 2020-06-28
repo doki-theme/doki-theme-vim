@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'KonataOrange'],
-    \ 'info':    ['fg', 'KonataPurple'],
+    \ 'hl+':     ['fg', 'KonataParameter'],
+    \ 'info':    ['fg', 'KonataConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'KonataGreen'],
+    \ 'prompt':  ['fg', 'KonataClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               KonataInfoLine
 
   hi! link ALEErrorSign          KonataRed
-  hi! link ALEWarningSign        KonataOrange
-  hi! link ALEInfoSign           KonataCyan
+  hi! link ALEWarningSign        KonataParameter
+  hi! link ALEInfoSign           KonataKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

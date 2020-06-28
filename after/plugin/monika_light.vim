@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'MonikaLightOrange'],
-    \ 'info':    ['fg', 'MonikaLightPurple'],
+    \ 'hl+':     ['fg', 'MonikaLightParameter'],
+    \ 'info':    ['fg', 'MonikaLightConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'MonikaLightGreen'],
+    \ 'prompt':  ['fg', 'MonikaLightClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               MonikaLightInfoLine
 
   hi! link ALEErrorSign          MonikaLightRed
-  hi! link ALEWarningSign        MonikaLightOrange
-  hi! link ALEInfoSign           MonikaLightCyan
+  hi! link ALEWarningSign        MonikaLightParameter
+  hi! link ALEInfoSign           MonikaLightKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

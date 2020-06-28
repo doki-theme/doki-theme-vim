@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'RemOrange'],
-    \ 'info':    ['fg', 'RemPurple'],
+    \ 'hl+':     ['fg', 'RemParameter'],
+    \ 'info':    ['fg', 'RemConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'RemGreen'],
+    \ 'prompt':  ['fg', 'RemClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               RemInfoLine
 
   hi! link ALEErrorSign          RemRed
-  hi! link ALEWarningSign        RemOrange
-  hi! link ALEInfoSign           RemCyan
+  hi! link ALEWarningSign        RemParameter
+  hi! link ALEInfoSign           RemKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

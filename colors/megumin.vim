@@ -27,11 +27,11 @@ let s:comment   = g:megumin#palette.comment
 let s:selection = g:megumin#palette.selection
 let s:subtle    = g:megumin#palette.subtle
 
-let s:cyan      = g:megumin#palette.cyan
-let s:green     = g:megumin#palette.green
-let s:orange    = g:megumin#palette.orange
-let s:pink      = g:megumin#palette.pink
-let s:purple    = g:megumin#palette.purple
+let s:key_color      = g:megumin#palette.key_color
+let s:class_name     = g:megumin#palette.class_name
+let s:parameter_color    = g:megumin#palette.parameter_color
+let s:keyword_color      = g:megumin#palette.keyword_color
+let s:constants_color    = g:megumin#palette.constants_color
 let s:red       = g:megumin#palette.red
 let s:string_color    = g:megumin#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('MeguminSelection', s:none, s:selection)
 
 call s:h('MeguminSubtle', s:subtle)
 
-call s:h('MeguminCyan', s:cyan)
-call s:h('MeguminCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('MeguminKeyColor', s:key_color)
+call s:h('MeguminKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('MeguminGreen', s:green)
-call s:h('MeguminGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('MeguminGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('MeguminGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('MeguminClassName', s:class_name)
+call s:h('MeguminClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('MeguminClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('MeguminClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('MeguminOrange', s:orange)
-call s:h('MeguminOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('MeguminOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('MeguminOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('MeguminOrangeInverse', s:bg, s:orange)
+call s:h('MeguminParameter', s:parameter_color)
+call s:h('MeguminParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('MeguminParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('MeguminParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('MeguminParameterInverse', s:bg, s:parameter_color)
 
-call s:h('MeguminPink', s:pink)
-call s:h('MeguminPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('MeguminKeyword', s:keyword_color)
+call s:h('MeguminKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('MeguminPurple', s:purple)
-call s:h('MeguminPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('MeguminPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('MeguminConstants', s:constants_color)
+call s:h('MeguminConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('MeguminConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('MeguminRed', s:red)
 call s:h('MeguminRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('MeguminStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 call s:h('MeguminError', s:red, s:none, [], s:red)
 
 call s:h('MeguminErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('MeguminWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('MeguminInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('MeguminWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('MeguminInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('MeguminTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('MeguminSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('MeguminTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('MeguminSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('MeguminBoundary', s:comment, s:bgdark)
-call s:h('MeguminLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('MeguminLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('MeguminDiffChange', s:orange, s:none)
-call s:h('MeguminDiffText', s:bg, s:orange)
+call s:h('MeguminDiffChange', s:parameter_color, s:none)
+call s:h('MeguminDiffText', s:bg, s:parameter_color)
 call s:h('MeguminDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  MeguminBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr MeguminStringColor
-hi! link DiffAdd      MeguminGreen
+hi! link DiffAdd      MeguminClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   MeguminDiffChange
 hi! link DiffDelete   MeguminDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     MeguminDiffText
-hi! link Directory    MeguminPurpleBold
+hi! link Directory    MeguminConstantsBold
 hi! link ErrorMsg     MeguminRedInverse
 hi! link FoldColumn   MeguminSubtle
 hi! link Folded       MeguminBoundary
-hi! link IncSearch    MeguminOrangeInverse
+hi! link IncSearch    MeguminParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      MeguminFgBold
 hi! link NonText      MeguminSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      MeguminBoundary
 " hi! link TabLineFill  MeguminBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        MeguminGreenBold
+hi! link Title        MeguminClassNameBold
 hi! link VertSplit    MeguminBoundary
 hi! link Visual       MeguminSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   MeguminOrangeInverse
+hi! link WarningMsg   MeguminParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey MeguminRed
   hi! link LspDiagnosticsUnderline MeguminFgUnderline
-  hi! link LspDiagnosticsInformation MeguminCyan
-  hi! link LspDiagnosticsHint MeguminCyan
+  hi! link LspDiagnosticsInformation MeguminKeyColor
+  hi! link LspDiagnosticsHint MeguminKeyColor
   hi! link LspDiagnosticsError MeguminError
-  hi! link LspDiagnosticsWarning MeguminOrange
+  hi! link LspDiagnosticsWarning MeguminParameter
   hi! link LspDiagnosticsUnderlineError MeguminErrorLine
   hi! link LspDiagnosticsUnderlineHint MeguminInfoLine
   hi! link LspDiagnosticsUnderlineInformation MeguminInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal MeguminWarnLine
 hi! link SpellCap MeguminInfoLine
 hi! link SpellRare MeguminInfoLine
 
-hi! link Constant MeguminPurple
+hi! link Constant MeguminConstants
 hi! link String MeguminStringColor
-hi! link Character MeguminPink
+hi! link Character MeguminKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier MeguminFg
-hi! link Function MeguminGreen
+hi! link Function MeguminClassName
 
-hi! link Statement MeguminPink
-hi! link Conditional MeguminPink
-hi! link Repeat MeguminPink
-hi! link Label MeguminPink
-hi! link Operator MeguminPink
-hi! link Keyword MeguminPink
-hi! link Exception MeguminPink
+hi! link Statement MeguminKeyword
+hi! link Conditional MeguminKeyword
+hi! link Repeat MeguminKeyword
+hi! link Label MeguminKeyword
+hi! link Operator MeguminKeyword
+hi! link Keyword MeguminKeyword
+hi! link Exception MeguminKeyword
 
-hi! link PreProc MeguminPink
-hi! link Include MeguminPink
-hi! link Define MeguminPink
-hi! link Macro MeguminPink
-hi! link PreCondit MeguminPink
-hi! link StorageClass MeguminPink
-hi! link Structure MeguminPink
-hi! link Typedef MeguminPink
+hi! link PreProc MeguminKeyword
+hi! link Include MeguminKeyword
+hi! link Define MeguminKeyword
+hi! link Macro MeguminKeyword
+hi! link PreCondit MeguminKeyword
+hi! link StorageClass MeguminKeyword
+hi! link Structure MeguminKeyword
+hi! link Typedef MeguminKeyword
 
-hi! link Type MeguminCyanItalic
+hi! link Type MeguminKeyColorItalic
 
 hi! link Delimiter MeguminFg
 
-hi! link Special MeguminPink
-hi! link SpecialComment MeguminCyanItalic
-hi! link Tag MeguminCyan
+hi! link Special MeguminKeyword
+hi! link SpecialComment MeguminKeyColorItalic
+hi! link Tag MeguminKeyColor
 hi! link helpHyperTextJump MeguminLink
-hi! link helpCommand MeguminPurple
-hi! link helpExample MeguminGreen
+hi! link helpCommand MeguminConstants
+hi! link helpExample MeguminClassName
 hi! link helpBacktick Special
 
 "}}}

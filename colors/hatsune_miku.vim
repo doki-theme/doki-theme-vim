@@ -27,11 +27,11 @@ let s:comment   = g:hatsune_miku#palette.comment
 let s:selection = g:hatsune_miku#palette.selection
 let s:subtle    = g:hatsune_miku#palette.subtle
 
-let s:cyan      = g:hatsune_miku#palette.cyan
-let s:green     = g:hatsune_miku#palette.green
-let s:orange    = g:hatsune_miku#palette.orange
-let s:pink      = g:hatsune_miku#palette.pink
-let s:purple    = g:hatsune_miku#palette.purple
+let s:key_color      = g:hatsune_miku#palette.key_color
+let s:class_name     = g:hatsune_miku#palette.class_name
+let s:parameter_color    = g:hatsune_miku#palette.parameter_color
+let s:keyword_color      = g:hatsune_miku#palette.keyword_color
+let s:constants_color    = g:hatsune_miku#palette.constants_color
 let s:red       = g:hatsune_miku#palette.red
 let s:string_color    = g:hatsune_miku#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('HatsuneMikuSelection', s:none, s:selection)
 
 call s:h('HatsuneMikuSubtle', s:subtle)
 
-call s:h('HatsuneMikuCyan', s:cyan)
-call s:h('HatsuneMikuCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('HatsuneMikuKeyColor', s:key_color)
+call s:h('HatsuneMikuKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('HatsuneMikuGreen', s:green)
-call s:h('HatsuneMikuGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('HatsuneMikuGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('HatsuneMikuGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('HatsuneMikuClassName', s:class_name)
+call s:h('HatsuneMikuClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('HatsuneMikuClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('HatsuneMikuClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('HatsuneMikuOrange', s:orange)
-call s:h('HatsuneMikuOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('HatsuneMikuOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('HatsuneMikuOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('HatsuneMikuOrangeInverse', s:bg, s:orange)
+call s:h('HatsuneMikuParameter', s:parameter_color)
+call s:h('HatsuneMikuParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('HatsuneMikuParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('HatsuneMikuParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('HatsuneMikuParameterInverse', s:bg, s:parameter_color)
 
-call s:h('HatsuneMikuPink', s:pink)
-call s:h('HatsuneMikuPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('HatsuneMikuKeyword', s:keyword_color)
+call s:h('HatsuneMikuKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('HatsuneMikuPurple', s:purple)
-call s:h('HatsuneMikuPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('HatsuneMikuPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('HatsuneMikuConstants', s:constants_color)
+call s:h('HatsuneMikuConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('HatsuneMikuConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('HatsuneMikuRed', s:red)
 call s:h('HatsuneMikuRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('HatsuneMikuStringColorItalic', s:string_color, s:none, [s:attrs.italic
 call s:h('HatsuneMikuError', s:red, s:none, [], s:red)
 
 call s:h('HatsuneMikuErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('HatsuneMikuWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('HatsuneMikuInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('HatsuneMikuWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('HatsuneMikuInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('HatsuneMikuTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('HatsuneMikuSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('HatsuneMikuTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('HatsuneMikuSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('HatsuneMikuBoundary', s:comment, s:bgdark)
-call s:h('HatsuneMikuLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('HatsuneMikuLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('HatsuneMikuDiffChange', s:orange, s:none)
-call s:h('HatsuneMikuDiffText', s:bg, s:orange)
+call s:h('HatsuneMikuDiffChange', s:parameter_color, s:none)
+call s:h('HatsuneMikuDiffText', s:bg, s:parameter_color)
 call s:h('HatsuneMikuDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  HatsuneMikuBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr HatsuneMikuStringColor
-hi! link DiffAdd      HatsuneMikuGreen
+hi! link DiffAdd      HatsuneMikuClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   HatsuneMikuDiffChange
 hi! link DiffDelete   HatsuneMikuDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     HatsuneMikuDiffText
-hi! link Directory    HatsuneMikuPurpleBold
+hi! link Directory    HatsuneMikuConstantsBold
 hi! link ErrorMsg     HatsuneMikuRedInverse
 hi! link FoldColumn   HatsuneMikuSubtle
 hi! link Folded       HatsuneMikuBoundary
-hi! link IncSearch    HatsuneMikuOrangeInverse
+hi! link IncSearch    HatsuneMikuParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      HatsuneMikuFgBold
 hi! link NonText      HatsuneMikuSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      HatsuneMikuBoundary
 " hi! link TabLineFill  HatsuneMikuBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        HatsuneMikuGreenBold
+hi! link Title        HatsuneMikuClassNameBold
 hi! link VertSplit    HatsuneMikuBoundary
 hi! link Visual       HatsuneMikuSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   HatsuneMikuOrangeInverse
+hi! link WarningMsg   HatsuneMikuParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey HatsuneMikuRed
   hi! link LspDiagnosticsUnderline HatsuneMikuFgUnderline
-  hi! link LspDiagnosticsInformation HatsuneMikuCyan
-  hi! link LspDiagnosticsHint HatsuneMikuCyan
+  hi! link LspDiagnosticsInformation HatsuneMikuKeyColor
+  hi! link LspDiagnosticsHint HatsuneMikuKeyColor
   hi! link LspDiagnosticsError HatsuneMikuError
-  hi! link LspDiagnosticsWarning HatsuneMikuOrange
+  hi! link LspDiagnosticsWarning HatsuneMikuParameter
   hi! link LspDiagnosticsUnderlineError HatsuneMikuErrorLine
   hi! link LspDiagnosticsUnderlineHint HatsuneMikuInfoLine
   hi! link LspDiagnosticsUnderlineInformation HatsuneMikuInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal HatsuneMikuWarnLine
 hi! link SpellCap HatsuneMikuInfoLine
 hi! link SpellRare HatsuneMikuInfoLine
 
-hi! link Constant HatsuneMikuPurple
+hi! link Constant HatsuneMikuConstants
 hi! link String HatsuneMikuStringColor
-hi! link Character HatsuneMikuPink
+hi! link Character HatsuneMikuKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier HatsuneMikuFg
-hi! link Function HatsuneMikuGreen
+hi! link Function HatsuneMikuClassName
 
-hi! link Statement HatsuneMikuPink
-hi! link Conditional HatsuneMikuPink
-hi! link Repeat HatsuneMikuPink
-hi! link Label HatsuneMikuPink
-hi! link Operator HatsuneMikuPink
-hi! link Keyword HatsuneMikuPink
-hi! link Exception HatsuneMikuPink
+hi! link Statement HatsuneMikuKeyword
+hi! link Conditional HatsuneMikuKeyword
+hi! link Repeat HatsuneMikuKeyword
+hi! link Label HatsuneMikuKeyword
+hi! link Operator HatsuneMikuKeyword
+hi! link Keyword HatsuneMikuKeyword
+hi! link Exception HatsuneMikuKeyword
 
-hi! link PreProc HatsuneMikuPink
-hi! link Include HatsuneMikuPink
-hi! link Define HatsuneMikuPink
-hi! link Macro HatsuneMikuPink
-hi! link PreCondit HatsuneMikuPink
-hi! link StorageClass HatsuneMikuPink
-hi! link Structure HatsuneMikuPink
-hi! link Typedef HatsuneMikuPink
+hi! link PreProc HatsuneMikuKeyword
+hi! link Include HatsuneMikuKeyword
+hi! link Define HatsuneMikuKeyword
+hi! link Macro HatsuneMikuKeyword
+hi! link PreCondit HatsuneMikuKeyword
+hi! link StorageClass HatsuneMikuKeyword
+hi! link Structure HatsuneMikuKeyword
+hi! link Typedef HatsuneMikuKeyword
 
-hi! link Type HatsuneMikuCyanItalic
+hi! link Type HatsuneMikuKeyColorItalic
 
 hi! link Delimiter HatsuneMikuFg
 
-hi! link Special HatsuneMikuPink
-hi! link SpecialComment HatsuneMikuCyanItalic
-hi! link Tag HatsuneMikuCyan
+hi! link Special HatsuneMikuKeyword
+hi! link SpecialComment HatsuneMikuKeyColorItalic
+hi! link Tag HatsuneMikuKeyColor
 hi! link helpHyperTextJump HatsuneMikuLink
-hi! link helpCommand HatsuneMikuPurple
-hi! link helpExample HatsuneMikuGreen
+hi! link helpCommand HatsuneMikuConstants
+hi! link helpExample HatsuneMikuClassName
 hi! link helpBacktick Special
 
 "}}}

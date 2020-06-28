@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'MiodaIbukiLightOrange'],
-    \ 'info':    ['fg', 'MiodaIbukiLightPurple'],
+    \ 'hl+':     ['fg', 'MiodaIbukiLightParameter'],
+    \ 'info':    ['fg', 'MiodaIbukiLightConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'MiodaIbukiLightGreen'],
+    \ 'prompt':  ['fg', 'MiodaIbukiLightClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               MiodaIbukiLightInfoLine
 
   hi! link ALEErrorSign          MiodaIbukiLightRed
-  hi! link ALEWarningSign        MiodaIbukiLightOrange
-  hi! link ALEInfoSign           MiodaIbukiLightCyan
+  hi! link ALEWarningSign        MiodaIbukiLightParameter
+  hi! link ALEInfoSign           MiodaIbukiLightKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

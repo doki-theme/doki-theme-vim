@@ -27,11 +27,11 @@ let s:comment   = g:emilia_dark#palette.comment
 let s:selection = g:emilia_dark#palette.selection
 let s:subtle    = g:emilia_dark#palette.subtle
 
-let s:cyan      = g:emilia_dark#palette.cyan
-let s:green     = g:emilia_dark#palette.green
-let s:orange    = g:emilia_dark#palette.orange
-let s:pink      = g:emilia_dark#palette.pink
-let s:purple    = g:emilia_dark#palette.purple
+let s:key_color      = g:emilia_dark#palette.key_color
+let s:class_name     = g:emilia_dark#palette.class_name
+let s:parameter_color    = g:emilia_dark#palette.parameter_color
+let s:keyword_color      = g:emilia_dark#palette.keyword_color
+let s:constants_color    = g:emilia_dark#palette.constants_color
 let s:red       = g:emilia_dark#palette.red
 let s:string_color    = g:emilia_dark#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('EmiliaDarkSelection', s:none, s:selection)
 
 call s:h('EmiliaDarkSubtle', s:subtle)
 
-call s:h('EmiliaDarkCyan', s:cyan)
-call s:h('EmiliaDarkCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('EmiliaDarkKeyColor', s:key_color)
+call s:h('EmiliaDarkKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('EmiliaDarkGreen', s:green)
-call s:h('EmiliaDarkGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('EmiliaDarkGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('EmiliaDarkGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('EmiliaDarkClassName', s:class_name)
+call s:h('EmiliaDarkClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('EmiliaDarkClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('EmiliaDarkClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('EmiliaDarkOrange', s:orange)
-call s:h('EmiliaDarkOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('EmiliaDarkOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('EmiliaDarkOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('EmiliaDarkOrangeInverse', s:bg, s:orange)
+call s:h('EmiliaDarkParameter', s:parameter_color)
+call s:h('EmiliaDarkParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('EmiliaDarkParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('EmiliaDarkParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('EmiliaDarkParameterInverse', s:bg, s:parameter_color)
 
-call s:h('EmiliaDarkPink', s:pink)
-call s:h('EmiliaDarkPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('EmiliaDarkKeyword', s:keyword_color)
+call s:h('EmiliaDarkKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('EmiliaDarkPurple', s:purple)
-call s:h('EmiliaDarkPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('EmiliaDarkPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('EmiliaDarkConstants', s:constants_color)
+call s:h('EmiliaDarkConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('EmiliaDarkConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('EmiliaDarkRed', s:red)
 call s:h('EmiliaDarkRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('EmiliaDarkStringColorItalic', s:string_color, s:none, [s:attrs.italic]
 call s:h('EmiliaDarkError', s:red, s:none, [], s:red)
 
 call s:h('EmiliaDarkErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('EmiliaDarkWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('EmiliaDarkInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('EmiliaDarkWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('EmiliaDarkInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('EmiliaDarkTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('EmiliaDarkSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('EmiliaDarkTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('EmiliaDarkSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('EmiliaDarkBoundary', s:comment, s:bgdark)
-call s:h('EmiliaDarkLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('EmiliaDarkLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('EmiliaDarkDiffChange', s:orange, s:none)
-call s:h('EmiliaDarkDiffText', s:bg, s:orange)
+call s:h('EmiliaDarkDiffChange', s:parameter_color, s:none)
+call s:h('EmiliaDarkDiffText', s:bg, s:parameter_color)
 call s:h('EmiliaDarkDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  EmiliaDarkBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr EmiliaDarkStringColor
-hi! link DiffAdd      EmiliaDarkGreen
+hi! link DiffAdd      EmiliaDarkClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   EmiliaDarkDiffChange
 hi! link DiffDelete   EmiliaDarkDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     EmiliaDarkDiffText
-hi! link Directory    EmiliaDarkPurpleBold
+hi! link Directory    EmiliaDarkConstantsBold
 hi! link ErrorMsg     EmiliaDarkRedInverse
 hi! link FoldColumn   EmiliaDarkSubtle
 hi! link Folded       EmiliaDarkBoundary
-hi! link IncSearch    EmiliaDarkOrangeInverse
+hi! link IncSearch    EmiliaDarkParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      EmiliaDarkFgBold
 hi! link NonText      EmiliaDarkSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      EmiliaDarkBoundary
 " hi! link TabLineFill  EmiliaDarkBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        EmiliaDarkGreenBold
+hi! link Title        EmiliaDarkClassNameBold
 hi! link VertSplit    EmiliaDarkBoundary
 hi! link Visual       EmiliaDarkSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   EmiliaDarkOrangeInverse
+hi! link WarningMsg   EmiliaDarkParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey EmiliaDarkRed
   hi! link LspDiagnosticsUnderline EmiliaDarkFgUnderline
-  hi! link LspDiagnosticsInformation EmiliaDarkCyan
-  hi! link LspDiagnosticsHint EmiliaDarkCyan
+  hi! link LspDiagnosticsInformation EmiliaDarkKeyColor
+  hi! link LspDiagnosticsHint EmiliaDarkKeyColor
   hi! link LspDiagnosticsError EmiliaDarkError
-  hi! link LspDiagnosticsWarning EmiliaDarkOrange
+  hi! link LspDiagnosticsWarning EmiliaDarkParameter
   hi! link LspDiagnosticsUnderlineError EmiliaDarkErrorLine
   hi! link LspDiagnosticsUnderlineHint EmiliaDarkInfoLine
   hi! link LspDiagnosticsUnderlineInformation EmiliaDarkInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal EmiliaDarkWarnLine
 hi! link SpellCap EmiliaDarkInfoLine
 hi! link SpellRare EmiliaDarkInfoLine
 
-hi! link Constant EmiliaDarkPurple
+hi! link Constant EmiliaDarkConstants
 hi! link String EmiliaDarkStringColor
-hi! link Character EmiliaDarkPink
+hi! link Character EmiliaDarkKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier EmiliaDarkFg
-hi! link Function EmiliaDarkGreen
+hi! link Function EmiliaDarkClassName
 
-hi! link Statement EmiliaDarkPink
-hi! link Conditional EmiliaDarkPink
-hi! link Repeat EmiliaDarkPink
-hi! link Label EmiliaDarkPink
-hi! link Operator EmiliaDarkPink
-hi! link Keyword EmiliaDarkPink
-hi! link Exception EmiliaDarkPink
+hi! link Statement EmiliaDarkKeyword
+hi! link Conditional EmiliaDarkKeyword
+hi! link Repeat EmiliaDarkKeyword
+hi! link Label EmiliaDarkKeyword
+hi! link Operator EmiliaDarkKeyword
+hi! link Keyword EmiliaDarkKeyword
+hi! link Exception EmiliaDarkKeyword
 
-hi! link PreProc EmiliaDarkPink
-hi! link Include EmiliaDarkPink
-hi! link Define EmiliaDarkPink
-hi! link Macro EmiliaDarkPink
-hi! link PreCondit EmiliaDarkPink
-hi! link StorageClass EmiliaDarkPink
-hi! link Structure EmiliaDarkPink
-hi! link Typedef EmiliaDarkPink
+hi! link PreProc EmiliaDarkKeyword
+hi! link Include EmiliaDarkKeyword
+hi! link Define EmiliaDarkKeyword
+hi! link Macro EmiliaDarkKeyword
+hi! link PreCondit EmiliaDarkKeyword
+hi! link StorageClass EmiliaDarkKeyword
+hi! link Structure EmiliaDarkKeyword
+hi! link Typedef EmiliaDarkKeyword
 
-hi! link Type EmiliaDarkCyanItalic
+hi! link Type EmiliaDarkKeyColorItalic
 
 hi! link Delimiter EmiliaDarkFg
 
-hi! link Special EmiliaDarkPink
-hi! link SpecialComment EmiliaDarkCyanItalic
-hi! link Tag EmiliaDarkCyan
+hi! link Special EmiliaDarkKeyword
+hi! link SpecialComment EmiliaDarkKeyColorItalic
+hi! link Tag EmiliaDarkKeyColor
 hi! link helpHyperTextJump EmiliaDarkLink
-hi! link helpCommand EmiliaDarkPurple
-hi! link helpExample EmiliaDarkGreen
+hi! link helpCommand EmiliaDarkConstants
+hi! link helpExample EmiliaDarkClassName
 hi! link helpBacktick Special
 
 "}}}

@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'YuriDarkOrange'],
-    \ 'info':    ['fg', 'YuriDarkPurple'],
+    \ 'hl+':     ['fg', 'YuriDarkParameter'],
+    \ 'info':    ['fg', 'YuriDarkConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'YuriDarkGreen'],
+    \ 'prompt':  ['fg', 'YuriDarkClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               YuriDarkInfoLine
 
   hi! link ALEErrorSign          YuriDarkRed
-  hi! link ALEWarningSign        YuriDarkOrange
-  hi! link ALEInfoSign           YuriDarkCyan
+  hi! link ALEWarningSign        YuriDarkParameter
+  hi! link ALEInfoSign           YuriDarkKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

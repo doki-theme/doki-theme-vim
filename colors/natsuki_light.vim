@@ -27,11 +27,11 @@ let s:comment   = g:natsuki_light#palette.comment
 let s:selection = g:natsuki_light#palette.selection
 let s:subtle    = g:natsuki_light#palette.subtle
 
-let s:cyan      = g:natsuki_light#palette.cyan
-let s:green     = g:natsuki_light#palette.green
-let s:orange    = g:natsuki_light#palette.orange
-let s:pink      = g:natsuki_light#palette.pink
-let s:purple    = g:natsuki_light#palette.purple
+let s:key_color      = g:natsuki_light#palette.key_color
+let s:class_name     = g:natsuki_light#palette.class_name
+let s:parameter_color    = g:natsuki_light#palette.parameter_color
+let s:keyword_color      = g:natsuki_light#palette.keyword_color
+let s:constants_color    = g:natsuki_light#palette.constants_color
 let s:red       = g:natsuki_light#palette.red
 let s:string_color    = g:natsuki_light#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('NatsukiLightSelection', s:none, s:selection)
 
 call s:h('NatsukiLightSubtle', s:subtle)
 
-call s:h('NatsukiLightCyan', s:cyan)
-call s:h('NatsukiLightCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('NatsukiLightKeyColor', s:key_color)
+call s:h('NatsukiLightKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('NatsukiLightGreen', s:green)
-call s:h('NatsukiLightGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('NatsukiLightGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('NatsukiLightGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('NatsukiLightClassName', s:class_name)
+call s:h('NatsukiLightClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('NatsukiLightClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('NatsukiLightClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('NatsukiLightOrange', s:orange)
-call s:h('NatsukiLightOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('NatsukiLightOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('NatsukiLightOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('NatsukiLightOrangeInverse', s:bg, s:orange)
+call s:h('NatsukiLightParameter', s:parameter_color)
+call s:h('NatsukiLightParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('NatsukiLightParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('NatsukiLightParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('NatsukiLightParameterInverse', s:bg, s:parameter_color)
 
-call s:h('NatsukiLightPink', s:pink)
-call s:h('NatsukiLightPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('NatsukiLightKeyword', s:keyword_color)
+call s:h('NatsukiLightKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('NatsukiLightPurple', s:purple)
-call s:h('NatsukiLightPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('NatsukiLightPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('NatsukiLightConstants', s:constants_color)
+call s:h('NatsukiLightConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('NatsukiLightConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('NatsukiLightRed', s:red)
 call s:h('NatsukiLightRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('NatsukiLightStringColorItalic', s:string_color, s:none, [s:attrs.itali
 call s:h('NatsukiLightError', s:red, s:none, [], s:red)
 
 call s:h('NatsukiLightErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('NatsukiLightWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('NatsukiLightInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('NatsukiLightWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('NatsukiLightInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('NatsukiLightTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('NatsukiLightSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('NatsukiLightTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('NatsukiLightSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('NatsukiLightBoundary', s:comment, s:bgdark)
-call s:h('NatsukiLightLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('NatsukiLightLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('NatsukiLightDiffChange', s:orange, s:none)
-call s:h('NatsukiLightDiffText', s:bg, s:orange)
+call s:h('NatsukiLightDiffChange', s:parameter_color, s:none)
+call s:h('NatsukiLightDiffText', s:bg, s:parameter_color)
 call s:h('NatsukiLightDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  NatsukiLightBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr NatsukiLightStringColor
-hi! link DiffAdd      NatsukiLightGreen
+hi! link DiffAdd      NatsukiLightClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   NatsukiLightDiffChange
 hi! link DiffDelete   NatsukiLightDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     NatsukiLightDiffText
-hi! link Directory    NatsukiLightPurpleBold
+hi! link Directory    NatsukiLightConstantsBold
 hi! link ErrorMsg     NatsukiLightRedInverse
 hi! link FoldColumn   NatsukiLightSubtle
 hi! link Folded       NatsukiLightBoundary
-hi! link IncSearch    NatsukiLightOrangeInverse
+hi! link IncSearch    NatsukiLightParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      NatsukiLightFgBold
 hi! link NonText      NatsukiLightSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      NatsukiLightBoundary
 " hi! link TabLineFill  NatsukiLightBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        NatsukiLightGreenBold
+hi! link Title        NatsukiLightClassNameBold
 hi! link VertSplit    NatsukiLightBoundary
 hi! link Visual       NatsukiLightSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   NatsukiLightOrangeInverse
+hi! link WarningMsg   NatsukiLightParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey NatsukiLightRed
   hi! link LspDiagnosticsUnderline NatsukiLightFgUnderline
-  hi! link LspDiagnosticsInformation NatsukiLightCyan
-  hi! link LspDiagnosticsHint NatsukiLightCyan
+  hi! link LspDiagnosticsInformation NatsukiLightKeyColor
+  hi! link LspDiagnosticsHint NatsukiLightKeyColor
   hi! link LspDiagnosticsError NatsukiLightError
-  hi! link LspDiagnosticsWarning NatsukiLightOrange
+  hi! link LspDiagnosticsWarning NatsukiLightParameter
   hi! link LspDiagnosticsUnderlineError NatsukiLightErrorLine
   hi! link LspDiagnosticsUnderlineHint NatsukiLightInfoLine
   hi! link LspDiagnosticsUnderlineInformation NatsukiLightInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal NatsukiLightWarnLine
 hi! link SpellCap NatsukiLightInfoLine
 hi! link SpellRare NatsukiLightInfoLine
 
-hi! link Constant NatsukiLightPurple
+hi! link Constant NatsukiLightConstants
 hi! link String NatsukiLightStringColor
-hi! link Character NatsukiLightPink
+hi! link Character NatsukiLightKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier NatsukiLightFg
-hi! link Function NatsukiLightGreen
+hi! link Function NatsukiLightClassName
 
-hi! link Statement NatsukiLightPink
-hi! link Conditional NatsukiLightPink
-hi! link Repeat NatsukiLightPink
-hi! link Label NatsukiLightPink
-hi! link Operator NatsukiLightPink
-hi! link Keyword NatsukiLightPink
-hi! link Exception NatsukiLightPink
+hi! link Statement NatsukiLightKeyword
+hi! link Conditional NatsukiLightKeyword
+hi! link Repeat NatsukiLightKeyword
+hi! link Label NatsukiLightKeyword
+hi! link Operator NatsukiLightKeyword
+hi! link Keyword NatsukiLightKeyword
+hi! link Exception NatsukiLightKeyword
 
-hi! link PreProc NatsukiLightPink
-hi! link Include NatsukiLightPink
-hi! link Define NatsukiLightPink
-hi! link Macro NatsukiLightPink
-hi! link PreCondit NatsukiLightPink
-hi! link StorageClass NatsukiLightPink
-hi! link Structure NatsukiLightPink
-hi! link Typedef NatsukiLightPink
+hi! link PreProc NatsukiLightKeyword
+hi! link Include NatsukiLightKeyword
+hi! link Define NatsukiLightKeyword
+hi! link Macro NatsukiLightKeyword
+hi! link PreCondit NatsukiLightKeyword
+hi! link StorageClass NatsukiLightKeyword
+hi! link Structure NatsukiLightKeyword
+hi! link Typedef NatsukiLightKeyword
 
-hi! link Type NatsukiLightCyanItalic
+hi! link Type NatsukiLightKeyColorItalic
 
 hi! link Delimiter NatsukiLightFg
 
-hi! link Special NatsukiLightPink
-hi! link SpecialComment NatsukiLightCyanItalic
-hi! link Tag NatsukiLightCyan
+hi! link Special NatsukiLightKeyword
+hi! link SpecialComment NatsukiLightKeyColorItalic
+hi! link Tag NatsukiLightKeyColor
 hi! link helpHyperTextJump NatsukiLightLink
-hi! link helpCommand NatsukiLightPurple
-hi! link helpExample NatsukiLightGreen
+hi! link helpCommand NatsukiLightConstants
+hi! link helpExample NatsukiLightClassName
 hi! link helpBacktick Special
 
 "}}}

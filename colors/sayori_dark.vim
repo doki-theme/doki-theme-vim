@@ -27,11 +27,11 @@ let s:comment   = g:sayori_dark#palette.comment
 let s:selection = g:sayori_dark#palette.selection
 let s:subtle    = g:sayori_dark#palette.subtle
 
-let s:cyan      = g:sayori_dark#palette.cyan
-let s:green     = g:sayori_dark#palette.green
-let s:orange    = g:sayori_dark#palette.orange
-let s:pink      = g:sayori_dark#palette.pink
-let s:purple    = g:sayori_dark#palette.purple
+let s:key_color      = g:sayori_dark#palette.key_color
+let s:class_name     = g:sayori_dark#palette.class_name
+let s:parameter_color    = g:sayori_dark#palette.parameter_color
+let s:keyword_color      = g:sayori_dark#palette.keyword_color
+let s:constants_color    = g:sayori_dark#palette.constants_color
 let s:red       = g:sayori_dark#palette.red
 let s:string_color    = g:sayori_dark#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('SayoriDarkSelection', s:none, s:selection)
 
 call s:h('SayoriDarkSubtle', s:subtle)
 
-call s:h('SayoriDarkCyan', s:cyan)
-call s:h('SayoriDarkCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('SayoriDarkKeyColor', s:key_color)
+call s:h('SayoriDarkKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('SayoriDarkGreen', s:green)
-call s:h('SayoriDarkGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('SayoriDarkGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('SayoriDarkGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('SayoriDarkClassName', s:class_name)
+call s:h('SayoriDarkClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('SayoriDarkClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('SayoriDarkClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('SayoriDarkOrange', s:orange)
-call s:h('SayoriDarkOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('SayoriDarkOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('SayoriDarkOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('SayoriDarkOrangeInverse', s:bg, s:orange)
+call s:h('SayoriDarkParameter', s:parameter_color)
+call s:h('SayoriDarkParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('SayoriDarkParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('SayoriDarkParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('SayoriDarkParameterInverse', s:bg, s:parameter_color)
 
-call s:h('SayoriDarkPink', s:pink)
-call s:h('SayoriDarkPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('SayoriDarkKeyword', s:keyword_color)
+call s:h('SayoriDarkKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('SayoriDarkPurple', s:purple)
-call s:h('SayoriDarkPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('SayoriDarkPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('SayoriDarkConstants', s:constants_color)
+call s:h('SayoriDarkConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('SayoriDarkConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('SayoriDarkRed', s:red)
 call s:h('SayoriDarkRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('SayoriDarkStringColorItalic', s:string_color, s:none, [s:attrs.italic]
 call s:h('SayoriDarkError', s:red, s:none, [], s:red)
 
 call s:h('SayoriDarkErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('SayoriDarkWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('SayoriDarkInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('SayoriDarkWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('SayoriDarkInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('SayoriDarkTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('SayoriDarkSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('SayoriDarkTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('SayoriDarkSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('SayoriDarkBoundary', s:comment, s:bgdark)
-call s:h('SayoriDarkLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('SayoriDarkLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('SayoriDarkDiffChange', s:orange, s:none)
-call s:h('SayoriDarkDiffText', s:bg, s:orange)
+call s:h('SayoriDarkDiffChange', s:parameter_color, s:none)
+call s:h('SayoriDarkDiffText', s:bg, s:parameter_color)
 call s:h('SayoriDarkDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  SayoriDarkBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr SayoriDarkStringColor
-hi! link DiffAdd      SayoriDarkGreen
+hi! link DiffAdd      SayoriDarkClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   SayoriDarkDiffChange
 hi! link DiffDelete   SayoriDarkDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     SayoriDarkDiffText
-hi! link Directory    SayoriDarkPurpleBold
+hi! link Directory    SayoriDarkConstantsBold
 hi! link ErrorMsg     SayoriDarkRedInverse
 hi! link FoldColumn   SayoriDarkSubtle
 hi! link Folded       SayoriDarkBoundary
-hi! link IncSearch    SayoriDarkOrangeInverse
+hi! link IncSearch    SayoriDarkParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      SayoriDarkFgBold
 hi! link NonText      SayoriDarkSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      SayoriDarkBoundary
 " hi! link TabLineFill  SayoriDarkBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        SayoriDarkGreenBold
+hi! link Title        SayoriDarkClassNameBold
 hi! link VertSplit    SayoriDarkBoundary
 hi! link Visual       SayoriDarkSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   SayoriDarkOrangeInverse
+hi! link WarningMsg   SayoriDarkParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey SayoriDarkRed
   hi! link LspDiagnosticsUnderline SayoriDarkFgUnderline
-  hi! link LspDiagnosticsInformation SayoriDarkCyan
-  hi! link LspDiagnosticsHint SayoriDarkCyan
+  hi! link LspDiagnosticsInformation SayoriDarkKeyColor
+  hi! link LspDiagnosticsHint SayoriDarkKeyColor
   hi! link LspDiagnosticsError SayoriDarkError
-  hi! link LspDiagnosticsWarning SayoriDarkOrange
+  hi! link LspDiagnosticsWarning SayoriDarkParameter
   hi! link LspDiagnosticsUnderlineError SayoriDarkErrorLine
   hi! link LspDiagnosticsUnderlineHint SayoriDarkInfoLine
   hi! link LspDiagnosticsUnderlineInformation SayoriDarkInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal SayoriDarkWarnLine
 hi! link SpellCap SayoriDarkInfoLine
 hi! link SpellRare SayoriDarkInfoLine
 
-hi! link Constant SayoriDarkPurple
+hi! link Constant SayoriDarkConstants
 hi! link String SayoriDarkStringColor
-hi! link Character SayoriDarkPink
+hi! link Character SayoriDarkKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier SayoriDarkFg
-hi! link Function SayoriDarkGreen
+hi! link Function SayoriDarkClassName
 
-hi! link Statement SayoriDarkPink
-hi! link Conditional SayoriDarkPink
-hi! link Repeat SayoriDarkPink
-hi! link Label SayoriDarkPink
-hi! link Operator SayoriDarkPink
-hi! link Keyword SayoriDarkPink
-hi! link Exception SayoriDarkPink
+hi! link Statement SayoriDarkKeyword
+hi! link Conditional SayoriDarkKeyword
+hi! link Repeat SayoriDarkKeyword
+hi! link Label SayoriDarkKeyword
+hi! link Operator SayoriDarkKeyword
+hi! link Keyword SayoriDarkKeyword
+hi! link Exception SayoriDarkKeyword
 
-hi! link PreProc SayoriDarkPink
-hi! link Include SayoriDarkPink
-hi! link Define SayoriDarkPink
-hi! link Macro SayoriDarkPink
-hi! link PreCondit SayoriDarkPink
-hi! link StorageClass SayoriDarkPink
-hi! link Structure SayoriDarkPink
-hi! link Typedef SayoriDarkPink
+hi! link PreProc SayoriDarkKeyword
+hi! link Include SayoriDarkKeyword
+hi! link Define SayoriDarkKeyword
+hi! link Macro SayoriDarkKeyword
+hi! link PreCondit SayoriDarkKeyword
+hi! link StorageClass SayoriDarkKeyword
+hi! link Structure SayoriDarkKeyword
+hi! link Typedef SayoriDarkKeyword
 
-hi! link Type SayoriDarkCyanItalic
+hi! link Type SayoriDarkKeyColorItalic
 
 hi! link Delimiter SayoriDarkFg
 
-hi! link Special SayoriDarkPink
-hi! link SpecialComment SayoriDarkCyanItalic
-hi! link Tag SayoriDarkCyan
+hi! link Special SayoriDarkKeyword
+hi! link SpecialComment SayoriDarkKeyColorItalic
+hi! link Tag SayoriDarkKeyColor
 hi! link helpHyperTextJump SayoriDarkLink
-hi! link helpCommand SayoriDarkPurple
-hi! link helpExample SayoriDarkGreen
+hi! link helpCommand SayoriDarkConstants
+hi! link helpExample SayoriDarkClassName
 hi! link helpBacktick Special
 
 "}}}

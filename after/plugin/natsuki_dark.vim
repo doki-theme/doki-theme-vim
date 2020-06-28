@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'NatsukiDarkOrange'],
-    \ 'info':    ['fg', 'NatsukiDarkPurple'],
+    \ 'hl+':     ['fg', 'NatsukiDarkParameter'],
+    \ 'info':    ['fg', 'NatsukiDarkConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'NatsukiDarkGreen'],
+    \ 'prompt':  ['fg', 'NatsukiDarkClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               NatsukiDarkInfoLine
 
   hi! link ALEErrorSign          NatsukiDarkRed
-  hi! link ALEWarningSign        NatsukiDarkOrange
-  hi! link ALEInfoSign           NatsukiDarkCyan
+  hi! link ALEWarningSign        NatsukiDarkParameter
+  hi! link ALEInfoSign           NatsukiDarkKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

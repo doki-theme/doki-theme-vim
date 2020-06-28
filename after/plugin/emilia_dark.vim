@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'EmiliaDarkOrange'],
-    \ 'info':    ['fg', 'EmiliaDarkPurple'],
+    \ 'hl+':     ['fg', 'EmiliaDarkParameter'],
+    \ 'info':    ['fg', 'EmiliaDarkConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'EmiliaDarkGreen'],
+    \ 'prompt':  ['fg', 'EmiliaDarkClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               EmiliaDarkInfoLine
 
   hi! link ALEErrorSign          EmiliaDarkRed
-  hi! link ALEWarningSign        EmiliaDarkOrange
-  hi! link ALEInfoSign           EmiliaDarkCyan
+  hi! link ALEWarningSign        EmiliaDarkParameter
+  hi! link ALEInfoSign           EmiliaDarkKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

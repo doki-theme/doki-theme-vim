@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'EmiliaLightOrange'],
-    \ 'info':    ['fg', 'EmiliaLightPurple'],
+    \ 'hl+':     ['fg', 'EmiliaLightParameter'],
+    \ 'info':    ['fg', 'EmiliaLightConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'EmiliaLightGreen'],
+    \ 'prompt':  ['fg', 'EmiliaLightClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               EmiliaLightInfoLine
 
   hi! link ALEErrorSign          EmiliaLightRed
-  hi! link ALEWarningSign        EmiliaLightOrange
-  hi! link ALEInfoSign           EmiliaLightCyan
+  hi! link ALEWarningSign        EmiliaLightParameter
+  hi! link ALEInfoSign           EmiliaLightKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

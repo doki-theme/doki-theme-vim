@@ -27,11 +27,11 @@ let s:comment   = g:monika_dark#palette.comment
 let s:selection = g:monika_dark#palette.selection
 let s:subtle    = g:monika_dark#palette.subtle
 
-let s:cyan      = g:monika_dark#palette.cyan
-let s:green     = g:monika_dark#palette.green
-let s:orange    = g:monika_dark#palette.orange
-let s:pink      = g:monika_dark#palette.pink
-let s:purple    = g:monika_dark#palette.purple
+let s:key_color      = g:monika_dark#palette.key_color
+let s:class_name     = g:monika_dark#palette.class_name
+let s:parameter_color    = g:monika_dark#palette.parameter_color
+let s:keyword_color      = g:monika_dark#palette.keyword_color
+let s:constants_color    = g:monika_dark#palette.constants_color
 let s:red       = g:monika_dark#palette.red
 let s:string_color    = g:monika_dark#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('MonikaDarkSelection', s:none, s:selection)
 
 call s:h('MonikaDarkSubtle', s:subtle)
 
-call s:h('MonikaDarkCyan', s:cyan)
-call s:h('MonikaDarkCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('MonikaDarkKeyColor', s:key_color)
+call s:h('MonikaDarkKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('MonikaDarkGreen', s:green)
-call s:h('MonikaDarkGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('MonikaDarkGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('MonikaDarkGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('MonikaDarkClassName', s:class_name)
+call s:h('MonikaDarkClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('MonikaDarkClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('MonikaDarkClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('MonikaDarkOrange', s:orange)
-call s:h('MonikaDarkOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('MonikaDarkOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('MonikaDarkOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('MonikaDarkOrangeInverse', s:bg, s:orange)
+call s:h('MonikaDarkParameter', s:parameter_color)
+call s:h('MonikaDarkParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('MonikaDarkParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('MonikaDarkParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('MonikaDarkParameterInverse', s:bg, s:parameter_color)
 
-call s:h('MonikaDarkPink', s:pink)
-call s:h('MonikaDarkPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('MonikaDarkKeyword', s:keyword_color)
+call s:h('MonikaDarkKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('MonikaDarkPurple', s:purple)
-call s:h('MonikaDarkPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('MonikaDarkPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('MonikaDarkConstants', s:constants_color)
+call s:h('MonikaDarkConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('MonikaDarkConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('MonikaDarkRed', s:red)
 call s:h('MonikaDarkRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('MonikaDarkStringColorItalic', s:string_color, s:none, [s:attrs.italic]
 call s:h('MonikaDarkError', s:red, s:none, [], s:red)
 
 call s:h('MonikaDarkErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('MonikaDarkWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('MonikaDarkInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('MonikaDarkWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('MonikaDarkInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('MonikaDarkTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('MonikaDarkSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('MonikaDarkTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('MonikaDarkSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('MonikaDarkBoundary', s:comment, s:bgdark)
-call s:h('MonikaDarkLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('MonikaDarkLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('MonikaDarkDiffChange', s:orange, s:none)
-call s:h('MonikaDarkDiffText', s:bg, s:orange)
+call s:h('MonikaDarkDiffChange', s:parameter_color, s:none)
+call s:h('MonikaDarkDiffText', s:bg, s:parameter_color)
 call s:h('MonikaDarkDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  MonikaDarkBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr MonikaDarkStringColor
-hi! link DiffAdd      MonikaDarkGreen
+hi! link DiffAdd      MonikaDarkClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   MonikaDarkDiffChange
 hi! link DiffDelete   MonikaDarkDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     MonikaDarkDiffText
-hi! link Directory    MonikaDarkPurpleBold
+hi! link Directory    MonikaDarkConstantsBold
 hi! link ErrorMsg     MonikaDarkRedInverse
 hi! link FoldColumn   MonikaDarkSubtle
 hi! link Folded       MonikaDarkBoundary
-hi! link IncSearch    MonikaDarkOrangeInverse
+hi! link IncSearch    MonikaDarkParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      MonikaDarkFgBold
 hi! link NonText      MonikaDarkSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      MonikaDarkBoundary
 " hi! link TabLineFill  MonikaDarkBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        MonikaDarkGreenBold
+hi! link Title        MonikaDarkClassNameBold
 hi! link VertSplit    MonikaDarkBoundary
 hi! link Visual       MonikaDarkSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   MonikaDarkOrangeInverse
+hi! link WarningMsg   MonikaDarkParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey MonikaDarkRed
   hi! link LspDiagnosticsUnderline MonikaDarkFgUnderline
-  hi! link LspDiagnosticsInformation MonikaDarkCyan
-  hi! link LspDiagnosticsHint MonikaDarkCyan
+  hi! link LspDiagnosticsInformation MonikaDarkKeyColor
+  hi! link LspDiagnosticsHint MonikaDarkKeyColor
   hi! link LspDiagnosticsError MonikaDarkError
-  hi! link LspDiagnosticsWarning MonikaDarkOrange
+  hi! link LspDiagnosticsWarning MonikaDarkParameter
   hi! link LspDiagnosticsUnderlineError MonikaDarkErrorLine
   hi! link LspDiagnosticsUnderlineHint MonikaDarkInfoLine
   hi! link LspDiagnosticsUnderlineInformation MonikaDarkInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal MonikaDarkWarnLine
 hi! link SpellCap MonikaDarkInfoLine
 hi! link SpellRare MonikaDarkInfoLine
 
-hi! link Constant MonikaDarkPurple
+hi! link Constant MonikaDarkConstants
 hi! link String MonikaDarkStringColor
-hi! link Character MonikaDarkPink
+hi! link Character MonikaDarkKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier MonikaDarkFg
-hi! link Function MonikaDarkGreen
+hi! link Function MonikaDarkClassName
 
-hi! link Statement MonikaDarkPink
-hi! link Conditional MonikaDarkPink
-hi! link Repeat MonikaDarkPink
-hi! link Label MonikaDarkPink
-hi! link Operator MonikaDarkPink
-hi! link Keyword MonikaDarkPink
-hi! link Exception MonikaDarkPink
+hi! link Statement MonikaDarkKeyword
+hi! link Conditional MonikaDarkKeyword
+hi! link Repeat MonikaDarkKeyword
+hi! link Label MonikaDarkKeyword
+hi! link Operator MonikaDarkKeyword
+hi! link Keyword MonikaDarkKeyword
+hi! link Exception MonikaDarkKeyword
 
-hi! link PreProc MonikaDarkPink
-hi! link Include MonikaDarkPink
-hi! link Define MonikaDarkPink
-hi! link Macro MonikaDarkPink
-hi! link PreCondit MonikaDarkPink
-hi! link StorageClass MonikaDarkPink
-hi! link Structure MonikaDarkPink
-hi! link Typedef MonikaDarkPink
+hi! link PreProc MonikaDarkKeyword
+hi! link Include MonikaDarkKeyword
+hi! link Define MonikaDarkKeyword
+hi! link Macro MonikaDarkKeyword
+hi! link PreCondit MonikaDarkKeyword
+hi! link StorageClass MonikaDarkKeyword
+hi! link Structure MonikaDarkKeyword
+hi! link Typedef MonikaDarkKeyword
 
-hi! link Type MonikaDarkCyanItalic
+hi! link Type MonikaDarkKeyColorItalic
 
 hi! link Delimiter MonikaDarkFg
 
-hi! link Special MonikaDarkPink
-hi! link SpecialComment MonikaDarkCyanItalic
-hi! link Tag MonikaDarkCyan
+hi! link Special MonikaDarkKeyword
+hi! link SpecialComment MonikaDarkKeyColorItalic
+hi! link Tag MonikaDarkKeyColor
 hi! link helpHyperTextJump MonikaDarkLink
-hi! link helpCommand MonikaDarkPurple
-hi! link helpExample MonikaDarkGreen
+hi! link helpCommand MonikaDarkConstants
+hi! link helpExample MonikaDarkClassName
 hi! link helpBacktick Special
 
 "}}}

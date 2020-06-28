@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'DarknessDarkOrange'],
-    \ 'info':    ['fg', 'DarknessDarkPurple'],
+    \ 'hl+':     ['fg', 'DarknessDarkParameter'],
+    \ 'info':    ['fg', 'DarknessDarkConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'DarknessDarkGreen'],
+    \ 'prompt':  ['fg', 'DarknessDarkClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               DarknessDarkInfoLine
 
   hi! link ALEErrorSign          DarknessDarkRed
-  hi! link ALEWarningSign        DarknessDarkOrange
-  hi! link ALEInfoSign           DarknessDarkCyan
+  hi! link ALEWarningSign        DarknessDarkParameter
+  hi! link ALEInfoSign           DarknessDarkKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

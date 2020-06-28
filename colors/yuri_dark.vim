@@ -27,11 +27,11 @@ let s:comment   = g:yuri_dark#palette.comment
 let s:selection = g:yuri_dark#palette.selection
 let s:subtle    = g:yuri_dark#palette.subtle
 
-let s:cyan      = g:yuri_dark#palette.cyan
-let s:green     = g:yuri_dark#palette.green
-let s:orange    = g:yuri_dark#palette.orange
-let s:pink      = g:yuri_dark#palette.pink
-let s:purple    = g:yuri_dark#palette.purple
+let s:key_color      = g:yuri_dark#palette.key_color
+let s:class_name     = g:yuri_dark#palette.class_name
+let s:parameter_color    = g:yuri_dark#palette.parameter_color
+let s:keyword_color      = g:yuri_dark#palette.keyword_color
+let s:constants_color    = g:yuri_dark#palette.constants_color
 let s:red       = g:yuri_dark#palette.red
 let s:string_color    = g:yuri_dark#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('YuriDarkSelection', s:none, s:selection)
 
 call s:h('YuriDarkSubtle', s:subtle)
 
-call s:h('YuriDarkCyan', s:cyan)
-call s:h('YuriDarkCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('YuriDarkKeyColor', s:key_color)
+call s:h('YuriDarkKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('YuriDarkGreen', s:green)
-call s:h('YuriDarkGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('YuriDarkGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('YuriDarkGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('YuriDarkClassName', s:class_name)
+call s:h('YuriDarkClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('YuriDarkClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('YuriDarkClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('YuriDarkOrange', s:orange)
-call s:h('YuriDarkOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('YuriDarkOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('YuriDarkOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('YuriDarkOrangeInverse', s:bg, s:orange)
+call s:h('YuriDarkParameter', s:parameter_color)
+call s:h('YuriDarkParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('YuriDarkParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('YuriDarkParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('YuriDarkParameterInverse', s:bg, s:parameter_color)
 
-call s:h('YuriDarkPink', s:pink)
-call s:h('YuriDarkPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('YuriDarkKeyword', s:keyword_color)
+call s:h('YuriDarkKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('YuriDarkPurple', s:purple)
-call s:h('YuriDarkPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('YuriDarkPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('YuriDarkConstants', s:constants_color)
+call s:h('YuriDarkConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('YuriDarkConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('YuriDarkRed', s:red)
 call s:h('YuriDarkRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('YuriDarkStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 call s:h('YuriDarkError', s:red, s:none, [], s:red)
 
 call s:h('YuriDarkErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('YuriDarkWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('YuriDarkInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('YuriDarkWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('YuriDarkInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('YuriDarkTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('YuriDarkSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('YuriDarkTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('YuriDarkSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('YuriDarkBoundary', s:comment, s:bgdark)
-call s:h('YuriDarkLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('YuriDarkLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('YuriDarkDiffChange', s:orange, s:none)
-call s:h('YuriDarkDiffText', s:bg, s:orange)
+call s:h('YuriDarkDiffChange', s:parameter_color, s:none)
+call s:h('YuriDarkDiffText', s:bg, s:parameter_color)
 call s:h('YuriDarkDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  YuriDarkBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr YuriDarkStringColor
-hi! link DiffAdd      YuriDarkGreen
+hi! link DiffAdd      YuriDarkClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   YuriDarkDiffChange
 hi! link DiffDelete   YuriDarkDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     YuriDarkDiffText
-hi! link Directory    YuriDarkPurpleBold
+hi! link Directory    YuriDarkConstantsBold
 hi! link ErrorMsg     YuriDarkRedInverse
 hi! link FoldColumn   YuriDarkSubtle
 hi! link Folded       YuriDarkBoundary
-hi! link IncSearch    YuriDarkOrangeInverse
+hi! link IncSearch    YuriDarkParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      YuriDarkFgBold
 hi! link NonText      YuriDarkSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      YuriDarkBoundary
 " hi! link TabLineFill  YuriDarkBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        YuriDarkGreenBold
+hi! link Title        YuriDarkClassNameBold
 hi! link VertSplit    YuriDarkBoundary
 hi! link Visual       YuriDarkSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   YuriDarkOrangeInverse
+hi! link WarningMsg   YuriDarkParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey YuriDarkRed
   hi! link LspDiagnosticsUnderline YuriDarkFgUnderline
-  hi! link LspDiagnosticsInformation YuriDarkCyan
-  hi! link LspDiagnosticsHint YuriDarkCyan
+  hi! link LspDiagnosticsInformation YuriDarkKeyColor
+  hi! link LspDiagnosticsHint YuriDarkKeyColor
   hi! link LspDiagnosticsError YuriDarkError
-  hi! link LspDiagnosticsWarning YuriDarkOrange
+  hi! link LspDiagnosticsWarning YuriDarkParameter
   hi! link LspDiagnosticsUnderlineError YuriDarkErrorLine
   hi! link LspDiagnosticsUnderlineHint YuriDarkInfoLine
   hi! link LspDiagnosticsUnderlineInformation YuriDarkInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal YuriDarkWarnLine
 hi! link SpellCap YuriDarkInfoLine
 hi! link SpellRare YuriDarkInfoLine
 
-hi! link Constant YuriDarkPurple
+hi! link Constant YuriDarkConstants
 hi! link String YuriDarkStringColor
-hi! link Character YuriDarkPink
+hi! link Character YuriDarkKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier YuriDarkFg
-hi! link Function YuriDarkGreen
+hi! link Function YuriDarkClassName
 
-hi! link Statement YuriDarkPink
-hi! link Conditional YuriDarkPink
-hi! link Repeat YuriDarkPink
-hi! link Label YuriDarkPink
-hi! link Operator YuriDarkPink
-hi! link Keyword YuriDarkPink
-hi! link Exception YuriDarkPink
+hi! link Statement YuriDarkKeyword
+hi! link Conditional YuriDarkKeyword
+hi! link Repeat YuriDarkKeyword
+hi! link Label YuriDarkKeyword
+hi! link Operator YuriDarkKeyword
+hi! link Keyword YuriDarkKeyword
+hi! link Exception YuriDarkKeyword
 
-hi! link PreProc YuriDarkPink
-hi! link Include YuriDarkPink
-hi! link Define YuriDarkPink
-hi! link Macro YuriDarkPink
-hi! link PreCondit YuriDarkPink
-hi! link StorageClass YuriDarkPink
-hi! link Structure YuriDarkPink
-hi! link Typedef YuriDarkPink
+hi! link PreProc YuriDarkKeyword
+hi! link Include YuriDarkKeyword
+hi! link Define YuriDarkKeyword
+hi! link Macro YuriDarkKeyword
+hi! link PreCondit YuriDarkKeyword
+hi! link StorageClass YuriDarkKeyword
+hi! link Structure YuriDarkKeyword
+hi! link Typedef YuriDarkKeyword
 
-hi! link Type YuriDarkCyanItalic
+hi! link Type YuriDarkKeyColorItalic
 
 hi! link Delimiter YuriDarkFg
 
-hi! link Special YuriDarkPink
-hi! link SpecialComment YuriDarkCyanItalic
-hi! link Tag YuriDarkCyan
+hi! link Special YuriDarkKeyword
+hi! link SpecialComment YuriDarkKeyColorItalic
+hi! link Tag YuriDarkKeyColor
 hi! link helpHyperTextJump YuriDarkLink
-hi! link helpCommand YuriDarkPurple
-hi! link helpExample YuriDarkGreen
+hi! link helpCommand YuriDarkConstants
+hi! link helpExample YuriDarkClassName
 hi! link helpBacktick Special
 
 "}}}

@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'SayoriLightOrange'],
-    \ 'info':    ['fg', 'SayoriLightPurple'],
+    \ 'hl+':     ['fg', 'SayoriLightParameter'],
+    \ 'info':    ['fg', 'SayoriLightConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'SayoriLightGreen'],
+    \ 'prompt':  ['fg', 'SayoriLightClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               SayoriLightInfoLine
 
   hi! link ALEErrorSign          SayoriLightRed
-  hi! link ALEWarningSign        SayoriLightOrange
-  hi! link ALEInfoSign           SayoriLightCyan
+  hi! link ALEWarningSign        SayoriLightParameter
+  hi! link ALEInfoSign           SayoriLightKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

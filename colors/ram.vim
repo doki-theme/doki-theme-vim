@@ -27,11 +27,11 @@ let s:comment   = g:ram#palette.comment
 let s:selection = g:ram#palette.selection
 let s:subtle    = g:ram#palette.subtle
 
-let s:cyan      = g:ram#palette.cyan
-let s:green     = g:ram#palette.green
-let s:orange    = g:ram#palette.orange
-let s:pink      = g:ram#palette.pink
-let s:purple    = g:ram#palette.purple
+let s:key_color      = g:ram#palette.key_color
+let s:class_name     = g:ram#palette.class_name
+let s:parameter_color    = g:ram#palette.parameter_color
+let s:keyword_color      = g:ram#palette.keyword_color
+let s:constants_color    = g:ram#palette.constants_color
 let s:red       = g:ram#palette.red
 let s:string_color    = g:ram#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('RamSelection', s:none, s:selection)
 
 call s:h('RamSubtle', s:subtle)
 
-call s:h('RamCyan', s:cyan)
-call s:h('RamCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('RamKeyColor', s:key_color)
+call s:h('RamKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('RamGreen', s:green)
-call s:h('RamGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('RamGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('RamGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('RamClassName', s:class_name)
+call s:h('RamClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('RamClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('RamClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('RamOrange', s:orange)
-call s:h('RamOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('RamOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('RamOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('RamOrangeInverse', s:bg, s:orange)
+call s:h('RamParameter', s:parameter_color)
+call s:h('RamParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('RamParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('RamParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('RamParameterInverse', s:bg, s:parameter_color)
 
-call s:h('RamPink', s:pink)
-call s:h('RamPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('RamKeyword', s:keyword_color)
+call s:h('RamKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('RamPurple', s:purple)
-call s:h('RamPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('RamPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('RamConstants', s:constants_color)
+call s:h('RamConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('RamConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('RamRed', s:red)
 call s:h('RamRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('RamStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 call s:h('RamError', s:red, s:none, [], s:red)
 
 call s:h('RamErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('RamWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('RamInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('RamWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('RamInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('RamTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('RamSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('RamTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('RamSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('RamBoundary', s:comment, s:bgdark)
-call s:h('RamLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('RamLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('RamDiffChange', s:orange, s:none)
-call s:h('RamDiffText', s:bg, s:orange)
+call s:h('RamDiffChange', s:parameter_color, s:none)
+call s:h('RamDiffText', s:bg, s:parameter_color)
 call s:h('RamDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  RamBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr RamStringColor
-hi! link DiffAdd      RamGreen
+hi! link DiffAdd      RamClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   RamDiffChange
 hi! link DiffDelete   RamDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     RamDiffText
-hi! link Directory    RamPurpleBold
+hi! link Directory    RamConstantsBold
 hi! link ErrorMsg     RamRedInverse
 hi! link FoldColumn   RamSubtle
 hi! link Folded       RamBoundary
-hi! link IncSearch    RamOrangeInverse
+hi! link IncSearch    RamParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      RamFgBold
 hi! link NonText      RamSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      RamBoundary
 " hi! link TabLineFill  RamBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        RamGreenBold
+hi! link Title        RamClassNameBold
 hi! link VertSplit    RamBoundary
 hi! link Visual       RamSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   RamOrangeInverse
+hi! link WarningMsg   RamParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey RamRed
   hi! link LspDiagnosticsUnderline RamFgUnderline
-  hi! link LspDiagnosticsInformation RamCyan
-  hi! link LspDiagnosticsHint RamCyan
+  hi! link LspDiagnosticsInformation RamKeyColor
+  hi! link LspDiagnosticsHint RamKeyColor
   hi! link LspDiagnosticsError RamError
-  hi! link LspDiagnosticsWarning RamOrange
+  hi! link LspDiagnosticsWarning RamParameter
   hi! link LspDiagnosticsUnderlineError RamErrorLine
   hi! link LspDiagnosticsUnderlineHint RamInfoLine
   hi! link LspDiagnosticsUnderlineInformation RamInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal RamWarnLine
 hi! link SpellCap RamInfoLine
 hi! link SpellRare RamInfoLine
 
-hi! link Constant RamPurple
+hi! link Constant RamConstants
 hi! link String RamStringColor
-hi! link Character RamPink
+hi! link Character RamKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier RamFg
-hi! link Function RamGreen
+hi! link Function RamClassName
 
-hi! link Statement RamPink
-hi! link Conditional RamPink
-hi! link Repeat RamPink
-hi! link Label RamPink
-hi! link Operator RamPink
-hi! link Keyword RamPink
-hi! link Exception RamPink
+hi! link Statement RamKeyword
+hi! link Conditional RamKeyword
+hi! link Repeat RamKeyword
+hi! link Label RamKeyword
+hi! link Operator RamKeyword
+hi! link Keyword RamKeyword
+hi! link Exception RamKeyword
 
-hi! link PreProc RamPink
-hi! link Include RamPink
-hi! link Define RamPink
-hi! link Macro RamPink
-hi! link PreCondit RamPink
-hi! link StorageClass RamPink
-hi! link Structure RamPink
-hi! link Typedef RamPink
+hi! link PreProc RamKeyword
+hi! link Include RamKeyword
+hi! link Define RamKeyword
+hi! link Macro RamKeyword
+hi! link PreCondit RamKeyword
+hi! link StorageClass RamKeyword
+hi! link Structure RamKeyword
+hi! link Typedef RamKeyword
 
-hi! link Type RamCyanItalic
+hi! link Type RamKeyColorItalic
 
 hi! link Delimiter RamFg
 
-hi! link Special RamPink
-hi! link SpecialComment RamCyanItalic
-hi! link Tag RamCyan
+hi! link Special RamKeyword
+hi! link SpecialComment RamKeyColorItalic
+hi! link Tag RamKeyColor
 hi! link helpHyperTextJump RamLink
-hi! link helpCommand RamPurple
-hi! link helpExample RamGreen
+hi! link helpCommand RamConstants
+hi! link helpExample RamClassName
 hi! link helpBacktick Special
 
 "}}}

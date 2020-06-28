@@ -27,11 +27,11 @@ let s:comment   = g:beatrice#palette.comment
 let s:selection = g:beatrice#palette.selection
 let s:subtle    = g:beatrice#palette.subtle
 
-let s:cyan      = g:beatrice#palette.cyan
-let s:green     = g:beatrice#palette.green
-let s:orange    = g:beatrice#palette.orange
-let s:pink      = g:beatrice#palette.pink
-let s:purple    = g:beatrice#palette.purple
+let s:key_color      = g:beatrice#palette.key_color
+let s:class_name     = g:beatrice#palette.class_name
+let s:parameter_color    = g:beatrice#palette.parameter_color
+let s:keyword_color      = g:beatrice#palette.keyword_color
+let s:constants_color    = g:beatrice#palette.constants_color
 let s:red       = g:beatrice#palette.red
 let s:string_color    = g:beatrice#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('BeatriceSelection', s:none, s:selection)
 
 call s:h('BeatriceSubtle', s:subtle)
 
-call s:h('BeatriceCyan', s:cyan)
-call s:h('BeatriceCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('BeatriceKeyColor', s:key_color)
+call s:h('BeatriceKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('BeatriceGreen', s:green)
-call s:h('BeatriceGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('BeatriceGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('BeatriceGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('BeatriceClassName', s:class_name)
+call s:h('BeatriceClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('BeatriceClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('BeatriceClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('BeatriceOrange', s:orange)
-call s:h('BeatriceOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('BeatriceOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('BeatriceOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('BeatriceOrangeInverse', s:bg, s:orange)
+call s:h('BeatriceParameter', s:parameter_color)
+call s:h('BeatriceParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('BeatriceParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('BeatriceParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('BeatriceParameterInverse', s:bg, s:parameter_color)
 
-call s:h('BeatricePink', s:pink)
-call s:h('BeatricePinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('BeatriceKeyword', s:keyword_color)
+call s:h('BeatriceKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('BeatricePurple', s:purple)
-call s:h('BeatricePurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('BeatricePurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('BeatriceConstants', s:constants_color)
+call s:h('BeatriceConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('BeatriceConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('BeatriceRed', s:red)
 call s:h('BeatriceRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('BeatriceStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 call s:h('BeatriceError', s:red, s:none, [], s:red)
 
 call s:h('BeatriceErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('BeatriceWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('BeatriceInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('BeatriceWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('BeatriceInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('BeatriceTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('BeatriceSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('BeatriceTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('BeatriceSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('BeatriceBoundary', s:comment, s:bgdark)
-call s:h('BeatriceLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('BeatriceLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('BeatriceDiffChange', s:orange, s:none)
-call s:h('BeatriceDiffText', s:bg, s:orange)
+call s:h('BeatriceDiffChange', s:parameter_color, s:none)
+call s:h('BeatriceDiffText', s:bg, s:parameter_color)
 call s:h('BeatriceDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  BeatriceBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr BeatriceStringColor
-hi! link DiffAdd      BeatriceGreen
+hi! link DiffAdd      BeatriceClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   BeatriceDiffChange
 hi! link DiffDelete   BeatriceDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     BeatriceDiffText
-hi! link Directory    BeatricePurpleBold
+hi! link Directory    BeatriceConstantsBold
 hi! link ErrorMsg     BeatriceRedInverse
 hi! link FoldColumn   BeatriceSubtle
 hi! link Folded       BeatriceBoundary
-hi! link IncSearch    BeatriceOrangeInverse
+hi! link IncSearch    BeatriceParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      BeatriceFgBold
 hi! link NonText      BeatriceSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      BeatriceBoundary
 " hi! link TabLineFill  BeatriceBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        BeatriceGreenBold
+hi! link Title        BeatriceClassNameBold
 hi! link VertSplit    BeatriceBoundary
 hi! link Visual       BeatriceSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   BeatriceOrangeInverse
+hi! link WarningMsg   BeatriceParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey BeatriceRed
   hi! link LspDiagnosticsUnderline BeatriceFgUnderline
-  hi! link LspDiagnosticsInformation BeatriceCyan
-  hi! link LspDiagnosticsHint BeatriceCyan
+  hi! link LspDiagnosticsInformation BeatriceKeyColor
+  hi! link LspDiagnosticsHint BeatriceKeyColor
   hi! link LspDiagnosticsError BeatriceError
-  hi! link LspDiagnosticsWarning BeatriceOrange
+  hi! link LspDiagnosticsWarning BeatriceParameter
   hi! link LspDiagnosticsUnderlineError BeatriceErrorLine
   hi! link LspDiagnosticsUnderlineHint BeatriceInfoLine
   hi! link LspDiagnosticsUnderlineInformation BeatriceInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal BeatriceWarnLine
 hi! link SpellCap BeatriceInfoLine
 hi! link SpellRare BeatriceInfoLine
 
-hi! link Constant BeatricePurple
+hi! link Constant BeatriceConstants
 hi! link String BeatriceStringColor
-hi! link Character BeatricePink
+hi! link Character BeatriceKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier BeatriceFg
-hi! link Function BeatriceGreen
+hi! link Function BeatriceClassName
 
-hi! link Statement BeatricePink
-hi! link Conditional BeatricePink
-hi! link Repeat BeatricePink
-hi! link Label BeatricePink
-hi! link Operator BeatricePink
-hi! link Keyword BeatricePink
-hi! link Exception BeatricePink
+hi! link Statement BeatriceKeyword
+hi! link Conditional BeatriceKeyword
+hi! link Repeat BeatriceKeyword
+hi! link Label BeatriceKeyword
+hi! link Operator BeatriceKeyword
+hi! link Keyword BeatriceKeyword
+hi! link Exception BeatriceKeyword
 
-hi! link PreProc BeatricePink
-hi! link Include BeatricePink
-hi! link Define BeatricePink
-hi! link Macro BeatricePink
-hi! link PreCondit BeatricePink
-hi! link StorageClass BeatricePink
-hi! link Structure BeatricePink
-hi! link Typedef BeatricePink
+hi! link PreProc BeatriceKeyword
+hi! link Include BeatriceKeyword
+hi! link Define BeatriceKeyword
+hi! link Macro BeatriceKeyword
+hi! link PreCondit BeatriceKeyword
+hi! link StorageClass BeatriceKeyword
+hi! link Structure BeatriceKeyword
+hi! link Typedef BeatriceKeyword
 
-hi! link Type BeatriceCyanItalic
+hi! link Type BeatriceKeyColorItalic
 
 hi! link Delimiter BeatriceFg
 
-hi! link Special BeatricePink
-hi! link SpecialComment BeatriceCyanItalic
-hi! link Tag BeatriceCyan
+hi! link Special BeatriceKeyword
+hi! link SpecialComment BeatriceKeyColorItalic
+hi! link Tag BeatriceKeyColor
 hi! link helpHyperTextJump BeatriceLink
-hi! link helpCommand BeatricePurple
-hi! link helpExample BeatriceGreen
+hi! link helpCommand BeatriceConstants
+hi! link helpExample BeatriceClassName
 hi! link helpBacktick Special
 
 "}}}

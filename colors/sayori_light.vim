@@ -27,11 +27,11 @@ let s:comment   = g:sayori_light#palette.comment
 let s:selection = g:sayori_light#palette.selection
 let s:subtle    = g:sayori_light#palette.subtle
 
-let s:cyan      = g:sayori_light#palette.cyan
-let s:green     = g:sayori_light#palette.green
-let s:orange    = g:sayori_light#palette.orange
-let s:pink      = g:sayori_light#palette.pink
-let s:purple    = g:sayori_light#palette.purple
+let s:key_color      = g:sayori_light#palette.key_color
+let s:class_name     = g:sayori_light#palette.class_name
+let s:parameter_color    = g:sayori_light#palette.parameter_color
+let s:keyword_color      = g:sayori_light#palette.keyword_color
+let s:constants_color    = g:sayori_light#palette.constants_color
 let s:red       = g:sayori_light#palette.red
 let s:string_color    = g:sayori_light#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('SayoriLightSelection', s:none, s:selection)
 
 call s:h('SayoriLightSubtle', s:subtle)
 
-call s:h('SayoriLightCyan', s:cyan)
-call s:h('SayoriLightCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('SayoriLightKeyColor', s:key_color)
+call s:h('SayoriLightKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('SayoriLightGreen', s:green)
-call s:h('SayoriLightGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('SayoriLightGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('SayoriLightGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('SayoriLightClassName', s:class_name)
+call s:h('SayoriLightClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('SayoriLightClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('SayoriLightClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('SayoriLightOrange', s:orange)
-call s:h('SayoriLightOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('SayoriLightOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('SayoriLightOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('SayoriLightOrangeInverse', s:bg, s:orange)
+call s:h('SayoriLightParameter', s:parameter_color)
+call s:h('SayoriLightParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('SayoriLightParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('SayoriLightParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('SayoriLightParameterInverse', s:bg, s:parameter_color)
 
-call s:h('SayoriLightPink', s:pink)
-call s:h('SayoriLightPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('SayoriLightKeyword', s:keyword_color)
+call s:h('SayoriLightKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('SayoriLightPurple', s:purple)
-call s:h('SayoriLightPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('SayoriLightPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('SayoriLightConstants', s:constants_color)
+call s:h('SayoriLightConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('SayoriLightConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('SayoriLightRed', s:red)
 call s:h('SayoriLightRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('SayoriLightStringColorItalic', s:string_color, s:none, [s:attrs.italic
 call s:h('SayoriLightError', s:red, s:none, [], s:red)
 
 call s:h('SayoriLightErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('SayoriLightWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('SayoriLightInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('SayoriLightWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('SayoriLightInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('SayoriLightTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('SayoriLightSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('SayoriLightTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('SayoriLightSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('SayoriLightBoundary', s:comment, s:bgdark)
-call s:h('SayoriLightLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('SayoriLightLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('SayoriLightDiffChange', s:orange, s:none)
-call s:h('SayoriLightDiffText', s:bg, s:orange)
+call s:h('SayoriLightDiffChange', s:parameter_color, s:none)
+call s:h('SayoriLightDiffText', s:bg, s:parameter_color)
 call s:h('SayoriLightDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  SayoriLightBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr SayoriLightStringColor
-hi! link DiffAdd      SayoriLightGreen
+hi! link DiffAdd      SayoriLightClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   SayoriLightDiffChange
 hi! link DiffDelete   SayoriLightDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     SayoriLightDiffText
-hi! link Directory    SayoriLightPurpleBold
+hi! link Directory    SayoriLightConstantsBold
 hi! link ErrorMsg     SayoriLightRedInverse
 hi! link FoldColumn   SayoriLightSubtle
 hi! link Folded       SayoriLightBoundary
-hi! link IncSearch    SayoriLightOrangeInverse
+hi! link IncSearch    SayoriLightParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      SayoriLightFgBold
 hi! link NonText      SayoriLightSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      SayoriLightBoundary
 " hi! link TabLineFill  SayoriLightBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        SayoriLightGreenBold
+hi! link Title        SayoriLightClassNameBold
 hi! link VertSplit    SayoriLightBoundary
 hi! link Visual       SayoriLightSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   SayoriLightOrangeInverse
+hi! link WarningMsg   SayoriLightParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey SayoriLightRed
   hi! link LspDiagnosticsUnderline SayoriLightFgUnderline
-  hi! link LspDiagnosticsInformation SayoriLightCyan
-  hi! link LspDiagnosticsHint SayoriLightCyan
+  hi! link LspDiagnosticsInformation SayoriLightKeyColor
+  hi! link LspDiagnosticsHint SayoriLightKeyColor
   hi! link LspDiagnosticsError SayoriLightError
-  hi! link LspDiagnosticsWarning SayoriLightOrange
+  hi! link LspDiagnosticsWarning SayoriLightParameter
   hi! link LspDiagnosticsUnderlineError SayoriLightErrorLine
   hi! link LspDiagnosticsUnderlineHint SayoriLightInfoLine
   hi! link LspDiagnosticsUnderlineInformation SayoriLightInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal SayoriLightWarnLine
 hi! link SpellCap SayoriLightInfoLine
 hi! link SpellRare SayoriLightInfoLine
 
-hi! link Constant SayoriLightPurple
+hi! link Constant SayoriLightConstants
 hi! link String SayoriLightStringColor
-hi! link Character SayoriLightPink
+hi! link Character SayoriLightKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier SayoriLightFg
-hi! link Function SayoriLightGreen
+hi! link Function SayoriLightClassName
 
-hi! link Statement SayoriLightPink
-hi! link Conditional SayoriLightPink
-hi! link Repeat SayoriLightPink
-hi! link Label SayoriLightPink
-hi! link Operator SayoriLightPink
-hi! link Keyword SayoriLightPink
-hi! link Exception SayoriLightPink
+hi! link Statement SayoriLightKeyword
+hi! link Conditional SayoriLightKeyword
+hi! link Repeat SayoriLightKeyword
+hi! link Label SayoriLightKeyword
+hi! link Operator SayoriLightKeyword
+hi! link Keyword SayoriLightKeyword
+hi! link Exception SayoriLightKeyword
 
-hi! link PreProc SayoriLightPink
-hi! link Include SayoriLightPink
-hi! link Define SayoriLightPink
-hi! link Macro SayoriLightPink
-hi! link PreCondit SayoriLightPink
-hi! link StorageClass SayoriLightPink
-hi! link Structure SayoriLightPink
-hi! link Typedef SayoriLightPink
+hi! link PreProc SayoriLightKeyword
+hi! link Include SayoriLightKeyword
+hi! link Define SayoriLightKeyword
+hi! link Macro SayoriLightKeyword
+hi! link PreCondit SayoriLightKeyword
+hi! link StorageClass SayoriLightKeyword
+hi! link Structure SayoriLightKeyword
+hi! link Typedef SayoriLightKeyword
 
-hi! link Type SayoriLightCyanItalic
+hi! link Type SayoriLightKeyColorItalic
 
 hi! link Delimiter SayoriLightFg
 
-hi! link Special SayoriLightPink
-hi! link SpecialComment SayoriLightCyanItalic
-hi! link Tag SayoriLightCyan
+hi! link Special SayoriLightKeyword
+hi! link SpecialComment SayoriLightKeyColorItalic
+hi! link Tag SayoriLightKeyColor
 hi! link helpHyperTextJump SayoriLightLink
-hi! link helpCommand SayoriLightPurple
-hi! link helpExample SayoriLightGreen
+hi! link helpCommand SayoriLightConstants
+hi! link helpExample SayoriLightClassName
 hi! link helpBacktick Special
 
 "}}}

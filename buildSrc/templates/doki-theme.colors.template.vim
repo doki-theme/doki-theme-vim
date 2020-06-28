@@ -27,11 +27,11 @@ let s:comment   = g:{{themeName}}#palette.comment
 let s:selection = g:{{themeName}}#palette.selection
 let s:subtle    = g:{{themeName}}#palette.subtle
 
-let s:cyan      = g:{{themeName}}#palette.cyan
-let s:green     = g:{{themeName}}#palette.green
-let s:orange    = g:{{themeName}}#palette.orange
-let s:pink      = g:{{themeName}}#palette.pink
-let s:purple    = g:{{themeName}}#palette.purple
+let s:key_color      = g:{{themeName}}#palette.key_color
+let s:class_name     = g:{{themeName}}#palette.class_name
+let s:parameter_color    = g:{{themeName}}#palette.parameter_color
+let s:keyword_color      = g:{{themeName}}#palette.keyword_color
+let s:constants_color    = g:{{themeName}}#palette.constants_color
 let s:red       = g:{{themeName}}#palette.red
 let s:string_color    = g:{{themeName}}#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('{{themeProperName}}Selection', s:none, s:selection)
 
 call s:h('{{themeProperName}}Subtle', s:subtle)
 
-call s:h('{{themeProperName}}Cyan', s:cyan)
-call s:h('{{themeProperName}}CyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('{{themeProperName}}KeyColor', s:key_color)
+call s:h('{{themeProperName}}KeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('{{themeProperName}}Green', s:green)
-call s:h('{{themeProperName}}GreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('{{themeProperName}}GreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('{{themeProperName}}GreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('{{themeProperName}}ClassName', s:class_name)
+call s:h('{{themeProperName}}ClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('{{themeProperName}}ClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('{{themeProperName}}ClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('{{themeProperName}}Orange', s:orange)
-call s:h('{{themeProperName}}OrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('{{themeProperName}}OrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('{{themeProperName}}OrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('{{themeProperName}}OrangeInverse', s:bg, s:orange)
+call s:h('{{themeProperName}}Parameter', s:parameter_color)
+call s:h('{{themeProperName}}ParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('{{themeProperName}}ParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('{{themeProperName}}ParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('{{themeProperName}}ParameterInverse', s:bg, s:parameter_color)
 
-call s:h('{{themeProperName}}Pink', s:pink)
-call s:h('{{themeProperName}}PinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('{{themeProperName}}Keyword', s:keyword_color)
+call s:h('{{themeProperName}}KeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('{{themeProperName}}Purple', s:purple)
-call s:h('{{themeProperName}}PurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('{{themeProperName}}PurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('{{themeProperName}}Constants', s:constants_color)
+call s:h('{{themeProperName}}ConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('{{themeProperName}}ConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('{{themeProperName}}Red', s:red)
 call s:h('{{themeProperName}}RedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('{{themeProperName}}StringColorItalic', s:string_color, s:none, [s:attr
 call s:h('{{themeProperName}}Error', s:red, s:none, [], s:red)
 
 call s:h('{{themeProperName}}ErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('{{themeProperName}}WarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('{{themeProperName}}InfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('{{themeProperName}}WarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('{{themeProperName}}InfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('{{themeProperName}}Todo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('{{themeProperName}}Search', s:green, s:none, [s:attrs.inverse])
+call s:h('{{themeProperName}}Todo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('{{themeProperName}}Search', s:class_name, s:none, [s:attrs.inverse])
 call s:h('{{themeProperName}}Boundary', s:comment, s:bgdark)
-call s:h('{{themeProperName}}Link', s:cyan, s:none, [s:attrs.underline])
+call s:h('{{themeProperName}}Link', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('{{themeProperName}}DiffChange', s:orange, s:none)
-call s:h('{{themeProperName}}DiffText', s:bg, s:orange)
+call s:h('{{themeProperName}}DiffChange', s:parameter_color, s:none)
+call s:h('{{themeProperName}}DiffText', s:bg, s:parameter_color)
 call s:h('{{themeProperName}}DiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  {{themeProperName}}BgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr {{themeProperName}}StringColor
-hi! link DiffAdd      {{themeProperName}}Green
+hi! link DiffAdd      {{themeProperName}}ClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   {{themeProperName}}DiffChange
 hi! link DiffDelete   {{themeProperName}}DiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     {{themeProperName}}DiffText
-hi! link Directory    {{themeProperName}}PurpleBold
+hi! link Directory    {{themeProperName}}ConstantsBold
 hi! link ErrorMsg     {{themeProperName}}RedInverse
 hi! link FoldColumn   {{themeProperName}}Subtle
 hi! link Folded       {{themeProperName}}Boundary
-hi! link IncSearch    {{themeProperName}}OrangeInverse
+hi! link IncSearch    {{themeProperName}}ParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      {{themeProperName}}FgBold
 hi! link NonText      {{themeProperName}}Subtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      {{themeProperName}}Boundary
 " hi! link TabLineFill  {{themeProperName}}BgDarker
 hi! link TabLineSel   Normal
-hi! link Title        {{themeProperName}}GreenBold
+hi! link Title        {{themeProperName}}ClassNameBold
 hi! link VertSplit    {{themeProperName}}Boundary
 hi! link Visual       {{themeProperName}}Selection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   {{themeProperName}}OrangeInverse
+hi! link WarningMsg   {{themeProperName}}ParameterInverse
 
 " }}}
 " Syntax: {{{
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey {{themeProperName}}Red
   hi! link LspDiagnosticsUnderline {{themeProperName}}FgUnderline
-  hi! link LspDiagnosticsInformation {{themeProperName}}Cyan
-  hi! link LspDiagnosticsHint {{themeProperName}}Cyan
+  hi! link LspDiagnosticsInformation {{themeProperName}}KeyColor
+  hi! link LspDiagnosticsHint {{themeProperName}}KeyColor
   hi! link LspDiagnosticsError {{themeProperName}}Error
-  hi! link LspDiagnosticsWarning {{themeProperName}}Orange
+  hi! link LspDiagnosticsWarning {{themeProperName}}Parameter
   hi! link LspDiagnosticsUnderlineError {{themeProperName}}ErrorLine
   hi! link LspDiagnosticsUnderlineHint {{themeProperName}}InfoLine
   hi! link LspDiagnosticsUnderlineInformation {{themeProperName}}InfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal {{themeProperName}}WarnLine
 hi! link SpellCap {{themeProperName}}InfoLine
 hi! link SpellRare {{themeProperName}}InfoLine
 
-hi! link Constant {{themeProperName}}Purple
+hi! link Constant {{themeProperName}}Constants
 hi! link String {{themeProperName}}StringColor
-hi! link Character {{themeProperName}}Pink
+hi! link Character {{themeProperName}}Keyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier {{themeProperName}}Fg
-hi! link Function {{themeProperName}}Green
+hi! link Function {{themeProperName}}ClassName
 
-hi! link Statement {{themeProperName}}Pink
-hi! link Conditional {{themeProperName}}Pink
-hi! link Repeat {{themeProperName}}Pink
-hi! link Label {{themeProperName}}Pink
-hi! link Operator {{themeProperName}}Pink
-hi! link Keyword {{themeProperName}}Pink
-hi! link Exception {{themeProperName}}Pink
+hi! link Statement {{themeProperName}}Keyword
+hi! link Conditional {{themeProperName}}Keyword
+hi! link Repeat {{themeProperName}}Keyword
+hi! link Label {{themeProperName}}Keyword
+hi! link Operator {{themeProperName}}Keyword
+hi! link Keyword {{themeProperName}}Keyword
+hi! link Exception {{themeProperName}}Keyword
 
-hi! link PreProc {{themeProperName}}Pink
-hi! link Include {{themeProperName}}Pink
-hi! link Define {{themeProperName}}Pink
-hi! link Macro {{themeProperName}}Pink
-hi! link PreCondit {{themeProperName}}Pink
-hi! link StorageClass {{themeProperName}}Pink
-hi! link Structure {{themeProperName}}Pink
-hi! link Typedef {{themeProperName}}Pink
+hi! link PreProc {{themeProperName}}Keyword
+hi! link Include {{themeProperName}}Keyword
+hi! link Define {{themeProperName}}Keyword
+hi! link Macro {{themeProperName}}Keyword
+hi! link PreCondit {{themeProperName}}Keyword
+hi! link StorageClass {{themeProperName}}Keyword
+hi! link Structure {{themeProperName}}Keyword
+hi! link Typedef {{themeProperName}}Keyword
 
-hi! link Type {{themeProperName}}CyanItalic
+hi! link Type {{themeProperName}}KeyColorItalic
 
 hi! link Delimiter {{themeProperName}}Fg
 
-hi! link Special {{themeProperName}}Pink
-hi! link SpecialComment {{themeProperName}}CyanItalic
-hi! link Tag {{themeProperName}}Cyan
+hi! link Special {{themeProperName}}Keyword
+hi! link SpecialComment {{themeProperName}}KeyColorItalic
+hi! link Tag {{themeProperName}}KeyColor
 hi! link helpHyperTextJump {{themeProperName}}Link
-hi! link helpCommand {{themeProperName}}Purple
-hi! link helpExample {{themeProperName}}Green
+hi! link helpCommand {{themeProperName}}Constants
+hi! link helpExample {{themeProperName}}ClassName
 hi! link helpBacktick Special
 
 "}}}

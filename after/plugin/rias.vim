@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'RiasOrange'],
-    \ 'info':    ['fg', 'RiasPurple'],
+    \ 'hl+':     ['fg', 'RiasParameter'],
+    \ 'info':    ['fg', 'RiasConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'RiasGreen'],
+    \ 'prompt':  ['fg', 'RiasClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               RiasInfoLine
 
   hi! link ALEErrorSign          RiasRed
-  hi! link ALEWarningSign        RiasOrange
-  hi! link ALEInfoSign           RiasCyan
+  hi! link ALEWarningSign        RiasParameter
+  hi! link ALEInfoSign           RiasKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'MeguminOrange'],
-    \ 'info':    ['fg', 'MeguminPurple'],
+    \ 'hl+':     ['fg', 'MeguminParameter'],
+    \ 'info':    ['fg', 'MeguminConstants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', 'MeguminGreen'],
+    \ 'prompt':  ['fg', 'MeguminClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               MeguminInfoLine
 
   hi! link ALEErrorSign          MeguminRed
-  hi! link ALEWarningSign        MeguminOrange
-  hi! link ALEInfoSign           MeguminCyan
+  hi! link ALEWarningSign        MeguminParameter
+  hi! link ALEInfoSign           MeguminKeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

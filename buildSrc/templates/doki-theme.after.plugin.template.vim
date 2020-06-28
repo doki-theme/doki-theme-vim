@@ -10,10 +10,10 @@ if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
     \ 'hl':      ['fg', 'Search'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', '{{themeProperName}}Orange'],
-    \ 'info':    ['fg', '{{themeProperName}}Purple'],
+    \ 'hl+':     ['fg', '{{themeProperName}}Parameter'],
+    \ 'info':    ['fg', '{{themeProperName}}Constants'],
     \ 'border':  ['fg', 'Ignore'],
-    \ 'prompt':  ['fg', '{{themeProperName}}Green'],
+    \ 'prompt':  ['fg', '{{themeProperName}}ClassName'],
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
@@ -28,8 +28,8 @@ if exists('g:ale_enabled')
   hi! link ALEInfo               {{themeProperName}}InfoLine
 
   hi! link ALEErrorSign          {{themeProperName}}Red
-  hi! link ALEWarningSign        {{themeProperName}}Orange
-  hi! link ALEInfoSign           {{themeProperName}}Cyan
+  hi! link ALEWarningSign        {{themeProperName}}Parameter
+  hi! link ALEInfoSign           {{themeProperName}}KeyColor
 
   hi! link ALEVirtualTextError   Comment
   hi! link ALEVirtualTextWarning Comment

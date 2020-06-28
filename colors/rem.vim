@@ -27,11 +27,11 @@ let s:comment   = g:rem#palette.comment
 let s:selection = g:rem#palette.selection
 let s:subtle    = g:rem#palette.subtle
 
-let s:cyan      = g:rem#palette.cyan
-let s:green     = g:rem#palette.green
-let s:orange    = g:rem#palette.orange
-let s:pink      = g:rem#palette.pink
-let s:purple    = g:rem#palette.purple
+let s:key_color      = g:rem#palette.key_color
+let s:class_name     = g:rem#palette.class_name
+let s:parameter_color    = g:rem#palette.parameter_color
+let s:keyword_color      = g:rem#palette.keyword_color
+let s:constants_color    = g:rem#palette.constants_color
 let s:red       = g:rem#palette.red
 let s:string_color    = g:rem#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('RemSelection', s:none, s:selection)
 
 call s:h('RemSubtle', s:subtle)
 
-call s:h('RemCyan', s:cyan)
-call s:h('RemCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('RemKeyColor', s:key_color)
+call s:h('RemKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('RemGreen', s:green)
-call s:h('RemGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('RemGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('RemGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('RemClassName', s:class_name)
+call s:h('RemClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('RemClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('RemClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('RemOrange', s:orange)
-call s:h('RemOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('RemOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('RemOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('RemOrangeInverse', s:bg, s:orange)
+call s:h('RemParameter', s:parameter_color)
+call s:h('RemParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('RemParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('RemParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('RemParameterInverse', s:bg, s:parameter_color)
 
-call s:h('RemPink', s:pink)
-call s:h('RemPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('RemKeyword', s:keyword_color)
+call s:h('RemKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('RemPurple', s:purple)
-call s:h('RemPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('RemPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('RemConstants', s:constants_color)
+call s:h('RemConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('RemConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('RemRed', s:red)
 call s:h('RemRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('RemStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 call s:h('RemError', s:red, s:none, [], s:red)
 
 call s:h('RemErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('RemWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('RemInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('RemWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('RemInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('RemTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('RemSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('RemTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('RemSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('RemBoundary', s:comment, s:bgdark)
-call s:h('RemLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('RemLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('RemDiffChange', s:orange, s:none)
-call s:h('RemDiffText', s:bg, s:orange)
+call s:h('RemDiffChange', s:parameter_color, s:none)
+call s:h('RemDiffText', s:bg, s:parameter_color)
 call s:h('RemDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  RemBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr RemStringColor
-hi! link DiffAdd      RemGreen
+hi! link DiffAdd      RemClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   RemDiffChange
 hi! link DiffDelete   RemDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     RemDiffText
-hi! link Directory    RemPurpleBold
+hi! link Directory    RemConstantsBold
 hi! link ErrorMsg     RemRedInverse
 hi! link FoldColumn   RemSubtle
 hi! link Folded       RemBoundary
-hi! link IncSearch    RemOrangeInverse
+hi! link IncSearch    RemParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      RemFgBold
 hi! link NonText      RemSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      RemBoundary
 " hi! link TabLineFill  RemBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        RemGreenBold
+hi! link Title        RemClassNameBold
 hi! link VertSplit    RemBoundary
 hi! link Visual       RemSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   RemOrangeInverse
+hi! link WarningMsg   RemParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey RemRed
   hi! link LspDiagnosticsUnderline RemFgUnderline
-  hi! link LspDiagnosticsInformation RemCyan
-  hi! link LspDiagnosticsHint RemCyan
+  hi! link LspDiagnosticsInformation RemKeyColor
+  hi! link LspDiagnosticsHint RemKeyColor
   hi! link LspDiagnosticsError RemError
-  hi! link LspDiagnosticsWarning RemOrange
+  hi! link LspDiagnosticsWarning RemParameter
   hi! link LspDiagnosticsUnderlineError RemErrorLine
   hi! link LspDiagnosticsUnderlineHint RemInfoLine
   hi! link LspDiagnosticsUnderlineInformation RemInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal RemWarnLine
 hi! link SpellCap RemInfoLine
 hi! link SpellRare RemInfoLine
 
-hi! link Constant RemPurple
+hi! link Constant RemConstants
 hi! link String RemStringColor
-hi! link Character RemPink
+hi! link Character RemKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier RemFg
-hi! link Function RemGreen
+hi! link Function RemClassName
 
-hi! link Statement RemPink
-hi! link Conditional RemPink
-hi! link Repeat RemPink
-hi! link Label RemPink
-hi! link Operator RemPink
-hi! link Keyword RemPink
-hi! link Exception RemPink
+hi! link Statement RemKeyword
+hi! link Conditional RemKeyword
+hi! link Repeat RemKeyword
+hi! link Label RemKeyword
+hi! link Operator RemKeyword
+hi! link Keyword RemKeyword
+hi! link Exception RemKeyword
 
-hi! link PreProc RemPink
-hi! link Include RemPink
-hi! link Define RemPink
-hi! link Macro RemPink
-hi! link PreCondit RemPink
-hi! link StorageClass RemPink
-hi! link Structure RemPink
-hi! link Typedef RemPink
+hi! link PreProc RemKeyword
+hi! link Include RemKeyword
+hi! link Define RemKeyword
+hi! link Macro RemKeyword
+hi! link PreCondit RemKeyword
+hi! link StorageClass RemKeyword
+hi! link Structure RemKeyword
+hi! link Typedef RemKeyword
 
-hi! link Type RemCyanItalic
+hi! link Type RemKeyColorItalic
 
 hi! link Delimiter RemFg
 
-hi! link Special RemPink
-hi! link SpecialComment RemCyanItalic
-hi! link Tag RemCyan
+hi! link Special RemKeyword
+hi! link SpecialComment RemKeyColorItalic
+hi! link Tag RemKeyColor
 hi! link helpHyperTextJump RemLink
-hi! link helpCommand RemPurple
-hi! link helpExample RemGreen
+hi! link helpCommand RemConstants
+hi! link helpExample RemClassName
 hi! link helpBacktick Special
 
 "}}}

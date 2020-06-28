@@ -27,11 +27,11 @@ let s:comment   = g:satsuki#palette.comment
 let s:selection = g:satsuki#palette.selection
 let s:subtle    = g:satsuki#palette.subtle
 
-let s:cyan      = g:satsuki#palette.cyan
-let s:green     = g:satsuki#palette.green
-let s:orange    = g:satsuki#palette.orange
-let s:pink      = g:satsuki#palette.pink
-let s:purple    = g:satsuki#palette.purple
+let s:key_color      = g:satsuki#palette.key_color
+let s:class_name     = g:satsuki#palette.class_name
+let s:parameter_color    = g:satsuki#palette.parameter_color
+let s:keyword_color      = g:satsuki#palette.keyword_color
+let s:constants_color    = g:satsuki#palette.constants_color
 let s:red       = g:satsuki#palette.red
 let s:string_color    = g:satsuki#palette.string_color
 
@@ -133,26 +133,26 @@ call s:h('SatsukiSelection', s:none, s:selection)
 
 call s:h('SatsukiSubtle', s:subtle)
 
-call s:h('SatsukiCyan', s:cyan)
-call s:h('SatsukiCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('SatsukiKeyColor', s:key_color)
+call s:h('SatsukiKeyColorItalic', s:key_color, s:none, [s:attrs.italic])
 
-call s:h('SatsukiGreen', s:green)
-call s:h('SatsukiGreenBold', s:green, s:none, [s:attrs.bold])
-call s:h('SatsukiGreenItalic', s:green, s:none, [s:attrs.italic])
-call s:h('SatsukiGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
+call s:h('SatsukiClassName', s:class_name)
+call s:h('SatsukiClassNameBold', s:class_name, s:none, [s:attrs.bold])
+call s:h('SatsukiClassNameItalic', s:class_name, s:none, [s:attrs.italic])
+call s:h('SatsukiClassNameItalicUnderline', s:class_name, s:none, [s:attrs.italic, s:attrs.underline])
 
-call s:h('SatsukiOrange', s:orange)
-call s:h('SatsukiOrangeBold', s:orange, s:none, [s:attrs.bold])
-call s:h('SatsukiOrangeItalic', s:orange, s:none, [s:attrs.italic])
-call s:h('SatsukiOrangeBoldItalic', s:orange, s:none, [s:attrs.bold, s:attrs.italic])
-call s:h('SatsukiOrangeInverse', s:bg, s:orange)
+call s:h('SatsukiParameter', s:parameter_color)
+call s:h('SatsukiParameterBold', s:parameter_color, s:none, [s:attrs.bold])
+call s:h('SatsukiParameterItalic', s:parameter_color, s:none, [s:attrs.italic])
+call s:h('SatsukiParameterBoldItalic', s:parameter_color, s:none, [s:attrs.bold, s:attrs.italic])
+call s:h('SatsukiParameterInverse', s:bg, s:parameter_color)
 
-call s:h('SatsukiPink', s:pink)
-call s:h('SatsukiPinkItalic', s:pink, s:none, [s:attrs.italic])
+call s:h('SatsukiKeyword', s:keyword_color)
+call s:h('SatsukiKeywordItalic', s:keyword_color, s:none, [s:attrs.italic])
 
-call s:h('SatsukiPurple', s:purple)
-call s:h('SatsukiPurpleBold', s:purple, s:none, [s:attrs.bold])
-call s:h('SatsukiPurpleItalic', s:purple, s:none, [s:attrs.italic])
+call s:h('SatsukiConstants', s:constants_color)
+call s:h('SatsukiConstantsBold', s:constants_color, s:none, [s:attrs.bold])
+call s:h('SatsukiConstantsItalic', s:constants_color, s:none, [s:attrs.italic])
 
 call s:h('SatsukiRed', s:red)
 call s:h('SatsukiRedInverse', s:fg, s:red)
@@ -163,16 +163,16 @@ call s:h('SatsukiStringColorItalic', s:string_color, s:none, [s:attrs.italic])
 call s:h('SatsukiError', s:red, s:none, [], s:red)
 
 call s:h('SatsukiErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
-call s:h('SatsukiWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
-call s:h('SatsukiInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
+call s:h('SatsukiWarnLine', s:none, s:none, [s:attrs.undercurl], s:parameter_color)
+call s:h('SatsukiInfoLine', s:none, s:none, [s:attrs.undercurl], s:key_color)
 
-call s:h('SatsukiTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('SatsukiSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('SatsukiTodo', s:key_color, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('SatsukiSearch', s:class_name, s:none, [s:attrs.inverse])
 call s:h('SatsukiBoundary', s:comment, s:bgdark)
-call s:h('SatsukiLink', s:cyan, s:none, [s:attrs.underline])
+call s:h('SatsukiLink', s:key_color, s:none, [s:attrs.underline])
 
-call s:h('SatsukiDiffChange', s:orange, s:none)
-call s:h('SatsukiDiffText', s:bg, s:orange)
+call s:h('SatsukiDiffChange', s:parameter_color, s:none)
+call s:h('SatsukiDiffText', s:bg, s:parameter_color)
 call s:h('SatsukiDiffDelete', s:red, s:bgdark)
 
 " }}}2
@@ -187,23 +187,23 @@ call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
 call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
-call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
+call s:h('WildMenu', s:bg, s:constants_color, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
 " hi! link ColorColumn  SatsukiBgDark
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr SatsukiStringColor
-hi! link DiffAdd      SatsukiGreen
+hi! link DiffAdd      SatsukiClassName
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   SatsukiDiffChange
 hi! link DiffDelete   SatsukiDiffDelete
 hi! link DiffRemoved  DiffDelete
 hi! link DiffText     SatsukiDiffText
-hi! link Directory    SatsukiPurpleBold
+hi! link Directory    SatsukiConstantsBold
 hi! link ErrorMsg     SatsukiRedInverse
 hi! link FoldColumn   SatsukiSubtle
 hi! link Folded       SatsukiBoundary
-hi! link IncSearch    SatsukiOrangeInverse
+hi! link IncSearch    SatsukiParameterInverse
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      SatsukiFgBold
 hi! link NonText      SatsukiSubtle
@@ -217,27 +217,27 @@ call s:h('SignColumn', s:comment)
 hi! link TabLine      SatsukiBoundary
 " hi! link TabLineFill  SatsukiBgDarker
 hi! link TabLineSel   Normal
-hi! link Title        SatsukiGreenBold
+hi! link Title        SatsukiClassNameBold
 hi! link VertSplit    SatsukiBoundary
 hi! link Visual       SatsukiSelection
 hi! link VisualNOS    Visual
-hi! link WarningMsg   SatsukiOrangeInverse
+hi! link WarningMsg   SatsukiParameterInverse
 
 " }}}
 " Syntax: 
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+call s:h('MatchParen', s:class_name, s:none, [s:attrs.underline])
+call s:h('Conceal', s:key_color, s:none)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey SatsukiRed
   hi! link LspDiagnosticsUnderline SatsukiFgUnderline
-  hi! link LspDiagnosticsInformation SatsukiCyan
-  hi! link LspDiagnosticsHint SatsukiCyan
+  hi! link LspDiagnosticsInformation SatsukiKeyColor
+  hi! link LspDiagnosticsHint SatsukiKeyColor
   hi! link LspDiagnosticsError SatsukiError
-  hi! link LspDiagnosticsWarning SatsukiOrange
+  hi! link LspDiagnosticsWarning SatsukiParameter
   hi! link LspDiagnosticsUnderlineError SatsukiErrorLine
   hi! link LspDiagnosticsUnderlineHint SatsukiInfoLine
   hi! link LspDiagnosticsUnderlineInformation SatsukiInfoLine
@@ -256,43 +256,43 @@ hi! link SpellLocal SatsukiWarnLine
 hi! link SpellCap SatsukiInfoLine
 hi! link SpellRare SatsukiInfoLine
 
-hi! link Constant SatsukiPurple
+hi! link Constant SatsukiConstants
 hi! link String SatsukiStringColor
-hi! link Character SatsukiPink
+hi! link Character SatsukiKeyword
 hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier SatsukiFg
-hi! link Function SatsukiGreen
+hi! link Function SatsukiClassName
 
-hi! link Statement SatsukiPink
-hi! link Conditional SatsukiPink
-hi! link Repeat SatsukiPink
-hi! link Label SatsukiPink
-hi! link Operator SatsukiPink
-hi! link Keyword SatsukiPink
-hi! link Exception SatsukiPink
+hi! link Statement SatsukiKeyword
+hi! link Conditional SatsukiKeyword
+hi! link Repeat SatsukiKeyword
+hi! link Label SatsukiKeyword
+hi! link Operator SatsukiKeyword
+hi! link Keyword SatsukiKeyword
+hi! link Exception SatsukiKeyword
 
-hi! link PreProc SatsukiPink
-hi! link Include SatsukiPink
-hi! link Define SatsukiPink
-hi! link Macro SatsukiPink
-hi! link PreCondit SatsukiPink
-hi! link StorageClass SatsukiPink
-hi! link Structure SatsukiPink
-hi! link Typedef SatsukiPink
+hi! link PreProc SatsukiKeyword
+hi! link Include SatsukiKeyword
+hi! link Define SatsukiKeyword
+hi! link Macro SatsukiKeyword
+hi! link PreCondit SatsukiKeyword
+hi! link StorageClass SatsukiKeyword
+hi! link Structure SatsukiKeyword
+hi! link Typedef SatsukiKeyword
 
-hi! link Type SatsukiCyanItalic
+hi! link Type SatsukiKeyColorItalic
 
 hi! link Delimiter SatsukiFg
 
-hi! link Special SatsukiPink
-hi! link SpecialComment SatsukiCyanItalic
-hi! link Tag SatsukiCyan
+hi! link Special SatsukiKeyword
+hi! link SpecialComment SatsukiKeyColorItalic
+hi! link Tag SatsukiKeyColor
 hi! link helpHyperTextJump SatsukiLink
-hi! link helpCommand SatsukiPurple
-hi! link helpExample SatsukiGreen
+hi! link helpCommand SatsukiConstants
+hi! link helpExample SatsukiClassName
 hi! link helpBacktick Special
 
 "}}}
