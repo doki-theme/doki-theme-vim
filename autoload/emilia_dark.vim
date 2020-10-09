@@ -16,10 +16,10 @@ let g:emilia_dark#palette.subtle    = ['#543466', 240]
 let g:emilia_dark#palette.key_color      = ['#a475ef', 141]
 let g:emilia_dark#palette.class_name     = ['#FF9CD6', 218]
 let g:emilia_dark#palette.parameter_color    = ['#FFB86C', 215]
-let g:emilia_dark#palette.keyword_color      = ['#bca3aa', 248]
+let g:emilia_dark#palette.keyword_color      = ['#E03FA4', 169]
 let g:emilia_dark#palette.constants_color    = ['#BD93F9', 141]
 let g:emilia_dark#palette.red       = ['#FF5555', 203]
-let g:emilia_dark#palette.string_color    = ['#f1fa8c', 228]
+let g:emilia_dark#palette.string_color    = ['#FDEFA2', 229]
 
 "
 " Terminal Colors

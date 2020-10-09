@@ -11,7 +11,7 @@ let g:megumin#palette.bgdarker  = ['#271c21', 234]
 
 let g:megumin#palette.comment   = ['#6272a4',  61]
 let g:megumin#palette.selection = ['#563036', 237]
-let g:megumin#palette.subtle    = ['#2c2228', 235]
+let g:megumin#palette.subtle    = ['#31262b', 235]
 
 let g:megumin#palette.key_color      = ['#AF5C5A', 131]
 let g:megumin#palette.class_name     = ['#dae838', 185]
