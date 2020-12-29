@@ -17,7 +17,7 @@ let g:mioda_ibuki_dark#palette.key_color      = ['#5ea7ff', 75]
 let g:mioda_ibuki_dark#palette.class_name     = ['#8daeef', 111]
 let g:mioda_ibuki_dark#palette.parameter_color    = ['#FFB86C', 215]
 let g:mioda_ibuki_dark#palette.keyword_color      = ['#8b8b8b', 245]
-let g:mioda_ibuki_dark#palette.constants_color    = ['#BD93F9', 141]
+let g:mioda_ibuki_dark#palette.constants_color    = ['#86dbfd', 117]
 let g:mioda_ibuki_dark#palette.red       = ['#FF5555', 203]
 let g:mioda_ibuki_dark#palette.string_color    = ['#f4fa8c', 228]
 

@@ -17,7 +17,7 @@ let g:hatsune_miku#palette.key_color      = ['#68f3e7', 86]
 let g:hatsune_miku#palette.class_name     = ['#8defe4', 122]
 let g:hatsune_miku#palette.parameter_color    = ['#FFB86C', 215]
 let g:hatsune_miku#palette.keyword_color      = ['#988F9A', 246]
-let g:hatsune_miku#palette.constants_color    = ['#BD93F9', 141]
+let g:hatsune_miku#palette.constants_color    = ['#86dbfd', 117]
 let g:hatsune_miku#palette.red       = ['#FF5555', 203]
 let g:hatsune_miku#palette.string_color    = ['#f4fa8c', 228]
 

@@ -17,7 +17,7 @@ let g:monika_dark#palette.key_color      = ['#bca3aa', 248]
 let g:monika_dark#palette.class_name     = ['#bca3aa', 248]
 let g:monika_dark#palette.parameter_color    = ['#FFB86C', 215]
 let g:monika_dark#palette.keyword_color      = ['#3eae5d', 71]
-let g:monika_dark#palette.constants_color    = ['#BD93F9', 141]
+let g:monika_dark#palette.constants_color    = ['#86dbfd', 117]
 let g:monika_dark#palette.red       = ['#FF5555', 203]
 let g:monika_dark#palette.string_color    = ['#f1fa8c', 228]
 

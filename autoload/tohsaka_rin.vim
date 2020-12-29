@@ -14,10 +14,10 @@ let g:tohsaka_rin#palette.selection = ['#391717', 234]
 let g:tohsaka_rin#palette.subtle    = ['#22191b', 234]
 
 let g:tohsaka_rin#palette.key_color      = ['#e0474b', 167]
-let g:tohsaka_rin#palette.class_name     = ['#4593f5', 69]
+let g:tohsaka_rin#palette.class_name     = ['#EFA554', 215]
 let g:tohsaka_rin#palette.parameter_color    = ['#FFB86C', 215]
 let g:tohsaka_rin#palette.keyword_color      = ['#666f71', 242]
-let g:tohsaka_rin#palette.constants_color    = ['#BD93F9', 141]
+let g:tohsaka_rin#palette.constants_color    = ['#86dbfd', 117]
 let g:tohsaka_rin#palette.red       = ['#FF5555', 203]
 let g:tohsaka_rin#palette.string_color    = ['#69e0f5', 81]
 

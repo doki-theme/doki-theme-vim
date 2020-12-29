@@ -17,7 +17,7 @@ let g:rias#palette.key_color      = ['#eea367', 215]
 let g:rias#palette.class_name     = ['#e03392', 168]
 let g:rias#palette.parameter_color    = ['#FFB86C', 215]
 let g:rias#palette.keyword_color      = ['#C04750', 131]
-let g:rias#palette.constants_color    = ['#BD93F9', 141]
+let g:rias#palette.constants_color    = ['#86dbfd', 117]
 let g:rias#palette.red       = ['#FF5555', 203]
 let g:rias#palette.string_color    = ['#9EB7D6', 146]
 

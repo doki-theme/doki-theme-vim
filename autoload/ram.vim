@@ -17,7 +17,7 @@ let g:ram#palette.key_color      = ['#F375C8', 212]
 let g:ram#palette.class_name     = ['#EF9FD8', 218]
 let g:ram#palette.parameter_color    = ['#FFB86C', 215]
 let g:ram#palette.keyword_color      = ['#988F9A', 246]
-let g:ram#palette.constants_color    = ['#BD93F9', 141]
+let g:ram#palette.constants_color    = ['#86dbfd', 117]
 let g:ram#palette.red       = ['#FF5555', 203]
 let g:ram#palette.string_color    = ['#f4fa8c', 228]
 

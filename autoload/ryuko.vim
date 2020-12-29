@@ -17,7 +17,7 @@ let g:ryuko#palette.key_color      = ['#C1B5C3', 250]
 let g:ryuko#palette.class_name     = ['#6893f3', 69]
 let g:ryuko#palette.parameter_color    = ['#FFB86C', 215]
 let g:ryuko#palette.keyword_color      = ['#e0474b', 167]
-let g:ryuko#palette.constants_color    = ['#BD93F9', 141]
+let g:ryuko#palette.constants_color    = ['#86dbfd', 117]
 let g:ryuko#palette.red       = ['#FF5555', 203]
 let g:ryuko#palette.string_color    = ['#efa554', 215]
 

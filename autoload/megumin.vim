@@ -17,7 +17,7 @@ let g:megumin#palette.key_color      = ['#AF5C5A', 131]
 let g:megumin#palette.class_name     = ['#dae838', 185]
 let g:megumin#palette.parameter_color    = ['#FFB86C', 215]
 let g:megumin#palette.keyword_color      = ['#a28a92', 246]
-let g:megumin#palette.constants_color    = ['#BD93F9', 141]
+let g:megumin#palette.constants_color    = ['#86dbfd', 117]
 let g:megumin#palette.red       = ['#FF5555', 203]
 let g:megumin#palette.string_color    = ['#ffd866', 221]
 

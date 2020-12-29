@@ -9,7 +9,7 @@ let g:emilia_dark#palette.bg        = ['#4e3162', 239]
 let g:emilia_dark#palette.bgdark    = ['#4e3162', 239]
 let g:emilia_dark#palette.bgdarker  = ['#4e3162', 239]
 
-let g:emilia_dark#palette.comment   = ['#6272a4',  61]
+let g:emilia_dark#palette.comment   = ['#8986A3',  103]
 let g:emilia_dark#palette.selection = ['#552a70', 53]
 let g:emilia_dark#palette.subtle    = ['#543466', 240]
 
@@ -17,7 +17,7 @@ let g:emilia_dark#palette.key_color      = ['#a475ef', 141]
 let g:emilia_dark#palette.class_name     = ['#FF9CD6', 218]
 let g:emilia_dark#palette.parameter_color    = ['#FFB86C', 215]
 let g:emilia_dark#palette.keyword_color      = ['#E03FA4', 169]
-let g:emilia_dark#palette.constants_color    = ['#BD93F9', 141]
+let g:emilia_dark#palette.constants_color    = ['#86dbfd', 117]
 let g:emilia_dark#palette.red       = ['#FF5555', 203]
 let g:emilia_dark#palette.string_color    = ['#FDEFA2', 229]
 

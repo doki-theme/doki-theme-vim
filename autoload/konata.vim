@@ -3,42 +3,42 @@
 let g:konata#palette           = {}
 let g:konata#palette.fg        = ['#f3edff', 255]
 
-let g:konata#palette.bglighter = ['#6192ee', 69]
-let g:konata#palette.bglight   = ['#6192ee', 69]
-let g:konata#palette.bg        = ['#6192ee', 69]
-let g:konata#palette.bgdark    = ['#6192ee', 69]
-let g:konata#palette.bgdarker  = ['#6192ee', 69]
+let g:konata#palette.bglighter = ['#334c7d', 60]
+let g:konata#palette.bglight   = ['#334c7d', 60]
+let g:konata#palette.bg        = ['#334c7d', 60]
+let g:konata#palette.bgdark    = ['#334c7d', 60]
+let g:konata#palette.bgdarker  = ['#334c7d', 60]
 
-let g:konata#palette.comment   = ['#6a737d',  243]
-let g:konata#palette.selection = ['#59a5b2', 73]
-let g:konata#palette.subtle    = ['#6c95ee', 69]
+let g:konata#palette.comment   = ['#B0C0FC',  147]
+let g:konata#palette.selection = ['#3a6c75', 242]
+let g:konata#palette.subtle    = ['#3d5d96', 60]
 
-let g:konata#palette.key_color      = ['#fffdae', 229]
-let g:konata#palette.class_name     = ['#DABDFB', 183]
-let g:konata#palette.parameter_color    = ['#4bcf4c', 77]
-let g:konata#palette.keyword_color      = ['#fad7e1', 224]
-let g:konata#palette.constants_color    = ['#F3C49C', 223]
+let g:konata#palette.key_color      = ['#fffd9b', 228]
+let g:konata#palette.class_name     = ['#cda8fa', 183]
+let g:konata#palette.parameter_color    = ['#FFB86C', 215]
+let g:konata#palette.keyword_color      = ['#ffc9d7', 224]
+let g:konata#palette.constants_color    = ['#f6be8b', 216]
 let g:konata#palette.red       = ['#FF5555', 203]
-let g:konata#palette.string_color    = ['#FFB6EE', 219]
+let g:konata#palette.string_color    = ['#fc9ee6', 218]
 
 "
 " Terminal Colors
 "
 let g:konata#palette.color_0  = '#21222C'
-let g:konata#palette.color_1  = '#FFB9D6'
-let g:konata#palette.color_2  = '#72E591'
+let g:konata#palette.color_1  = '#FF7AB2'
+let g:konata#palette.color_2  = '#54ea7c'
 let g:konata#palette.color_3  = '#F1FA8C'
-let g:konata#palette.color_4  = '#DABDFB'
-let g:konata#palette.color_5  = '#F79B9E'
-let g:konata#palette.color_6  = '#75D7EC'
+let g:konata#palette.color_4  = '#B39AFF'
+let g:konata#palette.color_5  = '#FF91BF'
+let g:konata#palette.color_6  = '#6DD6EE'
 let g:konata#palette.color_7  = '#F8F8F2'
 let g:konata#palette.color_8  = '#6272A4'
-let g:konata#palette.color_9  = '#FFB9D6'
-let g:konata#palette.color_10 = '#72E591'
-let g:konata#palette.color_11 = '#ffb760'
-let g:konata#palette.color_12 = '#DABDFB'
-let g:konata#palette.color_13 = '#F79B9E'
-let g:konata#palette.color_14 = '#75D7EC'
+let g:konata#palette.color_9  = '#FF7AB2'
+let g:konata#palette.color_10 = '#54ea7c'
+let g:konata#palette.color_11 = '#fdaa39'
+let g:konata#palette.color_12 = '#B39AFF'
+let g:konata#palette.color_13 = '#FF91BF'
+let g:konata#palette.color_14 = '#6DD6EE'
 let g:konata#palette.color_15 = '#FFFFFF'
 
 " }}}

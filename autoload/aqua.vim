@@ -17,7 +17,7 @@ let g:aqua#palette.key_color      = ['#6893f3', 69]
 let g:aqua#palette.class_name     = ['#8dc6ef', 117]
 let g:aqua#palette.parameter_color    = ['#FFB86C', 215]
 let g:aqua#palette.keyword_color      = ['#988F9A', 246]
-let g:aqua#palette.constants_color    = ['#BD93F9', 141]
+let g:aqua#palette.constants_color    = ['#86dbfd', 117]
 let g:aqua#palette.red       = ['#FF5555', 203]
 let g:aqua#palette.string_color    = ['#f4fa8c', 228]
 

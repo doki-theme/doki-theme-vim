@@ -17,7 +17,7 @@ let g:kanna#palette.key_color      = ['#FF357C', 204]
 let g:kanna#palette.class_name     = ['#6AADFF', 75]
 let g:kanna#palette.parameter_color    = ['#FFB86C', 215]
 let g:kanna#palette.keyword_color      = ['#d285fd', 177]
-let g:kanna#palette.constants_color    = ['#BD93F9', 141]
+let g:kanna#palette.constants_color    = ['#86dbfd', 117]
 let g:kanna#palette.red       = ['#FF5555', 203]
 let g:kanna#palette.string_color    = ['#FAF7BA', 229]
 
