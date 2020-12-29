@@ -17,7 +17,7 @@ let g:natsuki_dark#palette.key_color      = ['#FF9CD6', 218]
 let g:natsuki_dark#palette.class_name     = ['#FF9CD6', 218]
 let g:natsuki_dark#palette.parameter_color    = ['#FFB86C', 215]
 let g:natsuki_dark#palette.keyword_color      = ['#bca3aa', 248]
-let g:natsuki_dark#palette.constants_color    = ['#BD93F9', 141]
+let g:natsuki_dark#palette.constants_color    = ['#86dbfd', 117]
 let g:natsuki_dark#palette.red       = ['#FF5555', 203]
 let g:natsuki_dark#palette.string_color    = ['#f1fa8c', 228]
 

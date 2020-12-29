@@ -17,7 +17,7 @@ let g:darkness_dark#palette.key_color      = ['#3492b1', 67]
 let g:darkness_dark#palette.class_name     = ['#d53a4a', 167]
 let g:darkness_dark#palette.parameter_color    = ['#FFB86C', 215]
 let g:darkness_dark#palette.keyword_color      = ['#ffba2f', 214]
-let g:darkness_dark#palette.constants_color    = ['#BD93F9', 141]
+let g:darkness_dark#palette.constants_color    = ['#86dbfd', 117]
 let g:darkness_dark#palette.red       = ['#FF5555', 203]
 let g:darkness_dark#palette.string_color    = ['#4593f5', 69]
 
