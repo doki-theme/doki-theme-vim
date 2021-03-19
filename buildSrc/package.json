@@ -12,6 +12,7 @@
     "@types/jest": "^26.0.0",
     "@types/lodash": "^4.14.155",
     "copy-webpack-plugin": "^6.0.2",
+    "doki-build-source": "1.0.0",
     "jest": "^26.0.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.1.0",
