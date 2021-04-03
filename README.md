@@ -1,7 +1,7 @@
 Doki Theme VIM
 ---
 
-![Rem's Theme w/ hyper](./assets/screenshots/rem_code.png)
+![Maika's theme w/ hyper](https://user-images.githubusercontent.com/15972415/113490929-ddaa6580-9492-11eb-94f1-11f295f3ff87.png)
 
 These VIM color themes will complement your [Doki Theme for Hyper themes](https://github.com/doki-theme/doki-theme-hyper) very well.
 Go for the full Otaku terminal experience!
