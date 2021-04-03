@@ -15,7 +15,7 @@ const path = require('path');
 
 const {
   repoDirectory,
-  templateDirectoryPath,
+  appTemplatesDirectoryPath,
 } = resolvePaths(__dirname);
 
 const fs = require('fs');
@@ -30,7 +30,7 @@ const autoLoadDirectoryPath =
   path.resolve(repoDirectory, 'autoload');
 
 function constructVimName(dokiTheme: MasterDokiThemeDefinition) {
-  return dokiTheme.name.replace(/ /g, '_').toLowerCase();
+  return getName(dokiTheme).replace(/ /g, '_').toLowerCase();
 }
 
 function buildVimColorScript(
@@ -99,7 +99,7 @@ function evaluateTemplate(
     dokiThemeDefinition, dokiTemplateDefinitions,
   );
   const themeName = constructVimName(dokiThemeDefinition);
-  const themeProperName = dokiThemeDefinition.name.split(" ")
+  const themeProperName = getName(dokiThemeDefinition).split(" ")
     .map(part => capitalize(part))
     .join('')
 
@@ -114,7 +114,7 @@ function evaluateTemplate(
       resolveTemplateVariable
     );
   } catch (e) {
-    throw Error(`Unable to evaluate ${dokiThemeDefinition.name}'s template for raisins: ${e.message}.`);
+    throw Error(`Unable to evaluate ${getName(dokiThemeDefinition)}'s template for raisins: ${e.message}.`);
   }
 }
 
@@ -141,6 +141,10 @@ function findClosestX256Color(hexColor: string): string {
     distance: Number.MAX_VALUE
   });
   return closest.closest.ctermfg.toString();
+}
+
+function getName(dokiDefinition: MasterDokiThemeDefinition) {
+  return dokiDefinition.name.replace(':', '');
 }
 
 const x256Delimiter = '$x256';
@@ -206,28 +210,28 @@ function createDokiTheme(
       )
     };
   } catch (e) {
-    throw new Error(`Unable to build ${dokiThemeDefinition.name}'s theme for reasons ${e}`);
+    throw new Error(`Unable to build ${getName(dokiThemeDefinition)}'s theme for reasons ${e}`);
   }
 }
 
 console.log('Preparing to generate themes.');
 
-walkDir(path.resolve(templateDirectoryPath, 'syntax'))
+walkDir(path.resolve(appTemplatesDirectoryPath, 'syntax'))
   .then(vimSyntaxPaths => {
     const autoloadTemplate = fs.readFileSync(path.resolve(
-      templateDirectoryPath,
+      appTemplatesDirectoryPath,
       'doki-theme.autoload.template.vim'
     ), {
       encoding: 'utf-8',
     });
     const colorsTemplate = fs.readFileSync(path.resolve(
-      templateDirectoryPath,
+      appTemplatesDirectoryPath,
       'doki-theme.colors.template.vim',
     ), {
       encoding: 'utf-8'
     });
     const afterTemplate = fs.readFileSync(path.resolve(
-      templateDirectoryPath,
+      appTemplatesDirectoryPath,
       'doki-theme.after.plugin.template.vim',
     ), {
       encoding: 'utf-8'
@@ -249,12 +253,13 @@ walkDir(path.resolve(templateDirectoryPath, 'syntax'))
   (
     dokiFileDefinitionPath,
     dokiThemeDefinition,
-    dokiTemplateDefinitions,
-    dokiThemeAppDefinition
+    _,
+    dokiThemeAppDefinition,
+    appTemplateDefinitions,
   ) => createDokiTheme(
     dokiFileDefinitionPath,
     dokiThemeDefinition,
-    dokiTemplateDefinitions,
+    appTemplateDefinitions,
     dokiThemeAppDefinition,
     vimTemplates
   )
