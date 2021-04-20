@@ -1841,6 +1841,11 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
+doki-build-source@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/doki-build-source/-/doki-build-source-1.0.0.tgz#8182d0a66ee482f2de64150d6b5478d39fdf514a"
+  integrity sha512-4I82gang4fGNA+3RnX/Vn2Jnoi5EupAkpSHiMRRywYU0GQjvgYsFrQpfihdV8aL0u91DdR+PZ+QEVClSqvJG3w==
+
 domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
@@ -4754,9 +4759,9 @@ sshpk@^1.7.0:
     tweetnacl "~0.14.0"
 
 ssri@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
-  integrity sha512-3Wge10hNcT1Kur4PDFwEieXSCMCJs/7WvSACcrMYrNp+b8kDL1/0wJch5Ni2WrtwEa2IO8OsVfeKIciKCDx/QA==
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.2.tgz#157939134f20464e7301ddba3e90ffa8f7728ac5"
+  integrity sha512-cepbSq/neFK7xB6A50KHN0xHDotYzq58wWCa5LeWqnPrHG8GzfEjO/4O8kpmcGW+oaxkvhEJCWgbgNk4/ZV93Q==
   dependencies:
     figgy-pudding "^3.5.1"
 
