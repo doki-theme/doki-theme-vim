@@ -10,7 +10,7 @@ let g:mai_light#palette.bgdark    = ['#fbf3f2', 255]
 let g:mai_light#palette.bgdarker  = ['#fbf3f2', 255]
 
 let g:mai_light#palette.comment   = ['#64757d',  243]
-let g:mai_light#palette.selection = ['#a0a5d2', 146]
+let g:mai_light#palette.selection = ['#b1b0d2', 146]
 let g:mai_light#palette.subtle    = ['#f1ecf2', 255]
 
 let g:mai_light#palette.key_color      = ['#C869A3', 169]

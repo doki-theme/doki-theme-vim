@@ -9,17 +9,17 @@ let g:hatsune_miku#palette.bg        = ['#293030', 236]
 let g:hatsune_miku#palette.bgdark    = ['#293030', 236]
 let g:hatsune_miku#palette.bgdarker  = ['#293030', 236]
 
-let g:hatsune_miku#palette.comment   = ['#6272a4',  61]
+let g:hatsune_miku#palette.comment   = ['#67807b',  66]
 let g:hatsune_miku#palette.selection = ['#4c7a76', 243]
 let g:hatsune_miku#palette.subtle    = ['#313938', 237]
 
 let g:hatsune_miku#palette.key_color      = ['#68f3e7', 86]
-let g:hatsune_miku#palette.class_name     = ['#8defe4', 122]
+let g:hatsune_miku#palette.class_name     = ['#aae2f2', 153]
 let g:hatsune_miku#palette.parameter_color    = ['#FFB86C', 215]
 let g:hatsune_miku#palette.keyword_color      = ['#988F9A', 246]
 let g:hatsune_miku#palette.constants_color    = ['#86dbfd', 117]
 let g:hatsune_miku#palette.red       = ['#FF5555', 203]
-let g:hatsune_miku#palette.string_color    = ['#f4fa8c', 228]
+let g:hatsune_miku#palette.string_color    = ['#F6E9CB', 224]
 
 "
 " Terminal Colors
