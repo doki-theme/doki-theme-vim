@@ -13,7 +13,7 @@ let g:ishtar_dark#palette.comment   = ['#6272a4',  61]
 let g:ishtar_dark#palette.selection = ['#553919', 237]
 let g:ishtar_dark#palette.subtle    = ['#1A1913', 234]
 
-let g:ishtar_dark#palette.key_color      = ['#0f6ab7', 25]
+let g:ishtar_dark#palette.key_color      = ['#357fbf', 67]
 let g:ishtar_dark#palette.class_name     = ['#7C7C82', 244]
 let g:ishtar_dark#palette.parameter_color    = ['#FFB86C', 215]
 let g:ishtar_dark#palette.keyword_color      = ['#db974d', 173]

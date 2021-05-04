@@ -19,7 +19,7 @@ let g:monika_light#palette.parameter_color    = ['#388E3C', 65]
 let g:monika_light#palette.keyword_color      = ['#3eae5d', 71]
 let g:monika_light#palette.constants_color    = ['#4C94D6', 68]
 let g:monika_light#palette.red       = ['#FF5555', 203]
-let g:monika_light#palette.string_color    = ['#EC9130', 209]
+let g:monika_light#palette.string_color    = ['#da832e', 172]
 
 "
 " Terminal Colors
