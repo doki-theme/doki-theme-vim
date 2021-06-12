@@ -3,6 +3,8 @@ Changelog
 
 # 9.0.0 [Hanekawa, Shima Rin, Nagatoro, Yumeko, & Yuno]
 
+## 5 New Themes!
+
 From the Monogatari series:
 
 - Hanekawa Tsubasa (Dark)
