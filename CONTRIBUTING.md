@@ -112,7 +112,7 @@ the Doki Theme Suite.
 
 ### Vim specifics
 
-There are a _whole bunch_ of templates that compose the assets of this plugin.
+There are a _bunch_ of templates that compose the assets of this plugin.
 
 They can be found in `buildSrc/assets/templates`
 
@@ -123,7 +123,7 @@ directory:
 yarn buildThemes
 ```
 
-All of these templates will be evaluated for each theme and be placed in the corresponding directiosers. That way when
+All of these templates will be evaluated for each theme and be placed in the corresponding directories. That way when
 you open a new vim session, you should be able to see the new changes.
 
 # Creating New Themes
