@@ -128,7 +128,7 @@ you open a new vim session, you should be able to see the new changes.
 
 # Creating New Themes
 
-**IMPORTANT**! Do _not_ create brand new Doki-Themes using the Vim. New themes should be created from the original
+**IMPORTANT**! Do _not_ create brand new Doki-Themes using the Vim Plugin. New themes should be created from the original
 JetBrains plugin which uses all the colors defined. There is also Doki Theme creation assistance provided by the IDE as
 well.
 
