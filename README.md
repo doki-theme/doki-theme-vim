@@ -52,6 +52,13 @@ colorscheme rem
     ![Color Schemes](./assets/screenshots/color_schemes.png)
 
 
+
+## Contributing
+
+If you want to get your workstation set up to work on the plugin,
+then you'll want to check out the [CONTRIBUTING.md](./CONTRIBUTING.md) for instructions on what is needed.
+
+
 ### Acknowledgments
 
 Big thanks to the [Vim for Dracula](https://github.com/dracula/vim.git) for being the base for this plugin!
