@@ -9,7 +9,7 @@ let g:tohsaka_rin#palette.bg        = ['#191718', 234]
 let g:tohsaka_rin#palette.bgdark    = ['#191718', 234]
 let g:tohsaka_rin#palette.bgdarker  = ['#191718', 234]
 
-let g:tohsaka_rin#palette.comment   = ['#6272a4',  61]
+let g:tohsaka_rin#palette.comment   = ['#4c8484',  66]
 let g:tohsaka_rin#palette.selection = ['#391717', 234]
 let g:tohsaka_rin#palette.subtle    = ['#22191b', 234]
 
