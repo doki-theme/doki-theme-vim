@@ -10,7 +10,7 @@ let g:sonoda_umi#palette.bgdark    = ['#15173e', 234]
 let g:sonoda_umi#palette.bgdarker  = ['#15173e', 234]
 
 let g:sonoda_umi#palette.comment   = ['#6272a4',  61]
-let g:sonoda_umi#palette.selection = ['#23264f', 235]
+let g:sonoda_umi#palette.selection = ['#272A59', 235]
 let g:sonoda_umi#palette.subtle    = ['#181A46', 234]
 
 let g:sonoda_umi#palette.key_color      = ['#BD84DD', 140]

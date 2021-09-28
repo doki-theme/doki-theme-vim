@@ -9,7 +9,7 @@ let g:katsuragi_misato#palette.bg        = ['#3a2333', 236]
 let g:katsuragi_misato#palette.bgdark    = ['#3a2333', 236]
 let g:katsuragi_misato#palette.bgdarker  = ['#3a2333', 236]
 
-let g:katsuragi_misato#palette.comment   = ['#6272a4',  61]
+let g:katsuragi_misato#palette.comment   = ['#786598',  96]
 let g:katsuragi_misato#palette.selection = ['#8a2b4d', 89]
 let g:katsuragi_misato#palette.subtle    = ['#402d41', 237]
 
