@@ -1,6 +1,14 @@
 Changelog
 ---
 
+# 13.0.0 [Jahy-sama will not be discouraged!]
+
+**1 New Theme!**
+
+Featuring the Dark World's Second in Command: Jahy!
+
+![v21 Girl](https://doki.assets.unthrottled.io/misc/v21_girl.png)
+
 # 12.0.0 [KillLaKill Alt. Themes & Only for Onii-Chan]
 
 ## KillLaKill Alt. Themes
