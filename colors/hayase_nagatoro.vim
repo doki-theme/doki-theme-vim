@@ -76,6 +76,14 @@ endfunction
 
 let s:colors = hayase_nagatoro#GetColors() " Autoloaded from the specific color theme
 
-call s:h("Comment", { "fg": s:colors.comments, "gui": "italic", "cterm": "italic" }) " any comment
-call s:h("String", {"fg": s:colors.stringColor}) " any string guy
+" Global colors
+call s:h("Comment", { "fg": s:colors.comments, "gui": "italic", "cterm": "italic" })
+call s:h("String", {"fg": s:colors.stringColor})
+call s:h("Constant", {"fg": s:colors.constantColor})
+call s:h("Constant", {"fg": s:colors.constantColor})
+
+call s:h("htmlTagN", { "fg": s:colors.foregroundColorEditor})
+
+" Referencable colors for other syntax stuffs
+call s:h("ForegroundColorEditor", { "fg": s:colors.foregroundColorEditor})
 
