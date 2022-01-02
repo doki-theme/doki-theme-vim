@@ -196,18 +196,20 @@ function createDokiTheme(
         dokiThemeVimDefinition,
         vimTemplates.colorsTemplate,
       ),
-      afterTemplate: buildVimAfterScript(
-        dokiThemeDefinition,
-        dokiTemplateDefinitions,
-        dokiThemeVimDefinition,
-        vimTemplates.afterTemplate,
-      ),
-      afterSyntaxTemplates: buildVimSyntaxScript(
-        dokiThemeDefinition,
-        dokiTemplateDefinitions,
-        dokiThemeVimDefinition,
-        vimTemplates.afterSyntaxTemplates,
-      )
+      afterTemplate: '',
+      // afterTemplate: buildVimAfterScript(
+      //   dokiThemeDefinition,
+      //   dokiTemplateDefinitions,
+      //   dokiThemeVimDefinition,
+      //   vimTemplates.afterTemplate,
+      // ),
+      afterSyntaxTemplates: [],
+      // afterSyntaxTemplates: buildVimSyntaxScript(
+      //   dokiThemeDefinition,
+      //   dokiTemplateDefinitions,
+      //   dokiThemeVimDefinition,
+      //   vimTemplates.afterSyntaxTemplates,
+      // )
     };
   } catch (e) {
     throw new Error(`Unable to build ${getName(dokiThemeDefinition)}'s theme for reasons ${e}`);
@@ -220,13 +222,13 @@ walkDir(path.resolve(appTemplatesDirectoryPath, 'syntax'))
   .then(vimSyntaxPaths => {
     const autoloadTemplate = fs.readFileSync(path.resolve(
       appTemplatesDirectoryPath,
-      'doki-theme.autoload.template.vim'
+      'doki-theme.v2.autoload.template.vim'
     ), {
       encoding: 'utf-8',
     });
     const colorsTemplate = fs.readFileSync(path.resolve(
       appTemplatesDirectoryPath,
-      'doki-theme.colors.template.vim',
+      'doki-theme.v2.colors.template.vim',
     ), {
       encoding: 'utf-8'
     });
@@ -275,14 +277,14 @@ walkDir(path.resolve(appTemplatesDirectoryPath, 'syntax'))
       fs.writeFileSync(path.resolve(colorDirectoryPath, dokiThemeVimScriptName), dokiTheme.colorsTemplate);
 
       // write Vim after plugin Script
-      fs.writeFileSync(path.resolve(afterDirectoryPath, 'plugin', dokiThemeVimScriptName), dokiTheme.afterTemplate);
+      // fs.writeFileSync(path.resolve(afterDirectoryPath, 'plugin', dokiThemeVimScriptName), dokiTheme.afterTemplate);
 
       // write Vim Syntax Highlighting things
-      dokiTheme.afterSyntaxTemplates.forEach(({
-                                                fileName, fileContents
-                                              }) => {
-        fs.writeFileSync(path.resolve(afterDirectoryPath, 'syntax', `${vimName}_${fileName}`), fileContents);
-      });
+      // dokiTheme.afterSyntaxTemplates.forEach(({
+      //                                           fileName, fileContents
+      //                                         }) => {
+      //   fs.writeFileSync(path.resolve(afterDirectoryPath, 'syntax', `${vimName}_${fileName}`), fileContents);
+      // });
 
       // write Vim Auto load Script
       fs.writeFileSync(path.resolve(autoLoadDirectoryPath, dokiThemeVimScriptName), dokiTheme.autoloadTemplate);
