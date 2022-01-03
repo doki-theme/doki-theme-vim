@@ -12,6 +12,8 @@ let s:colors = {
       \ "errorColor": { "gui": "#ff2525", "cterm": "196", "cterm16": "1" },
       \ "headerColor": { "gui": "#121e1c", "cterm": "234", "cterm16": "1" },
       \ "accentColor": { "gui": "#6cb3b5", "cterm": "73", "cterm16": "1" },
+      \ "infoForeground": { "gui": "#b0a17f", "cterm": "144", "cterm16": "1" },
+      \ "unusedColor": { "gui": "#545c5b", "cterm": "240", "cterm16": "1" },
       \ "caretRow": { "gui": "#221f28", "cterm": "235", "cterm16": "1" },
       \ "lineNumberColor": { "gui": "#657978", "cterm": "243", "cterm16": "1" },
       \ "lightEditorColor": { "gui": "#182826", "cterm": "235", "cterm16": "1" },

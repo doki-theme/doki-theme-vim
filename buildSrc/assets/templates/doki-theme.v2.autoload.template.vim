@@ -13,6 +13,7 @@ let s:colors = {
       \ "headerColor": { "gui": "{{headerColor}}", "cterm": "{{headerColor$x256}}", "cterm16": "1" },
       \ "accentColor": { "gui": "{{accentColor}}", "cterm": "{{accentColor$x256}}", "cterm16": "1" },
       \ "infoForeground": { "gui": "{{infoForeground}}", "cterm": "{{infoForeground$x256}}", "cterm16": "1" },
+      \ "unusedColor": { "gui": "{{unusedColor}}", "cterm": "{{unusedColor$x256}}", "cterm16": "1" },
       \ "caretRow": { "gui": "{{caretRow}}", "cterm": "{{caretRow$x256}}", "cterm16": "1" },
       \ "lineNumberColor": { "gui": "{{lineNumberColor}}", "cterm": "{{lineNumberColor$x256}}", "cterm16": "1" },
       \ "lightEditorColor": { "gui": "{{lightEditorColor}}", "cterm": "{{lightEditorColor$x256}}", "cterm16": "1" },
