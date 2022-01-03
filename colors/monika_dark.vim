@@ -263,8 +263,49 @@ call s:h("cssAtKeyword", { "fg": s:colors.keywordColor})
 call s:h("cssProp", { "fg": s:colors.keyColor})
 call s:h("cssPseudoClassId", { "fg": s:colors.stringColor})
 
+" Neovim-Specific Highlighting 
 
-" Referencable colors for other syntax stuffs
-call s:h("ForegroundColorEditor", { "fg": s:colors.foregroundColorEditor})
-call s:h("HtmlTagColor", { "fg": s:colors.htmlTagColor})
+if has("nvim")
+  " Neovim terminal colors 
+  "let g:terminal_color_0 =  s:black.gui
+  let g:terminal_color_1 =  s:colors.terminalAnsiMagenta.gui
+  let g:terminal_color_2 =  s:colors.terminalAnsiGreen.gui
+  let g:terminal_color_3 =  s:colors.terminalAnsiYellow.gui
+  let g:terminal_color_4 =  s:colors.terminalAnsiGreen.gui
+  let g:terminal_color_5 =  s:colors.terminalAnsiBlue.gui
+  let g:terminal_color_6 =  s:colors.terminalAnsiCyan.gui
+  "let g:terminal_color_7 =  s:white.gui
+ " let g:terminal_color_8 =  s:visual_grey.gui
+ " let g:terminal_color_9 =  s:dark_red.gui
+  let g:terminal_color_10 = s:colors.terminalAnsiGreen.gui " No dark version
+  let g:terminal_color_11 = s:colors.terminalAnsiYellow.gui
+  let g:terminal_color_12 = s:colors.terminalAnsiBlue.gui " No dark version
+  let g:terminal_color_13 = s:colors.terminalAnsiBlue.gui " No dark version
+  let g:terminal_color_14 = s:colors.terminalAnsiCyan.gui " No dark version
+  let g:terminal_color_15 = s:colors.comments.gui
+  let g:terminal_color_background = s:colors.textEditorBackground.gui
+  let g:terminal_color_foreground = s:colors.foregroundColorEditor.gui
+  " }}}
 
+  " Neovim Diagnostics 
+  call s:h("DiagnosticError", { "fg": s:colors.errorColor })
+  call s:h("DiagnosticWarn", { "fg": s:colors.terminalAnsiYellow })
+  call s:h("DiagnosticInfo", { "fg": s:colors.infoForeground })
+  call s:h("DiagnosticHint", { "fg": s:colors.terminalAnsiCyan })
+  call s:h("DiagnosticUnderlineError", { "fg": s:colors.errorColor, "gui": "underline", "cterm": "underline" })
+  call s:h("DiagnosticUnderlineWarn", { "fg": s:colors.terminalAnsiYellow, "gui": "underline", "cterm": "underline" })
+  call s:h("DiagnosticUnderlineInfo", { "fg": s:colors.terminalAnsiBlue, "gui": "underline", "cterm": "underline" })
+  call s:h("DiagnosticUnderlineHint", { "fg": s:colors.terminalAnsiCyan, "gui": "underline", "cterm": "underline" })
+  " }}}
+
+  " Neovim LSP (for versions < 0.5.1) 
+  hi link LspDiagnosticsDefaultError DiagnosticError
+  hi link LspDiagnosticsDefaultWarning DiagnosticWarn
+  hi link LspDiagnosticsDefaultInformation DiagnosticInfo
+  hi link LspDiagnosticsDefaultHint DiagnosticHint
+  hi link LspDiagnosticsUnderlineError DiagnosticUnderlineError
+  hi link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
+  hi link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
+  hi link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
+  " }}}
+endif
