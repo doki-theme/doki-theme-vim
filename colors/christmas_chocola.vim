@@ -86,6 +86,8 @@ call s:h("Underlined", {"fg": s:colors.keyColor})
 call s:h("StorageClass", {"fg": s:colors.keywordColor})
 call s:h("Keyword", {"fg": s:colors.keywordColor})
 call s:h("Statement", {"fg": s:colors.keywordColor})
+call s:h("SpecialChar", {"fg": s:colors.keyColor})
+call s:h("SpecialComment", {"fg": s:colors.keyColor})
 call s:h("Operator", {"fg": s:colors.htmlTagColor})
 call s:h("foldBraces", {"fg": s:colors.foregroundColorEditor})
 
@@ -137,6 +139,13 @@ call s:h("typescriptGlobalObjects", { "fg": s:colors.classNameColor})
 call s:h("typescriptDocTags", { "fg": s:colors.keyColor})
 call s:h("typescriptDocParam", { "fg": s:colors.stringColor})
 call s:h("typescriptIdentifier", { "fg": s:colors.keywordColor})
+
+" Java
+call s:h("javaExternal", { "fg": s:colors.keywordColor})
+call s:h("javaAnnotation", { "fg": s:colors.editorAccentColor})
+call s:h("javaParen", { "fg": s:colors.foregroundColorEditor})
+call s:h("javaDocTags", { "fg": s:colors.keyColor})
+call s:h("javaDocParam", { "fg": s:colors.stringColor})
 
 
 " Referencable colors for other syntax stuffs
