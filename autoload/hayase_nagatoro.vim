@@ -10,6 +10,8 @@ let s:colors = {
       \ "keywordColor": { "gui": "#6d7fd4", "cterm": "68", "cterm16": "1" },
       \ "keyColor": { "gui": "#5cd7d7", "cterm": "80", "cterm16": "1" },
       \ "errorColor": { "gui": "#ff2525", "cterm": "196", "cterm16": "1" },
+      \ "headerColor": { "gui": "#1a1a1a", "cterm": "234", "cterm16": "1" },
+      \ "accentColor": { "gui": "#d2824e", "cterm": "173", "cterm16": "1" },
       \ "caretRow": { "gui": "#1f1f1f", "cterm": "234", "cterm16": "1" },
       \ "lineNumberColor": { "gui": "#5d5550", "cterm": "240", "cterm16": "1" },
       \ "lightEditorColor": { "gui": "#1b1b1b", "cterm": "234", "cterm16": "1" },
