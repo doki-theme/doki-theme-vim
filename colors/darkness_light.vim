@@ -83,6 +83,10 @@ call s:h("Constant", {"fg": s:colors.constantColor})
 call s:h("Identifier", {"fg": s:colors.foregroundColorEditor})
 call s:h("Function", {"fg": s:colors.classNameColor})
 call s:h("Underlined", {"fg": s:colors.keyColor})
+call s:h("StorageClass", {"fg": s:colors.keywordColor})
+call s:h("Keyword", {"fg": s:colors.keywordColor})
+call s:h("Statement", {"fg": s:colors.keywordColor})
+call s:h("Operator", {"fg": s:colors.htmlTagColor})
 
 " HTML Colors
 call s:h("htmlTagName", { "fg": s:colors.htmlTagColor})
@@ -104,12 +108,24 @@ call s:h("htmlH6", { "fg": s:colors.stringColor })
 call s:h("htmlLink", { "fg": s:colors.keyColor })
 call s:h("htmlSpecialChar", { "fg": s:colors.keywordColor})
 
-" Java script
+" Javascript
 call s:h("jsFuncCall", { "fg": s:colors.editorAccentColor})
+call s:h("jsDecoratorFunction", { "fg": s:colors.editorAccentColor})
+call s:h("jsDecorator", { "fg": s:colors.editorAccentColor})
+call s:h("jsRegexpString", { "fg": s:colors.editorAccentColor})
+call s:h("jsStorageClass", { "fg": s:colors.keywordColor})
+call s:h("jsThis", { "fg": s:colors.keywordColor})
+call s:h("jsOperatorKeyword", { "fg": s:colors.keywordColor})
+call s:h("jsVariableDef", { "fg": s:colors.foregroundColorEditor})
+call s:h("jsFuncBlock", { "fg": s:colors.foregroundColorEditor})
+call s:h("jsParens", { "fg": s:colors.foregroundColorEditor})
+call s:h("jsBrackets", { "fg": s:colors.foregroundColorEditor})
 call s:h("jsGlobalObjects", { "fg": s:colors.constantColor})
 call s:h("jsArrowFunction", { "fg": s:colors.htmlTagColor})
 call s:h("jsFunctionArgs", { "fg": s:colors.stringColor})
+call s:h("jsFuncArgs", { "fg": s:colors.stringColor})
 call s:h("jsObjectProp", { "fg": s:colors.foregroundColorEditor, "gui": "bold", "cterm": "bold"})
+call s:h("jsObjectKey", { "fg": s:colors.foregroundColorEditor, "gui": "bold", "cterm": "bold"})
 
 
 " Referencable colors for other syntax stuffs
