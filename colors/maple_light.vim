@@ -136,6 +136,17 @@ call s:h("jsFuncArgs", { "fg": s:colors.stringColor})
 call s:h("jsObjectProp", { "fg": s:colors.foregroundColorEditor, "gui": "bold", "cterm": "bold"})
 call s:h("jsObjectKey", { "fg": s:colors.foregroundColorEditor, "gui": "bold", "cterm": "bold"})
 
+" JSON
+call s:h("jsObjectKey", { "fg": s:colors.foregroundColorEditor, "gui": "bold", "cterm": "bold"})
+call s:h("jsonKeyword", { "fg": s:colors.foregroundColorEditor})
+call s:h("jsonQuote", { "fg": s:colors.foregroundColorEditor})
+call s:h("jsonBraces", { "fg": s:colors.foregroundColorEditor})
+call s:h("jsonNull", { "fg": s:colors.keywordColor})
+call s:h("jsonBoolean", { "fg": s:colors.keywordColor})
+call s:h("jsonStringMatch", { "fg": s:colors.stringColor})
+
+
+
 " Typescript
 call s:h("typescriptBraces", { "fg": s:colors.foregroundColorEditor})
 call s:h("typescriptEndColons", { "fg": s:colors.foregroundColorEditor})
