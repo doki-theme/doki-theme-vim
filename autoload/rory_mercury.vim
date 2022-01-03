@@ -10,6 +10,14 @@ let s:colors = {
       \ "keywordColor": { "gui": "#e0474b", "cterm": "167", "cterm16": "1" },
       \ "keyColor": { "gui": "#6b7476", "cterm": "243", "cterm16": "1" },
       \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
+      \ "caretRow": { "gui": "#1a1a1d", "cterm": "234", "cterm16": "1" },
+      \ "lineNumberColor": { "gui": "#796666", "cterm": "242", "cterm16": "1" },
+      \ "lightEditorColor": { "gui": "#18181b", "cterm": "234", "cterm16": "1" },
+      \ "searchForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
+      \ "searchBackground": { "gui": "#265579", "cterm": "24", "cterm16": "1" },
+      \ "selectionForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
+      \ "selectionBackground": { "gui": "#391717", "cterm": "234", "cterm16": "1" },
+      \ "foldedTextBackground": { "gui": "#191813", "cterm": "233", "cterm16": "1" },
       \ "stringColor": { "gui": "#4593f5", "cterm": "69", "cterm16": "1" }
       \}
 

@@ -10,6 +10,14 @@ let s:colors = {
       \ "keywordColor": { "gui": "{{keywordColor}}", "cterm": "{{keywordColor$x256}}", "cterm16": "1" },
       \ "keyColor": { "gui": "{{keyColor}}", "cterm": "{{keyColor$x256}}", "cterm16": "1" },
       \ "errorColor": { "gui": "{{errorColor}}", "cterm": "{{errorColor$x256}}", "cterm16": "1" },
+      \ "caretRow": { "gui": "{{caretRow}}", "cterm": "{{caretRow$x256}}", "cterm16": "1" },
+      \ "lineNumberColor": { "gui": "{{lineNumberColor}}", "cterm": "{{lineNumberColor$x256}}", "cterm16": "1" },
+      \ "lightEditorColor": { "gui": "{{lightEditorColor}}", "cterm": "{{lightEditorColor$x256}}", "cterm16": "1" },
+      \ "searchForeground": { "gui": "{{searchForeground}}", "cterm": "{{searchForeground$x256}}", "cterm16": "1" },
+      \ "searchBackground": { "gui": "{{searchBackground}}", "cterm": "{{searchBackground$x256}}", "cterm16": "1" },
+      \ "selectionForeground": { "gui": "{{selectionForeground}}", "cterm": "{{selectionForeground$x256}}", "cterm16": "1" },
+      \ "selectionBackground": { "gui": "{{selectionBackground}}", "cterm": "{{selectionBackground$x256}}", "cterm16": "1" },
+      \ "foldedTextBackground": { "gui": "{{foldedTextBackground}}", "cterm": "{{foldedTextBackground$x256}}", "cterm16": "1" },
       \ "stringColor": { "gui": "{{stringColor}}", "cterm": "{{stringColor$x256}}", "cterm16": "1" }
       \}
 

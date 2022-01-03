@@ -94,6 +94,17 @@ call s:h("Operator", {"fg": s:colors.htmlTagColor})
 call s:h("foldBraces", {"fg": s:colors.foregroundColorEditor})
 call s:h("Error", {"fg": s:colors.errorColor, "gui": "underline", "cterm":"underline"})
 
+" VIM Stuff
+call s:h("ColorColumn", {"bg": s:colors.caretRow})
+call s:h("CursorColumn", {"bg": s:colors.caretRow})
+call s:h("CursorLine", {"bg": s:colors.caretRow})
+call s:h("LineNr", {"fg": s:colors.lineNumberColor})
+call s:h("VertSplit", {"fg": s:colors.lineNumberColor, "bg": s:colors.lightEditorColor})
+call s:h("Search", {"fg": s:colors.searchForeground, "bg": s:colors.searchBackground})
+call s:h("IncSearch", {"fg": s:colors.searchForeground, "bg": s:colors.searchBackground})
+call s:h("Visual", {"fg": s:colors.selectionForeground, "bg": s:colors.selectionBackground})
+call s:h("Folded", {"fg": s:colors.comments, "bg": s:colors.foldedTextBackground})
+
 " Git
 call s:h("gitcommitHeader", { "fg": s:colors.classNameColor})
 
@@ -112,7 +123,7 @@ call s:h("xmlCdataStart", { "fg": s:colors.keywordColor})
 call s:h("xmlCdataEnd", { "fg": s:colors.keywordColor})
 call s:h("xmlCdataCdata", { "fg": s:colors.keywordColor})
 
-" Vim
+" Vim Script
 call s:h("vimOption", { "fg": s:colors.keyColor})
 call s:h("vimFuncName", { "fg": s:colors.editorAccentColor})
 call s:h("vimUserFunc", { "fg": s:colors.editorAccentColor})
@@ -193,8 +204,6 @@ call s:h("jsonBraces", { "fg": s:colors.foregroundColorEditor})
 call s:h("jsonNull", { "fg": s:colors.keywordColor})
 call s:h("jsonBoolean", { "fg": s:colors.keywordColor})
 call s:h("jsonStringMatch", { "fg": s:colors.stringColor})
-
-
 
 " Typescript
 call s:h("typescriptBraces", { "fg": s:colors.foregroundColorEditor})
