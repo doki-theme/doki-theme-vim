@@ -9,6 +9,7 @@ let s:colors = {
       \ "classNameColor": { "gui": "#d0a2fa", "cterm": "183", "cterm16": "1" },
       \ "keywordColor": { "gui": "#53dac7", "cterm": "80", "cterm16": "1" },
       \ "keyColor": { "gui": "#FFD448", "cterm": "221", "cterm16": "1" },
+      \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
       \ "stringColor": { "gui": "#b3a9ff", "cterm": "147", "cterm16": "1" }
       \}
 

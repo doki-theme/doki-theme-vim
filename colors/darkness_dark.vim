@@ -88,8 +88,14 @@ call s:h("Keyword", {"fg": s:colors.keywordColor})
 call s:h("Statement", {"fg": s:colors.keywordColor})
 call s:h("SpecialChar", {"fg": s:colors.keyColor})
 call s:h("SpecialComment", {"fg": s:colors.keyColor})
+call s:h("Special", {"fg": s:colors.keyColor})
 call s:h("Operator", {"fg": s:colors.htmlTagColor})
 call s:h("foldBraces", {"fg": s:colors.foregroundColorEditor})
+call s:h("Error", {"fg": s:colors.errorColor, "gui": "underline", "cterm":"underline"})
+
+" Git
+call s:h("gitcommitHeader", { "fg": s:colors.classNameColor})
+
 
 " HTML Colors
 call s:h("htmlTagName", { "fg": s:colors.htmlTagColor})
@@ -146,6 +152,14 @@ call s:h("javaAnnotation", { "fg": s:colors.editorAccentColor})
 call s:h("javaParen", { "fg": s:colors.foregroundColorEditor})
 call s:h("javaDocTags", { "fg": s:colors.keyColor})
 call s:h("javaDocParam", { "fg": s:colors.stringColor})
+
+" Kotlin
+call s:h("ktInclude", { "fg": s:colors.keywordColor})
+call s:h("ktDocTagParam", { "fg": s:colors.stringColor})
+call s:h("ktAnnotation", { "fg": s:colors.editorAccentColor})
+call s:h("ktExclExcl", { "fg": s:colors.htmlTagColor})
+call s:h("ktArrow", { "fg": s:colors.foregroundColorEditor})
+
 
 
 " Referencable colors for other syntax stuffs
