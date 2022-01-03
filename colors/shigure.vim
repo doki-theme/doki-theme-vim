@@ -112,6 +112,16 @@ call s:h("xmlCdataStart", { "fg": s:colors.keywordColor})
 call s:h("xmlCdataEnd", { "fg": s:colors.keywordColor})
 call s:h("xmlCdataCdata", { "fg": s:colors.keywordColor})
 
+" Vim
+call s:h("vimOption", { "fg": s:colors.keyColor})
+call s:h("vimFuncName", { "fg": s:colors.editorAccentColor})
+call s:h("vimUserFunc", { "fg": s:colors.editorAccentColor})
+call s:h("vimParenSep", { "fg": s:colors.foregroundColorEditor})
+call s:h("vimCommand", { "fg": s:colors.keywordColor})
+call s:h("vimLet", { "fg": s:colors.keywordColor})
+call s:h("vimNotFunc", { "fg": s:colors.keywordColor})
+call s:h("vimIsCommand", { "fg": s:colors.classNameColor})
+
 " HTML
 call s:h("htmlTagName", { "fg": s:colors.htmlTagColor})
 call s:h("htmlEndTag", { "fg": s:colors.htmlTagColor})
