@@ -87,6 +87,7 @@ call s:h("StorageClass", {"fg": s:colors.keywordColor})
 call s:h("Keyword", {"fg": s:colors.keywordColor})
 call s:h("Statement", {"fg": s:colors.keywordColor})
 call s:h("Operator", {"fg": s:colors.htmlTagColor})
+call s:h("foldBraces", {"fg": s:colors.foregroundColorEditor})
 
 " HTML Colors
 call s:h("htmlTagName", { "fg": s:colors.htmlTagColor})
@@ -126,6 +127,16 @@ call s:h("jsFunctionArgs", { "fg": s:colors.stringColor})
 call s:h("jsFuncArgs", { "fg": s:colors.stringColor})
 call s:h("jsObjectProp", { "fg": s:colors.foregroundColorEditor, "gui": "bold", "cterm": "bold"})
 call s:h("jsObjectKey", { "fg": s:colors.foregroundColorEditor, "gui": "bold", "cterm": "bold"})
+
+" Typescript
+call s:h("typescriptBraces", { "fg": s:colors.foregroundColorEditor})
+call s:h("typescriptEndColons", { "fg": s:colors.foregroundColorEditor})
+call s:h("typescriptParens", { "fg": s:colors.foregroundColorEditor})
+call s:h("typescriptDecorators", { "fg": s:colors.editorAccentColor})
+call s:h("typescriptGlobalObjects", { "fg": s:colors.classNameColor})
+call s:h("typescriptDocTags", { "fg": s:colors.keyColor})
+call s:h("typescriptDocParam", { "fg": s:colors.stringColor})
+call s:h("typescriptIdentifier", { "fg": s:colors.keywordColor})
 
 
 " Referencable colors for other syntax stuffs
