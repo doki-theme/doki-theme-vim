@@ -160,6 +160,16 @@ call s:h("ktAnnotation", { "fg": s:colors.editorAccentColor})
 call s:h("ktExclExcl", { "fg": s:colors.htmlTagColor})
 call s:h("ktArrow", { "fg": s:colors.foregroundColorEditor})
 
+" CSS
+call s:h("cssBraces", { "fg": s:colors.foregroundColorEditor})
+call s:h("cssTagName", { "fg": s:colors.editorAccentColor})
+call s:h("cssFunctionName", { "fg": s:colors.classNameColor})
+call s:h("cssFunction", { "fg": s:colors.editorAccentColor})
+call s:h("cssClassName", { "fg": s:colors.classNameColor})
+call s:h("cssAttributeSelector", { "fg": s:colors.classNameColor})
+call s:h("cssAtKeyword", { "fg": s:colors.keywordColor})
+call s:h("cssProp", { "fg": s:colors.keyColor})
+call s:h("cssPseudoClassId", { "fg": s:colors.stringColor})
 
 
 " Referencable colors for other syntax stuffs
