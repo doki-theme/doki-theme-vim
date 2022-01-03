@@ -84,6 +84,7 @@ call s:h("Identifier", {"fg": s:colors.foregroundColorEditor})
 call s:h("Function", {"fg": s:colors.classNameColor})
 call s:h("Underlined", {"fg": s:colors.keyColor})
 call s:h("Type", {"fg": s:colors.keyColor})
+call s:h("PreProc", {"fg": s:colors.keyColor})
 call s:h("StorageClass", {"fg": s:colors.keywordColor})
 call s:h("Keyword", {"fg": s:colors.keywordColor})
 call s:h("Statement", {"fg": s:colors.keywordColor})
@@ -118,6 +119,12 @@ call s:h("Folded", {"fg": s:colors.comments, "bg": s:colors.foldedTextBackground
 
 " Git
 call s:h("gitcommitHeader", { "fg": s:colors.classNameColor})
+
+" Shell
+call s:h("shQuote", { "fg": s:colors.stringColor})
+call s:h("shSingleQuote", { "fg": s:colors.stringColor})
+call s:h("shHereDoc", { "fg": s:colors.stringColor, "bg": s:colors.codeBlock})
+call s:h("shDoubleQuote", { "fg": s:colors.stringColor})
 
 " XML
 call s:h("xmlAttrib", { "fg": s:colors.editorAccentColor})
