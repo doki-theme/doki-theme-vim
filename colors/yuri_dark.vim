@@ -80,10 +80,39 @@ let s:colors = yuri_dark#GetColors() " Autoloaded from the specific color theme
 call s:h("Comment", { "fg": s:colors.comments, "gui": "italic", "cterm": "italic" })
 call s:h("String", {"fg": s:colors.stringColor})
 call s:h("Constant", {"fg": s:colors.constantColor})
-call s:h("Constant", {"fg": s:colors.constantColor})
+call s:h("Identifier", {"fg": s:colors.foregroundColorEditor})
+call s:h("Function", {"fg": s:colors.classNameColor})
+call s:h("Underlined", {"fg": s:colors.keyColor})
 
-call s:h("htmlTagN", { "fg": s:colors.foregroundColorEditor})
+" HTML Colors
+call s:h("htmlTagName", { "fg": s:colors.htmlTagColor})
+call s:h("htmlEndTag", { "fg": s:colors.htmlTagColor})
+call s:h("htmlEndTag", { "fg": s:colors.foregroundColorEditor})
+call s:h("htmlHead", { "fg": s:colors.htmlTagColor})
+call s:h("htmlSpecialTagName", { "fg": s:colors.htmlTagColor})
+call s:h("htmlArg", { "fg": s:colors.editorAccentColor, "gui": "italic", "cterm": "italic"})
+call s:h("htmlTagN", { "fg": s:colors.htmlTagColor})
+call s:h("htmlScriptTag", { "fg": s:colors.foregroundColorEditor})
+call s:h("htmlTag", { "fg": s:colors.foregroundColorEditor})
+call s:h("htmlTitle", { "fg": s:colors.stringColor})
+call s:h("htmlH1", { "fg": s:colors.stringColor })
+call s:h("htmlH2", { "fg": s:colors.stringColor })
+call s:h("htmlH3", { "fg": s:colors.stringColor })
+call s:h("htmlH4", { "fg": s:colors.stringColor })
+call s:h("htmlH5", { "fg": s:colors.stringColor })
+call s:h("htmlH6", { "fg": s:colors.stringColor })
+call s:h("htmlLink", { "fg": s:colors.keyColor })
+call s:h("htmlSpecialChar", { "fg": s:colors.keywordColor})
+
+" Java script
+call s:h("jsFuncCall", { "fg": s:colors.editorAccentColor})
+call s:h("jsGlobalObjects", { "fg": s:colors.constantColor})
+call s:h("jsArrowFunction", { "fg": s:colors.htmlTagColor})
+call s:h("jsFunctionArgs", { "fg": s:colors.stringColor})
+call s:h("jsObjectProp", { "fg": s:colors.foregroundColorEditor, "gui": "bold", "cterm": "bold"})
+
 
 " Referencable colors for other syntax stuffs
 call s:h("ForegroundColorEditor", { "fg": s:colors.foregroundColorEditor})
+call s:h("HtmlTagColor", { "fg": s:colors.htmlTagColor})
 

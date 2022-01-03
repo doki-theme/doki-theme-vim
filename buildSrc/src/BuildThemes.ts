@@ -110,6 +110,8 @@ function evaluateTemplate(
         ...namedColors,
         themeName,
         themeProperName,
+        editorAccentColor: dokiThemeDefinition.overrides?.editorScheme?.colors?.accentColor ||
+          dokiThemeDefinition.colors.accentColor
       },
       resolveTemplateVariable
     );

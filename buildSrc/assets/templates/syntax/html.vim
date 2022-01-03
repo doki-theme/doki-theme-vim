@@ -1,2 +1,1 @@
-hi! link htmlTag         ForegroundColorEditor
-hi! link htmlTagN        ForegroundColorEditor
+hi! link htmlTagName         HtmlTagColor

@@ -4,6 +4,11 @@ let s:colors = {
       \ "comments": { "gui": "#7384d4", "cterm": "68", "cterm16": "1" },
       \ "constantColor": { "gui": "#8bc1f8", "cterm": "111", "cterm16": "1" },
       \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#f3ff83", "cterm": "228", "cterm16": "1" },
+      \ "editorAccentColor": { "gui": "#60ff62", "cterm": "83", "cterm16": "1" },
+      \ "classNameColor": { "gui": "#d0a2fa", "cterm": "183", "cterm16": "1" },
+      \ "keywordColor": { "gui": "#53dac7", "cterm": "80", "cterm16": "1" },
+      \ "keyColor": { "gui": "#FFD448", "cterm": "221", "cterm16": "1" },
       \ "stringColor": { "gui": "#b3a9ff", "cterm": "147", "cterm16": "1" }
       \}
 
