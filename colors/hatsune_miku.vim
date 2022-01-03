@@ -97,8 +97,22 @@ call s:h("Error", {"fg": s:colors.errorColor, "gui": "underline", "cterm":"under
 " Git
 call s:h("gitcommitHeader", { "fg": s:colors.classNameColor})
 
+" XML
+call s:h("xmlAttrib", { "fg": s:colors.editorAccentColor})
+call s:h("xmlDoctype", { "fg": s:colors.editorAccentColor})
+call s:h("xmlDocTypeKeyword", { "fg": s:colors.htmlTagColor})
+call s:h("xmlDocTypeDecl", { "fg": s:colors.htmlTagColor})
+call s:h("xmlTag", { "fg": s:colors.foregroundColorEditor})
+call s:h("xmlTagName", { "fg": s:colors.htmlTagColor})
+call s:h("xmlEntity", { "fg": s:colors.constantColor})
+call s:h("xmlEntityPunct", { "fg": s:colors.constantColor})
+call s:h("xmlCdata", { "fg": s:colors.stringColor})
+call s:h("xmlString", { "fg": s:colors.stringColor})
+call s:h("xmlCdataStart", { "fg": s:colors.keywordColor})
+call s:h("xmlCdataEnd", { "fg": s:colors.keywordColor})
+call s:h("xmlCdataCdata", { "fg": s:colors.keywordColor})
 
-" HTML Colors
+" HTML
 call s:h("htmlTagName", { "fg": s:colors.htmlTagColor})
 call s:h("htmlEndTag", { "fg": s:colors.htmlTagColor})
 call s:h("htmlEndTag", { "fg": s:colors.foregroundColorEditor})
