@@ -103,7 +103,22 @@ colorscheme zero_two_dark
 
 ## Supported Plugins
 
+I am current open to supporting more syntax highlighting/plugins, it's just I've only made the ones I currently care about.
+Feel free to submit an issue to request syntax highlighting for various plugins/languages.
 
+**Current Supported Syntax Highlighting**: 
+
+- CSS
+- Git
+- HTML
+- Java
+- [Javascript](https://github.com/pangloss/vim-javascript.git)
+- [Kotlin](https://github.com/udalov/kotlin-vim.git)
+- Markdown
+- Shell
+- [Typescript](https://github.com/leafgarland/typescript-vim.git)
+- Vim Script
+- XML
 
 
 ## Contributing
