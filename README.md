@@ -1,7 +1,7 @@
 Doki Theme VIM
 ---
 
-![Zero Two's light theme w/ hyper](./assets/screenshot/zero_two_code.png)
+![Zero Two's light theme w/ hyper](./assets/screenshots/zero_two_code.png)
 
 These VIM color themes will complement your [Doki Theme for Hyper themes](https://github.com/doki-theme/doki-theme-hyper) very well.
 Go for the full Otaku terminal experience!
