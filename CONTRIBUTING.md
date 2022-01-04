@@ -107,7 +107,7 @@ nnoremap <F10> :colorscheme zero_two_light<CR> " Convience Shortcut to F10 that 
 
 ![Dev Setup](./assets/screenshots/dev_vim_setup.png)
 
-> I pressed F8 where the cursor is and it shows me that it is scoped to `vimBracket` from `vimBracket->Delimiter->Special`
+> I pressed F8 where the cursor is, and it shows me that it is scoped to `vimBracket` from `vimBracket->Delimiter->Special`
 
 **Helpful Links**
 
