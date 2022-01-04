@@ -109,6 +109,10 @@ nnoremap <F10> :colorscheme zero_two_light<CR> " Convience Shortcut to F10 that 
 
 > I pressed F8 where the cursor is and it shows me that it is scoped to `vimBracket` from `vimBracket->Delimiter->Special`
 
+**Helpful Links**
+
+- [OneDark](https://github.com/joshdick/onedark.vim/blob/main/colors/onedark.vim)
+- [VimCast](http://vimcasts.org/episodes/creating-colorschemes-for-vim/)
 
 ### Set up build source
 
