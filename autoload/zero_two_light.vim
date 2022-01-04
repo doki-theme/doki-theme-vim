@@ -4,7 +4,7 @@ let s:colors = {
       \ "comments": { "gui": "#6a737d", "cterm": "243", "cterm16": "1" },
       \ "constantColor": { "gui": "#0d5fa6", "cterm": "25", "cterm16": "1" },
       \ "foregroundColorEditor": { "gui": "#4D4D4A", "cterm": "239", "cterm16": "1" },
-      \ "htmlTagColor": { "gui": "#E356A7", "cterm": "169", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#5236B4", "cterm": "61", "cterm16": "1" },
       \ "editorAccentColor": { "gui": "#E356A7", "cterm": "169", "cterm16": "1" },
       \ "classNameColor": { "gui": "#117aa6", "cterm": "31", "cterm16": "1" },
       \ "keywordColor": { "gui": "#0da661", "cterm": "35", "cterm16": "1" },
@@ -33,7 +33,7 @@ let s:colors = {
       \ "selectionForeground": { "gui": "#393d45", "cterm": "237", "cterm16": "1" },
       \ "selectionBackground": { "gui": "#e9b4b8", "cterm": "181", "cterm16": "1" },
       \ "foldedTextBackground": { "gui": "#f6f6f6", "cterm": "255", "cterm16": "1" },
-      \ "stringColor": { "gui": "#131313", "cterm": "233", "cterm16": "1" }
+      \ "stringColor": { "gui": "#0EAAAF", "cterm": "37", "cterm16": "1" }
       \}
 
 function! zero_two_light#GetColors()

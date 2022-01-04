@@ -1,7 +1,7 @@
 Doki Theme VIM
 ---
 
-![Maika's theme w/ hyper](https://user-images.githubusercontent.com/15972415/113490929-ddaa6580-9492-11eb-94f1-11f295f3ff87.png)
+![Zero Two's light theme w/ hyper](./assets/screenshot/zero_two_code.png)
 
 These VIM color themes will complement your [Doki Theme for Hyper themes](https://github.com/doki-theme/doki-theme-hyper) very well.
 Go for the full Otaku terminal experience!
@@ -58,7 +58,7 @@ colorscheme rem
 6. Now in VIM, you can find a full list of all the Doki Theme `colorschemes` by following these steps:
     1. Open VIM
     1. type `:colorscheme` then add a `space` followed by a `ctrl+d`
-    ![Color Schemes](./assets/screenshots/color_schemes.png)
+    ![Color Schemes](./assets/screenshots/zero_two_settings.png)
 
 ### NeoVim
 
@@ -99,7 +99,7 @@ colorscheme zero_two_dark
 6. Now in NeoVim, you can find a full list of all the Doki Theme `colorschemes` by following these steps:
     1. Open NeoVim
     1. type `:colorscheme` then add a `space` followed by a `ctrl+d`
-    ![Color Schemes](./assets/screenshots/color_schemes.png)
+    ![Color Schemes](./assets/screenshots/zero_two_settings.png)
 
 ## Supported Plugins
 
