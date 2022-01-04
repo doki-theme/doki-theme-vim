@@ -174,13 +174,13 @@ console.log('Preparing to generate themes.');
 
 const autoloadTemplate = fs.readFileSync(path.resolve(
   appTemplatesDirectoryPath,
-  'doki-theme.v2.autoload.template.vim'
+  'doki-theme.autoload.template.vim'
 ), {
   encoding: 'utf-8',
 });
 const colorsTemplate = fs.readFileSync(path.resolve(
   appTemplatesDirectoryPath,
-  'doki-theme.v2.colors.template.vim',
+  'doki-theme.colors.template.vim',
 ), {
   encoding: 'utf-8'
 });
