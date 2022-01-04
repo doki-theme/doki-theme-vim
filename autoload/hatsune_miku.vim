@@ -1,57 +1,41 @@
-" Palette: 
 
-let g:hatsune_miku#palette           = {}
-let g:hatsune_miku#palette.fg        = ['#bbbbbb', 250]
 
-let g:hatsune_miku#palette.bglighter = ['#293030', 236]
-let g:hatsune_miku#palette.bglight   = ['#293030', 236]
-let g:hatsune_miku#palette.bg        = ['#293030', 236]
-let g:hatsune_miku#palette.bgdark    = ['#293030', 236]
-let g:hatsune_miku#palette.bgdarker  = ['#293030', 236]
+let s:colors = {
+      \ "comments": { "gui": "#67807b", "cterm": "66", "cterm16": "1" },
+      \ "constantColor": { "gui": "#86dbfd", "cterm": "117", "cterm16": "1" },
+      \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#60a498", "cterm": "72", "cterm16": "1" },
+      \ "editorAccentColor": { "gui": "#ff69df", "cterm": "206", "cterm16": "1" },
+      \ "classNameColor": { "gui": "#aae2f2", "cterm": "153", "cterm16": "1" },
+      \ "keywordColor": { "gui": "#988F9A", "cterm": "246", "cterm16": "1" },
+      \ "keyColor": { "gui": "#68f3e7", "cterm": "86", "cterm16": "1" },
+      \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
+      \ "headerColor": { "gui": "#2c3333", "cterm": "236", "cterm16": "1" },
+      \ "accentColor": { "gui": "#53b0b4", "cterm": "73", "cterm16": "1" },
+      \ "infoForeground": { "gui": "#73999b", "cterm": "246", "cterm16": "1" },
+      \ "unusedColor": { "gui": "#72737A", "cterm": "243", "cterm16": "1" },
+      \ "diffModified": { "gui": "#203952", "cterm": "237", "cterm16": "1" },
+      \ "diffInserted": { "gui": "#1B3B1C", "cterm": "234", "cterm16": "1" },
+      \ "diffDeleted": { "gui": "#393F3A", "cterm": "237", "cterm16": "1" },
+      \ "codeBlock": { "gui": "#2b3231", "cterm": "236", "cterm16": "1" },
+      \ "caretRow": { "gui": "#313938", "cterm": "237", "cterm16": "1" },
+      \ "textEditorBackground": { "gui": "#2f3635", "cterm": "236", "cterm16": "1" },
+      \ "terminalAnsiRed": { "gui": "#E356A7", "cterm": "169", "cterm16": "1" },
+      \ "terminalAnsiBlue": { "gui": "#9B6BDF", "cterm": "98", "cterm16": "1" },
+      \ "terminalAnsiCyan": { "gui": "#75D7EC", "cterm": "117", "cterm16": "1" },
+      \ "terminalAnsiGreen": { "gui": "#42E66C", "cterm": "77", "cterm16": "1" },
+      \ "terminalAnsiMagenta": { "gui": "#E64747", "cterm": "167", "cterm16": "1" },
+      \ "terminalAnsiYellow": { "gui": "#EFA554", "cterm": "215", "cterm16": "1" },
+      \ "lineNumberColor": { "gui": "#666879", "cterm": "242", "cterm16": "1" },
+      \ "lightEditorColor": { "gui": "#303837", "cterm": "236", "cterm16": "1" },
+      \ "searchForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
+      \ "searchBackground": { "gui": "#654773", "cterm": "241", "cterm16": "1" },
+      \ "selectionForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
+      \ "selectionBackground": { "gui": "#4c7a76", "cterm": "243", "cterm16": "1" },
+      \ "foldedTextBackground": { "gui": "#273431", "cterm": "236", "cterm16": "1" },
+      \ "stringColor": { "gui": "#F6E9CB", "cterm": "224", "cterm16": "1" }
+      \}
 
-let g:hatsune_miku#palette.comment   = ['#67807b',  66]
-let g:hatsune_miku#palette.selection = ['#4c7a76', 243]
-let g:hatsune_miku#palette.subtle    = ['#313938', 237]
-
-let g:hatsune_miku#palette.key_color      = ['#68f3e7', 86]
-let g:hatsune_miku#palette.class_name     = ['#aae2f2', 153]
-let g:hatsune_miku#palette.parameter_color    = ['#FFB86C', 215]
-let g:hatsune_miku#palette.keyword_color      = ['#988F9A', 246]
-let g:hatsune_miku#palette.constants_color    = ['#86dbfd', 117]
-let g:hatsune_miku#palette.red       = ['#FF5555', 203]
-let g:hatsune_miku#palette.string_color    = ['#F6E9CB', 224]
-
-"
-" Terminal Colors
-"
-let g:hatsune_miku#palette.color_0  = '#21222C'
-let g:hatsune_miku#palette.color_1  = '#E356A7'
-let g:hatsune_miku#palette.color_2  = '#42E66C'
-let g:hatsune_miku#palette.color_3  = '#F1FA8C'
-let g:hatsune_miku#palette.color_4  = '#9B6BDF'
-let g:hatsune_miku#palette.color_5  = '#E64747'
-let g:hatsune_miku#palette.color_6  = '#75D7EC'
-let g:hatsune_miku#palette.color_7  = '#F8F8F2'
-let g:hatsune_miku#palette.color_8  = '#6272A4'
-let g:hatsune_miku#palette.color_9  = '#E356A7'
-let g:hatsune_miku#palette.color_10 = '#42E66C'
-let g:hatsune_miku#palette.color_11 = '#EFA554'
-let g:hatsune_miku#palette.color_12 = '#9B6BDF'
-let g:hatsune_miku#palette.color_13 = '#E64747'
-let g:hatsune_miku#palette.color_14 = '#75D7EC'
-let g:hatsune_miku#palette.color_15 = '#FFFFFF'
-
-" }}}
-
-" Helper function that takes a variadic list of filetypes as args and returns
-" whether or not the execution of the ftplugin should be aborted.
-func! hatsune_miku#should_abort(...)
-    if ! exists('g:colors_name') || g:colors_name !=# 'hatsune_miku'
-        return 1
-    elseif a:0 > 0 && (! exists('b:current_syntax') || index(a:000, b:current_syntax) == -1)
-        return 1
-    endif
-    return 0
+function! hatsune_miku#GetColors()
+  return s:colors
 endfunction
-
-" vim: fdm=marker ts=2 sts=2 sw=2 fdl=0:

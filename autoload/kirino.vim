@@ -1,57 +1,41 @@
-" Palette: 
 
-let g:kirino#palette           = {}
-let g:kirino#palette.fg        = ['#cbcbcb', 251]
 
-let g:kirino#palette.bglighter = ['#152321', 234]
-let g:kirino#palette.bglight   = ['#152321', 234]
-let g:kirino#palette.bg        = ['#152321', 234]
-let g:kirino#palette.bgdark    = ['#152321', 234]
-let g:kirino#palette.bgdarker  = ['#152321', 234]
+let s:colors = {
+      \ "comments": { "gui": "#6A8882", "cterm": "66", "cterm16": "1" },
+      \ "constantColor": { "gui": "#EA7797", "cterm": "174", "cterm16": "1" },
+      \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#8BEF85", "cterm": "120", "cterm16": "1" },
+      \ "editorAccentColor": { "gui": "#8bd9ff", "cterm": "117", "cterm16": "1" },
+      \ "classNameColor": { "gui": "#E77FD5", "cterm": "176", "cterm16": "1" },
+      \ "keywordColor": { "gui": "#49e7d0", "cterm": "80", "cterm16": "1" },
+      \ "keyColor": { "gui": "#eec45e", "cterm": "221", "cterm16": "1" },
+      \ "errorColor": { "gui": "#ff2525", "cterm": "196", "cterm16": "1" },
+      \ "headerColor": { "gui": "#121e1c", "cterm": "234", "cterm16": "1" },
+      \ "accentColor": { "gui": "#6cb3b5", "cterm": "73", "cterm16": "1" },
+      \ "infoForeground": { "gui": "#b0a17f", "cterm": "144", "cterm16": "1" },
+      \ "unusedColor": { "gui": "#545c5b", "cterm": "240", "cterm16": "1" },
+      \ "diffModified": { "gui": "#1B3360", "cterm": "23", "cterm16": "1" },
+      \ "diffInserted": { "gui": "#153315", "cterm": "234", "cterm16": "1" },
+      \ "diffDeleted": { "gui": "#1F2F2D", "cterm": "236", "cterm16": "1" },
+      \ "codeBlock": { "gui": "#292a1f", "cterm": "235", "cterm16": "1" },
+      \ "caretRow": { "gui": "#221f28", "cterm": "235", "cterm16": "1" },
+      \ "textEditorBackground": { "gui": "#121e1c", "cterm": "234", "cterm16": "1" },
+      \ "terminalAnsiRed": { "gui": "#E356A7", "cterm": "169", "cterm16": "1" },
+      \ "terminalAnsiBlue": { "gui": "#9B6BDF", "cterm": "98", "cterm16": "1" },
+      \ "terminalAnsiCyan": { "gui": "#75D7EC", "cterm": "117", "cterm16": "1" },
+      \ "terminalAnsiGreen": { "gui": "#42E66C", "cterm": "77", "cterm16": "1" },
+      \ "terminalAnsiMagenta": { "gui": "#E64747", "cterm": "167", "cterm16": "1" },
+      \ "terminalAnsiYellow": { "gui": "#EFA554", "cterm": "215", "cterm16": "1" },
+      \ "lineNumberColor": { "gui": "#657978", "cterm": "243", "cterm16": "1" },
+      \ "lightEditorColor": { "gui": "#182826", "cterm": "235", "cterm16": "1" },
+      \ "searchForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
+      \ "searchBackground": { "gui": "#195A80", "cterm": "24", "cterm16": "1" },
+      \ "selectionForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
+      \ "selectionBackground": { "gui": "#3d213e", "cterm": "237", "cterm16": "1" },
+      \ "foldedTextBackground": { "gui": "#1b2d2a", "cterm": "235", "cterm16": "1" },
+      \ "stringColor": { "gui": "#F6E9CB", "cterm": "224", "cterm16": "1" }
+      \}
 
-let g:kirino#palette.comment   = ['#6A8882',  66]
-let g:kirino#palette.selection = ['#3d213e', 237]
-let g:kirino#palette.subtle    = ['#221f28', 235]
-
-let g:kirino#palette.key_color      = ['#eec45e', 221]
-let g:kirino#palette.class_name     = ['#E77FD5', 176]
-let g:kirino#palette.parameter_color    = ['#FFB86C', 215]
-let g:kirino#palette.keyword_color      = ['#49e7d0', 80]
-let g:kirino#palette.constants_color    = ['#EA7797', 174]
-let g:kirino#palette.red       = ['#FF5555', 203]
-let g:kirino#palette.string_color    = ['#F6E9CB', 224]
-
-"
-" Terminal Colors
-"
-let g:kirino#palette.color_0  = '#21222C'
-let g:kirino#palette.color_1  = '#E356A7'
-let g:kirino#palette.color_2  = '#42E66C'
-let g:kirino#palette.color_3  = '#F1FA8C'
-let g:kirino#palette.color_4  = '#9B6BDF'
-let g:kirino#palette.color_5  = '#E64747'
-let g:kirino#palette.color_6  = '#75D7EC'
-let g:kirino#palette.color_7  = '#F8F8F2'
-let g:kirino#palette.color_8  = '#6272A4'
-let g:kirino#palette.color_9  = '#E356A7'
-let g:kirino#palette.color_10 = '#42E66C'
-let g:kirino#palette.color_11 = '#EFA554'
-let g:kirino#palette.color_12 = '#9B6BDF'
-let g:kirino#palette.color_13 = '#E64747'
-let g:kirino#palette.color_14 = '#75D7EC'
-let g:kirino#palette.color_15 = '#FFFFFF'
-
-" }}}
-
-" Helper function that takes a variadic list of filetypes as args and returns
-" whether or not the execution of the ftplugin should be aborted.
-func! kirino#should_abort(...)
-    if ! exists('g:colors_name') || g:colors_name !=# 'kirino'
-        return 1
-    elseif a:0 > 0 && (! exists('b:current_syntax') || index(a:000, b:current_syntax) == -1)
-        return 1
-    endif
-    return 0
+function! kirino#GetColors()
+  return s:colors
 endfunction
-
-" vim: fdm=marker ts=2 sts=2 sw=2 fdl=0:

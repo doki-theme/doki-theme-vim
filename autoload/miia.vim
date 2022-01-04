@@ -1,57 +1,41 @@
-" Palette: 
 
-let g:miia#palette           = {}
-let g:miia#palette.fg        = ['#efefef', 255]
 
-let g:miia#palette.bglighter = ['#36101c', 234]
-let g:miia#palette.bglight   = ['#36101c', 234]
-let g:miia#palette.bg        = ['#36101c', 234]
-let g:miia#palette.bgdark    = ['#36101c', 234]
-let g:miia#palette.bgdarker  = ['#36101c', 234]
+let s:colors = {
+      \ "comments": { "gui": "#a47272", "cterm": "131", "cterm16": "1" },
+      \ "constantColor": { "gui": "#34a7d1", "cterm": "74", "cterm16": "1" },
+      \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#E356A7", "cterm": "169", "cterm16": "1" },
+      \ "editorAccentColor": { "gui": "#efa2da", "cterm": "218", "cterm16": "1" },
+      \ "classNameColor": { "gui": "#FFB86C", "cterm": "215", "cterm16": "1" },
+      \ "keywordColor": { "gui": "#39e6a6", "cterm": "79", "cterm16": "1" },
+      \ "keyColor": { "gui": "#c05388", "cterm": "132", "cterm16": "1" },
+      \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
+      \ "headerColor": { "gui": "#3a1020", "cterm": "234", "cterm16": "1" },
+      \ "accentColor": { "gui": "#d6a53e", "cterm": "179", "cterm16": "1" },
+      \ "infoForeground": { "gui": "#b19e78", "cterm": "144", "cterm16": "1" },
+      \ "unusedColor": { "gui": "#54545B", "cterm": "240", "cterm16": "1" },
+      \ "diffModified": { "gui": "#1c2331", "cterm": "235", "cterm16": "1" },
+      \ "diffInserted": { "gui": "#102d0e", "cterm": "233", "cterm16": "1" },
+      \ "diffDeleted": { "gui": "#412a2b", "cterm": "236", "cterm16": "1" },
+      \ "codeBlock": { "gui": "#3c1623", "cterm": "235", "cterm16": "1" },
+      \ "caretRow": { "gui": "#3a1020", "cterm": "234", "cterm16": "1" },
+      \ "textEditorBackground": { "gui": "#310e19", "cterm": "234", "cterm16": "1" },
+      \ "terminalAnsiRed": { "gui": "#E356A7", "cterm": "169", "cterm16": "1" },
+      \ "terminalAnsiBlue": { "gui": "#9B6BDF", "cterm": "98", "cterm16": "1" },
+      \ "terminalAnsiCyan": { "gui": "#75D7EC", "cterm": "117", "cterm16": "1" },
+      \ "terminalAnsiGreen": { "gui": "#42E66C", "cterm": "77", "cterm16": "1" },
+      \ "terminalAnsiMagenta": { "gui": "#E64747", "cterm": "167", "cterm16": "1" },
+      \ "terminalAnsiYellow": { "gui": "#EFA554", "cterm": "215", "cterm16": "1" },
+      \ "lineNumberColor": { "gui": "#a87975", "cterm": "138", "cterm16": "1" },
+      \ "lightEditorColor": { "gui": "#360f1d", "cterm": "234", "cterm16": "1" },
+      \ "searchForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
+      \ "searchBackground": { "gui": "#772761", "cterm": "89", "cterm16": "1" },
+      \ "selectionForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
+      \ "selectionBackground": { "gui": "#5b3225", "cterm": "236", "cterm16": "1" },
+      \ "foldedTextBackground": { "gui": "#38101e", "cterm": "234", "cterm16": "1" },
+      \ "stringColor": { "gui": "#e2d9bd", "cterm": "187", "cterm16": "1" }
+      \}
 
-let g:miia#palette.comment   = ['#a47272',  131]
-let g:miia#palette.selection = ['#5b3225', 236]
-let g:miia#palette.subtle    = ['#3a1020', 234]
-
-let g:miia#palette.key_color      = ['#c05388', 132]
-let g:miia#palette.class_name     = ['#FFB86C', 215]
-let g:miia#palette.parameter_color    = ['#FFB86C', 215]
-let g:miia#palette.keyword_color      = ['#39e6a6', 79]
-let g:miia#palette.constants_color    = ['#34a7d1', 74]
-let g:miia#palette.red       = ['#FF5555', 203]
-let g:miia#palette.string_color    = ['#e2d9bd', 187]
-
-"
-" Terminal Colors
-"
-let g:miia#palette.color_0  = '#21222C'
-let g:miia#palette.color_1  = '#E356A7'
-let g:miia#palette.color_2  = '#42E66C'
-let g:miia#palette.color_3  = '#F1FA8C'
-let g:miia#palette.color_4  = '#9B6BDF'
-let g:miia#palette.color_5  = '#E64747'
-let g:miia#palette.color_6  = '#75D7EC'
-let g:miia#palette.color_7  = '#F8F8F2'
-let g:miia#palette.color_8  = '#6272A4'
-let g:miia#palette.color_9  = '#E356A7'
-let g:miia#palette.color_10 = '#42E66C'
-let g:miia#palette.color_11 = '#EFA554'
-let g:miia#palette.color_12 = '#9B6BDF'
-let g:miia#palette.color_13 = '#E64747'
-let g:miia#palette.color_14 = '#75D7EC'
-let g:miia#palette.color_15 = '#FFFFFF'
-
-" }}}
-
-" Helper function that takes a variadic list of filetypes as args and returns
-" whether or not the execution of the ftplugin should be aborted.
-func! miia#should_abort(...)
-    if ! exists('g:colors_name') || g:colors_name !=# 'miia'
-        return 1
-    elseif a:0 > 0 && (! exists('b:current_syntax') || index(a:000, b:current_syntax) == -1)
-        return 1
-    endif
-    return 0
+function! miia#GetColors()
+  return s:colors
 endfunction
-
-" vim: fdm=marker ts=2 sts=2 sw=2 fdl=0:

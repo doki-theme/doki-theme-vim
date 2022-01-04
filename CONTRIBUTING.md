@@ -28,6 +28,7 @@ the [installation instructions](https://github.com/doki-theme/doki-theme-vim#ins
 
 - Yarn package manager
 - Node 14
+- [HighLinkTrace](https://github.com/gerw/vim-HiLinkTrace)
 
 ## Initial Setup
 
@@ -77,6 +78,42 @@ To accomplish this, just run this command in the `masterThemes` directory.
 yarn
 ```
 
+**Install Helpful Plugins**
+
+[HiLinkTrace](https://github.com/gerw/vim-HiLinkTrace) is a handy plugin that allows you to look up the syntax highlighting in an open file with syntax highlighting on.
+
+- Create a place to install the plugin 
+
+```shell
+mkdir -p ~/.vim/pack/vendor/start    
+```
+
+- Clone the repository into the new destination
+
+```shell
+git clone --depth 1 git@github.com:gerw/vim-HiLinkTrace.git ~/.vim/pack/vendor/start/hiLinkTrace
+```
+
+- Enable the setting in your `~/.vimrc`
+
+```vimscript
+filetype plugin on
+syntax on 
+colorscheme zero_two_light " Best Girl
+:set hls
+nnoremap <F8> :HLT<CR> " Allows you to use F8 to view the source highlightings
+nnoremap <F10> :colorscheme zero_two_light<CR> " Convience Shortcut to F10 that sets a theme
+```
+
+![Dev Setup](./assets/screenshots/dev_vim_setup.png)
+
+> I pressed F8 where the cursor is, and it shows me that it is scoped to `vimBracket` from `vimBracket->Delimiter->Special`
+
+**Helpful Links**
+
+- [OneDark](https://github.com/joshdick/onedark.vim/blob/main/colors/onedark.vim)
+- [VimCast](http://vimcasts.org/episodes/creating-colorschemes-for-vim/)
+
 ### Set up build source
 
 Navigate to the root of the `buildSource` directory and run the following command.
@@ -112,7 +149,7 @@ the Doki Theme Suite.
 
 ### Vim specifics
 
-There are a _bunch_ of templates that compose the assets of this plugin.
+There are a few templates that compose the assets of this plugin.
 
 They can be found in `buildSrc/assets/templates`
 

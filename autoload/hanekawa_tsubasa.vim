@@ -1,57 +1,41 @@
-" Palette: 
 
-let g:hanekawa_tsubasa#palette           = {}
-let g:hanekawa_tsubasa#palette.fg        = ['#c3c3c3', 251]
 
-let g:hanekawa_tsubasa#palette.bglighter = ['#141115', 233]
-let g:hanekawa_tsubasa#palette.bglight   = ['#141115', 233]
-let g:hanekawa_tsubasa#palette.bg        = ['#141115', 233]
-let g:hanekawa_tsubasa#palette.bgdark    = ['#141115', 233]
-let g:hanekawa_tsubasa#palette.bgdarker  = ['#141115', 233]
+let s:colors = {
+      \ "comments": { "gui": "#79769f", "cterm": "243", "cterm16": "1" },
+      \ "constantColor": { "gui": "#86dbfd", "cterm": "117", "cterm16": "1" },
+      \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#ff8fec", "cterm": "213", "cterm16": "1" },
+      \ "editorAccentColor": { "gui": "#9a97f4", "cterm": "105", "cterm16": "1" },
+      \ "classNameColor": { "gui": "#e39656", "cterm": "173", "cterm16": "1" },
+      \ "keywordColor": { "gui": "#d55fde", "cterm": "170", "cterm16": "1" },
+      \ "keyColor": { "gui": "#7ceec8", "cterm": "122", "cterm16": "1" },
+      \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
+      \ "headerColor": { "gui": "#0f0d10", "cterm": "233", "cterm16": "1" },
+      \ "accentColor": { "gui": "#634F8D", "cterm": "60", "cterm16": "1" },
+      \ "infoForeground": { "gui": "#988ccb", "cterm": "104", "cterm16": "1" },
+      \ "unusedColor": { "gui": "#72737A", "cterm": "243", "cterm16": "1" },
+      \ "diffModified": { "gui": "#152A3D", "cterm": "235", "cterm16": "1" },
+      \ "diffInserted": { "gui": "#142F14", "cterm": "233", "cterm16": "1" },
+      \ "diffDeleted": { "gui": "#1D1D1D", "cterm": "234", "cterm16": "1" },
+      \ "codeBlock": { "gui": "#281f28", "cterm": "235", "cterm16": "1" },
+      \ "caretRow": { "gui": "#1e1d1f", "cterm": "234", "cterm16": "1" },
+      \ "textEditorBackground": { "gui": "#100d11", "cterm": "233", "cterm16": "1" },
+      \ "terminalAnsiRed": { "gui": "#E356A7", "cterm": "169", "cterm16": "1" },
+      \ "terminalAnsiBlue": { "gui": "#9B6BDF", "cterm": "98", "cterm16": "1" },
+      \ "terminalAnsiCyan": { "gui": "#75D7EC", "cterm": "117", "cterm16": "1" },
+      \ "terminalAnsiGreen": { "gui": "#42E66C", "cterm": "77", "cterm16": "1" },
+      \ "terminalAnsiMagenta": { "gui": "#E64747", "cterm": "167", "cterm16": "1" },
+      \ "terminalAnsiYellow": { "gui": "#EFA554", "cterm": "215", "cterm16": "1" },
+      \ "lineNumberColor": { "gui": "#777495", "cterm": "243", "cterm16": "1" },
+      \ "lightEditorColor": { "gui": "#181719", "cterm": "234", "cterm16": "1" },
+      \ "searchForeground": { "gui": "#ebd6fc", "cterm": "189", "cterm16": "1" },
+      \ "searchBackground": { "gui": "#305D49", "cterm": "238", "cterm16": "1" },
+      \ "selectionForeground": { "gui": "#ebd6fc", "cterm": "189", "cterm16": "1" },
+      \ "selectionBackground": { "gui": "#5a3b5d", "cterm": "240", "cterm16": "1" },
+      \ "foldedTextBackground": { "gui": "#322932", "cterm": "236", "cterm16": "1" },
+      \ "stringColor": { "gui": "#F6E3CC", "cterm": "224", "cterm16": "1" }
+      \}
 
-let g:hanekawa_tsubasa#palette.comment   = ['#79769f',  243]
-let g:hanekawa_tsubasa#palette.selection = ['#5a3b5d', 240]
-let g:hanekawa_tsubasa#palette.subtle    = ['#1e1d1f', 234]
-
-let g:hanekawa_tsubasa#palette.key_color      = ['#7ceec8', 122]
-let g:hanekawa_tsubasa#palette.class_name     = ['#e39656', 173]
-let g:hanekawa_tsubasa#palette.parameter_color    = ['#FFB86C', 215]
-let g:hanekawa_tsubasa#palette.keyword_color      = ['#d55fde', 170]
-let g:hanekawa_tsubasa#palette.constants_color    = ['#86dbfd', 117]
-let g:hanekawa_tsubasa#palette.red       = ['#FF5555', 203]
-let g:hanekawa_tsubasa#palette.string_color    = ['#F6E3CC', 224]
-
-"
-" Terminal Colors
-"
-let g:hanekawa_tsubasa#palette.color_0  = '#21222C'
-let g:hanekawa_tsubasa#palette.color_1  = '#E356A7'
-let g:hanekawa_tsubasa#palette.color_2  = '#42E66C'
-let g:hanekawa_tsubasa#palette.color_3  = '#F1FA8C'
-let g:hanekawa_tsubasa#palette.color_4  = '#9B6BDF'
-let g:hanekawa_tsubasa#palette.color_5  = '#E64747'
-let g:hanekawa_tsubasa#palette.color_6  = '#75D7EC'
-let g:hanekawa_tsubasa#palette.color_7  = '#F8F8F2'
-let g:hanekawa_tsubasa#palette.color_8  = '#6272A4'
-let g:hanekawa_tsubasa#palette.color_9  = '#E356A7'
-let g:hanekawa_tsubasa#palette.color_10 = '#42E66C'
-let g:hanekawa_tsubasa#palette.color_11 = '#EFA554'
-let g:hanekawa_tsubasa#palette.color_12 = '#9B6BDF'
-let g:hanekawa_tsubasa#palette.color_13 = '#E64747'
-let g:hanekawa_tsubasa#palette.color_14 = '#75D7EC'
-let g:hanekawa_tsubasa#palette.color_15 = '#FFFFFF'
-
-" }}}
-
-" Helper function that takes a variadic list of filetypes as args and returns
-" whether or not the execution of the ftplugin should be aborted.
-func! hanekawa_tsubasa#should_abort(...)
-    if ! exists('g:colors_name') || g:colors_name !=# 'hanekawa_tsubasa'
-        return 1
-    elseif a:0 > 0 && (! exists('b:current_syntax') || index(a:000, b:current_syntax) == -1)
-        return 1
-    endif
-    return 0
+function! hanekawa_tsubasa#GetColors()
+  return s:colors
 endfunction
-
-" vim: fdm=marker ts=2 sts=2 sw=2 fdl=0:

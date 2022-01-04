@@ -1,57 +1,41 @@
-" Palette: 
 
-let g:jabami_yumeko#palette           = {}
-let g:jabami_yumeko#palette.fg        = ['#dbdbdb', 253]
 
-let g:jabami_yumeko#palette.bglighter = ['#070000', 16]
-let g:jabami_yumeko#palette.bglight   = ['#070000', 16]
-let g:jabami_yumeko#palette.bg        = ['#070000', 16]
-let g:jabami_yumeko#palette.bgdark    = ['#070000', 16]
-let g:jabami_yumeko#palette.bgdarker  = ['#070000', 16]
+let s:colors = {
+      \ "comments": { "gui": "#735253", "cterm": "240", "cterm16": "1" },
+      \ "constantColor": { "gui": "#e4ff10", "cterm": "190", "cterm16": "1" },
+      \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#4fcad5", "cterm": "80", "cterm16": "1" },
+      \ "editorAccentColor": { "gui": "#b48fec", "cterm": "141", "cterm16": "1" },
+      \ "classNameColor": { "gui": "#7092ea", "cterm": "68", "cterm16": "1" },
+      \ "keywordColor": { "gui": "#e0474b", "cterm": "167", "cterm16": "1" },
+      \ "keyColor": { "gui": "#42E66C", "cterm": "77", "cterm16": "1" },
+      \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
+      \ "headerColor": { "gui": "#0b0000", "cterm": "16", "cterm16": "1" },
+      \ "accentColor": { "gui": "#8a1820", "cterm": "88", "cterm16": "1" },
+      \ "infoForeground": { "gui": "#7e2a2a", "cterm": "236", "cterm16": "1" },
+      \ "unusedColor": { "gui": "#72737A", "cterm": "243", "cterm16": "1" },
+      \ "diffModified": { "gui": "#121e31", "cterm": "234", "cterm16": "1" },
+      \ "diffInserted": { "gui": "#0c230b", "cterm": "233", "cterm16": "1" },
+      \ "diffDeleted": { "gui": "#1c1214", "cterm": "233", "cterm16": "1" },
+      \ "codeBlock": { "gui": "#1d0406", "cterm": "232", "cterm16": "1" },
+      \ "caretRow": { "gui": "#1e0607", "cterm": "232", "cterm16": "1" },
+      \ "textEditorBackground": { "gui": "#050000", "cterm": "16", "cterm16": "1" },
+      \ "terminalAnsiRed": { "gui": "#E356A7", "cterm": "169", "cterm16": "1" },
+      \ "terminalAnsiBlue": { "gui": "#9B6BDF", "cterm": "98", "cterm16": "1" },
+      \ "terminalAnsiCyan": { "gui": "#75D7EC", "cterm": "117", "cterm16": "1" },
+      \ "terminalAnsiGreen": { "gui": "#42E66C", "cterm": "77", "cterm16": "1" },
+      \ "terminalAnsiMagenta": { "gui": "#E64747", "cterm": "167", "cterm16": "1" },
+      \ "terminalAnsiYellow": { "gui": "#EFA554", "cterm": "215", "cterm16": "1" },
+      \ "lineNumberColor": { "gui": "#97706f", "cterm": "243", "cterm16": "1" },
+      \ "lightEditorColor": { "gui": "#140404", "cterm": "232", "cterm16": "1" },
+      \ "searchForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
+      \ "searchBackground": { "gui": "#2a6121", "cterm": "235", "cterm16": "1" },
+      \ "selectionForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
+      \ "selectionBackground": { "gui": "#390c10", "cterm": "233", "cterm16": "1" },
+      \ "foldedTextBackground": { "gui": "#280a0b", "cterm": "232", "cterm16": "1" },
+      \ "stringColor": { "gui": "#F6E3CC", "cterm": "224", "cterm16": "1" }
+      \}
 
-let g:jabami_yumeko#palette.comment   = ['#735253',  240]
-let g:jabami_yumeko#palette.selection = ['#390c10', 233]
-let g:jabami_yumeko#palette.subtle    = ['#1e0607', 232]
-
-let g:jabami_yumeko#palette.key_color      = ['#42E66C', 77]
-let g:jabami_yumeko#palette.class_name     = ['#7092ea', 68]
-let g:jabami_yumeko#palette.parameter_color    = ['#FFB86C', 215]
-let g:jabami_yumeko#palette.keyword_color      = ['#e0474b', 167]
-let g:jabami_yumeko#palette.constants_color    = ['#e4ff10', 190]
-let g:jabami_yumeko#palette.red       = ['#FF5555', 203]
-let g:jabami_yumeko#palette.string_color    = ['#F6E3CC', 224]
-
-"
-" Terminal Colors
-"
-let g:jabami_yumeko#palette.color_0  = '#21222C'
-let g:jabami_yumeko#palette.color_1  = '#E356A7'
-let g:jabami_yumeko#palette.color_2  = '#42E66C'
-let g:jabami_yumeko#palette.color_3  = '#F1FA8C'
-let g:jabami_yumeko#palette.color_4  = '#9B6BDF'
-let g:jabami_yumeko#palette.color_5  = '#E64747'
-let g:jabami_yumeko#palette.color_6  = '#75D7EC'
-let g:jabami_yumeko#palette.color_7  = '#F8F8F2'
-let g:jabami_yumeko#palette.color_8  = '#6272A4'
-let g:jabami_yumeko#palette.color_9  = '#E356A7'
-let g:jabami_yumeko#palette.color_10 = '#42E66C'
-let g:jabami_yumeko#palette.color_11 = '#EFA554'
-let g:jabami_yumeko#palette.color_12 = '#9B6BDF'
-let g:jabami_yumeko#palette.color_13 = '#E64747'
-let g:jabami_yumeko#palette.color_14 = '#75D7EC'
-let g:jabami_yumeko#palette.color_15 = '#FFFFFF'
-
-" }}}
-
-" Helper function that takes a variadic list of filetypes as args and returns
-" whether or not the execution of the ftplugin should be aborted.
-func! jabami_yumeko#should_abort(...)
-    if ! exists('g:colors_name') || g:colors_name !=# 'jabami_yumeko'
-        return 1
-    elseif a:0 > 0 && (! exists('b:current_syntax') || index(a:000, b:current_syntax) == -1)
-        return 1
-    endif
-    return 0
+function! jabami_yumeko#GetColors()
+  return s:colors
 endfunction
-
-" vim: fdm=marker ts=2 sts=2 sw=2 fdl=0:

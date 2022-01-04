@@ -1,57 +1,41 @@
-" Palette: 
 
-let g:tohsaka_rin#palette           = {}
-let g:tohsaka_rin#palette.fg        = ['#bbbbbb', 250]
 
-let g:tohsaka_rin#palette.bglighter = ['#191718', 234]
-let g:tohsaka_rin#palette.bglight   = ['#191718', 234]
-let g:tohsaka_rin#palette.bg        = ['#191718', 234]
-let g:tohsaka_rin#palette.bgdark    = ['#191718', 234]
-let g:tohsaka_rin#palette.bgdarker  = ['#191718', 234]
+let s:colors = {
+      \ "comments": { "gui": "#4c8484", "cterm": "66", "cterm16": "1" },
+      \ "constantColor": { "gui": "#86dbfd", "cterm": "117", "cterm16": "1" },
+      \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#e0474b", "cterm": "167", "cterm16": "1" },
+      \ "editorAccentColor": { "gui": "#68a8cb", "cterm": "74", "cterm16": "1" },
+      \ "classNameColor": { "gui": "#EFA554", "cterm": "215", "cterm16": "1" },
+      \ "keywordColor": { "gui": "#666f71", "cterm": "242", "cterm16": "1" },
+      \ "keyColor": { "gui": "#e0474b", "cterm": "167", "cterm16": "1" },
+      \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
+      \ "headerColor": { "gui": "#1b191a", "cterm": "234", "cterm16": "1" },
+      \ "accentColor": { "gui": "#4c9697", "cterm": "66", "cterm16": "1" },
+      \ "infoForeground": { "gui": "#86a4ab", "cterm": "109", "cterm16": "1" },
+      \ "unusedColor": { "gui": "#3D3D42", "cterm": "237", "cterm16": "1" },
+      \ "diffModified": { "gui": "#1A233D", "cterm": "235", "cterm16": "1" },
+      \ "diffInserted": { "gui": "#142D14", "cterm": "233", "cterm16": "1" },
+      \ "diffDeleted": { "gui": "#242424", "cterm": "235", "cterm16": "1" },
+      \ "codeBlock": { "gui": "#211D1E", "cterm": "234", "cterm16": "1" },
+      \ "caretRow": { "gui": "#22191b", "cterm": "234", "cterm16": "1" },
+      \ "textEditorBackground": { "gui": "#161415", "cterm": "233", "cterm16": "1" },
+      \ "terminalAnsiRed": { "gui": "#E356A7", "cterm": "169", "cterm16": "1" },
+      \ "terminalAnsiBlue": { "gui": "#9B6BDF", "cterm": "98", "cterm16": "1" },
+      \ "terminalAnsiCyan": { "gui": "#75D7EC", "cterm": "117", "cterm16": "1" },
+      \ "terminalAnsiGreen": { "gui": "#42E66C", "cterm": "77", "cterm16": "1" },
+      \ "terminalAnsiMagenta": { "gui": "#E64747", "cterm": "167", "cterm16": "1" },
+      \ "terminalAnsiYellow": { "gui": "#EFA554", "cterm": "215", "cterm16": "1" },
+      \ "lineNumberColor": { "gui": "#847878", "cterm": "243", "cterm16": "1" },
+      \ "lightEditorColor": { "gui": "#1d1719", "cterm": "234", "cterm16": "1" },
+      \ "searchForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
+      \ "searchBackground": { "gui": "#225041", "cterm": "238", "cterm16": "1" },
+      \ "selectionForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
+      \ "selectionBackground": { "gui": "#391717", "cterm": "234", "cterm16": "1" },
+      \ "foldedTextBackground": { "gui": "#211D1E", "cterm": "234", "cterm16": "1" },
+      \ "stringColor": { "gui": "#69e0f5", "cterm": "81", "cterm16": "1" }
+      \}
 
-let g:tohsaka_rin#palette.comment   = ['#4c8484',  66]
-let g:tohsaka_rin#palette.selection = ['#391717', 234]
-let g:tohsaka_rin#palette.subtle    = ['#22191b', 234]
-
-let g:tohsaka_rin#palette.key_color      = ['#e0474b', 167]
-let g:tohsaka_rin#palette.class_name     = ['#EFA554', 215]
-let g:tohsaka_rin#palette.parameter_color    = ['#FFB86C', 215]
-let g:tohsaka_rin#palette.keyword_color      = ['#666f71', 242]
-let g:tohsaka_rin#palette.constants_color    = ['#86dbfd', 117]
-let g:tohsaka_rin#palette.red       = ['#FF5555', 203]
-let g:tohsaka_rin#palette.string_color    = ['#69e0f5', 81]
-
-"
-" Terminal Colors
-"
-let g:tohsaka_rin#palette.color_0  = '#21222C'
-let g:tohsaka_rin#palette.color_1  = '#E356A7'
-let g:tohsaka_rin#palette.color_2  = '#42E66C'
-let g:tohsaka_rin#palette.color_3  = '#F1FA8C'
-let g:tohsaka_rin#palette.color_4  = '#9B6BDF'
-let g:tohsaka_rin#palette.color_5  = '#E64747'
-let g:tohsaka_rin#palette.color_6  = '#75D7EC'
-let g:tohsaka_rin#palette.color_7  = '#F8F8F2'
-let g:tohsaka_rin#palette.color_8  = '#6272A4'
-let g:tohsaka_rin#palette.color_9  = '#E356A7'
-let g:tohsaka_rin#palette.color_10 = '#42E66C'
-let g:tohsaka_rin#palette.color_11 = '#EFA554'
-let g:tohsaka_rin#palette.color_12 = '#9B6BDF'
-let g:tohsaka_rin#palette.color_13 = '#E64747'
-let g:tohsaka_rin#palette.color_14 = '#75D7EC'
-let g:tohsaka_rin#palette.color_15 = '#FFFFFF'
-
-" }}}
-
-" Helper function that takes a variadic list of filetypes as args and returns
-" whether or not the execution of the ftplugin should be aborted.
-func! tohsaka_rin#should_abort(...)
-    if ! exists('g:colors_name') || g:colors_name !=# 'tohsaka_rin'
-        return 1
-    elseif a:0 > 0 && (! exists('b:current_syntax') || index(a:000, b:current_syntax) == -1)
-        return 1
-    endif
-    return 0
+function! tohsaka_rin#GetColors()
+  return s:colors
 endfunction
-
-" vim: fdm=marker ts=2 sts=2 sw=2 fdl=0:
