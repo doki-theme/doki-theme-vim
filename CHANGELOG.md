@@ -1,6 +1,23 @@
 Changelog
 ---
 
+# 15.0.0 [Syntax Highlighting Revisited]
+
+- Updated all the syntax highlighting themes to be consistent with the rest of the platform.
+- Removed existing support for previous file types, plugin now only supports these (if you want more please submit an issue):
+  - CSS
+  - Git
+  - HTML
+  - Java
+  - [Javascript](https://github.com/pangloss/vim-javascript.git)
+  - [Kotlin](https://github.com/udalov/kotlin-vim.git)
+  - Markdown
+  - Shell
+  - [Typescript](https://github.com/leafgarland/typescript-vim.git)
+  - Vim Script
+  - XML
+
+
 # 14.0.0 [Holiday Release]
 
 **3 New Dark Themes!**
