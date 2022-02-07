@@ -30,8 +30,8 @@ let s:colors = {
       \ "lightEditorColor": { "gui": "#ffe0ea", "cterm": "224", "cterm16": "1" },
       \ "searchForeground": { "gui": "#ffffff", "cterm": "231", "cterm16": "1" },
       \ "searchBackground": { "gui": "#dc99bb", "cterm": "175", "cterm16": "1" },
-      \ "selectionForeground": { "gui": "#ffffff", "cterm": "231", "cterm16": "1" },
-      \ "selectionBackground": { "gui": "#dc99bb", "cterm": "175", "cterm16": "1" },
+      \ "selectionForeground": { "gui": "#f049da", "cterm": "206", "cterm16": "1" },
+      \ "selectionBackground": { "gui": "#fcc9f2", "cterm": "225", "cterm16": "1" },
       \ "foldedTextBackground": { "gui": "#F1E5FA", "cterm": "255", "cterm16": "1" },
       \ "stringColor": { "gui": "#DC872E", "cterm": "172", "cterm16": "1" }
       \}

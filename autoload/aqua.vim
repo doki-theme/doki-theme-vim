@@ -2,7 +2,7 @@
 
 let s:colors = {
       \ "comments": { "gui": "#6272a4", "cterm": "61", "cterm16": "1" },
-      \ "constantColor": { "gui": "#86dbfd", "cterm": "117", "cterm16": "1" },
+      \ "constantColor": { "gui": "#48ffd6", "cterm": "86", "cterm16": "1" },
       \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
       \ "htmlTagColor": { "gui": "#a28a92", "cterm": "246", "cterm16": "1" },
       \ "editorAccentColor": { "gui": "#578CDA", "cterm": "68", "cterm16": "1" },
