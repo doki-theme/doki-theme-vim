@@ -5,10 +5,10 @@ let s:colors = {
       \ "constantColor": { "gui": "#86dbfd", "cterm": "117", "cterm16": "1" },
       \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
       \ "htmlTagColor": { "gui": "#60a498", "cterm": "72", "cterm16": "1" },
-      \ "editorAccentColor": { "gui": "#ff69df", "cterm": "206", "cterm16": "1" },
-      \ "classNameColor": { "gui": "#aae2f2", "cterm": "153", "cterm16": "1" },
-      \ "keywordColor": { "gui": "#988F9A", "cterm": "246", "cterm16": "1" },
-      \ "keyColor": { "gui": "#68f3e7", "cterm": "86", "cterm16": "1" },
+      \ "editorAccentColor": { "gui": "#FF9CEA", "cterm": "218", "cterm16": "1" },
+      \ "classNameColor": { "gui": "#F6E9CB", "cterm": "224", "cterm16": "1" },
+      \ "keywordColor": { "gui": "#7BF8E1", "cterm": "122", "cterm16": "1" },
+      \ "keyColor": { "gui": "#95C8FA", "cterm": "117", "cterm16": "1" },
       \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
       \ "headerColor": { "gui": "#2c3333", "cterm": "236", "cterm16": "1" },
       \ "accentColor": { "gui": "#53b0b4", "cterm": "73", "cterm16": "1" },
@@ -33,7 +33,7 @@ let s:colors = {
       \ "selectionForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
       \ "selectionBackground": { "gui": "#4c7a76", "cterm": "243", "cterm16": "1" },
       \ "foldedTextBackground": { "gui": "#273431", "cterm": "236", "cterm16": "1" },
-      \ "stringColor": { "gui": "#F6E9CB", "cterm": "224", "cterm16": "1" }
+      \ "stringColor": { "gui": "#B5F6BA", "cterm": "157", "cterm16": "1" }
       \}
 
 function! hatsune_miku#GetColors()
