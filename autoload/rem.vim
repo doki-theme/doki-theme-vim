@@ -8,7 +8,7 @@ let s:colors = {
       \ "editorAccentColor": { "gui": "#8dc6ef", "cterm": "117", "cterm16": "1" },
       \ "classNameColor": { "gui": "#FBFF90", "cterm": "228", "cterm16": "1" },
       \ "keywordColor": { "gui": "#6893f3", "cterm": "69", "cterm16": "1" },
-      \ "keyColor": { "gui": "#986DEA", "cterm": "98", "cterm16": "1" },
+      \ "keyColor": { "gui": "#9d8df6", "cterm": "141", "cterm16": "1" },
       \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
       \ "headerColor": { "gui": "#25262b", "cterm": "235", "cterm16": "1" },
       \ "accentColor": { "gui": "#578CDA", "cterm": "68", "cterm16": "1" },
