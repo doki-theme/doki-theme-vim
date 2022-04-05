@@ -11,7 +11,7 @@ let s:colors = {
       \ "keyColor": { "gui": "#fd9144", "cterm": "209", "cterm16": "1" },
       \ "errorColor": { "gui": "#ff2525", "cterm": "196", "cterm16": "1" },
       \ "headerColor": { "gui": "#1c140f", "cterm": "233", "cterm16": "1" },
-      \ "accentColor": { "gui": "#823a3b", "cterm": "237", "cterm16": "1" },
+      \ "accentColor": { "gui": "#8a3c3d", "cterm": "95", "cterm16": "1" },
       \ "infoForeground": { "gui": "#bfb38c", "cterm": "144", "cterm16": "1" },
       \ "unusedColor": { "gui": "#606867", "cterm": "241", "cterm16": "1" },
       \ "diffModified": { "gui": "#1B3A47", "cterm": "237", "cterm16": "1" },
