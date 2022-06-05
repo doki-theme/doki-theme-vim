@@ -4,11 +4,11 @@ let s:colors = {
       \ "comments": { "gui": "#6a737d", "cterm": "243", "cterm16": "1" },
       \ "constantColor": { "gui": "#4C94D6", "cterm": "68", "cterm16": "1" },
       \ "foregroundColorEditor": { "gui": "#4D4D4A", "cterm": "239", "cterm16": "1" },
-      \ "htmlTagColor": { "gui": "#7B6970", "cterm": "242", "cterm16": "1" },
-      \ "editorAccentColor": { "gui": "#90468c", "cterm": "96", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#5E24BA", "cterm": "55", "cterm16": "1" },
+      \ "editorAccentColor": { "gui": "#95348C", "cterm": "96", "cterm16": "1" },
       \ "classNameColor": { "gui": "#c26a9d", "cterm": "133", "cterm16": "1" },
-      \ "keywordColor": { "gui": "#c26a9d", "cterm": "133", "cterm16": "1" },
-      \ "keyColor": { "gui": "#7C75EF", "cterm": "105", "cterm16": "1" },
+      \ "keywordColor": { "gui": "#7C75EF", "cterm": "105", "cterm16": "1" },
+      \ "keyColor": { "gui": "#D579D0", "cterm": "176", "cterm16": "1" },
       \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
       \ "headerColor": { "gui": "#f5f0ff", "cterm": "231", "cterm16": "1" },
       \ "accentColor": { "gui": "#ab74cb", "cterm": "140", "cterm16": "1" },
@@ -33,7 +33,7 @@ let s:colors = {
       \ "selectionForeground": { "gui": "#393d45", "cterm": "237", "cterm16": "1" },
       \ "selectionBackground": { "gui": "#ada0d2", "cterm": "146", "cterm16": "1" },
       \ "foldedTextBackground": { "gui": "#eae5f6", "cterm": "255", "cterm16": "1" },
-      \ "stringColor": { "gui": "#d27f2d", "cterm": "172", "cterm16": "1" }
+      \ "stringColor": { "gui": "#2DA0D2", "cterm": "38", "cterm16": "1" }
       \}
 
 function! yuri_light#GetColors()

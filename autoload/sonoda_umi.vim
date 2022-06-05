@@ -32,7 +32,7 @@ let s:colors = {
       \ "searchBackground": { "gui": "#47264B", "cterm": "238", "cterm16": "1" },
       \ "selectionForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
       \ "selectionBackground": { "gui": "#272A59", "cterm": "235", "cterm16": "1" },
-      \ "foldedTextBackground": { "gui": "#251832", "cterm": "235", "cterm16": "1" },
+      \ "foldedTextBackground": { "gui": "#191c49", "cterm": "234", "cterm16": "1" },
       \ "stringColor": { "gui": "#FFF6B3", "cterm": "229", "cterm16": "1" }
       \}
 

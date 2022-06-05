@@ -114,7 +114,7 @@ function findClosestX256Color(hexColor: string): string {
 }
 
 function getName(dokiDefinition: MasterDokiThemeDefinition) {
-  return dokiDefinition.name.replace(':', '');
+  return dokiDefinition.name.replace(/\:/g, '').replace(/\./g,'');
 }
 
 const x256Delimiter = '$x256';

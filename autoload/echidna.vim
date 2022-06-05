@@ -1,7 +1,7 @@
 
 
 let s:colors = {
-      \ "comments": { "gui": "#41495A", "cterm": "238", "cterm16": "1" },
+      \ "comments": { "gui": "#505A6D", "cterm": "240", "cterm16": "1" },
       \ "constantColor": { "gui": "#86dbfd", "cterm": "117", "cterm16": "1" },
       \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
       \ "htmlTagColor": { "gui": "#8daeef", "cterm": "111", "cterm16": "1" },
@@ -13,7 +13,7 @@ let s:colors = {
       \ "headerColor": { "gui": "#171519", "cterm": "233", "cterm16": "1" },
       \ "accentColor": { "gui": "#ECECEC", "cterm": "255", "cterm16": "1" },
       \ "infoForeground": { "gui": "#75aaab", "cterm": "109", "cterm16": "1" },
-      \ "unusedColor": { "gui": "#3D3D42", "cterm": "237", "cterm16": "1" },
+      \ "unusedColor": { "gui": "#626266", "cterm": "241", "cterm16": "1" },
       \ "diffModified": { "gui": "#203952", "cterm": "237", "cterm16": "1" },
       \ "diffInserted": { "gui": "#142F14", "cterm": "233", "cterm16": "1" },
       \ "diffDeleted": { "gui": "#262626", "cterm": "235", "cterm16": "1" },

@@ -29,7 +29,7 @@ let s:colors = {
       \ "lineNumberColor": { "gui": "#a87975", "cterm": "138", "cterm16": "1" },
       \ "lightEditorColor": { "gui": "#381212", "cterm": "233", "cterm16": "1" },
       \ "searchForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
-      \ "searchBackground": { "gui": "#721515", "cterm": "52", "cterm16": "1" },
+      \ "searchBackground": { "gui": "#268B61", "cterm": "29", "cterm16": "1" },
       \ "selectionForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
       \ "selectionBackground": { "gui": "#531e1e", "cterm": "234", "cterm16": "1" },
       \ "foldedTextBackground": { "gui": "#3c1515", "cterm": "234", "cterm16": "1" },

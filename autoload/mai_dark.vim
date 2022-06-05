@@ -1,14 +1,14 @@
 
 
 let s:colors = {
-      \ "comments": { "gui": "#6272a4", "cterm": "61", "cterm16": "1" },
-      \ "constantColor": { "gui": "#86dbfd", "cterm": "117", "cterm16": "1" },
+      \ "comments": { "gui": "#6C7EA5", "cterm": "67", "cterm16": "1" },
+      \ "constantColor": { "gui": "#FFEEA6", "cterm": "229", "cterm16": "1" },
       \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
-      \ "htmlTagColor": { "gui": "#a28a92", "cterm": "246", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#AFC8F5", "cterm": "153", "cterm16": "1" },
       \ "editorAccentColor": { "gui": "#b772de", "cterm": "134", "cterm16": "1" },
       \ "classNameColor": { "gui": "#61dba0", "cterm": "79", "cterm16": "1" },
-      \ "keywordColor": { "gui": "#ebd5d4", "cterm": "188", "cterm16": "1" },
-      \ "keyColor": { "gui": "#50cefb", "cterm": "81", "cterm16": "1" },
+      \ "keywordColor": { "gui": "#50cefb", "cterm": "81", "cterm16": "1" },
+      \ "keyColor": { "gui": "#F9B2FF", "cterm": "219", "cterm16": "1" },
       \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
       \ "headerColor": { "gui": "#25254e", "cterm": "235", "cterm16": "1" },
       \ "accentColor": { "gui": "#fee3cf", "cterm": "224", "cterm16": "1" },

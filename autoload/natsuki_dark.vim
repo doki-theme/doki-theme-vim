@@ -1,14 +1,14 @@
 
 
 let s:colors = {
-      \ "comments": { "gui": "#9C67AF", "cterm": "133", "cterm16": "1" },
-      \ "constantColor": { "gui": "#86dbfd", "cterm": "117", "cterm16": "1" },
+      \ "comments": { "gui": "#A179A7", "cterm": "139", "cterm16": "1" },
+      \ "constantColor": { "gui": "#9286FD", "cterm": "105", "cterm16": "1" },
       \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
-      \ "htmlTagColor": { "gui": "#bca3aa", "cterm": "248", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#EBABFD", "cterm": "183", "cterm16": "1" },
       \ "editorAccentColor": { "gui": "#E94686", "cterm": "168", "cterm16": "1" },
       \ "classNameColor": { "gui": "#FF9CD6", "cterm": "218", "cterm16": "1" },
-      \ "keywordColor": { "gui": "#bca3aa", "cterm": "248", "cterm16": "1" },
-      \ "keyColor": { "gui": "#FF9CD6", "cterm": "218", "cterm16": "1" },
+      \ "keywordColor": { "gui": "#FF9CD6", "cterm": "218", "cterm16": "1" },
+      \ "keyColor": { "gui": "#9DC0FF", "cterm": "147", "cterm16": "1" },
       \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
       \ "headerColor": { "gui": "#2f0a27", "cterm": "235", "cterm16": "1" },
       \ "accentColor": { "gui": "#E94686", "cterm": "168", "cterm16": "1" },
@@ -33,7 +33,7 @@ let s:colors = {
       \ "selectionForeground": { "gui": "#e6afca", "cterm": "182", "cterm16": "1" },
       \ "selectionBackground": { "gui": "#602b50", "cterm": "239", "cterm16": "1" },
       \ "foldedTextBackground": { "gui": "#441a35", "cterm": "236", "cterm16": "1" },
-      \ "stringColor": { "gui": "#f1fa8c", "cterm": "228", "cterm16": "1" }
+      \ "stringColor": { "gui": "#F6E9CB", "cterm": "224", "cterm16": "1" }
       \}
 
 function! natsuki_dark#GetColors()

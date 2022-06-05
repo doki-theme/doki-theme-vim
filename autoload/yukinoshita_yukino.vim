@@ -1,7 +1,7 @@
 
 
 let s:colors = {
-      \ "comments": { "gui": "#41495A", "cterm": "238", "cterm16": "1" },
+      \ "comments": { "gui": "#596477", "cterm": "60", "cterm16": "1" },
       \ "constantColor": { "gui": "#86dbfd", "cterm": "117", "cterm16": "1" },
       \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
       \ "htmlTagColor": { "gui": "#BD84DD", "cterm": "140", "cterm16": "1" },
