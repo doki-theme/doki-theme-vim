@@ -4,7 +4,7 @@ let s:colors = {
       \ "comments": { "gui": "#a47272", "cterm": "131", "cterm16": "1" },
       \ "constantColor": { "gui": "#86dbfd", "cterm": "117", "cterm16": "1" },
       \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
-      \ "htmlTagColor": { "gui": "#a28a92", "cterm": "246", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#EA5B7B", "cterm": "168", "cterm16": "1" },
       \ "editorAccentColor": { "gui": "#fbf96e", "cterm": "227", "cterm16": "1" },
       \ "classNameColor": { "gui": "#e03392", "cterm": "168", "cterm16": "1" },
       \ "keywordColor": { "gui": "#C04750", "cterm": "131", "cterm16": "1" },
@@ -33,7 +33,7 @@ let s:colors = {
       \ "selectionForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
       \ "selectionBackground": { "gui": "#822e2e", "cterm": "236", "cterm16": "1" },
       \ "foldedTextBackground": { "gui": "#491818", "cterm": "234", "cterm16": "1" },
-      \ "stringColor": { "gui": "#9EB7D6", "cterm": "146", "cterm16": "1" }
+      \ "stringColor": { "gui": "#9BBEE3", "cterm": "110", "cterm16": "1" }
       \}
 
 function! rias_crimson#GetColors()

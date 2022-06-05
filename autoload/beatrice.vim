@@ -1,10 +1,10 @@
 
 
 let s:colors = {
-      \ "comments": { "gui": "#6a737d", "cterm": "243", "cterm16": "1" },
+      \ "comments": { "gui": "#7d6a7d", "cterm": "243", "cterm16": "1" },
       \ "constantColor": { "gui": "#4C94D6", "cterm": "68", "cterm16": "1" },
       \ "foregroundColorEditor": { "gui": "#4D4D4A", "cterm": "239", "cterm16": "1" },
-      \ "htmlTagColor": { "gui": "#7B6970", "cterm": "242", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#C64EA1", "cterm": "169", "cterm16": "1" },
       \ "editorAccentColor": { "gui": "#5c84da", "cterm": "68", "cterm16": "1" },
       \ "classNameColor": { "gui": "#df81b8", "cterm": "175", "cterm16": "1" },
       \ "keywordColor": { "gui": "#C869A3", "cterm": "169", "cterm16": "1" },
@@ -23,7 +23,7 @@ let s:colors = {
       \ "terminalAnsiRed": { "gui": "#E356A7", "cterm": "169", "cterm16": "1" },
       \ "terminalAnsiBlue": { "gui": "#9B6BDF", "cterm": "98", "cterm16": "1" },
       \ "terminalAnsiCyan": { "gui": "#0896AD", "cterm": "31", "cterm16": "1" },
-      \ "terminalAnsiGreen": { "gui": "#3ab55b", "cterm": "71", "cterm16": "1" },
+      \ "terminalAnsiGreen": { "gui": "#3dd664", "cterm": "77", "cterm16": "1" },
       \ "terminalAnsiMagenta": { "gui": "#E64747", "cterm": "167", "cterm16": "1" },
       \ "terminalAnsiYellow": { "gui": "#db974d", "cterm": "173", "cterm16": "1" },
       \ "lineNumberColor": { "gui": "#aaaaaa", "cterm": "248", "cterm16": "1" },

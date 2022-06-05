@@ -13,7 +13,7 @@ let s:colors = {
       \ "headerColor": { "gui": "#0d0b0c", "cterm": "232", "cterm16": "1" },
       \ "accentColor": { "gui": "#f5c443", "cterm": "221", "cterm16": "1" },
       \ "infoForeground": { "gui": "#866e45", "cterm": "95", "cterm16": "1" },
-      \ "unusedColor": { "gui": "#3D3D42", "cterm": "237", "cterm16": "1" },
+      \ "unusedColor": { "gui": "#504848", "cterm": "239", "cterm16": "1" },
       \ "diffModified": { "gui": "#0E2539", "cterm": "235", "cterm16": "1" },
       \ "diffInserted": { "gui": "#132D14", "cterm": "233", "cterm16": "1" },
       \ "diffDeleted": { "gui": "#21211E", "cterm": "234", "cterm16": "1" },

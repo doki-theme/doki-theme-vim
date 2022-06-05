@@ -4,16 +4,16 @@ let s:colors = {
       \ "comments": { "gui": "#4c8484", "cterm": "66", "cterm16": "1" },
       \ "constantColor": { "gui": "#86dbfd", "cterm": "117", "cterm16": "1" },
       \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
-      \ "htmlTagColor": { "gui": "#e0474b", "cterm": "167", "cterm16": "1" },
-      \ "editorAccentColor": { "gui": "#68a8cb", "cterm": "74", "cterm16": "1" },
+      \ "htmlTagColor": { "gui": "#FC5773", "cterm": "203", "cterm16": "1" },
+      \ "editorAccentColor": { "gui": "#69e0f5", "cterm": "81", "cterm16": "1" },
       \ "classNameColor": { "gui": "#EFA554", "cterm": "215", "cterm16": "1" },
-      \ "keywordColor": { "gui": "#666f71", "cterm": "242", "cterm16": "1" },
+      \ "keywordColor": { "gui": "#859395", "cterm": "246", "cterm16": "1" },
       \ "keyColor": { "gui": "#e0474b", "cterm": "167", "cterm16": "1" },
-      \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
+      \ "errorColor": { "gui": "#C20000", "cterm": "124", "cterm16": "1" },
       \ "headerColor": { "gui": "#1b191a", "cterm": "234", "cterm16": "1" },
       \ "accentColor": { "gui": "#4c9697", "cterm": "66", "cterm16": "1" },
       \ "infoForeground": { "gui": "#86a4ab", "cterm": "109", "cterm16": "1" },
-      \ "unusedColor": { "gui": "#3D3D42", "cterm": "237", "cterm16": "1" },
+      \ "unusedColor": { "gui": "#67414A", "cterm": "239", "cterm16": "1" },
       \ "diffModified": { "gui": "#1A233D", "cterm": "235", "cterm16": "1" },
       \ "diffInserted": { "gui": "#142D14", "cterm": "233", "cterm16": "1" },
       \ "diffDeleted": { "gui": "#242424", "cterm": "235", "cterm16": "1" },
@@ -31,9 +31,9 @@ let s:colors = {
       \ "searchForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
       \ "searchBackground": { "gui": "#225041", "cterm": "238", "cterm16": "1" },
       \ "selectionForeground": { "gui": "#fbfbfb", "cterm": "231", "cterm16": "1" },
-      \ "selectionBackground": { "gui": "#391717", "cterm": "234", "cterm16": "1" },
+      \ "selectionBackground": { "gui": "#501F1F", "cterm": "235", "cterm16": "1" },
       \ "foldedTextBackground": { "gui": "#211D1E", "cterm": "234", "cterm16": "1" },
-      \ "stringColor": { "gui": "#69e0f5", "cterm": "81", "cterm16": "1" }
+      \ "stringColor": { "gui": "#72F8B5", "cterm": "85", "cterm16": "1" }
       \}
 
 function! tohsaka_rin#GetColors()

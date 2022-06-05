@@ -1,14 +1,14 @@
 
 
 let s:colors = {
-      \ "comments": { "gui": "#4E6B4C", "cterm": "239", "cterm16": "1" },
-      \ "constantColor": { "gui": "#86dbfd", "cterm": "117", "cterm16": "1" },
+      \ "comments": { "gui": "#647863", "cterm": "65", "cterm16": "1" },
+      \ "constantColor": { "gui": "#FF8FCA", "cterm": "212", "cterm16": "1" },
       \ "foregroundColorEditor": { "gui": "#F8F8F2", "cterm": "255", "cterm16": "1" },
       \ "htmlTagColor": { "gui": "#3eae5d", "cterm": "71", "cterm16": "1" },
-      \ "editorAccentColor": { "gui": "#388E3C", "cterm": "65", "cterm16": "1" },
-      \ "classNameColor": { "gui": "#bca3aa", "cterm": "248", "cterm16": "1" },
+      \ "editorAccentColor": { "gui": "#60E769", "cterm": "77", "cterm16": "1" },
+      \ "classNameColor": { "gui": "#FFEA82", "cterm": "222", "cterm16": "1" },
       \ "keywordColor": { "gui": "#3eae5d", "cterm": "71", "cterm16": "1" },
-      \ "keyColor": { "gui": "#bca3aa", "cterm": "248", "cterm16": "1" },
+      \ "keyColor": { "gui": "#ABFFAF", "cterm": "157", "cterm16": "1" },
       \ "errorColor": { "gui": "#ff5555", "cterm": "203", "cterm16": "1" },
       \ "headerColor": { "gui": "#1D2115", "cterm": "234", "cterm16": "1" },
       \ "accentColor": { "gui": "#388E3C", "cterm": "65", "cterm16": "1" },
@@ -29,11 +29,11 @@ let s:colors = {
       \ "lineNumberColor": { "gui": "#697966", "cterm": "242", "cterm16": "1" },
       \ "lightEditorColor": { "gui": "#212618", "cterm": "234", "cterm16": "1" },
       \ "searchForeground": { "gui": "#ececec", "cterm": "255", "cterm16": "1" },
-      \ "searchBackground": { "gui": "#16690D", "cterm": "22", "cterm16": "1" },
+      \ "searchBackground": { "gui": "#2362A7", "cterm": "25", "cterm16": "1" },
       \ "selectionForeground": { "gui": "#ffffff", "cterm": "231", "cterm16": "1" },
       \ "selectionBackground": { "gui": "#30432B", "cterm": "236", "cterm16": "1" },
       \ "foldedTextBackground": { "gui": "#252D19", "cterm": "235", "cterm16": "1" },
-      \ "stringColor": { "gui": "#f1fa8c", "cterm": "228", "cterm16": "1" }
+      \ "stringColor": { "gui": "#94CFFF", "cterm": "117", "cterm16": "1" }
       \}
 
 function! monika_dark#GetColors()
