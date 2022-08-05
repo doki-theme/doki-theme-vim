@@ -36,6 +36,6 @@ let s:colors = {
       \ "stringColor": { "gui": "#0EAAAF", "cterm": "37", "cterm16": "1" }
       \}
 
-function! zero_two_light#GetColors()
+function! zero_two_light_lily#GetColors()
   return s:colors
 endfunction

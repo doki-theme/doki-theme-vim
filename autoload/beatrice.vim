@@ -23,7 +23,7 @@ let s:colors = {
       \ "terminalAnsiRed": { "gui": "#E356A7", "cterm": "169", "cterm16": "1" },
       \ "terminalAnsiBlue": { "gui": "#9B6BDF", "cterm": "98", "cterm16": "1" },
       \ "terminalAnsiCyan": { "gui": "#0896AD", "cterm": "31", "cterm16": "1" },
-      \ "terminalAnsiGreen": { "gui": "#3dd664", "cterm": "77", "cterm16": "1" },
+      \ "terminalAnsiGreen": { "gui": "#4BB767", "cterm": "71", "cterm16": "1" },
       \ "terminalAnsiMagenta": { "gui": "#E64747", "cterm": "167", "cterm16": "1" },
       \ "terminalAnsiYellow": { "gui": "#db974d", "cterm": "173", "cterm16": "1" },
       \ "lineNumberColor": { "gui": "#aaaaaa", "cterm": "248", "cterm16": "1" },
