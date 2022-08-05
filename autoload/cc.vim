@@ -15,7 +15,7 @@ let s:colors = {
       \ "infoForeground": { "gui": "#358969", "cterm": "65", "cterm16": "1" },
       \ "unusedColor": { "gui": "#7F955B", "cterm": "101", "cterm16": "1" },
       \ "diffModified": { "gui": "#91BCCE", "cterm": "110", "cterm16": "1" },
-      \ "diffInserted": { "gui": "#89CE65", "cterm": "113", "cterm16": "1" },
+      \ "diffInserted": { "gui": "#9EE084", "cterm": "150", "cterm16": "1" },
       \ "diffDeleted": { "gui": "#B6D489", "cterm": "150", "cterm16": "1" },
       \ "codeBlock": { "gui": "#b1e494", "cterm": "150", "cterm16": "1" },
       \ "caretRow": { "gui": "#D0F09E", "cterm": "193", "cterm16": "1" },
