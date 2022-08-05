@@ -1,7 +1,7 @@
 Changelog
 ---
 
-# 88.0-1.2.1 [Darling]
+# 88.0-1.0.0 [Darling]
 
 Best Girl just got _better_. ❤️
 
@@ -15,7 +15,7 @@ _Zero Two's Not Just A Cutie. ;)_
 - It wouldn't be the _Darling_ release if I didn't include Hiro as well. (Dark Theme)
 - Lastly, this is the first release with a duo theme! (Nao's doesn't count, I just wanted the melon meme.) Just to pad my Zero Two theme stats, I've now got a Hiro & Zero Two couples' dark theme.
 
-# 84.1-1.2.1 [Light Theme Party]
+# 84.1-1.0.0 [Light Theme Party]
 
 ![v84 Girls](https://doki.assets.unthrottled.io/misc/v84_girls.png)
 
@@ -45,7 +45,7 @@ This release is not for my Dark Theme Normies. Dark themes are nice, but I like 
 - Small syntax highlighting usability updates to these themes: Zero Two Dark, Yukino, Hanekawa,
   Nagatoro, Rei, Astolfo, Echidna, Shima Rin, Sonoda Umi, Kurisu, & Ishtar Dark
 
-# 78.0-1.0.6 [The Boys]
+# 78.0-1.0.0 [The Boys]
 
 I'm trying to bring in a bit of inclusion.
 
