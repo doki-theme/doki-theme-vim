@@ -5,7 +5,7 @@ if v:version > 580
   endif
 endif
 
-let g:colors_name = 'rimiru_tempest'
+let g:colors_name = 'rimuru_tempest'
 
 set t_Co=256
 
@@ -14,13 +14,13 @@ set t_Co=256
 " (a 16-color palette for this color scheme is available; see
 " < https://github.com/joshdick/
 " for more information.)
-if !exists("g:rimiru_tempest_termcolors")
-  let g:rimiru_tempest_termcolors = 256
+if !exists("g:rimuru_tempest_termcolors")
+  let g:rimuru_tempest_termcolors = 256
 endif
 
 " Not all terminals support italics properly. If yours does, opt-in.
-if !exists("g:rimiru_tempest_terminal_italics")
-  let g:rimiru_tempest_terminal_italics = 0
+if !exists("g:rimuru_tempest_terminal_italics")
+  let g:rimuru_tempest_terminal_italics = 0
 endif
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
@@ -47,7 +47,7 @@ function! s:h(group, style, ...)
     let s:group_colors[a:group] = s:highlight " Cache default highlight group settings
   endif
 
-  if g:rimiru_tempest_terminal_italics == 0
+  if g:rimuru_tempest_terminal_italics == 0
     if has_key(s:highlight, "cterm") && s:highlight["cterm"] == "italic"
       unlet s:highlight.cterm
     endif
@@ -56,7 +56,7 @@ function! s:h(group, style, ...)
     endif
   endif
 
-  if g:rimiru_tempest_termcolors == 16
+  if g:rimuru_tempest_termcolors == 16
     let l:ctermfg = (has_key(s:highlight, "fg") ? s:highlight.fg.cterm16 : "NONE")
     let l:ctermbg = (has_key(s:highlight, "bg") ? s:highlight.bg.cterm16 : "NONE")
   else
@@ -74,7 +74,7 @@ function! s:h(group, style, ...)
     \ "cterm="   (has_key(s:highlight, "cterm") ? s:highlight.cterm    : "NONE")
 endfunction
 
-let s:colors = rimiru_tempest#GetColors() " Autoloaded from the specific color theme
+let s:colors = rimuru_tempest#GetColors() " Autoloaded from the specific color theme
 
 " Global colors
 call s:h("Comment", { "fg": s:colors.comments, "gui": "italic", "cterm": "italic" })

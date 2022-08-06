@@ -36,6 +36,6 @@ let s:colors = {
       \ "stringColor": { "gui": "#77C2FF", "cterm": "111", "cterm16": "1" }
       \}
 
-function! rimiru_tempest#GetColors()
+function! rimuru_tempest#GetColors()
   return s:colors
 endfunction
